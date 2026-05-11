@@ -8,7 +8,7 @@
 \institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
 \carrera{Catálogo STEM}
 \asignatura{Matemática III}
-\tema{Resumen 01: Matrices}
+\tema{Resumen 01: Funciones vectoriales y curvas}
 \autor[A. Merino]{Andrés Merino}
 \fecha{Periodo 2026-1}
 
@@ -22,9 +22,220 @@
 \encabezado
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{}
+\section{Funciones vectoriales}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+En esta sección, asumiremos que $\Omega$ es un subconjunto de $\R^n$.
 
+\begin{defi}[Funciones vectoriales]
+    Sea $\func{f}{\Omega}{\R^m}$ una función:
+    \begin{itemize}
+        \item Si $n=1$ y $m>1$ se dice que $f$ es una trayectoria.
+        \item Si $n>1$ y $m=1$ se dice que $f$ es un campo escalar.
+        \item Si $n>1$ y $m>1$ se dice que $f$ es un campo vectorial.
+    \end{itemize}
+\end{defi}
+
+\begin{advertencia}
+    En general, en este libro, utilizaremos:
+    \begin{itemize}
+        \item letras griegas para trayectorias;
+        \item letras minúsculas para campos escalares; y
+        \item letras mayúsculas para campos vectoriales.
+    \end{itemize}
+\end{advertencia}
+
+\begin{defi}[Componentes]
+    Dada $\func{F}{\Omega}{\R^m}$ una función y $m>1$, se tiene que, para todo $x\in \Omega$,
+    \[
+        F(x)=(f_1(x),f_2(x),\ldots,f_m(x)),
+    \]
+    donde $\func{f_i}{\Omega}{\R}$, para $i=1,\ldots,m$. A estas funciones se las llama las componentes de $F$.
+\end{defi}
+
+\begin{advertencia}
+    Dada $\func{F}{\Omega}{\R^m}$ una función y $m>1$, si para todo $x\in \Omega$,
+    \[
+        F(x)=(f_1(x),f_2(x),\ldots,f_m(x)),
+    \]
+    en la literatura se suele denotar $F=(f_1,f_2,\ldots,f_m)$. Formalmente, esta notación no es correcta dado que el elemento de la izquierda es una función mientras que el elemento de la derecha es un vector de funciones. A pesar de esto, se utilizará esta notación para indicar que $f_1,f_2,\ldots,f_m$ son las componentes de la función $F$.
+\end{advertencia}
+
+\begin{defi}[Conjuntos de nivel]
+    Dados $\func{f}{\Omega}{\R}$ una función y $c\in\R$, al conjunto
+    \[
+        L_c(f)=\{x\in \Omega:f(x)=c\}
+    \]
+    se lo llama conjunto de nivel de $f$ en $c$.
+\end{defi}
+
+\begin{advertencia}
+    \begin{itemize}
+        \item Si $n=2$, a $L_c(f)$ se lo llama curva de nivel.
+        \item Si $n=3$, a $L_c(f)$ se lo llama superficie de nivel.
+    \end{itemize}
+\end{advertencia}
+
+\begin{defi}[Operaciones entre funciones]
+    Dadas las funciones $\func{f}{\Omega}{\R^m}$, $\func{g}{\Omega}{\R^m}$, $\func{u}{\Omega}{\R}$ y $\lambda\in\R$, se definen las funciones:
+    \begin{itemize}
+        \item $\func{f+g}{\Omega}{\R^m}$, con $(f+g)(x)=f(x)+g(x)$, para todo $x\in \Omega$.
+        \item $\func{\lambda f}{\Omega}{\R^m}$, con $(\lambda f)(x)= \lambda f(x)$, para todo $x\in \Omega$.
+        \item $\func{u f}{\Omega}{\R^m}$, con $(u f)(x)= u(x) f(x)$, para todo $x\in \Omega$.
+        \item $\func{f\cdot g}{\Omega}{\R}$, con $(f\cdot g)(x)=f(x)\cdot g(x)$, para todo $x\in \Omega$.
+        \item $\func{\|f\|}{\Omega}{\R}$, con $\|f\|(x)=\|f(x)\|$, para todo $x\in \Omega$.
+        \item Si $m=3$, $\func{f\times g}{\Omega}{\R^3}$, con $(f\times g)(x)= f(x)\times g(x)$, para todo $x\in \Omega$.
+    \end{itemize}
+\end{defi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cálculo en trayectorias}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En este capítulo asumiremos que $m>1$ e $I,J\subset\R$ son intervalos.
+
+\begin{defi}[Límite]
+    Dados $\func{\alpha}{I}{\R^m}$ una trayectoria y $a\in\R$, el límite de $\alpha$ cuando $x$ tiende a $a$ es
+    \[
+        \lim_{x\to a}\alpha(x)
+        =\left(\lim_{x\to a}\alpha_1(x),\lim_{x\to a}\alpha_2(x),\ldots,\lim_{x\to a}\alpha_m(x)\right)
+    \]
+    siempre que los límites de la derecha existan.
+\end{defi}
+
+\begin{defi}[Continuidad]
+    Dados $\func{\alpha}{I}{\R^m}$ una trayectoria y $a\in I$, se dice que $\alpha$ es continua en $a$ si
+    \[
+        \lim_{x\to a}\alpha(x)=\alpha(a).
+    \]
+    Se dice que $\alpha$ es continua en $I$ si $\alpha$ es continua en cada punto de $I$.
+\end{defi}
+
+\begin{prop}
+    Dados $\func{\alpha}{I}{\R^m}$ una trayectoria y $a\in \R$, se tiene que
+    \[
+        \lim_{x\to a}\alpha(x)=L,
+    \]
+    si y solo si: para todo $\epsilon>0$, existe $\delta>0$ tal que para todo $x\in I$ se tiene que
+    \[
+        0<|x-a|<\delta \Longrightarrow \|\alpha(x)-L\|<\epsilon.
+    \]
+\end{prop}
+
+\begin{prop}
+    Dados $\func{\alpha}{I}{\R^m}$ una trayectoria y $a\in I$, se tiene que $\alpha$ es continua en $a$ si y solo si: para todo $\epsilon>0$, existe $\delta>0$ tal que para todo $x\in I$ se tiene que
+    \[
+        |x-a|<\delta \Longrightarrow \|\alpha(x)-\alpha(a)\|<\epsilon.
+    \]
+\end{prop}
+
+\begin{defi}[Derivada]
+    Dados $\func{\alpha}{I}{\R^m}$ una trayectoria, con $I$ un intervalo abierto, y $a\in I$, la derivada de $\alpha$ en $a$ es
+    \[
+        \alpha'(a)=\left(\alpha_1'(a),\alpha_2'(a),\ldots,\alpha_m'(a)\right),
+    \]
+    siempre que las derivadas de la derecha existan. Si existen, se dice que $\alpha$ es derivable en $a$.
+\end{defi}
+
+\begin{prop}
+    Dados $\func{\alpha}{I}{\R^m}$ una trayectoria, con $I$ un intervalo abierto, y $a\in I$, se tiene que $\alpha$ es derivable en $a$ si y solo si existe
+    \[
+        \lim_{h\to 0} \frac 1 h ( \alpha(a+h)-\alpha(a) ),
+    \]
+    en tal caso, el valor de $\alpha'(a)$ es este límite.
+\end{prop}
+
+\begin{defi}[Integral]
+    Dada una trayectoria $\func{\alpha}{[a,b]}{\R^m}$, la integral de $\alpha$ de $a$ a $b$ es
+    \[
+        \int_a^b \alpha(t)dt=\left(\int_a^b \alpha_1(t)dt,\int_a^b \alpha_2(t)dt,\ldots,\int_a^b \alpha_m(t)dt\right),
+    \]
+    siempre que las integrales de la derecha existan. Si existen, se dice que $\alpha$ es integrable en $[a,b]$.
+\end{defi}
+
+\begin{teo}
+    Dadas las trayectorias $\func{\alpha}{I}{\R^m}$, $\func{\beta}{I}{\R^m}$, y la función $\func{u}{I}{\R}$, todas derivables en $a\in I$, se tiene que
+    \begin{itemize}
+        \item $\alpha+\beta$ es derivable en $a$ y $(\alpha+\beta)'(a)=\alpha'(a)+\beta'(a)$.
+        \item $\lambda \alpha$ es derivable en $a$ y $(\lambda \alpha)'(a)=\lambda \alpha'(a)$.
+        \item $\alpha \cdot \beta$ es derivable en $a$ y $(\alpha \cdot \beta)'(a)=\alpha'(a)\cdot \beta(a)+\alpha(a)\cdot \beta'(a)$.
+        \item $u \alpha$ es derivable en $a$ y $(u \alpha)'(a)=u'(a) \alpha(a)+u(a) \alpha'(a)$.
+        \item Si $m=3$, $\alpha \times \beta$ es derivable en $a$ y $(\alpha \times \beta)'(a)=\alpha'(a)\times \beta(a)+\alpha(a)\times \beta'(a)$.
+    \end{itemize}
+\end{teo}
+
+\begin{prop}
+    Si $\func{\alpha}{I}{\R^m}$ es derivable en $I$ y existe $k\in\R$ tal que $\|\alpha(x)\|=k$ para todo $x\in I$, entonces $\alpha(x)\cdot \alpha'(x)=0$ para todo $x\in I$.
+\end{prop}
+
+\begin{teo}[Regla de la cadena]
+    Si $\func{u}{I}{\R}$ es derivable en $a\in I$ y $\func{\alpha}{J}{\R^m}$ es derivable en $u(a)\in J$, entonces $\func{\alpha\circ u}{I}{\R^m}$ es derivable en $a$ y se tiene que
+    \[
+        (\alpha\circ u)'(a)=u'(a)\alpha'(u(a)).
+    \]
+\end{teo}
+
+\begin{prop}[Linealidad de la integral]
+    Dadas las trayectorias $\func{\alpha}{[a,b]}{\R^m}$ y $\func{\beta}{[a,b]}{\R^m}$, integrables en $[a,b]$ y $\lambda_1,\lambda_2\in\R$, se tiene que la función $\lambda_1 \alpha + \lambda_2 \beta$ es integrable en $[a,b]$ y
+    \[
+        \int_a^b(\lambda_1 \alpha(x) + \lambda_2 \beta(x) )dx
+        = \lambda_1\int_a^b \alpha(x)dx + \lambda_2 \int_a^b \beta(x) dx.
+    \]
+\end{prop}
+
+\begin{teo}[Teorema Fundamental del Cálculo I]
+    Dada $\func{\alpha}{[a,b]}{\R^m}$ una trayectoria continua y $c\in[a,b]$, si definimos para $x\in[a,b]$
+    \[
+        A(x)=\int_c^x \alpha(t) dt,
+    \]
+    entonces $A$ es derivable en $(a,b)$ y $A'(x)=\alpha(x)$ para todo $x\in(a,b)$.
+\end{teo}
+
+\begin{teo}[Teorema Fundamental del Cálculo II]
+    Dada $\func{\alpha}{[a,b]}{\R^m}$ una trayectoria continua, si $\func{A}{[a,b]}{\R^m}$ es una primitiva de $\alpha$, entonces
+    \[
+        \int_a^b \alpha(t) dt = A(b)-A(a).
+    \]
+\end{teo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Curvas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección asumiremos que $m\in\{2,3\}$.
+
+\begin{defi}[Curva]
+    Dada $\func{\alpha}{I}{\R^m}$ una trayectoria, al conjunto $\img(\alpha)$ se lo llama la gráfica de $\alpha$. A $\alpha$ se la llama una parametrización de $\img(\alpha)$.
+
+    Si $\alpha$ es continua en $I$, a su gráfica se la llama la curva descrita por~$\alpha$.
+\end{defi}
+
+\begin{defi}[Tangente]
+    Dada una curva $C$ parametrizada por la trayectoria $\func{\alpha}{I}{\R^m}$, para $t\in I$, si existe $\alpha'(t)$ y es diferente de 0, al vector $\alpha'(t)$ se lo denomina vector tangente a $C$ en el punto $\alpha(t)$. Además, a la recta $L(\alpha(t);\alpha'(t))$ se la llama recta tangente a $C$ en $\alpha(t)$.
+\end{defi}
+
+\begin{defi}[Parametrizaciones equivalentes]
+    Dadas dos trayectorias $\func{\alpha}{I}{\R^m}$ y $\func{\beta}{J}{\R^m}$, se dice que $\alpha$ y $\beta$ son equivalentes si existe una función $\func{u}{I}{J}$ sobreyectiva y derivable, con derivada distinta de 0 en todo punto de $I$, tal que
+    \[
+        \alpha(t)=\beta(u(t))
+    \]
+    para todo $t\in I$. A $u$ se la denomina un cambio de parámetro.
+\end{defi}
+
+\begin{prop}
+    Un cambio de parámetro envía los extremos del intervalo en los extremos del otro.
+\end{prop}
+
+\begin{prop}
+    Dadas dos trayectorias $\func{\alpha}{I}{\R^m}$ y $\func{\beta}{J}{\R^m}$ equivalentes, se tiene que $\img(\alpha)=\img(\beta)$.
+\end{prop}
+
+\begin{advertencia}
+    Se dice que una propiedad de una curva es invariante bajo cambio de parámetro si la propiedad se mantiene para parametrizaciones equivalentes de la curva.
+\end{advertencia}
+
+\begin{prop}
+    Dada una curva $C$, la recta tangente en uno de sus puntos es invariante bajo cambio de parámetro.
+\end{prop}
 
 \end{document}

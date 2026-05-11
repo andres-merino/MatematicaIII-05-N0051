@@ -8,7 +8,7 @@
 \institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
 \carrera{Catálogo STEM}
 \asignatura{Matemática III}
-\tema{Ejercicios 01: Matrices}
+\tema{Ejercicios 01: Funciones vectoriales y curvas}
 \autor{Andrés Merino}
 \fecha{Periodo 2026-1}
 
@@ -24,17 +24,268 @@
 
 \encabezado
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ejer}
-    
+    Dado el campo escalar
+    \[
+       \funcion{f}{\R^n}{\R}{x}
+       {f(x)=
+           \begin{cases}
+               \|x\|^2 &\text{si }\|x\|<1,\\
+               0 &\text{si }\|x\|\geq 1.
+           \end{cases}
+       }
+    \]
+    Describir los conjuntos de nivel de $f$.
 \end{ejer}
 
 \begin{proof}[Solución]
-    
+    Notemos que $0\leq f(x) < 1$ para todo $x\in\R^n$, por lo tanto $L_c(f)=\varnothing$ si $c<0$ o si $c\geq 1$. Por otro lado,
+    \begin{align*}
+        L_0(f)
+            &= \{ x\in\R^n: f(x)=0 \}\\
+            &= \{ x\in\R^n: x=0 \lor \|x\|\geq 1 \}
+             = B(0,1)^c\cup\{0\}.
+    \end{align*}
+    Además, para todo $c\in\lop0,1\rop$, $L_c(f) = S(0,\sqrt{c})$.
+    Así,
+    \[
+        L_c(f)=
+        \begin{cases}
+            B(0,1)^c\cup\{0\} &\text{si }c=0,\\
+            S(0,\sqrt{c}) &\text{si }c\in\lop0,1\rop,\\
+            \varnothing &\text{caso contrario.}
+        \end{cases}\qedhere
+    \]
 \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Dado el campo escalar
+    \[
+        \funcion{f}{\R^2}{\R}{(x,y)}{
+         \begin{cases}
+            1&\text{ si }x^2+y^2<1,\\
+            0&\text{ si }x^2+y^2\geq 1,
+         \end{cases}}
+    \]
+    describa todos los conjuntos de nivel de $f$ y bosqueje sus gráficas.
+\end{ejer}
+
+\begin{proof}[Solución]
+    Notemos que $f(x)\in \{0,1\}$, por lo tanto $L_c(f)=\varnothing$ si $c \not\in \{0,1\}$. Por otro lado,
+    \[
+        L_0(f) = \R^2 \setminus B(0,1),
+        \qquad
+        L_1(f) = B(0,1).
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Encontrar y describir los conjuntos de nivel en $-1$, $0$, $1$, $2$ para los campos escalares dados a continuación.
+    \begin{enumerate}
+    \item $\funcion{f}{\R^2}{\R}{(x,y)}{x+2y.}$
+    \item $\funcion{f}{\R^2}{\R}{(x,y)}{xy.}$
+    \item $\funcion{f}{\R^2}{\R}{(x,y)}{x^2-y.}$
+    \end{enumerate}
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Dado el campo escalar
+    \[
+        \funcion{f}{\R^3}{\R}{(x,y,z)}{x^2+y^2-z,}
+    \]
+    estudie y describa sus conjuntos de nivel.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Sean $f,g:\R^n\to\R$. Demuestre o refute:
+    si $L_c(f)=L_c(g)$ para todo $c\in\R$, entonces $f=g$.
+\end{ejer}
+
+\begin{proof}[Solución]
+    Es verdadero. Dado $x\in\R^n$, como $x\in L_{f(x)}(f)=L_{f(x)}(g)$, se tiene que $g(x)=f(x)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Encontrar una función lineal $\func{f}{\R^3}{\R}$ tal que su conjunto de nivel en $1$ sea
+    \[
+        \{(x,y,z)\in\R^3:z+1=2x+3y\}.
+    \]
+\end{ejer}
+
+\begin{proof}[Solución]
+    Se busca $f(x,y,z)=\alpha x+\beta y+\gamma z$ tal que $f(x,y,z)=1\Leftrightarrow 2x+3y-z=1$. Así, $f(x,y,z)=2x+3y-z$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Calcule el límite de la trayectoria $\alpha$ en $5$, donde
+    \[
+        \funcion{\alpha}{\R\setminus\{0\}}{\R^3}{y}
+        {\left(y^3+5,y^2,\frac{y+1}{y}\right).}
+    \]
+\end{ejer}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Dada la trayectoria
+    \[
+        \funcion{\alpha}{\R}{\R^3}{t}
+        {\begin{cases}
+            \left(\dfrac{\sen(t)}{t},2t^2,\dfrac{e^t-1}{t}\right) &\text{si }t\neq 0,\\[4mm]
+            x&\text{si }t= 0,
+        \end{cases}}
+    \]
+    con $x\in \R^3$. ¿Cuál es el valor de $x$ para que $\alpha$ sea continua en $0$?
+\end{ejer}
+\begin{proof}[Solución]
+    Para continuidad en $0$ se requiere $\lim_{t\to 0}\alpha(t)=x$. Calculando componente a componente: $x=(1,0,1)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Dada la función
+    \[
+        \funcion{\alpha}{[-1,1]\setminus\{0\}}{\R^2}{t}{\l(\dfrac{\sen(\pi t)}t,e^{3t}-t^2\r).}
+    \]
+    Estudie la continuidad de $\alpha$ en $0$; si $\Lim_{t\to 0} \alpha(t)$ existe, halle su valor.
+\end{ejer}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Dada la trayectoria
+    \[
+        \funcion{\alpha}{\R}{\R^3}{x}{(x+2,x^2,x^4+x^2),}
+    \]
+    calcule la derivada de $\alpha$ y evalúela en $x=10$.
+\end{ejer}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Dada la trayectoria
+    \[
+        \funcion{\alpha}{\R}{\R^2}{x}{\l(\dfrac{x^2}{x^2+1},x|x|\r).}
+    \]
+    Demuestre que $\alpha$ es derivable en todo su dominio y halle su derivada.
+\end{ejer}
+
+\begin{proof}[Solución]
+    $\alpha$ es derivable en todo $\R$ y $\alpha'(x)=\l(\dfrac{2x}{(x^2+1)^2},2|x|\r)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Dada la trayectoria
+    \[
+        \funcion{\alpha}{\R}{\R^3}{t}{\alpha(t)=
+            \frac{2t}{1+t^2}\ \veci+\frac{1-t^2}{1+t^2}\ \vecj+\veck,
+        }
+    \]
+    comprobar que el ángulo que forma $\alpha(t)$ con $\alpha'(t)$ es constante.
+\end{ejer}
+
+\begin{proof}[Solución]
+    Se calcula $\alpha(t)\cdot\alpha'(t)=0$ para todo $t$, por lo que el ángulo es siempre $\pi/2$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Sea $\func{\alpha}{I}{\R^m}$, con $m>1$, una trayectoria derivable. Si existe $k\in\R\setminus\{0\}$ tal que $\| \alpha(t) \|=k$ para todo $t\in I$, demostrar que $\alpha(t)$ y $\alpha'(t)$ son ortogonales para todo $t\in I$.
+\end{ejer}
+
+\begin{proof}[Solución]
+    De $\|\alpha(t)\|^2=k^2$ se deriva $(k^2)'=2\alpha(t)\cdot\alpha'(t)=0$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Dada una trayectoria $\func{\alpha}{\R}{\R^3}$ con tres derivadas, se define
+    \[
+        \funcion{u}{\R}{\R}{t}{u(t)=\alpha(t)\cdot(\alpha'(t)\times \alpha''(t)).}
+    \]
+    Comprobar que $u$ es derivable y que $u'=\alpha\cdot(\alpha'\times \alpha''')$.
+\end{ejer}
+
+\begin{proof}[Solución]
+    $u'=\alpha'\cdot(\alpha'\times\alpha'')+\alpha\cdot(\alpha''\times\alpha''+\alpha'\times\alpha''')=\alpha\cdot(\alpha'\times\alpha''')$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Dada una trayectoria $\func{\alpha}{I}{\R^3}$, se define
+    $\funcion{\beta}{I}{\R^3}{t}{\alpha(t)\times \alpha'(t).}$
+    Comprobar que $\beta$ es derivable y hallar su derivada.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Sean $\func{\alpha,\beta,\gamma}{I}{\R^3}$ trayectorias derivables. Comprobar que $\alpha \cdot (\beta \times \gamma)$ es derivable y que
+    \[
+        (\alpha \cdot (\beta \times \gamma))' = \alpha \cdot (\beta \times \gamma') + \alpha \cdot (\beta' \times \gamma) + \alpha' \cdot (\beta \times \gamma).
+    \]
+
+\end{ejer}
+
+\begin{proof}[Solución]
+    $(\alpha \cdot (\beta \times \gamma))'= \alpha' \cdot(\beta \times \gamma)+\alpha\cdot(\beta'\times\gamma+\beta\times\gamma')=\alpha\cdot(\beta\times\gamma')+\alpha\cdot(\beta'\times\gamma)+\alpha'\cdot(\beta\times\gamma)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Dada la función $\funcion{\alpha}{\R}{\R^3}{t}{(\cos t , 1, -2t)}$, calcule, si existe,
+    $\int_0^{\pi} \alpha(t) dt$.
+
+\end{ejer}
+
+\begin{proof}[Solución]
+    $\int_0^{\pi} \alpha(t) dt = (0,\pi,\pi^2)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Dada la trayectoria $\funcion{\alpha}{\R}{\R^3}{t}{(t-\cos(t),1-\cos(t),t)}$ y la función $\funcion{u}{[-1,1]}{\R}{z}{u(z)=\arcsen(z)}$, determine $(\alpha \circ u)'(z)$ para cada $z\in \l] -1,1 \r[$.
+\end{ejer}
+
+\begin{proof}[Solución]
+    $(\alpha \circ u)'(z)=\l(\dfrac{1+z}{\sqrt{1-z^2}},\dfrac{z}{\sqrt{1-z^2}},\dfrac{1}{\sqrt{1-z^2}}\r)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Dada la trayectoria $\funcion{\alpha}{\R}{\R^n}{x}{\alpha(x)=e^{2x}a+e^{-2x}b}$ con $a,b \in \R^n$ vectores fijos no nulos, comprobar que $\alpha''(x)$ tiene la misma dirección que $\alpha(x)$ para todo $x\in\R$.
+\end{ejer}
+
+\begin{proof}[Solución]
+    Se tiene $\alpha''(x)=4\alpha(x)$, por lo tanto tienen la misma dirección.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Determine el vector tangente y la recta tangente a la curva $C$ descrita por
+    $\funcion{\alpha}{\R}{\R^3}{t}{(e^t(\sen(t)+\cos(t)),\,e^t(\sen(t)-\cos(t)),\,e^t)}$
+    en el punto $(1,-1,1)$.
+\end{ejer}
+
+\begin{proof}[Solución]
+    En $t=0$: $\alpha'(0)=(2,0,1)$. La recta tangente es $L((1,-1,1);(2,0,1))$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+    Sea $I = [0, 4\pi]$ y $J = \l[-\frac{7\pi}{2}, \frac{\pi}{2}\r]$. Se definen las trayectorias
+    \[
+        \funcion{\alpha}{I}{\R^3}{t}{(\sen(t), \cos(t), t)}
+        \texty
+        \funcion{\beta}{J}{\R^3}{t}{\l(\cos(t), \sen(t), \tfrac{\pi}{2} - t\r)}.
+    \]
+    Muestre que $\alpha$ y $\beta$ son trayectorias equivalentes.
+\end{ejer}
+
+\begin{proof}[Solución]
+    El cambio de parámetro $u(t)=\frac{\pi}{2}-t$ es sobreyectivo de $I$ en $J$, derivable con derivada no nula, y satisface $\beta(u(t))=\alpha(t)$.
+\end{proof}
+
+\end{preguntas}
 
 \end{document}
