@@ -1,0 +1,118 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí: 
+% https://github.com/alephsub0/LaTeX_aleph-notas 
+
+% -- Paquetes adicionales 
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientale}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 01: Matrices}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-01}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\section*{Resultado de Aprendizaje}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\subsection*{RdA de la asignatura:}  
+% Comentar los que no apliquen a la clase
+\begin{itemize}[leftmargin=*]  
+    \item \textbf{RdA 1:} Identificar los conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales, integrales de funciones vectoriales con el apoyo de asistentes computacionales.
+    \item \textbf{RdA 3:} Aplicar distintos tópicos del Cálculo Vectorial para la solución de problemas reales en diferentes contextos.
+\end{itemize}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\subsection*{RdA del tema:}  
+% indicar de 2 a 3 resutados de aprendizaje específicos para este tema
+\begin{itemize}[leftmargin=*]  
+    \item Identificar matrices según su orden, filas y columnas.  
+    \item Aplicar operaciones básicas entre matrices: suma, producto por escalar y transpuesta.  
+    \item Determinar cuándo una multiplicación de matrices está definida y calcular el producto.  
+\end{itemize}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\section*{Introducción}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\paragraph{Pregunta inicial:}  
+% Colocar una pregunta que motive desde la cotidianidad o la ciencia de datos el tema a tratar, que no involucre en el enunciado los concpetos que se van a abordar.
+¿Cómo se puede organizar información de manera compacta para modelar problemas de ingeniería?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\section*{Desarrollo}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\subsection*{Actividad 1: Modelación con tablas y representación matricial}
+% Breve descripción
+La clase inicia con una tabla de datos reales (por ejemplo: producción semanal por sedes y productos) para motivar la noción de matriz como arreglo numérico. A través de una clase magistral, se trabajan los conceptos de orden, igualdad de matrices, operaciones elementales y producto matricial, enfatizando la compatibilidad de dimensiones y su interpretación.
+
+\paragraph{¿Cómo lo haremos?}  
+% indicar las que correspondan
+\begin{itemize}[leftmargin=*]  
+    \item \textbf{Motivación:} se presenta una tabla de datos y se discute cómo convertirla a matriz, identificando filas, columnas y entradas $a_{ij}$.
+    \item \textbf{Clase magistral:} se explican los conceptos de matriz, orden, igualdad, suma, multiplicación por escalar, transpuesta, producto de matrices y matriz identidad. Se usa el resumen \href{https://fcena-puce.github.io/AlgebraLineal-05-N0048/01Resumen/Resumen01.pdf}{Resumen01.pdf}.  
+    \item \textbf{Resolución de ejercicios:} los estudiantes resolverán, de manera guiada, ejercicios de operaciones y producto de matrices del documento \href{https://fcena-puce.github.io/AlgebraLineal-05-N0048/04Ejercicios/Ejercicios01.pdf}{Ejercicios01.pdf}.  
+    \item \textbf{Visualización de videos:} se recomendará el estudio con los videos:  
+    \begin{itemize}
+        \item \href{https://youtu.be/9FKFgNQktkU?si=kGRbP9Ad-NRRciwL}{MATRICES: de los gráficos de Fortnite a la física cuántica}
+        \item \href{https://youtu.be/m6w5vLA3Lnw?si=xcCeg-0snioQb-ns}{Matrices Introducción | Conceptos básicos}
+    \end{itemize}  
+    \item \textbf{Recomendaciones de lectura:} se sugiere la lectura de los siguientes enlaces:
+    \begin{itemize}
+        \item \href{https://blog.nekomath.com/algebra-lineal-i-bases-y-dimension-de-espacios-vectoriales/}{Bases y dimensión de espacios vectoriales}
+    \end{itemize}
+    \item \textbf{Implementación computacional:} se realiza mediante cuadernos de Jupyter usando el documento \href{https://fcena-puce.github.io/AlgebraLineal-05-N0048/02ResumenPython/ResumenPy01.pdf}{ResumenPy01.pdf}.
+\end{itemize}  
+
+\paragraph{Verificación de aprendizaje:} 
+% plantear preguntas directas y cerradas que permitan verificar que se han alcanzado los RdA del tema
+\begin{itemize}[leftmargin=*]  
+    \item ¿Qué condiciones deben cumplir dos matrices para poder sumarse?  
+    \item ¿Cuándo está definido el producto $AB$ entre dos matrices?  
+    \item ¿Por qué, en general, $AB \neq BA$?  
+\end{itemize}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\section*{Cierre}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+
+\paragraph{Tarea:}  
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=86081}{Fundamentos de álgebra lineal de Larson}, sección 2.1, los ejercicios: 2, 4, 10, 11, 14, 18, 20, 31, 35, 62, 63, 81.
+
+\paragraph{Pregunta de investigación:}  
+% preguntas relacionadas con los temas que no se han abordado en clase
+\begin{enumerate}[leftmargin=*]  
+    \item ¿Cómo se usan las matrices para representar imágenes digitales y transformarlas (rotación, escalamiento, filtros)?
+    \item ¿Qué relación existe entre matrices y redes neuronales en inteligencia artificial?
+\end{enumerate}  
+
+\paragraph{Para el próximo tema:}  
+Leer la sección 2.3 del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=283260}{Álgebra lineal con aplicaciones y Python de Aranda} y la sección 1.1 del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=86081}{Fundamentos de álgebra lineal de Larson}.
+
+\end{document}

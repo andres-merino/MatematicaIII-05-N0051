@@ -1,0 +1,2642 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+\usepackage{esint}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 01: Matrices}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+\begin{document}
+
+\encabezado
+
+\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Funciones vectoriales
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Funciones vectoriales}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+En esta sección, asumiremos que $\Omega$ es un subconjunto de $\R^n$.
+\begin{defi}[Funciones vectoriales]
+    Sea $\func{f}{\Omega}{\R^m}$ una función:
+    \begin{itemize}
+        \item Si $n=1$ y $m>1$ se dice que $f$ es una trayectoria.
+        \item Si $n>1$ y $m=1$ se dice que $f$ es un campo escalar.
+        \item Si $n>1$ y $m>1$ se dice que $f$ es un campo vectorial.
+    \end{itemize}
+\end{defi}
+
+\begin{advertencia}
+    En general, en este libro, utilizaremos:
+    \begin{itemize}
+        \item letras griegas para trayectorias;
+        \item letras minúsculas para campos escalares; y
+        \item letras mayúsculas para campos vectoriales.
+    \end{itemize}
+\end{advertencia}
+
+\begin{defi}[Componentes]
+    Dada $\func{F}{\Omega}{\R^m}$ una función y $m>1$, se tiene que, para todo $x\in \Omega$,
+    \[
+        F(x)=(f_1(x),f_2(x),\ldots,f_m(x)),
+    \]
+    donde $\func{f_i}{\Omega}{\R}$, para $i=1,\ldots,m$. A estas funciones se las llama las componentes de $F$.
+\end{defi}
+
+\begin{advertencia}
+    Dada $\func{F}{\Omega}{\R^m}$ una función y $m>1$, si para todo $x\in \Omega$,
+    \[
+        F(x)=(f_1(x),f_2(x),\ldots,f_m(x)),
+    \]
+    en la literatura se suele denotar
+    \[
+        F=(f_1,f_2,\ldots,f_m).
+    \]
+    Formalmente, esta notación no es correcta dado que el elemento de la izquierda es una función mientras que el elemento de la derecha es un vector de funciones. A pesar de esto, se utilizará esta notación para indicar que $f_1,f_2,\ldots,f_m$ son la componentes de la función $F$.
+\end{advertencia}
+
+\begin{defi}[Conjuntos de nivel]
+    Dados $\func{f}{\Omega}{\R}$ una función y $c\in\R$, al conjunto
+    \[
+        L_c(f)=\{x\in \Omega:f(x)=c\}
+    \]
+    se lo llama conjunto de nivel de $f$ en $c$.
+\end{defi}
+
+\begin{advertencia}
+    \begin{itemize}
+        \item Si $n=2$, a $L_c(f)$ se lo llama curva de nivel.
+        \item Si $n=3$, a $L_c(f)$ se lo llama superficie de nivel.
+    \end{itemize}
+\end{advertencia}
+
+\begin{defi}[Operaciones entre funciones]
+    Dadas las funciones $\func{f}{\Omega}{\R^m}$, $\func{g}{\Omega}{\R^m}$, $\func{u}{\Omega}{\R}$ y $\lambda\in\R$, se definen las funciones:
+    \begin{itemize}
+        \item $\func{f+g}{\Omega}{\R^m}$, con $(f+g)(x)=f(x)+g(x)$, para todo $x\in \Omega$.
+        \item $\func{\lambda f}{\Omega}{\R^m}$, con $(\lambda f)(x)= \lambda f(x)$, para todo $x\in \Omega$.
+        \item $\func{u f}{\Omega}{\R^m}$, con $(u f)(x)= u(x) f(x)$, para todo $x\in \Omega$.
+        \item $\func{f\cdot g}{\Omega}{\R}$, con $(f\cdot g)(x)=f(x)\cdot g(x)$, para todo $x\in \Omega$.
+        \item $\func{\|f\|}{\Omega}{\R}$, con $\|f\|(x)=\|f(x)\|$, para todo $x\in \Omega$.
+        \item Si $m=3$, $\func{f\times g}{\Omega}{\R^3}$, con $(f\times g)(x)= f(x)\times g(x)$, para todo $x\in \Omega$.
+    \end{itemize}
+\end{defi}
+
+\section{Cálculo en trayectorias}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En este capítulo asumiremos que $m>1$ e $I,J\subset\R$ son intervalos.
+
+\begin{defi}[Límite]
+    Dados $\func{\alpha}{I}{\R^m}$ una trayectoria y $a\in\R$, el límite de $\alpha$ cuando $x$ tiende a $a$ es
+    \[
+        \lim_{x\to a}\alpha(x)
+        =\left(\lim_{x\to a}\alpha_1(x),\lim_{x\to a}\alpha_2(x),\ldots,\lim_{x\to a}\alpha_m(x)\right)
+    \]
+    siempre que los límites de la derecha existan.
+\end{defi}
+
+\begin{defi}[Continuidad]
+    Dados $\func{\alpha}{I}{\R^m}$ una trayectoria y $a\in I$, se dice que $\alpha$ es continua en $a$ si
+    \[
+        \lim_{x\to a}\alpha(x)=\alpha(a).
+    \]
+    Se dice que $\alpha$ es continua en $I$ si $\alpha$ es continua en cada punto de $I$.
+\end{defi}
+
+\begin{prop}
+    Dados $\func{\alpha}{I}{\R^m}$ una trayectoria y $a\in \R$, se tiene que
+    \[
+        \lim_{x\to a}\alpha(x)=L,
+    \]
+    si y solo si: para todo $\epsilon>0$, existe $\delta>0$ tal que para todo $x\in I$ se tiene que
+    \[
+        0<|x-a|<\delta \Longrightarrow \|\alpha(x)-L\|<\epsilon.
+    \]
+\end{prop}
+
+\begin{prop}
+    Dados $\func{\alpha}{I}{\R^m}$ una trayectoria y $a\in I$, se tiene que $\alpha$ es continua en $a$ si y solo si: para todo $\epsilon>0$, existe $\delta>0$ tal que para todo $x\in I$ se tiene que
+    \[
+        |x-a|<\delta \Longrightarrow \|\alpha(x)-\alpha(a)\|<\epsilon.
+    \]
+    \end{prop}
+    
+    \begin{defi}[Derivada]
+    Dados $\func{\alpha}{I}{\R^m}$ una trayectoria, con $I$ un intervalo abierto, y $a\in I$, la derivada de $\alpha$ en $a$ es
+    \[
+        \alpha'(a)=\left(\alpha_1'(a),\alpha_2'(a),\ldots,\alpha_m'(a)\right),
+    \]
+    siempre que las derivadas de la derecha existan. Si existen, se dice que $\alpha$ es derivable en $a$.
+\end{defi}
+
+\begin{prop}
+    Dados $\func{\alpha}{I}{\R^m}$ una trayectoria, con $I$ un intervalo abierto, y $a\in I$, se tiene que $\alpha$ es derivable en $a$ si y solo si existe
+    \[
+        \lim_{h\to 0} \frac 1 h ( \alpha(a+h)-\alpha(a) ),
+    \]
+    en tal caso, el valor de $\alpha'(a)$ es este límite.
+\end{prop}
+
+\begin{defi}[Integral]
+    Dada una trayectoria $\func{\alpha}{[a,b]}{\R^m}$, la integral de $\alpha$ de $a$ a $b$ es
+    \[
+        \int_a^b \alpha(t)dt=\left(\int_a^b \alpha_1(t)dt,\int_a^b \alpha_2(t)dt,\ldots,\int_a^b \alpha_m(t)dt\right),
+    \]
+    siempre que las integrales de la derecha existan. Si existen, se dice que $\alpha$ es integrable en $[a,b]$.
+\end{defi}
+
+\begin{defi}
+    Dado un intervalo $[a,b]$, una partición de orden $n$ es un conjunto
+    \[
+        P=\{x_i\in\R: i=0,\ldots,n\},
+    \]
+    donde
+    \[
+        a=x_0<x_1<\cdots<x_n=b.
+    \]
+    \begin{itemize}
+    \item 
+        A los conjuntos
+        \[
+            I_i=[x_{i-1},x_i],
+        \]
+        con $i=1,\ldots,n$, se los llama subintervalos de la partición.
+    \item 
+        A las cantidades
+        \[
+            \Delta x_i = x_i - x_{i-1},
+        \]
+        con $i=1,\ldots,n$, se las llama la longitud del subintervalo.
+    \item 
+        A un conjunto
+        \[
+            C=\{c_i\in\R : c_i\in I_i, \, i=1,\ldots,n\},
+        \]
+        se lo llama un conjunto de etiquetas para $P$.
+    \item
+        Al par $(P,C)$ se lo llama una partición etiquetada de $[a,b]$.
+    \item A la cantidad
+        \[
+            |P|=\max_{i=1,\ldots,n}{\Delta x_i}
+        \]
+        se la llama grosor de la partición.
+    \end{itemize}
+\end{defi}
+
+\begin{defi}
+    Sean $\func{\alpha}{[a,b]}{\R^m}$ una trayectoria y $(P,C)$ una partición etiquetada de $[a,b]$, entonces
+    \[
+        S(\alpha,P,C)=\sum_{i=1}^n \alpha(c_i)\Delta x_i
+    \]
+    es la suma de Riemann de $\alpha$ respecto a la partición etiquetada $(P,C)$.
+\end{defi}
+
+\begin{prop}
+    Dada una trayectoria $\func{\alpha}{[a,b]}{\R^m}$, se define la integral de $\alpha$ por
+    \[
+        \int_a^b \alpha(t)dt = \lim_{|P|\to 0} S(\alpha,P,C) = \lim_{|P|\to 0} \sum_{i=1}^n \alpha(c_i)\Delta x_i,
+    \]
+    siempre que el límite exista (el límite se toma sobre todas las particiones etiquetadas). Si el límite existe, se dice que la función es integrable.
+\end{prop}
+
+\begin{teo}
+    Dadas las trayectorias $\func{\alpha}{I}{\R^m}$, $\func{\beta}{I}{\R^m}$, y la función $\func{u}{I}{\R}$, todas derivables en $a\in I$, se tiene que
+    \begin{itemize}
+        \item $\alpha+\beta$ es derivable en $a$ y $(\alpha+\beta)'(a)=\alpha'(a)+\beta'(a)$.
+        \item $\lambda \alpha$ es derivable en $a$ y $(\lambda \alpha)'(a)=\lambda \alpha'(a)$.
+        \item $\alpha \cdot \beta$ es derivable en $a$ y $(\alpha \cdot \beta)'(a)=\alpha'(a)\cdot \beta(a)+\alpha(a)\cdot \beta'(a)$.
+        \item $u \alpha$ es derivable en $a$ y $(u \alpha)'(a)=u'(a) \alpha(a)+u(a) \alpha'(a)$.
+        \item Si $m=3$, $\alpha \times \beta$ es derivable en $a$ y $(\alpha \times \beta)'(a)=\alpha'(a)\times \beta(a)+\alpha(a)\times \beta'(a)$.
+    \end{itemize}
+\end{teo}
+
+\begin{prop}
+    Si $\func{\alpha}{I}{\R^m}$ es derivable en $I$ y existe $k\in\R$ tal que $\|\alpha(x)\|=k$ para todo $x\in R$, entonces $\alpha(x)\cdot \alpha'(x)=0$ para todo $x\in I$.
+\end{prop}
+
+\begin{teo}[Regla de la cadena]
+    Si $\func{u}{I}{\R}$, es derivable en $a\in I$ y $\func{\alpha}{J}{\R^m}$ es derivable en $u(a)\in J$, entonces $\func{\alpha\circ u}{I}{\R^m}$ es derivable en $a$ y se tiene que
+    \[
+        (\alpha\circ u)'(a)=u'(a)\alpha'(u(a)).
+    \]
+\end{teo}
+
+\begin{prop}[Linealidad de la integral]
+    Dadas las trayectorias $\func{\alpha}{[a,b]}{\R^m}$ y $\func{\beta}{[a,b]}{\R^m}$, integrables en $[a,b]$ y $\lambda_1,\lambda_2\in\R$, se tiene que la función
+    \[
+        \lambda_1 \alpha + \lambda_2 \beta
+    \]
+    es integrable en $[a,b]$ y
+    \[
+        \int_a^b(\lambda_1 \alpha(x) + \lambda_2 \beta(x) )dx
+        = \lambda_1\int_a^b \alpha(x)dx + \lambda_2 \int_a^b \beta(x) dx
+    \]
+\end{prop}
+
+\begin{teo}[Teorema Fundamental del Cálculo I]
+    Dada $\func{\alpha}{[a,b]}{\R^m}$ una trayectoria continua y $c\in[a,b]$, si definimos para $x\in[a,b]$
+    \[
+        A(x)=\int_c^x \alpha(t) dt,
+    \]
+    entonces $A$ es derivable en $(a,b)$ y 
+    \[
+        A'(x)=\alpha(x)
+    \]
+    para todo $x\in(a,b)$.
+\end{teo}
+
+\begin{defi}
+    Sean $\func{\alpha}{I}{\R^m}$ una trayectoria y $\func{A}{I}{\R^m}$ una trayectoria derivable en $I$. Se dice que $A$ es una primitiva de $\alpha$ si
+    \[
+        \alpha(x)=A'(x)
+    \]
+    para todo $x\in I$.
+\end{defi}
+
+\begin{teo}[Teorema Fundamental del Cálculo II]
+    Dada $\func{\alpha}{[a,b]}{\R^m}$ una trayectoria continua, si $\func{A}{[a,b]}{\R^m}$ es una primitiva de $\alpha$, entonces
+    \[
+        \int_a^b \alpha(t) dt = A(b)-A(a).
+    \]
+\end{teo}
+
+\begin{prop}
+    Dados $\func{\alpha}{[a,b]}{\R^m}$ una trayectoria integrable y $c\in\R^m$, se tiene que $c\cdot \alpha$ es integrable y
+    \[
+        \int_a^b c\cdot \alpha(t) dt = c\cdot\int_a^b \alpha(t) dt
+    \]
+\end{prop}
+
+\begin{prop}
+    Dados $\func{\alpha}{[a,b]}{\R^m}$ una trayectoria integrable tal que $\|\alpha\|$ también es integrable y
+    \[
+        \left\| \int_a^b \alpha(t)dt \right\| \leq \int_a^b\| \alpha(t)\|dt.
+    \]
+\end{prop}
+
+\section{Curvas}
+
+En esta sección asumiremos que $m\in\{2,3\}$.
+
+\begin{defi}[Curva]
+    Dada $\func{\alpha}{I}{\R^m}$ una trayectoria, al conjunto $\img(\alpha)$ se lo llama la gráfica de $\alpha$. A $\alpha$ se la llama una parametrización de $\img(\alpha)$.
+
+    Si $\alpha$ es continua en $I$, a su gráfica se la llama la curva descrita por~$\alpha$.
+\end{defi}
+
+\begin{defi}[Tangente]
+    Dada una curva $C$ parametrizada por por la trayectoria $\func{\alpha}{I}{\R^m}$. Para $t\in I$, si existe $\alpha'(t)$ y es diferente de 0, al vector $\alpha'(t)$ se lo denomina vector tangente a $C$ en el punto $\alpha(t)$. Además, a la recta $L(\alpha(t);\alpha'(t))$ se la llama recta tangente a $C$ en $\alpha(t)$.
+\end{defi}
+
+\begin{defi}[Parametrizaciones equivalentes]
+    Dadas dos trayectorias $\func{\alpha}{I}{\R^m}$ y $\func{\beta}{J}{\R^m}$, se dice que $\alpha$ y $\beta$ son equivalente si existe una función $\func{u}{I}{J}$ sobreyectiva y derivable, con derivada distinta de 0 en todo punto de $I$ tal que
+    \[
+        \alpha(t)=\beta(u(t))
+    \]
+    para todo $t\in I$. A $u$ se la denomina un cambio de parámetro.
+\end{defi}
+
+\begin{prop}
+    Un cambio de parámetro envía los extremos del intervalo en los extremos del otro.
+\end{prop}
+
+\begin{prop}
+    Dadas dos trayectorias $\func{\alpha}{I}{\R^m}$ y $\func{\beta}{J}{\R^m}$ equivalentes, se tiene que
+    \[
+        \img(\alpha)=\img(\beta).
+    \]
+\end{prop}
+
+\begin{advertencia}
+    Se dice que una propiedad de una curva es invariante bajo cambio de parámetro si la propiedad se mantiene para parametrizaciones equivalentes de la curva.
+\end{advertencia}
+
+\begin{prop}
+    Dada un curva $C$, la recta tangente en uno de sus puntos es invariante bajo cambio de parámetro.
+\end{prop}
+
+\section{Aplicaciones al movimiento}
+
+En las secciones siguientes, consideraremos una curva $C$, parametrizada por la función $\func{\alpha}{I}{\R^m}$, la cual supondremos se puede derivar cuantas veces sea preciso y que $\alpha'(t)\neq 0$ para todo $t\in I$.
+
+\begin{defi}
+    Si consideramos que $\alpha$ describe el movimiento de una partícula por la curva $C$, tenemos que, para todo $t\in I$,
+    \begin{itemize}
+        \item $\alpha(t)$ es la posición de la partícula en el tiempo $t$.
+        \item $\alpha'(t)$ es la velocidad de la partícula en el tiempo $t$; se la denotará por $v_\alpha(t)$.
+        \item $\|\alpha'(t)\|$ es la rapidez de la partícula en el tiempo $t$; se la denotará por $\rho_\alpha(t)$.
+        \item $\alpha''(t)$ es la aceleración de la partícula en el tiempo $t$; se la denotará por $a_\alpha(t)$.
+    \end{itemize}
+\end{defi}
+
+\begin{defi}[Movimiento rectilíneo]
+    Un movimiento se dice rectilíneo si la posición tiene la forma
+    \[
+        \alpha(t)=a+u(t) b,
+    \]
+    donde $a,b\in\R^n$ y $\func{u}{I}{\R}$ es una función continua.
+\end{defi}
+
+\begin{defi}[Movimiento circular]
+    Un movimiento se dice circular si la posición tiene la forma
+    \[
+        \alpha(t)=a\cos(u(t))\mathbf{i}+a\sen(u(t))\mathbf{j},
+    \]
+    donde $a>0$ y $\func{u}{I}{\R}$ es una función continua.
+\end{defi}
+
+\begin{defi}[Movimiento planar]
+    Un movimiento se dice planar si su vector posición pertenece al mismo plano, para todo $t$.
+\end{defi}
+
+\section{Vectores y planos asociados}
+
+En esta sección consideraremos $\func{\alpha}{I}{\R^3}$, dos veces derivable tal que $\alpha'(t)\neq 0$ para todo $t\in I$.
+
+\begin{defi}[Vector unitario tangente]
+    Se define el vector unitario tangente por
+    \[
+        T_\alpha(t)=\frac{\alpha'(t)}{\|\alpha'(t)\|},
+    \]
+    para todo $t\in I$.
+\end{defi}
+
+\begin{defi}[Vector normal principal]
+    Si $T_\alpha'(t)\neq 0$ para todo $t\in I$, se define el vector normal principal por
+    \[
+        N_\alpha(t)=\frac{T_\alpha'(t)}{\|T_\alpha'(t)\|},
+    \]
+    para todo $t\in I$.
+\end{defi}
+
+\begin{defi}[Vector binormal principal]
+    Si $T_\alpha'(t)\neq 0$ para todo $t\in I$, se define el vector binormal principal por
+    \[
+        B_\alpha(t)=T_\alpha(t)\times N_\alpha(t),
+    \]
+    para todo $t\in I$.
+\end{defi}
+
+\begin{defi}[Plano osculador]
+    El plano
+    \[
+        P(\alpha(t);T_\alpha(t),N_\alpha(t))
+    \]
+    se lo denomina plano osculador de la trayectoria en el punto $\alpha(t)$.
+\end{defi}
+
+\begin{defi}[Plano normal]
+    El plano
+    \[
+        P(\alpha(t);B_\alpha(t),N_\alpha(t))
+    \]
+    se lo denomina plano normal de la trayectoria en el punto $\alpha(t)$.
+\end{defi}
+
+\begin{defi}[Plano rectificante]
+    El plano
+    \[
+        P(\alpha(t);T_\alpha(t),B_\alpha(t))
+    \]
+    se lo denomina plano rectificante de la trayectoria en el punto $\alpha(t)$.
+\end{defi}
+  
+
+\begin{prop}
+    El vector aceleración en el tiempo $t$ es una combinación lineal de los vectores $T_\alpha(t)$ y $T_\alpha'(t)$ para todo $t\in I$, además
+    \[
+        a_\alpha(t)=\rho'_\alpha(t) T_\alpha(t)+\rho_\alpha(t) T_\alpha' (t).
+    \]
+\end{prop}
+
+\begin{advertencia}
+    En las definiciones anteriores, si no existe ambigüedad en cuando a la parametrización de la curva $C$, se omitirá el uso del subíndice $\alpha$.
+\end{advertencia}
+
+\section{Longitud de arco y curvatura}
+
+\begin{defi}[Longitud de arco]
+    Si $\func{\alpha}{[a,b]}{\R^n}$, la longitud de arco de la curva $C$ está dada por
+    \[
+        \ell(C)=\int_a^b \rho_\alpha(t) dt.
+    \]
+\end{defi}
+
+
+\begin{prop}
+    La longitud de arco es invariante bajo cambio de parámetro.
+\end{prop}
+
+En esta sección consideraremos $\func{\alpha}{I}{\R^3}$, dos veces derivable, con $\alpha'(t)\neq 0$ para todo $t\in I$.
+
+\begin{defi}[Curvatura]
+    El vector curvatura se define por
+    \[
+        K_\alpha(t)=\frac{1}{\rho_\alpha(t)}T_\alpha'(t),
+    \]
+    para todo $t\in I$, además, la curvatura se define por
+    \[
+        \kappa_\alpha(t)=\frac{\|T_\alpha'(t)\|}{\rho_\alpha(t)},
+    \]
+    para todo $t\in I$.
+\end{defi}
+
+\begin{prop}
+    La curvatura es invariante bajo cambio de parámetro.
+\end{prop}
+
+\begin{prop}
+    Se tiene que
+    \[
+        a_\alpha(t)=\rho_\alpha'(t) T_\alpha(t) + \kappa_\alpha(t) \rho^2_\alpha(t) N_\alpha(t),
+    \]
+    para todo $t\in I$, además,
+    \[
+        \kappa_\alpha(t) = \frac{\|a_\alpha(t)\times v_\alpha(t)\|}{\rho^3_\alpha(t)}
+    \]
+    para todo $t\in I$.
+\end{prop}
+
+\begin{defi}[Torsión]
+    La torsión se define por
+    \[
+        \tau_\alpha(t)= \frac{v_\alpha(t)\cdot(a_\alpha(t)\times a_\alpha'(t))}{\| v_\alpha(t)\times a_\alpha(t) \|^2},
+    \]
+    para todo $t\in I$.
+\end{defi}
+
+\begin{prop}
+    La torsión es invariante bajo cambio de parámetro.
+\end{prop}
+
+\section{Topología de $\R^n$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En este capítulo consideraremos $n>1$.
+
+\begin{defi}
+    Dados $x_0\in\R^n$ y $r>0$, se define la bola abierta de centro $x_0$ y radio $r$ como el conjunto
+    \[
+        B(x_0,r)=\{x\in\R^n : \|x-x_0\|<r\}
+    \]
+    
+\end{defi}
+
+\begin{defi}[Conjunto abierto y cerrado]
+    Dado un conjunto $A\subset \R^n$, se dice que es abierto si para todo $x\in A$, existe $r>0$ tal que
+    \[
+        B(x,r)\subset A.
+    \]
+    Por otro lado, se dice que $A$ es cerrado si $A^c$ es abierto.
+\end{defi}
+
+\begin{defi}[Clausura y frontera]
+    Dado un conjunto $A\subset \R^n$, se define la clausura de $A$ por
+    \[
+        \cl{A}=\{x\in \R^n: (\forall r>0)(B(x,r)\cap A\neq \emptyset)\};
+    \]
+    el derivado de $A$ por
+    \[
+        A'=\{x\in \R^n: (\forall r>0)((B(x,r)\setminus\{x\})\cap A\neq \emptyset)\};
+    \]
+    la frontera de $A$ por
+    \[
+        \delta(A)=\{x\in \R^n: (\forall r>0)(B(x,r)\cap A\neq \emptyset\ \land\ B(x,r)\cap A^c\neq \emptyset) \};
+    \]
+    y el interior de $A$ por
+    \[
+        \inte(A)=\{x\in \R^n: (\exists r>0)(B(x,r)\subset A)\}.
+    \]
+\end{defi}
+
+\begin{defi}[Conjunto acotado]
+    Dado un conjunto $A\subset \R^n$, se dice que $A$ es cotado si existe $R>0$ tal que
+    \[
+        \|x\|<R,
+    \]
+    para todo $x\in A$.
+\end{defi}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Cálculo diferencial de campos escalares
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Cálculo diferencial de campos escalares}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección consideraremos $\Omega\subset \R^n$ e $I\subset\R$ un intervalo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Límites y continuidad de campos escalares}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Límite]
+    Dados un campo escalar $\func{f}{\Omega}{\R}$, $a\in \Omega'$ y $L\in\R$, se dice que $L$ es el límite de $f$ cuando $x$ tiende a $a$ si: para todo $\epsilon>0$, existe $\delta>0$ tal que para todo $x\in \Omega$,
+    \[
+        0<\|x-a\|<\delta \Imp |f(x)-L| < \epsilon. 
+    \]
+    Esto se denota por
+    \[
+        \lim_{x\to a}f(x)=L.
+    \]
+\end{defi}
+
+\begin{prop}
+	El límite de una función es único.
+\end{prop}
+
+\begin{defi}[Límite infinito]
+    Dados un campo escalar $\func{f}{\Omega}{\R}$ y $a\in \Omega'$, se dice que el límite de $f$ cuando $x$ tiende a $a$ es $+\infty$ (resp. $-\infty$) si: para todo $M>0$, existe $\delta>0$ tal que para todo $x\in \Omega$,
+    \[
+        0<\|x-a\|<\delta \Imp f(x) > M 
+    \]
+    (resp. 
+    \[
+        0<\|x-a\|<\delta \Imp f(x) < -M ).
+    \]
+    Esto se denota por
+    \[
+        \lim_{x\to a}f(x)=+\infty,
+    \]
+    (resp. 
+    \[
+        \lim_{x\to a}f(x)=-\infty).
+    \]
+\end{defi}
+
+\begin{defi}[Límite iterado]
+    En $\R^2$, sean $\func{f}{\Omega=I_1\times I_2}{\R}$ un campo escalar, con $I_1,I_2\subset \R$, y $a=(a_1,a_2)\in \Omega'$. Para $x\neq a_1$,  se define la función:
+    \[
+        \funcion{f_x}{I_2}{\R}{y}{f(x,y).}
+    \]
+    Si para cada $x\in I_1$, con $x\neq a_1$ existe
+    \[
+        \lim_{y\to a_2}f_x(y),
+    \]
+    entonces se define
+    \[
+        \funcion{g}{I_1\setminus\{a_1\}}{\R}{x}{\lim_{y\to a_2}f_x(y).}
+    \]
+    Finalmente, si existe
+    \[
+        \lim_{x\to a_1} g(x),
+    \]
+    entonces, se dice que existe el límite iterado, denotado por $\dlim_{x\to a_1}\dlim_{y\to a_2}f(x,y)$, y se define por
+    \[
+        \lim_{x\to a_1}\lim_{y\to a_2}f(x,y)=
+        \lim_{x\to a_1} g(x)=
+        \lim_{x\to a_1} \l(\lim_{y\to a_2}f_x(y)\r).
+    \]
+\end{defi}
+
+\begin{prop}
+    En $\R^2$, sean $\func{f}{\Omega}{\R}$ un campo escalar y $a=(a_1,a_2)\in \Omega'$, si existen
+    \[
+        \lim_{(x,y)\to a}f(x,y),
+        \qquad
+        \lim_{x\to a_1}\lim_{y\to a_2}f(x,y)
+        \texty
+        \lim_{y\to a_2}\lim_{x\to a_1}f(x,y),
+    \]
+    entonces todos estos son iguales.
+\end{prop}
+
+\begin{defi}[Límite por trayectorias]
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar, $a\in \Omega'$, $\func{\alpha}{I}{\R^n}$ una trayectoria inyectiva tal que existe $t_0\in I$ que cumple $\alpha(t_0)=a$. Se define el límite de $f$ cuando $x$ tiende a $a$, por la trayectoria $\alpha$, mediante
+    \[
+        \lim_{t\to t_0} f(\alpha(t)),
+    \]
+    siempre que este exista.
+\end{defi}
+
+
+\begin{prop}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega'$, si existe
+    \[
+        \lim_{x\to a}f(x)=L,
+    \]
+    entonces existe el límite por cualquier trayectoria y es igual a $L$.
+\end{prop}
+
+\begin{prop}
+    Sean $\func{f,g}{\Omega}{\R}$ campos escalares y $a\in \Omega'$. Si existen
+    \[
+        \lim_{x\to a}f(x)
+        \texty
+        \lim_{x\to a}g(x)
+    \]
+    entonces
+    \begin{itemize}
+    \item
+        $\dlim_{x\to a}\l(f(x)+g(x)\r)=\dlim_{x\to a}f(x)+\dlim_{x\to a}g(x)$;
+    \item 
+        $\dlim_{x\to a}(f(x)g(x))=\l(\dlim_{x\to a}f(x)\r)\l(\dlim_{x\to a}g(x)\r)$;
+    \item 
+        $\dlim_{x\to a}\l(\frac{f(x)}{g(x)}\r)=\frac{\dlim_{x\to a}f(x)}{\dlim_{x\to a}g(x)}$, siempre que $\dlim_{x\to a}g(x)\neq 0$;
+    \item 
+        $\dlim_{x\to a}|f(x)|=\l|\dlim_{x\to a}f(x)\r|$.
+    \end{itemize}
+\end{prop}
+
+\begin{prop}
+    Sean $\func{f,g,h}{\Omega}{\R}$ campos escalares y $a\in \Omega'$. Si
+    \[
+    	g(x)\leq f(x) \leq h(x)
+    \]
+    para todo $x\in \Omega\setminus\{a\}$ y si existen
+    \[
+        \lim_{x\to a}g(x)=\lim_{x\to a}h(x)=L,
+    \]
+    entonces
+    \[
+    	\lim_{x\to a}f(x)=L.
+    \]
+\end{prop}
+
+\begin{defi}[Continuidad]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$, se dice que $f$ es continua en $a$ si
+    \[
+        \lim_{x\to a}f(x)=f(a).
+    \]
+    Se dice que $f$ es continua en $\Omega$ si $f$ es continua en cada punto de $\Omega$.
+\end{defi}
+
+\begin{prop}
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$, se tiene que $f$ es continua en $a$ si y solo si: para todo $\epsilon>0$, existe $\delta>0$ tal que para todo $x\in \Omega$ se tiene que
+    \[
+        \|x-a\|<\delta \Longrightarrow |f(x)-f(a)|<\epsilon.
+    \]
+\end{prop}
+
+\begin{teo}[Cambio de variable]
+    Sean $\Omega_1,\Omega_2\subset \R^n$ y sean $\func{f}{\Omega_1}{\R}$, $\func{g}{\Omega_2}{\R^n}$ tales que $\img(g)\subset \Omega_1$ y $a\in\Omega_2'$. Si:
+    \begin{enumerate}
+    \item existen $\dlim_{x\to a}g(x)=b$ y $\dlim_{y\to b}f(y)$; y
+    \item se satisfacen una de las tres condiciones siguientes:
+        \begin{enumerate}
+        \item la función $f$ es continua en $b$;
+        \item la función $f$ no está definida en $b$, es decir, $b\not\in \Omega_1$;
+        \item existe una bola $B(a,r)$ tal que
+        \[
+            g(x) \neq b
+        \]
+        para todo $x\in B(a,r)\setminus\{a\}$.
+        \end{enumerate}
+    \end{enumerate}
+    Entonces:
+    \[
+        \lim_{x\to a}f(g(x)) = \lim_{y\to b}f(y).
+    \]
+\end{teo}
+
+\begin{advertencia}
+    Para calcular el límite de una composición como la siguiente
+    \[
+        \lim_{x\to a}f(g(x)),
+    \]
+    se puede usar el \emph{cambio de variable}
+    \[
+        y = g(x)
+    \]
+    siempre que se cumplan las condiciones de teorema anterior, de esta forma, se tendría
+    \[
+        \lim_{x\to a}f(g(x)) = \lim_{y\to b} f(y)
+    \]
+    Esto se denomina \emph{método del cambio de variable}.
+\end{advertencia}
+
+\begin{prop}
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar continuo con $\Omega$ un conjunto cerrado y acotado, se tiene que $f$ alcanza su mínimo y su máximo en $\Omega$.
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Diferenciabilidad}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección, consideraremos $\Omega\subset \R^n$ como un conjunto abierto.
+
+\begin{defi}[Derivada respecto a un vector]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar, $a\in \Omega$ y $y\in \R^n$, la derivada de $f$ en $a$ respecto a $y$ se define por
+    \[
+        f'(a;y)=\lim_{h\to 0}\frac{f(a+hy)-f(a)}{h},
+    \]
+    siempre que el límite exista.
+\end{defi}
+
+\begin{prop}
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar, $a\in \Omega$ y $y\in \R^n$, definimos
+    \[
+        \funcion{g}{I}{\R}{t}{g(t)=f(a+ty).}
+    \]
+    Si, para todo $t\in I$, existe
+    \[
+        g'(t)
+        \texto
+        f'(a+ty;y)
+    \]
+    entonces la otra también existe y
+    \[
+        g'(t)=f'(a+ty;y).
+    \]
+    En particular se tiene que
+    \[
+        g'(0)=f'(a;y).
+    \]
+\end{prop}
+
+
+\begin{teo}[Valor medio]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar, $a\in \Omega$ y $y\in \R^n$. Si $f'(a+ty;y)$ existe para todo $t\in[0,1]$, entonces existe $\zeta\in (0,1)$ tal que
+    \[
+        f(a+y)-f(a)=f'(a+\zeta y;y).
+    \]
+\end{teo}
+
+\begin{defi}[Derivadas direccionales y parciales]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar, $a\in \Omega$ y $y\in \R^n$ un vector unitario. A $f'(a;y)$ se la llama la derivada de $f$ en $a$ en la dirección de $y$. Además, si se trata de un vector de la base canónica $e^k$, se lo llama la $k$-ésima derivada parcial de $f$ en $a$ y se la denota por 
+    \[
+        D_k f(a)=\frac{\partial f}{\partial x_k}(a)=f'(a;e^k).
+    \]
+\end{defi}
+
+\begin{defi}[Campo escalar derivable y Vector gradiente]
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si existe la derivada de $f$ en cualquier dirección, se define el vector gradiente de $f$ en $a$ por
+    \begin{align*}
+        \nabla f(a)
+            & =\l(D_1 f(a), D_2 f(a),\ldots, D_n f(a)\r) \\
+            & = \l(\parcial{f}{x_1}, \parcial{f}{x_2},\ldots, \parcial{f}{x_n} \r)
+    \end{align*}
+\end{defi}
+
+\begin{prop}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si existe el gradiente de $f$ en $a$, entonces
+    \[
+        f'(a;y)=\nabla f(a)\cdot y,
+    \]
+    para todo $y\in\R^n$.
+\end{prop}
+
+\begin{prop}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si existe el gradiente de $f$ en $a$ tal que $\nabla f(a)\neq 0$, entonces el mayor valor de $f'(a;y)$, con $\|y\|=1$, se lo alcanza en $\frac{\nabla f(a)}{\|\nabla f(a)\|}$ y su valor es
+    \[
+        f'\l(a;\frac{\nabla f(a)}{\|\nabla f(a)\|}\r)=\|\nabla f(a)\|.
+    \]
+\end{prop}
+
+\begin{advertencia}
+    La existencia de todas la derivadas direccionales no implica la continuidad del campo escalar. Es decir, que un campo escalar tenga gradiente no implica que sea continua.
+\end{advertencia}
+
+\begin{defi}[Campo escalar diferenciable en un punto]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$, se dice que $f$ es diferenciable en $a$ si existe una aplicación lineal $\func{T}{\R^n}{\R}$ tal que
+    \[
+        \lim_{h\to 0}\frac{f(a+h)-f(a)-T(h)}{\|h\|}=0.
+    \]
+    A la aplicación $T$ se la llama el diferencial de $f$ en $a$ y se lo denota por
+    \[
+        f'(a)
+        \texto
+        Df(a).
+    \]
+\end{defi}
+
+\begin{prop}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si $f$ es diferenciable en $a$, entonces existe $r>0$ tal que para todo $h\in\R^n$ que cumple $\|h\|<r$, se tiene que
+    \[
+        f(a+h)=f(a)+f'(a)(h)+\|h\|E(a,h),
+    \]
+    donde $E(a,h)\to 0$ cuando $\|h\|\to 0$.
+\end{prop}
+
+\begin{prop}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si $f$ es diferenciable en $a$, entonces existe su derivada con respecto a cualquier vector, además,
+    \[
+        f'(a)(h)=f'(a;h)
+    \]
+    para todo $h\in\R^n$.
+\end{prop}
+
+\begin{advertencia}
+    Si un campo escalar es diferenciable entonces existe su gradiente.
+\end{advertencia}
+
+\begin{teo}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$ tales que $f$ es diferenciable en $a$. Si $f$ es diferenciable en $a$ entonces
+    \[
+        [f'(a)]=\nabla f(a)
+    \]
+    es decir, 
+    \[
+        f'(a)(h)=\nabla f(a)\cdot h,
+    \]
+    para todo $h\in\R^n$.
+\end{teo}
+
+\begin{prop}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si $f$ es diferenciable en $a$, entonces existe $r>0$ tal que para todo $h\in\R^n$ que cumple $\|h\|<r$, se tiene que
+    \[
+        f(a+h)=f(a)+\nabla f(a)\cdot h+\|h\|E(a,h),
+    \]
+    donde $E(a,h)\to 0$ cuando $\|h\|\to 0$.
+\end{prop}
+
+\begin{teo}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si $f$ es diferenciable en $a$, entonces $f$ es continua en $a$.
+\end{teo}
+
+\begin{advertencia}
+    Si un campo escalar tiene gradiente, no necesariamente es diferenciable.
+\end{advertencia}
+
+\begin{teo}[Condición suficiente de diferenciabilidad]
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si existen las derivadas parciales de $f$ en una bola de centro en $a$ y estas son continuas en $a$, entonces $f$ es diferenciable en $a$.
+\end{teo}
+
+\begin{advertencia}
+    A un campo escalar que cumpla las hipótesis del teorema anterior se le llama diferenciable con continuidad.
+\end{advertencia}
+
+\begin{teo}[Regla de la cadena]
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar, $\func{\alpha}{I}{\R^n}$ una trayectoria tal que $\img(\alpha)\subset \Omega$ y $t\in I$. Si $\alpha$ es derivable en $t\in I$ y $f$ es diferenciable en $\alpha(t)\in\Omega$, entonces $f\circ \alpha$ es derivable en $t$ y se tiene que
+    \[
+        (f\circ \alpha)'(t) = \nabla f(\alpha(t))\cdot \alpha'(t).
+    \]
+\end{teo}
+
+\begin{prop}
+    En $\R^2$, sean $\func{f}{\Omega}{\R}$ un campo escalar y $C$ una de sus curvas de nivel. Se tiene que 
+    \begin{itemize}
+        \item El gradiente de $f$ es normal a $C$.
+        \item La derivada direccional de $f$ a lo largo de $C$ es 0.
+        \item La derivada direccional de $f$ tiene su valor máximo en la dirección normal a $C$.
+    \end{itemize}
+\end{prop}
+
+\begin{prop}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $C$ uno de sus conjuntos de nivel. Se tiene que 
+    \begin{itemize}
+        \item El gradiente de $f$ es normal a toda curva contenida en $C$.
+    \end{itemize}
+\end{prop}
+
+\begin{advertencia}
+	En $\R^2$, si $\func{f}{\Omega}{\R}$ es un campo escalar diferenciable en $(x_0,y_0)\in \Omega$ entonces la ecuación del plano tangente a $f$ en el punto $(x_0,y_0)$ es
+    \[
+    	z = f(x_0,y_0) + \nabla f(x_0,y_0) \cdot (x-x_0,y-y_0)
+    \]
+    para $(x,y,z)\in\R^3$.
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Cálculo diferencial de campos vectoriales
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Cálculo diferencial de campos vectoriales}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección asumiremos que $n,m>1$ y $\Omega\subset \R^n$.
+
+\begin{defi}[Límite]
+Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega'$, el límite de $F$ cuando $x$ tiende a $a$ es
+\[
+    \lim_{x\to a}F(x)
+    =\left(\lim_{x\to a}f_1(x),\lim_{x\to a}f_2(x),\ldots,\lim_{x\to a}f_m(x)\right)
+\]
+siempre que los límites de la derecha existan.
+\end{defi}
+
+\begin{defi}[Continuidad]
+Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$, se dice que $F$ es continua en $a$ si
+\[
+    \lim_{x\to a}F(x)=F(a).
+\]
+Se dice que $F$ es continua en $D$ si $F$ es continua en cada punto de $D$.
+\end{defi}
+
+\begin{prop}
+Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega'$, se tiene que
+\[
+    \lim_{x\to a}F(x)=L.
+\]
+Si y solo si: para todo $\epsilon>0$, existe $\delta>0$ tal que para todo $x\in \Omega$ se tiene que
+\[
+    0<\|x-a\|<\delta \Longrightarrow \|F(x)-L\|<\epsilon.
+\]
+\end{prop}
+
+\begin{prop}
+Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$, se tiene que $F$ es continua en $a$ si y solo si: para todo $\epsilon>0$, existe $\delta>0$ tal que para todo $x\in \Omega$ se tiene que
+\[
+    \|x-a\|<\delta \Longrightarrow \|F(x)-F(a)\|<\epsilon.
+\]
+\end{prop}
+
+De aquí en adelante, se supone que $\Omega$ es un conjunto abierto.
+
+\begin{defi}[Derivada respecto a un vector]
+    Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial, $a\in \Omega$ y $y\in \R^n$, la derivada de $F$ en $a$ respecto a $y$ se define por
+    \[
+        F'(a;y)=\left(f_1'(a;y),f_2'(a;y),\ldots,f_m'(a;y)\right),
+    \]
+    siempre que las derivadas de la derecha existan.
+\end{defi}
+
+\begin{prop}
+    Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial, $a\in \Omega$ y $y\in \R^n$, se tiene que
+    \[
+        F'(a;y)=\lim_{h\to 0}\frac{F(a+hy)-F(a)}{h},
+    \]
+    siempre que el límite exista.
+\end{prop}
+
+\begin{defi}[Derivadas direccionales y parciales]
+    Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial, $a\in \Omega$ y $y\in \R^n$ un vector unitario. A $F'(a;y)$ se la llama la derivada de $F$ en $a$ en la dirección de $y$. Además, si se trata de un vector de la base canónica $e^k$, se lo llama la $k$-ésima derivada parcial de $F$ en $a$ y se la denota por 
+    \[
+        D_k F(a)=\frac{\partial F}{\partial x_k}(a)=F'(a;e^k).
+    \]
+\end{defi}
+
+\begin{prop}
+    Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$, si existe $D_k F(a)$, entonces
+    \[
+        D_k F(a) = (D_k f_1(a), D_k f_2(a), \ldots, D_k f_m(a)).
+    \]
+\end{prop}
+
+\begin{defi}[Matriz Jacobiana]
+    Sean $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$. Si existe la derivada de $F$ en cualquier dirección, se define la matriz jacobiana de $F$ en $a$ por
+    \[
+        J_F(a) = 
+        \begin{bmatrix}
+         D_1f_1(a) & D_2f_1(a) & \cdots & D_nf_1(a) \\
+         D_1f_2(a) & D_2f_2(a) & \cdots & D_nf_2(a) \\
+         \vdots & \vdots &  \ddots & \vdots\\
+         D_1f_m(a) & D_2f_m(a) & \cdots & D_nf_m(a) \\
+        \end{bmatrix}.
+    \]
+\end{defi}
+
+\begin{prop}
+    Sean $\func{F}{\Omega}{\R^m}$ una función y $a\in \Omega$. Si existe la jacobiana de $F$ en $a$, entonces
+    \[
+        [F'(a;y)]= J_F(a) [y],
+    \]
+    para todo $y\in\R^n$.
+\end{prop}
+
+\begin{advertencia}
+    La existencia de todas la derivadas direccionales no implica la continuidad del campo vectorial. Es decir, que un campo vectorial tenga jacobiana no implica que sea continuo.
+\end{advertencia}
+
+\begin{defi}[Campo vectorial diferenciable en un punto]
+    Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$, se dice que $F$ es diferenciable en $a$ si existe una aplicación lineal $\func{T}{\R^n}{\R^m}$ tal que
+    \[
+        \lim_{h\to 0}\frac{F(a+h)-F(a)-T(h)}{\|h\|}=0.
+    \]
+    A la aplicación $T$ se la llama el diferencial de $F$ en $a$ y se lo denota por
+    \[
+        F'(a)
+        \texto
+        DF(a).
+    \]
+\end{defi}
+
+\begin{prop}
+    Sean $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$. Si $F$ es diferenciable en $a$, entonces existe $r>0$ tal que para todo $h\in\R^n$ que cumple $\|h\|<r$, se tiene que
+    \[
+        F(a+h)=F(a)+F'(a)(h)+\|h\|E(a,h),
+    \]
+    donde $E(a,h)\to 0$ cuando $\|h\|\to 0$.
+\end{prop}
+
+\begin{prop}
+    Sean $\func{f}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$. Si $F$ es diferenciable en $a$, entonces existe su derivada con respecto a cualquier vector, además,
+    \[
+        F'(a)(h)=F'(a;h)
+    \]
+    para todo $h\in\R^n$.
+\end{prop}
+
+\begin{advertencia}
+    Si un campo vectorial es diferenciable entonces existe su jacobiana.
+\end{advertencia}
+
+\begin{teo}
+    Sean $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$. Si $F$ es diferenciable en $a$ entonces
+    \[
+        [F'(a)]=J_F(a)
+    \]
+    es decir, 
+    \[
+        [F'(a)(h)]=J_F(a) [h],
+    \]
+    para todo $h\in\R^n$.
+\end{teo}
+
+\begin{teo}
+    Sean $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$. Si $F$ es diferenciable en $a$, entonces $F$ es continuo en $a$.
+\end{teo}
+
+\begin{advertencia}
+    Si un campo vectorial tiene jacobiana, no necesariamente es diferenciable.
+\end{advertencia}
+
+Aquí, asumiremos $k\in\N^*$ y que $\Omega_1\subset \R^k$, $\Omega_2\subset \R^n$ son conjuntos abiertos.
+
+\begin{teo}[Regla de la cadena]
+    Sean $\func{F}{\Omega_1}{\R^m}$ y $\func{G}{\Omega_2}{\R^k}$ campos vectroiales tales que $\img(G)\subset \Omega_1$ y $a\in \Omega_2$. Si $G$ es diferenciable en $a$ y $F$ es diferenciable en $G(a)$, entonces $F\circ G$ es derivable en $a$ y se tiene que
+    \[
+        (F\circ G)'(a) = F'(G(a))\circ G'(a).
+    \]
+\end{teo}
+
+\begin{prop}
+    Sean $\func{F}{\Omega_1}{\R^m}$ y $\func{G}{\Omega_2}{\R^k}$ campos vectoriales tales que $\img(G)\subset \Omega_1$ y $a\in \Omega_2$. Si $G$ es diferenciable en $a$ y $F$ es diferenciable en $b=G(a)$, entonces 
+    \[
+        J_{F\circ G}(a) = J_F(G(a)) J_G(a),
+    \]
+    así, si $i=1,\ldots,n$ y $j=1,\ldots,m$, entonces
+    \[
+        D_i (F\circ G)_j(a) = D_1 f_j(b) D_i g_1(a) + D_2 f_j(b) D_i g_2(a) + \cdots + D_k f_j(b) D_i g_k(a).
+    \]
+\end{prop}
+
+\begin{advertencia}
+    Bajo la proposición anterior, si tenemos $b=x(a)$ y 
+    \begin{gather*}
+        \funcion{x}{\Omega_2\subset \R^n}{\R^k}{(t_1,\ldots t_n)}{x(t_1,\ldots, t_n),}\\
+        \funcion{y}{\Omega_1\subset \R^k}{\R^m}{(x_1,\ldots x_k)}{y(x_1,\ldots, x_k)}
+    \end{gather*}
+    entonces
+    \[
+        \frac{\partial (y\circ x)_j}{\partial t_i}(a) 
+            = \frac{\partial y_j}{\partial x_1} (b) \frac{\partial x_1}{\partial t_j}(a)
+            + \frac{\partial y_j}{\partial x_2} (b) \frac{\partial x_2}{\partial t_j}(a)
+            + \cdots 
+            + \frac{\partial y_j}{\partial x_k} (b) \frac{\partial x_k}{\partial t_j}(a).
+    \]
+    
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Función implícita
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Función implícita}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+En esta sección tomaremos $\Omega\subset\R^n$ un abierto.
+
+\begin{defi}
+    Sean $\func{f}{\Omega}{\R}$ y $\func{\hat{f}}{\R^{n+1}}{\R}$ campos escalares, se dice que $f$ está definida de manera implícita con respecto a $\hat{f}$ si para todo $(x_1,\ldots,x_n)\in \Omega$ se tiene que
+    \[
+        \hat{f}(x_1,\ldots,x_n,f(x_1,\ldots,x_n))=0.
+    \]
+\end{defi}
+
+\begin{teo}
+    Sean $\func{f}{\Omega}{\R}$ y $\func{\hat{f}}{\R^{n+1}}{\R}$ campos escalares tales que $f$ está definido de manera implícita con respecto a $\hat{f}$. Si $\hat{f}$ es diferenciable, entonces para cada $k=1,\ldots, n$, se tiene que
+    \[
+        D_k f (x_1,\ldots,x_n) = 
+        -\frac{D_k \hat{f}(x_1,\ldots,x_n,f(x_1,\ldots,x_n))}{D_{n+1} \hat{f}(x_1,\ldots,x_n,f(x_1,\ldots,x_n))}
+    \]
+    para todo $x_1,\ldots,x_n\in \Omega$ tal que $D_{n+1} \hat{f}(x_1,\ldots,x_n,f(x_1,\ldots,x_n))\neq 0$.
+\end{teo}
+
+\begin{advertencia}
+    Bajo el teorema anterior, tenemos que
+    \[
+        \parcial{f}{x_k}(x_1,\ldots,x_n)= -\frac{\parcial{\hat{f}}{x_k}(x_1,\ldots,x_n,f(x_1,\ldots,x_k))}{\parcial{\hat{f}}{x_{n+1}}(x_1,\ldots,x_n,f(x_1,\ldots,x_n))}
+    \]
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Derivadas de orden superior
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Derivadas de orden superior}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección asumiremos que $n>1$, $\Omega\subset \R^n$ es un abierto e $I\subset \R$ es un intervalo.
+
+\begin{defi}[Derivadas parciales de orden superior]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar tal que, para $i=1,\ldots, n$, existe $D_if(x)$ exista para todo $x\in \Omega$, para $j=1,\ldots, n$ y $a\in \Omega$, se define la derivada parcial mixta por
+    \[
+        D_{j,i} f(a)=\frac{\partial^2 f}{\partial x_j\partial x_i}(a)
+        =\frac{\partial f}{\partial x_j}\l( \frac{\partial f}{\partial x_i}\r)(a)
+        =D_j(D_i f)(a).
+    \]
+\end{defi}
+
+\begin{teo}
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar tal que sus derivadas parciales mixtas existan y sean continuas en $\Omega$, entonces
+    \[
+        D_j(D_i f)(a) = D_i(D_j f)(a)
+    \]
+    para todo $i,j\in\{1,\ldots, n\}$ y $a\in \Omega$.
+\end{teo}
+
+\begin{defi}[Matriz hessiana]
+    Dado $\func{f}{\Omega}{\R}$ un campo escalar diferenciable con continuidad en $\Omega$, además consideramos $\func{\nabla f}{\Omega}{\R^n}$ como un campo vectorial. Si $\nabla f$ posee matriz jacobiana en $a\in \Omega$, entonces se define la matriz hessiana de $f$ por
+    \[
+        H_f(a)= (J_{\nabla f} (a))^T = 
+        \begin{bmatrix}
+         D_{1,1}f(a) & D_{1,2}f(a) & \cdots & D_{1,n}f(a) \\
+         D_{2,1}f(a) & D_{2,2}f(a) & \cdots & D_{2,n}f(a) \\
+         \vdots & \vdots &  \ddots & \vdots\\
+         D_{n,1}f(a) & D_{n,2}f(a) & \cdots & D_{n,n}f(a) 
+        \end{bmatrix}.
+    \]
+\end{defi}
+ 
+
+\begin{advertencia}
+    La matriz hessiana puede ser entendida, de cierto modo, como el representante de la segunda derivada de la función, la cual también es una aplicación lineal.
+\end{advertencia}
+
+\begin{advertencia}
+    Si un campo escalar $f$ es diferenciable y $\nabla f$, visto como un campo vectorial, es diferenciable, entonces se dice que $f$ es dos veces diferenciable.
+\end{advertencia}
+
+\begin{advertencia}
+    Si las derivadas parciales mixtas de una función son continuas, entonces su matriz hessiana es simétrica. En este caso, se dice que la función es dos veces diferenciable con continudad.
+\end{advertencia}
+ 
+
+\begin{teo}[Fórmula de Taylor de primer orden]
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar diferenciable y $a\in \Omega$, entonces existe $r>0$ tal que para todo $h\in\R^n$ que cumple $\|h\|<r$, se tiene que
+    \[
+        f(a+h) = f(a) + \nabla f(a) \cdot h + \|h\| E(a,h),
+    \]
+    donde $E(a,h)\to 0$ cuando $h\to 0$.
+\end{teo}
+ 
+
+\begin{prop}[Aproximación lineal]
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar diferenciable y $a\in \Omega$, entonces la función definida por
+    \[
+        F(x) = f(a) + \nabla f(a) \cdot (x-a),
+    \]
+    es una buena aproximación lineal de la función $f$ cerca de $a$, es decir,
+    \[
+        \lim_{x\to a} \frac{F(x)-f(x)}{\|x-a\|} = 0.
+    \]
+\end{prop}
+ 
+
+\begin{teo}[Fórmula de Taylor de segundo orden]
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar dos veces diferenciable y $a\in \Omega$, entonces existe $r>0$ tal que para todo $h\in\R^n$ que cumple $\|h\|<r$, se tiene que
+    \[
+        f(a+h) = f(a) + \nabla f(a) \cdot h +  \frac{1}{2!}[h]^T Hf(a) [h] +\|h\|^2 E(a,h),
+    \]
+    donde $E(a,h)\to 0$ cuando $h\to 0$.
+\end{teo}
+ 
+
+\begin{prop}[Aproximación cuadrática]
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar dos veces diferenciable y $a\in \Omega$, entonces la función definida por
+    \[
+        F(x) = f(a) + \nabla f(a) \cdot (x-a) + \frac{1}{2!}[x-a]^T Hf(a) [x-a],
+    \]
+    es una buena aproximación cuadrática de la función $f$ cerca de $a$, es decir,
+    \[
+        \lim_{x\to a} \frac{F(x)-f(x)}{\|x-a\|^2} = 0.
+    \]
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Rotacional, divergencia y laplaciano
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Rotacional, divergencia y laplaciano}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En adelante asumiremos que $\Omega\subset \R^n$ es un conjunto abierto.
+
+\begin{defi}[Divergencia]
+    Dado un campo vectorial $\func{F}{\Omega}{\R^n}$ diferenciable, se define la divergencia de $F$ por
+    \[
+        \dive(F)(x) = \sum_{i=1}^n D_i f_i(x) = \sum_{i=1}^n \parcial{f_i}{x_i}(x)
+    \]
+    para todo $x\in\R^n$.
+\end{defi}
+
+\begin{defi}
+    Dados un campo vectorial $\func{F}{\Omega}{\R^n}$ diferenciable y $x\in\Omega$, si $\dive(F)(x)>0$, se dice que $x$ es una fuente, y si $\dive(F)(x)<0$, se dice que $x$ es un sumidero.
+\end{defi}
+
+\begin{advertencia}
+    Si se tiene que
+    \[
+        \dive(f) = 0
+    \]
+    se dice que $f$ es un campo incompresible.
+\end{advertencia}
+
+\begin{defi}[Rotacional en $\R^2$]
+    Si $n=2$, dado un campo vectorial $\func{F}{\Omega\subset \R^2}{\R^2}$ diferenciable, se define el rotacional de $F$ por
+    \[
+        \rot(F)(x,y) = D_1 f_2(x,y) - D_2 f_1(x,y) = \parcial{f_2}{x}(x,y) - \parcial{f_1}{y}(x,y)
+    \]
+    para $(x,y)\in \Omega$.
+\end{defi}
+
+\begin{defi}
+    Si $n=2$, dados un campo vectorial $\func{F}{\Omega\subset \R^2}{\R^2}$ diferenciable y $(x,y)\in\Omega$, si
+    \[
+        \rot(F)(x,y)>0,
+    \]
+    se dice que el campo tiene rotación antihoraria en $a$, y si
+    \[
+        \rot(F)(x,y)<0,
+    \]
+    se dice que el campo tiene rotación horaria en $a$
+\end{defi}
+
+\begin{defi}[Rotacional en $\R^3$]
+    Si $n=3$, dado un campo vectorial $\func{f}{\Omega}{\R^3}$ diferenciable, se define el rotacional de $F$ por
+    \begin{align*}
+        \rot(F)(x,y,z) 
+        & = \begin{pmatrix}
+                D_2 f_3(x,y,z) - D_3 f_2(x,y,z) \\[4mm]
+                D_3 f_1(x,y,z) - D_1 f_3(x,y,z) \\[4mm]
+                D_1 f_2(x,y,z) - D_2 f_1(x,y,z) 
+            \end{pmatrix}^T \\
+        & = \begin{pmatrix}
+                \parcial{f_3}{y}(x,y,z) - \parcial{f_2}{z}(x,y,z) \\[4mm]
+                \parcial{f_1}{z}(x,y,z) - \parcial{f_3}{x}(x,y,z) \\[4mm]
+                \parcial{f_2}{x}(x,y,z) - \parcial{f_1}{y}(x,y,z) 
+            \end{pmatrix}^T 
+    \end{align*}
+    para $(x,y,z)\in \Omega$.
+\end{defi}
+
+\begin{advertencia}
+    Si se tiene que
+    \[
+        \rot(f) = 0
+    \]
+    se dice que $f$ es un campo irrotacional.
+\end{advertencia}
+
+\begin{advertencia}
+    Se suele usar la notación
+    \[
+        \dive(F) = \nabla\cdot F
+        \texty
+        \rot(F) = \nabla \times F.
+    \]
+\end{advertencia}
+
+\begin{prop}
+    Si $n=3$, dado $\func{f}{\Omega\subset\R^3}{\R}$ un campo escalar diferenciable, se tiene que
+    \[
+        \rot(\nabla f)(x,y,z)=0
+    \]
+    para $(x,y,z)\in \Omega$.
+\end{prop}
+
+\begin{prop}
+    Si $n=3$, dado $\func{F}{\Omega\subset\R^3}{\R^3}$ un campo vectorial diferenciable, se tiene que
+    \[
+        \dive(\rot(F))(x,y,z)=0
+    \]
+    para $(x,y,z)\in \Omega$.
+\end{prop}
+
+\begin{defi}[Laplaciano]
+    Dado un campo escalar $\func{f}{\Omega}{\R}$ diferenciable, se define el laplaciano de $f$ por
+    \[
+        \Delta f (x) = \dive(\nabla f)(x) = \sum_{i=1}^n D_{i,i} f_i(x) = \sum_{i=1}^n \frac{\partial^2 f_i}{\partial x_i^2}(x)
+    \]
+    para todo $x\in\R^n$.
+\end{defi}
+
+\begin{advertencia}
+    Se suele usar la notación
+    \[
+        \Delta f = \nabla^2 f.
+    \]
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Campos conservativos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Campos conservativos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}
+    Dado un campo vectorial $\func{F}{\Omega}{\R^n}$ se dice que es conservativo si existe un campo escalar $\func{f}{\Omega}{\R}$ tal que 
+    \[
+        F(x)=\nabla f(x)
+    \]
+    para todo $x\in \Omega$. De ser este el caso, se dice que $f$ es un potencial de $F$.
+\end{defi}
+
+\begin{prop}
+    Sean $\func{F}{\Omega}{\R^n}$ un campo vectorial diferenciable, se tiene que si $F$ es un campo conservativo, entonces
+    \[
+        D_i F_j(x) = D_j F_i(x)
+    \]
+    para todo $x\in \Omega$ y todo $i,j=1,\ldots,n$.
+\end{prop}
+
+
+\begin{defi}
+    Dada una curva cerrada con parametrización $\func{\alpha}{[a,b]}{\R^n}$, se dice que puede ser deformada continuamente a un punto $c\in\R^n$ en $\Omega\subset \R^n$ si existe una función
+    \[
+        \func{G}{[a,b]\times[0,1]}{\Omega}
+    \]
+    tal que
+    \[
+        G(t,0)=\alpha(t)
+        \texty
+        G(t,1)=c
+    \]
+    para todo $t\in[a,b]$.
+    
+    Se dice que un subconjunto $\Omega\subset \R^n$ es simplemente conexo si toda curva cerrada puede ser deformada continuamente a un punto en $\Omega$.
+\end{defi}
+
+\begin{advertencia}
+    La idea intuitiva para un conjunto simplemente conexo es la de un conjunto que no posee ``huecos''.
+\end{advertencia}
+
+\begin{prop}
+    Sean $\func{F}{\Omega}{\R^n}$, con $n=2,3$, un campo vectorial diferenciable donde $\Omega$ es simplemente conexo, se tiene que $F$ es un campo conservativo si y solo si
+    \[
+        D_i F_j(x) = D_j F_i(x)
+    \]
+    para todo $x\in \Omega$ y todo $i,j=1,\ldots,n$.
+\end{prop}
+
+\begin{prop}
+    Si $n\in\{2,3\}$, dado $\func{F}{\Omega}{\R^n}$, si se tiene que $\rot(F)=0$ y $\Omega$ es simplemente conexo, entonces $F$ es conservativo.
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optimización
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Optimización}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección asumiremos que $n>1$, $\Omega\subset \R^n$.
+
+\begin{defi}[Máximos{,} mínimos y extremos]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Se dice que $f$ alcanza un máximo absoluto (resp. mínimo absoluto) en $a$ si
+    \[
+        f(x) \leq f(a)
+    \]
+    (resp. $f(x) \geq f(a)$) para todo $x\in \Omega$. El valor $f(a)$ se llama máximo absoluto (resp. mínimo absoluto) de $f$ en $\Omega$.
+    
+    Se dice que $f$ alcanza un máximo relativo (resp. mínimo relativo) en $a$ si existe $r>0$ tal que
+    \[
+        f(x) \leq f(a)
+    \]
+    (resp. $f(x) \geq f(a)$) para todo $x\in B(a,r)$.
+    
+    Finalmente, a un máximo relativo o a un mínimo relativo se lo llama extremo de la función.
+\end{defi}
+ 
+
+\begin{teo}
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar diferenciable en el interior de $\Omega$. Si $f$ tiene un extremo en $a\in\inte(\Omega)$, entonces 
+    \[
+        \nabla f(a) = 0.
+    \]
+\end{teo}
+
+\begin{advertencia}
+    Dado un campo escalar diferenciable $\func{f}{\Omega}{\R}$ y $a\in\inte(D)$. Si tenemos que $\nabla f(a)=0$ se dice que $a$ es un punto crítico de $f$. Esto no necesariamente implica que $f$ tiene un extremo de la función, de ser este el caso, se dice que $f$ tiene un punto de ensilladura en $a$.
+\end{advertencia}
+
+\begin{defi}
+    Dada una matriz simétrica $M\in \mathcal{M}_{n\times n}$, se dice que la matriz es:
+    \begin{itemize}
+        \item definida positiva si $x^TMx>0$ para todo $x\in \mathcal{M}_{n\times 1}$, $x\neq 0$;
+        \item definida negativa si $x^TMx<0$ para todo $x\in \mathcal{M}_{n\times 1}$, $x\neq 0$; e
+        \item indefinida si existen $x,y\in \mathcal{M}_{n\times 1}$ tales que $x^TMx>0$ y $y^TMy<0$.
+    \end{itemize}
+\end{defi}
+ 
+
+\begin{teo}[Criterio de la segunda derivada]
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar dos veces diferenciable en el interior de $\Omega$ y $a\in\inte(\Omega)$ un punto crítico de $f$. Se tiene que
+    \begin{itemize}
+        \item si $H_f(a)$ es definida positiva, entonces $f$ alcanza un mínimo en $a$;
+        \item si $H_f(a)$ es definida negativa, entonces $f$ alcanza un máximo en $a$; y
+        \item si $H_f(a)$ es indefinida, entonces $f$ tiene un punto de ensilladura en $a$.
+    \end{itemize}
+\end{teo}
+ 
+
+\begin{prop}[Criterio de los valores propios]
+    Dada una matriz simétrica $M\in \mathcal{M}_{n\times n}$, se tiene que la matriz es:
+    \begin{itemize}
+        \item definida positiva si y solo si todos los valores propios de la matriz son positivos;
+        \item definida negativa si y solo si todos los valores propios de la matriz son negativos;
+        \item indefinida si y solo si tiene valores propios positivos y negativos.
+    \end{itemize}
+\end{prop}
+ 
+
+\begin{prop}[Criterio de Sylvester]
+    Dada una matriz simétrica $M\in \mathcal{M}_{n\times n}$, se tiene que la matriz es:
+    \begin{itemize}
+        \item definida positiva si y solo si todos los determinantes de los menores principales de $M$ son positivos;
+        \item definida negativa si y solo si todos los determinantes de los menores principales impares de $M$ son negativos y los pares son positivos;
+        \item indefinida si y solo si el determinantes de $M$ es diferente de 0 y los determinantes de los menores principales no siguen los patrones antes señalados.
+    \end{itemize}
+\end{prop}
+ 
+
+\begin{teo}
+    En $\R^2$, sean $\func{f}{\Omega}{\R}$ un campo escalar dos veces diferenciable en el interior de $\Omega$ y $a\in\inte(\Omega)$ un punto crítico de $f$, se tiene que
+    \begin{itemize}
+        \item si $\det(H_f(a))>0$ y $D_{1,1}f(a) >0$, entonces $f$ alcanza un mínimo en $a$;
+        \item si $\det(H_f(a))>0$ y $D_{1,1}f(a) <0$, entonces $f$ alcanza un máximo en $a$; y
+        \item si $\det(H_f(a))<0$, entonces $a$ es un punto de ensilladura de $f$.
+    \end{itemize}
+\end{teo}
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Multiplicadores de Lagrange}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección consideraremos resolver el problema:
+\[
+    \l\{
+    \begin{array}{l}
+         \max f(x) \\
+         \text{sujeto a:}\\
+         \quad g(x)=c.
+    \end{array}\r.
+\]
+Donde $f$ y $g$ son campos escalares dos veces diferenciables y $c\in\R$.
+ 
+
+\begin{teo}
+    Sean $\func{f,g}{\Omega}{\R}$ campos escalares dos veces diferenciables y $c\in \R$. Denotemos 
+    \[
+        S = L_c(g) = \{x\in \R^n: g(x)=c\}.
+    \]
+    Si existe $a\in\R^n$ tal que
+    \begin{itemize}
+        \item $\nabla g(a) \neq 0$ y
+        \item $f$ tiene un extremo para $S$ en $a$,
+    \end{itemize}
+    entonces existe un $\lambda\in\R$ tal que
+    \[
+        \nabla f(a) = \lambda \nabla g(a).
+    \]
+\end{teo}
+ 
+
+Así, para resolver el problema antes mencionado, empezamos definiendo
+\[
+    L(\lambda,x) = f(x) - \lambda (g(x)-c)
+\]
+y procedemos a buscar los puntos críticos de manera usual. A esta función se la llama el Lagrangiano del problema.
+ 
+
+\begin{teo}
+    Sean $\func{f,g_1,\ldots,g_m}{\Omega}{\R}$ campos escalares dos veces diferenciables, y $c\in \R^m$. Denotemos 
+    \[
+        S = L_c(g) = \{x\in \R^n: g_1(x)=c_1\land\cdots\land g_m(x)=c_m\}.
+    \]
+    Si existe $a\in\R^n$ tal que
+    \begin{itemize}
+        \item $\nabla g_i(a) \neq 0$, para $i\in\{1,\ldots,m\}$, y
+        \item $f$ tiene un extremo para $S$ en $a$,
+    \end{itemize}
+    entonces existe un $\lambda_1,\ldots,\lambda_m\in\R$ tal que
+    \[
+        \nabla f(a) = \lambda_1 \nabla g_1(a) + \cdots + \lambda_m \nabla g_m(a).
+    \]
+\end{teo}
+ 
+
+\begin{teo}
+    Sean $\func{f,g_1,\ldots,g_m}{\Omega}{\R}$ campos escalares dos veces diferenciables, y $c\in \R^m$. Denotemos 
+    \[
+        S =  \{x\in \R^n: g_1(x)=c_1\land\cdots\land g_m(x)=c_m\}.
+    \]
+    si  $(\lambda_1,\ldots,\lambda_m,a)\in\R^{m+n}$ es un punto crítico de $L$ definida por
+    \[
+        L(\lambda_1,\ldots,\lambda_m,x) = f(x) - \lambda_1 (g_1(x)-c_1) - \cdots
+        - \lambda_m (g_m(x)-c_m),
+    \]
+    entonces, definiendo por $H_k$ a las menores principales de $H_L(\lambda_1,\ldots,\lambda_m,a)$ y la siguiente secuencia
+    \[
+        (-1)^m\det(H_{2m+1}),\qquad
+        (-1)^m\det(H_{2m+2}),\qquad
+        \ldots,\qquad
+        (-1)^m\det(H_{m+n}),
+    \]
+    tenemos el siguiente criterio: 
+    \begin{itemize}
+        \item Si la secuencia anterior consta solo de números positivos, entonces $f$ tiene un mínimo para $S$ en $a$.
+        \item Si la secuencia anterior empieza con un número negativo y luego se alternan los signos, entonces $f$ tiene un máximo para $S$ en $a$.
+        \item Si no se tiene ningún caso anterior, pero $\det(H_L(\lambda_1,\ldots,\lambda_m,a))\neq 0$, entonces $f$ tiene un punto silla para $S$ en $a$.
+    \end{itemize}
+\end{teo}
+ 
+
+\begin{teo}
+    En $\R^2$, sean $\func{f,g}{\Omega}{\R}$ campos escalares dos veces diferenciables, y $c\in \R$. Denotemos 
+    \[
+        S =  \{x\in \R^n: g(x)=c\}.
+    \]
+    si  $(\lambda,a)\in\R^{3}$ es un punto crítico de $L$ definida por
+    \[
+        L(\lambda,x) = f(x) - \lambda (g(x)-c) ,
+    \]
+    entonces tenemos el siguiente criterio: 
+    \begin{itemize}
+        \item Si $\det(H_L(\lambda,a))<0$, entonces $f$ tiene un mínimo para $S$ en $a$.
+        \item Si $\det(H_L(\lambda,a))>0$, entonces $f$ tiene un máximo para $S$ en $a$.
+    \end{itemize}
+\end{teo}
+
+\section{Integrales dobles}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección asumiremos $a,b,c,d\in\R$ tal que $a<b$ y $c<d$ y definimos
+\[
+    R=[a,b]\times [c,d],
+\]
+al cual llamaremos un rectángulo.
+
+\begin{defi}
+    Dado un rectángulo $R$, una partición de orden $n$ es un conjunto
+    \[
+        P=\{(x_i,y_i)\in\R^2:i=0,\ldots,n\},
+    \]
+    donde
+    \[
+        a=x_0<x_1<\cdots<x_n=b
+    \texty
+        c=y_0<y_1<\cdots<y_n=d.
+    \]
+    \begin{itemize}
+    \item 
+        A los conjuntos 
+        \[
+            R_{ij}=[x_{i-1},x_i]\times[y_{j-1},y_j],
+        \]
+        con $i,j=1,\ldots,n$, se los llama subrectángulos de la partición.
+    \item 
+        A las cantidades
+        \[
+            \Delta x_i=x_i-x_{i-1},
+            \texty
+            \Delta y_i=y_i-y_{i-1},
+        \]
+        con $i,j=1,\ldots,n$, se las llama el ancho y el alto del subrectángulo, respectivamente.
+    \item
+        A la cantidad
+        \[
+            \Delta A_{ij} = \Delta x_i\Delta y_j,
+        \]
+        con $i,j=1,\ldots,n$, se la llama área del subrectángulo.
+    \item 
+        A un conjunto
+        \[
+            C = \{c^{ij}\in\R^2: c^{ij}\in R_{ij},\ i,j=1,\ldots,n\},
+        \]
+        se lo llama conjunto de etiquetas para $P$.
+    \item 
+        Al par $(P,C)$ se lo llama una partición etiquetada de $R$.
+    \item
+        A la cantidad
+        \[
+            |P| = \max_{i=1,\ldots,n}\{\Delta x_i,\Delta y_i\}
+        \]
+        se la llama grosor de la partición.
+    \end{itemize}
+\end{defi}
+
+\begin{defi}
+    Sean $\func{f}{R}{\R}$ un campo escalar y $(P,C)$ un partición etiquetada de $R$, entonces
+    \[
+        S(f,P,C) = \sum_{i,j=1}^n f(c^{ij})\Delta A_{ij}
+    \]
+    es la suma de Riemann de $f$ respecto a la partición etiquetada $(P,C)$.
+\end{defi}
+
+\begin{defi}
+    Sea $\func{f}{R}{\R}$ un campo escalar, se define la integral doble de $f$ por
+    \[
+        \iint_R f\, dA =\iint_R f(x,y)dxdy 
+        = \lim_{|P|\to 0} S(f,P,C) 
+        = \lim_{|P|\to 0} \sum_{i,j=1}^n f(c^{ij})\Delta A_{ij},
+    \]
+    siempre que el límite exista (el limite se toma sobre todas las particiones etiquetadas). Si el límite existe, se dice que la función es integrable.
+\end{defi}
+
+\begin{prop}
+    Sea $\func{f}{R}{\R}$ un campo escalar, si $f$ es continua, entonces es integrable.
+\end{prop}
+
+\begin{prop}
+    Sea $\func{f}{R}{\R}$ un campo escalar, si $f$ es acotada y si el conjunto de discontinuidades de $f$ tiene área cero, entonces
+    \[
+        \iint_R f\, dA
+    \]
+    existe.
+\end{prop}
+
+\begin{teo}[Teorema de Fubini]
+    Sea $\func{f}{R}{\R}$ un campo escalar. Supongamos que $f$ es acotada y que $S$, el conjunto de discontinuidades de $f$, tiene área cero. Si cada recta paralela a los ejes de coordenadas interseca a $S$ en una cantidad finita de puntos, entonces
+    \[
+        \iint_R f\, dA = \int_a^b\l( \int_c^d f(x,y)\, dy\r)dx = \int_c^d\l( \int_a^b f(x,y)\, dx\r)dy
+    \]
+\end{teo}
+
+\begin{prop}
+    Sean $\func{f,g}{R}{\R}$ campos escalares integrables. Se tienen las siguientes propiedades:
+    \begin{itemize}
+        \item $f+g$ es integrable y
+        \[
+            \iint_R (f+g)\, dA = \iint_R f\, dA + \iint_R g\, dA.
+        \]
+        \item $cf$ es integrable, donde $c\in\R$ es cualquier constante, y
+        \[
+            \iint_R cf\, dA = c \iint_R f\, dA.
+        \]
+        \item Si $f(x,y)\leq g(x,y)$ para todo $(x,y)\in R$, entonces
+        \[
+            \iint_R f\, dA \leq \iint_R g\, dA.
+        \]
+        \item $|f|$ es integrable y
+        \[
+            \left| \iint_R f\, dA \right| \leq \iint_R |f|\, dA.
+        \]
+    \end{itemize}
+\end{prop}
+
+A partir de aquí, tomaremos a $\Omega$ como un subconjunto cerrado de $R$.
+
+\begin{defi}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar. Definimos la extensión de $f$ a $R$ por
+    \[
+        f^{\text{ext}}(x,y) = \begin{cases}
+                        f(x,y) & \text{ si } (x,y)\in \Omega, \\
+                        0 & \text{ si } (x,y) \not\in \Omega,
+                        \end{cases}
+    \]
+    para $(x,y)\in R$.
+\end{defi}
+
+\begin{defi}
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar, donde $\Omega$ es una región elemental, si $R$ es cualquier rectángulo que contiene a $\Omega$, definimos
+    \[
+        \iint_\Omega f\, dA = \iint f^{\text{ext}}\, dA.
+    \]
+\end{defi}
+
+\begin{defi}
+    Se dice que $\Omega\subseteq\R^2$ es una región elemental si puede ser descrita como un subconjunto de $\R^2$ de alguna de las siguientes maneras:
+    \begin{itemize}
+        \item \textbf{Región de tipo I:} si
+        \[
+            \Omega=\{(x,y)\in\R^2 \, : \, \gamma(x) \leq y \leq \delta(x), \, a\leq x\leq b \},
+        \]
+        donde $\func{\gamma, \delta}{[a,b]}{\R}$ son funciones continuas.
+        \item \textbf{Región de tipo II:} si
+        \[
+            \Omega=\{(x,y)\in\R^2 \, : \, \alpha(y) \leq x \leq \beta(y), \, c\leq y\leq d \},
+        \]
+        donde $\func{\alpha, \beta}{[c,d]}{\R}$ son funciones continuas.
+        \item \textbf{Región de tipo III:} si $\Omega$ es de tipo 1 y de tipo 2.
+    \end{itemize}
+\end{defi}
+
+\begin{teo}
+    Sean $\Omega$ una región elemental en $\R^2$ y $\func{f}{\Omega}{\R}$ un campo escalar continuo.
+    \begin{itemize}
+        \item Si $\Omega$ es te tipo I, entonces
+        \[
+            \iint_\Omega f\, dA = \int_a^b\l( \int_{\gamma(x)}^{\delta(x)}f(x,y) \, dy\r)dx.
+        \]
+        \item Si $\Omega$ es de tipo II, entonces
+        \[
+            \iint_\Omega f\, dA = \int_c^d\l( \int_{\alpha(y)}^{\beta(y)}f(x,y) \, dx\r)dy.
+        \]
+    \end{itemize}
+\end{teo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Cambio de variable de integrales dobles}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{advertencia}
+    Sea
+    \[
+        \funcion{T}{\R^2}{\R^2}{(u,v)}
+            {T(u,v)}
+    \]
+    una aplicación lineal con representante 
+    \[
+        [T]= A =\begin{pmatrix}
+            a & b \\
+            c & d
+          \end{pmatrix},
+    \]
+    tal que $\det(A)\neq 0$. Entonces la función es biyectiva, envía paralelogramos en paralelogramos y vértices de paralelogramos en vértices de paralelogramos. Además, si $\Omega^*$ es un paralelogramo, entonces $\Omega=T(\Omega^*)$ es un paralelogramo y
+    \[
+        \text{Área de } \Omega = |\det(A)| \cdot (\text{Área de } \Omega^*).
+    \]
+\end{advertencia}
+
+   
+En adelante, tomaremos la función inyectiva y diferenciable con continuidad
+\[
+    \funcion{T}{\R^2}{\R^2}{(u,v)}{T(u,v)=(x(u,v),y(u,v))}
+\]
+a la cual llamaremos una transformación de coordenadas.
+   
+\begin{prop}
+    Sean $\Omega$ y $\Omega^*$ regiones elementales de $\R^2$. Supongamos que $\func{T}{\R^2}{\R^2}$ es una transformación de coordenadas tal que $T(\Omega^*)=\Omega$. Si $\func{f}{\Omega}{\R}$ es una función integrable, entonces
+    \[
+        \iint_\Omega f(x,y)\, dxdy = \iint_{\Omega^*} f(T(u,v)) |\det(J_T(u,v))| \, dudv.
+    \]
+\end{prop}
+   
+\begin{advertencia}
+    Si 
+    \[
+        \funcion{T}{\R^2}{\R^2}{(u,v)}{T(u,v)=(x(u,v),y(u,v))}
+    \]
+    es una transformación de coordenadas biyectiva, entonces
+    \[
+        \funcion{T^{-1}}{\R^2}{\R^2}{(x,y)}{T^{-1}(x,y)=(u(x,y),v(x,y))}
+    \]
+    también es una transformación de coordenadas, además
+    \[
+        \det(J_{T^{-1}}(x,y)) = \frac{1}{\det(J_{T}(u,v))},
+    \]
+    con $(x,y)=T(u,v)$.
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Integrales triples
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Integrales triples}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección asumiremos $a,b,c,d,p,q\in\R$ tal que $a<b$, $c<d$ y $p<q$ y definimos
+\[
+    B=[a,b]\times [c,d] \times [p,q]
+\]
+al cual llamaremos un bloque.
+
+\begin{defi}
+    Dado un bloque $B$, una partición de orden $n$ es un conjunto
+    \[
+        P=\{(x_i,y_i,z_i)\in\R^3:i=0,\ldots,n\},
+    \]
+    donde
+    \[
+        a=x_0<x_1<\cdots<x_n=b,
+    \qquad
+        c=y_0<y_1<\cdots<y_n=d
+    \]
+    y
+    \[
+        p=z_0<z_1<\cdots<z_n=q
+    \]
+    \begin{itemize}
+    \item 
+        A los conjuntos 
+        \[
+            B_{ijk}=[x_{i-1},x_i]\times[y_{j-1},y_j]\times[z_{k-1},z_k],
+        \]
+        con $i,j,k=1,\ldots,n$, se los llama subbloques de la partición.
+    \item 
+        A las cantidades
+        \[
+            \Delta x_i=x_i-x_{i-1},
+        \qquad
+            \Delta y_j=y_j-y_{j-1}
+        \texty
+            \Delta z_k=z_k-z_{k-1}
+        \]
+        con $i,j,k=1,\ldots,n$, se las llama el ancho, el alto y la profundidad del subbloque, respectivamente.
+    \item
+        A la cantidad
+        \[
+            \Delta V_{ijk} = \Delta x_i\Delta y_j\Delta z_k,
+        \]
+        con $i,j,k=1,\ldots,n$, se la llama volumen del subbloque.
+    \item 
+        A un conjunto
+        \[
+            C = \{c^{ijk}\in\R^3: c^{ijk}\in B_{ijk},\ i,j=1,\ldots,n\},
+        \]
+        se lo llama conjunto de etiquetas para $P$.
+    \item 
+        Al par $(P,C)$ se lo llama una partición etiquetada de $B$.
+    \item
+        A la cantidad
+        \[
+            |P| = \max_{i=1,\ldots,n}\{\Delta x_i,\Delta y_i,\Delta z_i\}
+        \]
+        se la llama grosor de la partición.
+    \end{itemize}
+\end{defi}
+
+\begin{defi}
+    Sean $\func{f}{B}{\R}$ un campo escalar y $(P,C)$ una partición etiquetada de $B$, entonces
+    \[
+        S(f,P,C) = \sum_{i,j,k=1}^n f(c^{ijk})\Delta V_{ijk}
+    \]
+    es la suma de Riemann de $f$ respecto a la partición etiquetada $(P,C)$.
+\end{defi}
+
+\begin{defi}
+    Sea $\func{f}{B}{\R}$ un campo escalar, se define la integral triple de $f$ por
+    \[
+        \iiint_B f\, dV
+        =\iiint_B f(x,y,z)\,dxdydz 
+        = \lim_{|P|\to 0} S(f,P,C) 
+        = \lim_{|P|\to 0} \sum_{i,j,k=1}^n f(c^{ijk})\Delta V_{ijk},
+    \]
+    siempre que el límite exista (el limite se toma sobre todas las particiones etiquetadas). Si el límite existe, se dice que la función es integrable.
+\end{defi}
+
+\begin{prop}
+    Sea $\func{f}{B}{\R}$ un campo escalar, si $f$ es continua, entonces es integrable.
+\end{prop}
+
+\begin{prop}
+    Sea $\func{f}{B}{\R}$ un campo escalar, si $f$ es acotada y si el conjunto de discontinuidades de $f$ tiene volumen cero, entonces
+    \[
+        \iiint_B f\, dV
+    \]
+    existe.
+\end{prop}
+   
+\begin{teo}
+    Sea $\func{f}{B}{\R}$ un campo escalar. Supongamos que $f$ es acotada y que $S$, el conjunto de discontinuidades de $f$, tiene volumen cero. Si cada recta paralela a los ejes de coordenadas interseca a $S$ en una cantidad finita de puntos, entonces
+    \begin{align*}
+        \iiint_B f\, dV 
+        & = \int_a^b \l(\int_c^d \l(\int_p^q f(x,y,z)\, dz\r)dy\r)dx \\
+        & = \int_a^b \l(\int_p^q\l( \int_c^d f(x,y,z)\, dy\r)dz\r)dx \\
+        & = \int_c^d \l(\int_a^b\l( \int_p^q f(x,y,z)\, dz\r)dx\r)dy \\
+        & = \int_c^d \l(\int_p^q\l( \int_a^b f(x,y,z)\, dx\r)dz\r)dy \\
+        & = \int_p^q \l(\int_a^b\l( \int_c^d f(x,y,z)\, dy\r)dx\r)dz \\
+        & = \int_p^q \l(\int_c^d \l(\int_a^b f(x,y,z)\, dx\r)dy\r)dz.
+    \end{align*}
+\end{teo}
+   
+\begin{defi}
+    Se dice que $W$ es una región elemental en el espacio si puede ser descrita como un subconjunto de $\R^3$ de alguna de las siguientes maneras:
+    \begin{itemize}
+        \item \textbf{Región de tipo I:} si
+        \begin{enumerate}[label=(\alph*)]
+            \item $W=\{(x,y,z)\in\R^3 \, : \, \varphi(x,y) \leq z \leq \psi(x,y), \, \gamma(x)\leq y \leq \delta(x),\, a\leq x\leq b \}$, o
+            \item $W=\{(x,y,z)\in\R^3 \, : \, \varphi(x,y) \leq z \leq \psi(x,y), \, \alpha(y)\leq x \leq \beta(y),\, c\leq y\leq d \}$.
+        \end{enumerate}
+        
+        \item \textbf{Región de tipo II:} si
+        \begin{enumerate}[label=(\alph*)]
+            \item $W=\{(x,y,z)\in\R^3 \, : \, \alpha(y,z) \leq x \leq \beta(y,z), \, \gamma(z)\leq y \leq \delta(z),\, p\leq z\leq q \}$, o
+            \item $W=\{(x,y,z)\in\R^3 \, : \, \alpha(y,z) \leq x \leq \beta(y,z), \, \varphi(y)\leq z \leq \psi(y),\, c\leq y\leq d \}$.
+        \end{enumerate}
+        
+        \item \textbf{Región de tipo III:} si
+        \begin{enumerate}[label=(\alph*)]
+            \item $W=\{(x,y,z)\in\R^3 \, : \, \gamma(x,z) \leq y \leq \delta(x,z), \, \alpha(z)\leq x \leq \beta(z),\, p\leq z\leq q \}$, o
+            \item $W=\{(x,y,z)\in\R^3 \, : \, \gamma(x,z) \leq y \leq \delta(x,z), \, \varphi(x)\leq z \leq \psi(x),\, a\leq x\leq b \}$.
+        \end{enumerate}
+        
+        \item \textbf{Región de tipo IV:} si $D$ es de tipo 1, 2 y 3.
+    \end{itemize}
+\end{defi}
+   
+A partir de aquí, tomaremos a $D$ como un subconjunto cerrado de $B$.
+
+\begin{defi}
+    Sean $\func{f}{D}{\R}$ un campo escalar. Definimos la extensión de $f$ a $B$ por
+    \[
+        f^{\text{ext}}(x,y,z) = \begin{cases}
+                          f(x,y,z) & \text{ si } (x,y,z)\in D, \\
+                          0 & \text{ si } (x,y,z) \not\in D,
+                         \end{cases}
+    \]
+    para $(x,y,z)\in B$.
+\end{defi}
+
+\begin{defi}
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar, donde $\Omega$ es una región elemental, si $B$ es cualquier bloque que contiene a $\Omega$, definimos
+    \[
+        \iiint_\Omega f\, dV = \iiint f^{\text{ext}}\, dV.
+    \]
+\end{defi}
+   
+\begin{prop}
+    Sea $\Omega$ una región elemental en $\R^3$ y $\func{f}{\Omega}{\R}$ una función continua.
+    \begin{itemize}
+        \item Si $\Omega$ es de tipo I, entonces
+        \[
+            \iiint_\Omega f\, dV = \int_a^b \l(\int_{\gamma(x)}^{\delta(x)} \l(\int_{\varphi(x,y)}^{\psi(x,y)} f(x,y,z)\, dz\r)dy\r)dx,
+        \]
+        o
+        \[
+            \iiint_\Omega f\, dV = \int_c^d \l(\int_{\alpha(y)}^{\beta(y)} \l(\int_{\varphi(x,y)}^{\psi(x,y)} f(x,y,z)\, dz\r)dx\r)dy.
+        \]
+        
+        \item Si $\Omega$ es de tipo II, entonces
+        \[
+            \iiint_\Omega f\, dV = \int_p^q \l(\int_{\gamma(z)}^{\delta(z)} \l(\int_{\alpha(y,z)}^{\beta(y,z)} f(x,y,z)\, dx\r)dy\r)dz,
+        \]
+        o
+        \[
+            \iiint_\Omega f\, dV = \int_c^d \l(\int_{\varphi(y)}^{\psi(y)} \l(\int_{\alpha(y,z)}^{\beta(y,z)} f(x,y,z)\, dx\r)dz\r)dy.
+        \] 
+        
+        \item Si $\Omega$ es de tipo III, entonces
+        \[
+            \iiint_\Omega f\, dV = \int_p^q \l(\int_{\alpha(z)}^{\beta(z)} \l(\int_{\gamma(x,z)}^{\delta(x,z)} f(x,y,z)\, dy\r)dx\r)dz,
+        \]
+        o
+        \[
+            \iiint_\Omega f\, dV = \int_a^b \l(\int_{\varphi(x)}^{\psi(x)} \l(\int_{\gamma(x,z)}^{\delta(x,z)} f(x,y,z)\, dy\r)dz\r)dx.
+        \]
+    \end{itemize}
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Cambio de variable para integrales triples}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En adelante, tomaremos la función inyectiva y diferenciable con continuidad
+\[
+    \funcion{T}{\R^3}{\R^3}{(u,v,w)}{T(u,v,w)=(x(u,v,w),y(u,v,w),z(u,v,w))}.
+\]
+a la cual llamaremos una transformación de coordenadas del espacio $uvw$ al plano $xyx$.
+
+\begin{prop}
+    Sean $\Omega$ y $\Omega^*$ regiones elementales de $\R^3$. Supongamos que $\func{T}{\R^3}{\R^3}$ es una transformación de coordenadas tal que $T(\Omega^*)=\Omega$. Si $\func{f}{\Omega}{\R}$ es una función integrable, entonces
+    \[
+        \iiint_\Omega f(x,y,z)\, dxdydz = \iiint_{\Omega^*} f(T(u,v,w)) \left|\det(J_T(u,v,w) )\right| \, dudvdw.
+    \]
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Aplicaciones
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Aplicaciones}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{advertencia}
+    Dada una región elemental $\Omega$ de $\R^2$, se tiene que
+    \[
+        \iint_\Omega 1\, dxdy
+    \]
+    es el área de la región $\Omega$.
+\end{advertencia}
+
+\begin{advertencia}
+    Dada una región elemental $\Omega$ de $\R^3$, se tiene que
+    \[
+        \iiint_\Omega 1\, dxdy
+    \]
+    es el volumen de la región $\Omega$.
+\end{advertencia}
+   
+\begin{defi}
+    Dados una región elemental $\Omega$ de $\R^2$ y $\func{f}{\Omega}{\R}$ un campo escalar, se define el promedio de la función $f$ por
+    \[
+        \frac{\iint_\Omega f(x,y)\, dxdy}{\iint_\Omega 1\, dxdy}
+    \]
+    es el volumen de la región $\Omega$.
+\end{defi}
+   
+\begin{advertencia}
+    Dados una región elemental $\Omega$ de $\R^2$ y $\func{\delta}{\Omega}{\R}$ un campo escalar, si $\Omega$ representa una lámina y $\delta(x,y)$ representa la densidad de la lámina en el punto $(x,y)$, entonces se tiene que el centro de masas $(\overline{x},\overline{y})$ está dado por
+    \[
+        \overline{x}=
+        \frac{\iint_\Omega x\delta(x,y)\, dxdy}
+        {\iint_\Omega \delta(x,y)\, dxdy}
+    \]
+    y
+    \[
+        \overline{y}=
+        \frac{\iint_\Omega y\delta(x,y)\, dxdy}
+        {\iint_\Omega \delta(x,y)\, dxdy}.
+    \]
+\end{advertencia}
+   
+\begin{advertencia}
+    Dados una región elemental $\Omega$ de $\R^3$ y $\func{\delta}{\Omega}{\R}$ un campo escalar, si $\Omega$ representa un sólido y $\delta(x,y,z)$ representa la densidad del sólido en el punto $(x,y,z)$, entonces se tiene que el centro de masas $(\overline{x},\overline{y},\overline{z})$ está dado por
+    \[
+        \overline{x}=
+        \frac{\iiint_\Omega x\delta(x,y,z)\, dxdydz}
+        {\iiint_\Omega \delta(x,y,z)\, dxdydz},
+    \]
+    \[
+        \overline{y}=
+        \frac{\iiint_\Omega y\delta(x,y,z)\, dxdydz}
+        {\iiint_\Omega \delta(x,y,z)\, dxdydz}
+    \]
+    y
+    \[
+        \overline{z}=
+        \frac{\iiint_\Omega z\delta(x,y,z)\, dxdydz}
+        {\iiint_\Omega \delta(x,y,z)\, dxdydz},
+    \]
+\end{advertencia}
+   
+\begin{advertencia}
+    Dados una región elemental $\Omega$ de $\R^3$ y $\func{\delta}{\Omega}{\R}$ un campo escalar, si $\Omega$ representa un sólido y $\delta(x,y,z)$ representa la densidad del sólido en el punto $(x,y,z)$, entonces el momento de inercia con respecto al eje $x$ está dado por
+    \[
+        I_x =
+        \iiint_\Omega (y^2+z^2)\delta(x,y,z)\, dxdydz,
+    \]
+    el momento de inercia con respecto al eje $y$ está dado por
+    \[
+        I_y =
+        \iiint_\Omega (x^2+z^2)\delta(x,y,z)\, dxdydz
+    \]
+    y el momento de inercia con respecto al eje $z$ está dado por
+    \[
+        I_z =
+        \iiint_\Omega (x^2+y^2)\delta(x,y,z)\, dxdydz.
+    \]
+\end{advertencia}
+
+\section{Integrales de línea en campos escalares}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En lo siguiente consideraremos una curva $C$ con una parametrización $\func{\alpha}{[a,b]}{\R^n}$, donde $\alpha$ es una trayectoria derivable tal que $\alpha'$ es continua. Además, supondremos que $\Omega$ es un subconjunto de $\R^n$ tal que $C\subseteq \Omega$.
+
+\begin{defi}[Integral de linea de campos escalares]
+    Dado un campo escalar $\func{f}{\Omega}{\R}$, se define la integral de linea del campo escalar $f$ a lo largo de la trayectoria $\alpha$ por
+    \[
+        \int_C f\, d\alpha 
+        = \lim_{|P|\to 0} f(\alpha(c_i)) \| \alpha(t_i)-\alpha(t_{i-1}) \|,
+    \]
+    siempre que el límite exista (el limite se toma sobre todas las particiones etiquetadas del intervalo $[a,b]$).
+\end{defi}
+
+\begin{advertencia}
+    A esta integral también se la llama la integral del campo escalar $f$ sobre la curva $C$. Otras notaciones para esta integral son:
+    \[
+        \int_C f \,d\alpha = \int_\alpha f \,ds 
+        = \int_\alpha f(x,y) \,ds 
+        = \int_C f \,ds
+        = \int_C f(x) \,ds
+        = \int_C f(x) \,d\alpha
+    \]
+\end{advertencia}
+
+\begin{teo}
+    Dado un campo escalar $\func{f}{\Omega}{\R}$, si existe la integral de linea de $f$ a lo largo de la trayectoria $\alpha$, entonces se tiene que
+    \[
+        \int_C f \,d\alpha
+        =\int_a^b f(\alpha(t))\|\alpha'(t)\|\,dt,
+    \]
+\end{teo}
+
+\begin{prop}
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar y $\func{\beta}{[c,d]}{\R^n}$ una parametrización equivalente de $C$, se tiene que
+    \[
+        \int_C f \,d\alpha = \int_C f \,d\beta
+    \]
+\end{prop}
+
+\begin{defi}
+    Dada una curva $C$ con una parametrización $\func{\alpha}{[a,b]}{\R^n}$, 
+    se dice que $C$ es una curva cerrada si $\alpha(a)=\alpha(b)$ y se dice que es simple si es inyectiva. 
+    
+    Además, dada otra parametrización $\func{\beta}{[c,d]}{\R^n}$ de $C$ que sea equivalente a $\alpha$, se dice que las trayectorias preservan la orientación si $\alpha(a)=\beta(c)$ y $\alpha(b)=\beta(d)$, caso contrario se dice que invierten la orientación.
+\end{defi}
+
+\begin{advertencia}
+    Si $C$ es una curva cerrada se suele utilizar la notación
+    \[
+        \oint_C f  d\alpha = \int_C f d\alpha
+    \]
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Campos vectoriales
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Integrales de línea en campos vectoriales}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Integral de linea de campos vectoriales]
+    Dado un campo vectorial $\func{F}{\Omega}{\R^n}$, se define la integral de linea del campo vectorial $F$ a lo largo de la trayectoria $\alpha$ por
+    \[
+        \int_C F \cdot d\alpha 
+        = \lim_{|P|\to 0} F(\alpha(c_i))\cdot (\alpha(t_i)-\alpha(t_{i-1}) ),
+    \]
+    siempre que el límite exista (el limite se toma sobre todas las particiones etiquetadas del intervalo $[a,b]$).
+\end{defi}
+
+\begin{advertencia}
+    A esta integral también se la llama la integral del campo vectorial $F$ sobre la curva $C$. Otras notaciones para esta integral son:
+    \[
+        \int_C F \cdot d\alpha 
+        = \int_\alpha F \cdot ds 
+        = \int_\alpha F(x) \cdot ds 
+        = \int_C F \cdot ds
+        = \int_C F(x) \cdot ds
+        = \int_C F(x) \cdot d\alpha
+    \]
+\end{advertencia}
+
+\begin{teo}
+    Dado un campo vectorial $\func{F}{\Omega}{\R}$, si existe la integral de linea de $F$ a lo largo de la trayectoria $\alpha$, entonces se tiene que
+    \[
+        \int_C F \cdot d\alpha 
+        =\int_a^b F(\alpha(t))\cdot \alpha'(t)\,dt,
+    \]
+\end{teo}
+
+\begin{advertencia}
+    En $\R^2$, si tenemos el campo vectorial $\func{F}{\Omega}{\R^2}$ dado por
+    \[
+        F(x,y) = (M(x,y),N(x,y)),
+    \]
+    para todo $(x,y)\in \Omega$, donde $M$ y $N$ son campos escalares, se suele utilizar la notación
+    \[
+        \int_C F \cdot d\alpha 
+        = \int_\alpha M\,dx + N\,dy
+        = \int_\alpha M(x,y)\,dx + N(x,y)\,dy.
+    \]
+\end{advertencia}
+
+\begin{prop}
+    Dados $\func{F}{\Omega}{\R^n}$ un campo vectorial y $\func{\beta}{[c,d]}{\R^n}$ una parametrización equivalente a $\alpha$ de $C$, se tiene que
+    \begin{itemize}
+        \item si $\alpha$ y $\beta$ preservan la orientación, entonces $\int_C F \cdot d\alpha = \int_C F \cdot d\beta$; y
+        \item si $\alpha$ y $\beta$ invierten la orientación, entonces $\int_C F \cdot d\alpha = - \int_C F \cdot d\beta$.
+    \end{itemize}
+\end{prop}
+
+\begin{advertencia}
+    Si $C$ es una curva cerrada se suele utilizar la notación
+    \[
+        \oint_C F \cdot d\alpha = \int_C F \cdot d\alpha
+    \]
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Aplicaciones
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Aplicaciones}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{advertencia}
+    Dados una curva $C$ de $\R^3$, $\func{\alpha}{I}{\R^3}$  y $\func{\delta}{C}{\R}$ un campo escalar, si $C$ representa un alambre y $\delta(x,y,z)$ representa la densidad del alambre en el punto $(x,y,z)$, entonces se tiene que el centro de masas $(\overline{x},\overline{y},\overline{z})$ está dado por
+    \[
+        \overline{x}=
+        \frac{\int_C x\delta(x,y,z)\, d\alpha}
+        {\int_C \delta(x,y,z)\, d\alpha},
+    \]
+    \[
+        \overline{y}=
+        \frac{\int_C y\delta(x,y,z)\, d\alpha}
+        {\int_C \delta(x,y,z)\, d\alpha}
+    \]
+    y
+    \[
+        \overline{z}=
+        \frac{\int_C z\delta(x,y,z)\, d\alpha}
+        {\int_C \delta(x,y,z)\, d\alpha}.
+    \]
+\end{advertencia}
+
+
+\begin{advertencia}
+    Dados una curva $C$ de $\R^3$, $\func{\alpha}{I}{\R^3}$ y $\func{\delta}{C}{\R}$ un campo escalar, si $C$ representa un alambre y $\delta(x,y,z)$ representa la densidad del alambre en el punto $(x,y,z)$, entonces el momento de inercia con respecto al eje $x$ está dado por
+    \[
+        I_x =
+        \int_C (y^2+z^2)\delta(x,y,z)\, d\alpha,
+    \]
+    el momento de inercia con respecto al eje $y$ está dado por
+    \[
+        I_y =
+        \int_C (x^2+z^2)\delta(x,y,z)\, d\alpha
+    \]
+    y el momento de inercia con respecto al eje $z$ está dado por
+    \[
+        I_z =
+        \int_C (x^2+y^2)\delta(x,y,z)\, d\alpha.
+    \]
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Teoremas Fundamentales de las integrales de línea
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Teoremas fundamentales de las integrales de línea}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Conjuntos conexos]
+    Dado $\Omega\subseteq \R^n$, se dice que $\Omega$ es conexo (por caminos) si para todo par de puntos $a$ y $b$ de $\Omega$ existe una trayectoria continua $\alpha$ definida en un intervalo $[t_i,t_f]$ tal que $\alpha(t)\in \Omega$ para todo $t\in[t_i,t_f]$ y que $\alpha(t_i)=a$ y $\alpha(t_f)=b$.
+\end{defi}
+
+De aquí en adelante, se supone $\Omega\subseteq \R^n$ es un conjunto conexo por caminos.
+
+\begin{defi}
+    Un campo vectorial $\func{F}{\Omega}{\R^n}$ se dice que tiene integral independiente de camino si
+    \[
+        \int_{C_1} F\cdot d\alpha = \int_{C_2} F\cdot d\beta
+    \]
+    para todo par de trayectorias $\alpha$ y $\beta$ que tienen los mismos puntos iniciales y finales.
+\end{defi}
+
+
+
+\begin{prop}
+    Sea $\func{F}{\Omega}{\R^n}$ un campo vectorial que tenga integral de linea independiente del camino, entonces, para toda curva cerrada $C$ con parametrización $\alpha$ se tiene que
+    \[
+        \oint_C F\cdot d\alpha = 0.
+    \]
+\end{prop}
+
+
+\begin{advertencia}
+    Si $\func{F}{\Omega}{\R^n}$ es un campo vectorial que tiene integral de linea independiente del camino, entonces para una trayectoria $\alpha$ con punto inicial $a$ y final $b$ notaremos
+    \[
+        \int_a^b F\cdot ds = \int_C F\cdot d\alpha.
+    \]    
+\end{advertencia}
+
+
+\begin{teo}[Primer Teorema Fundamental para Integrales de Linea]
+    Sean $\func{F}{\Omega}{\R^n}$ un campo vectorial que tenga integral de linea independiente del camino y $a\in \Omega$ un punto, entonces, si definimos el campo escalar
+    \[
+        f(x) = \int_a^x F\cdot ds
+    \]
+    para todo $x\in \Omega$, entonces $f$ tiene gradiente y
+    \[
+        \nabla f(x) = F(x)
+    \]
+    para todo $x\in \Omega$, es decir, $f$ es un potencial de $F$.
+\end{teo}
+
+\begin{prop}
+    Sean $\func{F}{\Omega}{\R^n}$ un campo vectorial, se tiene que las siguientes tres proposiciones son equivalentes:
+    \begin{itemize}
+        \item $F$ es un campo conservativo;
+        \item $F$ tiene integral de linea independiente de camino; y
+        \item la integral de linea de $f$ sobre toda curva cerrada es igual a 0.
+    \end{itemize}
+\end{prop}
+
+\begin{teo}[Segundo Teorema Fundamental para Integrales de Linea]
+    Sean $\func{F}{\Omega}{\R^n}$ un campo vectorial conservativo y 
+    $\func{f}{\Omega}{\R}$ una función potencial de $F$. Para una trayectoria con punto inicial $a$ y final $b$ se tiene que
+    \[
+        \int_a^b F\cdot ds = \int_a^b \nabla f\cdot ds = f(b)-f(a).
+    \]
+\end{teo}
+
+\section{Integrales de superficie}
+
+En lo que sigue, tomaremos $\Omega\subseteq \R^2$ un conjunto abierto y conexo.
+
+\begin{defi}[Superficie parametrizada]
+    Dada $\func{\alpha}{\Omega}{\R^3}$ una función, al conjunto $\Sigma=\img(\alpha)$ se lo llama la gráfica de $\alpha$. A $\alpha$ se la llama una parametrización de $\Sigma$.
+    
+    Si $\alpha$ es continua en $\Omega$, a su gráfica se la llama la superficie descrita por $\alpha$.
+\end{defi}
+
+ 
+\begin{defi}[Curvas coordenadas]
+    Dada una superficie $\Sigma$ con parametrización $\func{\alpha}{\Omega}{\R^3}$ y $(u_0,v_0)\in \Omega$, se definen las trayectorias
+    \[
+        \funcion{\alpha_{v_0}}{I_1}{\R^3}{u}{\alpha_{v_0}(u)=\alpha(u,v_0)}
+        \texty
+        \funcion{\alpha_{u_0}}{I_2}{\R^3}{v}{\alpha_{u_0}(v)=\alpha(u_0,v),}
+    \]
+    donde $I_1=\{u\in\R:(u,v_0)\in \Omega\}$ y $I_2=\{v\in\R:(u_0,v)\in \Omega\}$. A estas trayectorias se las llama curvas coordenadas de la superficie $\Sigma$ en $(u_0,v_0)$.
+\end{defi}
+
+ 
+\begin{defi}[Vectores tangentes y normal]
+    Dada una superficie $\Sigma$ con parametrización $\func{\alpha}{\Omega}{\R^3}$ y $(u,v)\in \Omega$, se tiene que
+    \[
+        T_\alpha^1(u,v) = \alpha_v'(u) = D_1 \alpha(u,v) = \parcial{\alpha}{u}(u,v)
+    \]
+    y
+    \[
+        T_\alpha^2(u,v) = \alpha_u'(v) = D_2 \alpha(u,v) = \parcial{\alpha}{v}(u,v)
+    \]
+    son vectores tangentes a las curvas coordenadas en $x(u)$ y $y(v)$, respectivamente. Se los denomina vectores tangentes a la superficie en el punto $\alpha(u,v)$. Además, al vector
+    \[
+        N(u,v) = T_\alpha^1(u,v) \times T_\alpha^2(u,v)
+    \]
+    se lo llama vector normal estándar en el punto $\alpha(u,v)$.
+\end{defi}
+
+\begin{advertencia}
+    Si no existe ambigüedad en cuanto a la parametrización de la superficie, se denotará por $T^1$, $T^2$, $N$ a $T_\alpha^1$, $T_\alpha^2$, $N_\alpha$, respectivamente.
+\end{advertencia}
+ 
+\begin{defi}[Superficie suave]
+    Dada una superficie $\Sigma$ con parametrización $\func{\alpha}{\Omega}{\R^3}$, se dice que es suave si
+    \[
+        N(u,v) \neq 0
+    \]
+    para todo $(u,v)\in \Omega$.
+\end{defi}
+
+\begin{prop}
+    Dada una superficie suave $\Sigma$ con parametrización $\func{\alpha}{\Omega}{\R^3}$, se tiene que su área está dada por
+    \[
+        \iint_\Omega \|N(u,v)\| \,dudv
+    \]
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Integrales de superficie de campos escalares
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Integrales de superficie de campos escalares}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En lo siguiente consideraremos una superficie suave $\Sigma$ con una parametrización $\func{\alpha}{\Omega}{\R^3}$.
+
+
+\begin{defi}[Integral de superficie de campos escalares]
+    Dado un campo escalar $\func{f}{\Sigma}{\R}$, se define la integral de superficie del campo escalar $f$ sobre la superficie $\Sigma$ parametrizada por $\alpha$ por
+    \[
+        \iint_\Sigma f\, d\alpha 
+        = \lim_{|P|\to 0} f(\alpha(b_i,c_j)) \| (\alpha(u_i,v_j)- \alpha(u_{i-1},v_j)) \times (\alpha(u_i,v_j)- \alpha(u_i,v_{j-1}))\|,
+    \]
+    siempre que el límite exista (el limite se toma sobre todas las particiones etiquetadas del conjunto $\Omega$).
+\end{defi}
+
+\begin{advertencia}
+    Otras notaciones para esta integral son:
+    \[
+        \iint_\Sigma f\, d\alpha
+        = \iint_\alpha f\, dS
+        = \iint_\Sigma f \,dS
+    \]
+\end{advertencia}
+ 
+\begin{teo}
+    Dado un campo escalar $\func{f}{\Sigma}{\R}$, si existe la integral de superficie de $f$ sobre la superficie $\Sigma$ parametrizada por $\alpha$, entonces se tiene que
+    \[
+        \iint_\Sigma f\, d\alpha
+        =\iint_\Omega f(\alpha(u,v))\|N(u,v)\|\,dudv.
+    \]
+\end{teo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Integrales de superficie de campos vectoriales
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Integrales de superficie de campos vectoriales}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Integral de superficie de campos vectoriales]
+    Dado un campo vectorial $\func{F}{S}{\R^3}$, se define la integral de superficie del campo vectorial $F$ sobre la superficie $\Sigma$ parametrizada por $\alpha$ por
+    \[
+        \iint_\Sigma F\cdot d\alpha 
+        = \lim_{|P|\to 0} F(\alpha(b_i,c_j)) \cdot\l( (\alpha(u_i,v_j)- \alpha(u_{i-1},v_j)) \times (\alpha(u_i,v_j)- \alpha(u_i,v_{j-1}))\r),
+    \]
+    siempre que el límite exista (el limite se toma sobre todas las particiones etiquetadas del conjunto $\Sigma$).
+\end{defi}
+
+\begin{advertencia}
+    Otras notaciones para esta integral son:
+    \[
+        \iint_\Sigma F\cdot d\alpha
+        = \iint_\alpha F \cdot dS 
+        = \iint_\Sigma F \cdot dS.
+    \]
+\end{advertencia}
+
+ 
+\begin{teo}
+    Dado un campo vectorial $\func{F}{\Sigma}{\R^3}$, si existe la integral de superficie de $F$ obre la superficie $\Sigma$, entonces se tiene que
+    \[
+        \iint_\Sigma F\cdot d\alpha
+        =\iint_\Omega F(\alpha(u,v))\cdot N(u,v)\,dudv.
+    \]
+\end{teo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Cambio de parámetro
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Cambio de parámetro}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Parametrizaciones equivalentes]
+    Dadas dos funciones $\func{\alpha}{\Omega_1}{\R^3}$ y $\func{\beta}{\Omega_2}{\R^3}$, se dice que $\alpha$ y $\beta$ son equivalentes si existe una función $\func{H}{\Omega_1}{\Omega_2}$ biyectiva y derivable, tal que
+    \[
+        \alpha(u,v)=\beta(H(u,v))
+    \]
+    para todo $(u,v)\in \Omega_1$.
+\end{defi}
+
+ 
+\begin{prop}
+    Dadas dos funciones $\func{\alpha}{\Omega_1}{\R^3}$ y $\func{\beta}{\Omega_2}{\R^3}$ que sean equivalentes, se tiene que
+    \[
+        N_\alpha(u,v) = J_H(u,v) N_\beta(H(u,v))
+    \]
+    para todo $(u,v)\in \Omega_1$.
+\end{prop}
+
+ 
+\begin{defi}
+     Dadas dos funciones $\func{\alpha}{\Omega_1}{\R^3}$ y $\func{\beta}{\Omega_2}{\R^3}$ que sean equivalentes, se dice que
+    \begin{itemize}
+        \item preservan la orientación si $J_H(u,v)>0$ para todo $(u,v)\in \Omega_1$.
+        \item invierten la orientación si $J_H(u,v)<0$ para todo $(u,v)\in \Omega_1$.
+    \end{itemize}
+\end{defi}
+
+\begin{prop}
+    Dados $\func{f}{\Sigma}{\R}$ un campo escalar y $\func{\beta}{\Omega_2}{\R^3}$ una parametrización equivalente a $\alpha$ de $\Sigma$, se tiene que
+    \[
+        \iint_\Sigma f \,d\alpha = \iint_\Sigma f \,d\beta
+    \]
+\end{prop}
+
+\begin{prop}
+    Dados $\func{f}{\Sigma}{\R^3}$ un campo vectorial y $\func{\beta}{\Omega_2}{\R^3}$ una parametrización equivalente a $\alpha$ de $\Sigma$, se tiene que
+    \begin{itemize}
+        \item si $\alpha$ y $\beta$ preservan la orientación, entonces $\iint_\Sigma f \cdot d\alpha = \iint_\Sigma f \cdot d\beta$; y
+        \item si $\alpha$ y $\beta$ invierten la orientación, entonces $\iint_\Sigma f \cdot d\alpha = -\iint_\Sigma f \cdot d\beta$.
+    \end{itemize}
+\end{prop}
+
+\section{Teorema de Green}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{teo}[Teorema de Green]
+    Sea $\Omega\subseteq \R^2$ un conjunto cerrado, acotado y simplemente conexo tal que $\partial \Omega$ es una curva suave parametrizada por una trayectoria que recorre $\partial \Omega$ de manera antihoraria. Se tiene que
+    \[
+        \iint_\Omega \rot(f) \,dA = \oint_{\partial \Omega} f\cdot ds.
+    \]
+\end{teo}
+
+\begin{advertencia}
+    Si tenemos que
+    \[
+        f(x,y)=(M(x,y),N(x,y)),
+    \]
+    para $(x,y)\in\R^2$, entonces el Teorema de Green se enuncia por
+    \[
+        \iint_\Omega \parcial{N}{x} - \parcial{M}{y} \,dxdy = \oint_{\partial \Omega} M\, dx+ N\, dy.
+    \]
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Teorema de Green
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Teorema de Gauss en el plano}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{teo}[Teorema de Gauss en el plano]
+    Sea $\Omega\subseteq \R^2$ un conjunto cerrado, acotado y simplemente conexo tal que $\partial D$ es una curva suave parametrizada por una trayectoria $\func{\alpha}{I}{\R^2}$ que recorre $\partial D$ de manera antihoraria. Se define
+    \[
+        n(t) = \frac{(\alpha_2'(t),- \alpha_1'(t))}{\|\alpha'(t)\|}
+    \]
+    para $t\in I$. Se tiene que
+    \[
+        \iint_\Omega \dive(f) \,dA = \oint_{\partial \Omega} f\cdot n\, d\alpha.
+    \]
+\end{teo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Teorema de Stokes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Teorema de Stokes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Superficie orientable]
+    Se dice que una superficie $\Sigma$ es orientable si es posible definir un solo vector normal unitario en cada punto de $\Sigma$ de modo que este sea continuo. Una vez definido el vector normal se dice que $\Sigma$ es una superficie orientada.
+\end{defi}
+
+\begin{defi}
+    Dada una superficie orientada $\Sigma$ y una curva $C$ sobre $\Sigma$ se dice que la parametrización de $C$ tiene orientación consistente con la parametrización de $\Sigma$ si el vector normal de $\Sigma$ sigue la regla de la mano derecha con respecto a $C$.
+\end{defi}
+
+\begin{teo}[Teorema de Stokes]
+    Sea $\Sigma$ una superficie orientada, acotada y suave en $\R^3$ tal que el borde de $\Sigma$, denotado por $\partial \Sigma$ es una curva suave, simple, cerrada y parametrizada con orientación consistente con la parametrización de $\Sigma$. Sea $\func{f}{\Sigma}{\R^3}$ un campo vectorial diferenciable, se tiene que
+    \[
+        \iint_\Sigma \rot(f) \cdot dS = \oint_{\partial \Sigma} f\cdot ds.
+    \]
+\end{teo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Teorema de Gauss
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Teorema de Gauss}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{teo}[Teorema de Gauss]
+    Sea $\Omega$ una región acotada de $\R^3$ tal que $\partial \Omega$ es una superficie suave, cerrada y parametrizada con orientación hacia fuera de $\Omega$. Sea $\func{F}{\Omega}{\R^3}$ un campo vectorial diferenciable, se tiene que
+    \[
+        \iiint_\Omega \dive(F) \, dV = \varoiint_{\partial \Omega} F\cdot dS.
+    \]
+\end{teo}
+
+\begin{prop}
+    Sea $\Omega$ una región acotada de $\R^3$ tal que $\partial \Omega$ es una superficie suave, cerrada y parametrizada con orientación hacia fuera de $\Omega$. Sean $\func{F}{\Omega}{\R^3}$ un campo vectorial y $\func{g}{\Omega\subseteq \R^3}{\R}$ un campo escalar, ambos diferenciables, se tiene que
+    \[
+        \iiint_{\Omega} (F \cdot \nabla g + g \dive(F))\, dV
+        = \varoiint_{\partial \Omega}  g f \cdot dS.
+    \]
+\end{prop}
+
+\begin{prop}[Fórmula de Green]
+    Sea $\Omega$ una región acotada de $\R^3$ tal que $\partial \Omega$ es una superficie suave, cerrada y parametrizada con orientación hacia fuera de $\Omega$. Sean $\func{f,g}{\Omega}{\R}$ campos escalares dos veces diferenciables, se tiene que
+    \[
+        \iiint_\Omega (\nabla f\cdot \nabla f + f \Delta f) \, dV 
+        =
+        \varoiint_{\partial \Omega} (f\nabla g) \cdot dS.
+    \]
+\end{prop}
+
+\begin{prop}
+    Sea $\Omega$ una región acotada de $\R^3$ tal que $\partial \Omega$ es una superficie suave, cerrada y parametrizada con orientación hacia fuera de $\Omega$. Sean $\func{F,G}{\Omega}{\R^3}$ campos vectoriales dos veces diferenciables, se tiene que
+    \[
+        \iiint_{\Omega} (G \cdot \rot(F) - F \cdot \rot(G))\, dV
+        = \varoiint_{\partial \Omega}  F\times G \cdot dS.
+    \]
+\end{prop}
+
+\begin{advertencia}
+    Los anteriores se pueden ver como generalizaciones de integración por partes de la siguiente manera
+    \[
+        \iiint_{\Omega} F \cdot \nabla g \, dV 
+        = \varoiint_{\partial \Omega}  g f \cdot dS - \iint_\Omega g \dive(f)\, dV
+    \]
+    o
+    \[
+        \iiint_\Omega f \Delta g \, dV 
+        =
+        \varoiint_{\partial \Omega} (f\nabla g) \cdot dS
+        -\iiint_\Omega \nabla f\cdot \nabla g \, dV
+    \]
+    o
+    \[
+        \iiint_{\Omega} G \cdot \rot(G) \, dV
+        = \varoiint_{\partial \Omega}  F\times G \cdot dS
+        +\iiint_\Omega  F \cdot \rot(G) \,dV.
+    \]
+\end{advertencia}
+
+\end{document}

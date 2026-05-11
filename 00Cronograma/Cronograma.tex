@@ -1,0 +1,211 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí: 
+% https://github.com/alephsub0/LaTeX_aleph-notas 
+
+% -- Paquetes adicionales 
+\usepackage{enumitem}
+\usepackage{array,booktabs,multirow,makecell}
+\usepackage{colortbl}
+\usepackage{longtable}
+\usepackage{url}
+\usepackage{pdflscape}
+\usepackage{amsmath,amssymb}
+
+% -- Datos 
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Cronograma y actividades}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+% -- Comandos para tablas
+\newcolumntype{C}[1]{>{\hspace{0pt}\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\definecolor{verde}{RGB}{0, 255, 127}
+\definecolor{celeste}{RGB}{68,195,218}
+
+\begin{document}
+\addtolength{\headheight}{1.8\baselineskip}
+\addtolength{\voffset}{-1.5\baselineskip}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultados de aprendizaje} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}[leftmargin=*]
+\item 
+    \textbf{RdA 1:} Identificar los conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{Criterio 1.1:}  Asocia las funciones de varias variables con su ley de asignación y su representación gráfica.
+        \item \textbf{Criterio 1.2:}  Interpreta el concepto de derivada en varias variables y reconocer sus elementos y propiedades.
+        \item \textbf{Criterio 1.3:} Interpreta el concepto de integrales en varias variables y reconocer sus elementos y propiedades.
+    \end{itemize}
+\item 
+    \textbf{RdA 2:} Calcular derivadas parciales, integrales de funciones vectoriales con el apoyo de asistentes computacionales.
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{Criterio 2.1:}  Determina dominios de funciones de varias variables a través de su representación gráfica o su ley de asignación.
+        \item \textbf{Criterio 2.2:} Calcula derivadas de funciones de varias variables.
+        \item \textbf{Criterio 2.3:} Calcula integrales de funciones de varias variables.
+    \end{itemize}
+\item
+    \textbf{RdA 3:} Aplicar distintos tópicos del Cálculo Vectorial para la solución de problemas reales en diferentes contextos.
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{Criterio 3.1:} Utiliza funciones de varias variables para modelar problemas.
+        \item \textbf{Criterio 3.2:} Emplea la derivada para resolver problemas de optimización.
+        \item \textbf{Criterio 3.3:} Emplea integrales múltiples para determinar áreas, superficies y volúmenes.
+    \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contenidos generales} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+    \item Funciones vectoriales
+    \item Cálculo diferencial
+    \item Optimización
+    \item Integrales múltiples
+    \item Integrales de línea y superficie
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Actividades de evaluación} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\small
+\begin{tabular}{C{1.4cm}L{5.5cm}L{8cm}}
+    \toprule
+    \textbf{Criterio} & \textbf{Actividad} & \textbf{Descripción} \\
+    \midrule
+    1.1
+        & Cuestionario en línea 1 (100\%)
+        & Evalúa la identificación de tipos de matrices, sus operaciones básicas y el proceso de inversión de matrices. \\ 
+    \midrule
+    1.2
+        & Cuestionario en línea 2 (60\%)
+        & Verifica la identificación de sistemas de ecuaciones lineales y su clasificación según el tipo de solución. \\\cmidrule{2-3}
+        & Video-exposición 1 (40\%)
+        & Presenta y explica la identificación de sistemas de ecuaciones lineales y su clasificación según el tipo de solución. \\
+    \midrule
+    1.3
+        & Cuestionario en línea 3 (60\%)
+        & Evalúa la comprensión de espacios vectoriales, base, dimensión y propiedades de aplicaciones lineales. \\\cmidrule{2-3}
+        & Video-exposición 2 (40\%)
+        & Expone conceptos de transformaciones lineales y su relación con base y dimensión. \\
+    \midrule
+    2.1
+        & Examen 1 - parte 1 (100\%)
+        & Mide la resolución de operaciones con matrices, cálculo de inversas y determinantes en problemas aplicados. \\
+    \midrule
+    2.2
+        & Examen 1 - parte 2 (100\%)
+        & Evalúa la aplicación de métodos como eliminación de Gauss y técnicas matriciales para resolver sistemas lineales. \\
+    \midrule
+    2.3
+        & Examen 2 (100\%)
+        & Valora la resolución de problemas de espacios vectoriales, núcleo, imagen, valores y vectores propios. \\
+    \midrule
+    3.1
+        & Reto 1 (100\%)
+        & Aplica métodos de álgebra lineal para modelar y resolver sistemas en contextos prácticos diversos. \\
+    \midrule
+    3.2
+        & Reto 2 (100\%)
+        & Integra espacios vectoriales y aplicaciones lineales para modelar situaciones de diferentes contextos. \\
+    \bottomrule
+\end{tabular}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Detalle de temas} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\small
+\begin{tabular}{ccl}
+\toprule
+Tema & Clases & Nombre del tema \\
+\midrule
+Tema 1  & 1--2   & Funciones vectoriales y curvas \\
+Tema 2  & 3      & Movimiento en el espacio \\
+Tema 3  & 4--5   & Geometría de curvas \\
+Tema 4  & 6      & Topología de \(\mathbb{R}^n\) \\
+Tema 5  & 7--8   & Límites y diferenciabilidad \\
+Tema 6  & 9--10  & Derivadas parciales y gradiente \\
+Tema 7  & 11     & Función implícita y Hessiana \\
+Tema 8  & 12--13 & Campos vectoriales \\
+Tema 9  & 14     & Campos conservativos \\
+Tema 10 & 15--16 & Optimización \\
+Tema 11 & 17--18 & Integrales dobles \\
+Tema 12 & 19     & Cambio de variable \\
+Tema 13 & 20--21 & Integrales triples \\
+Tema 14 & 22     & Cambio de variable en integrales triples \\
+Tema 15 & 23--24 & Integrales de línea \\
+Tema 16 & 25     & Integrales de superficie \\
+Tema 17 & 26     & Teoremas integrales \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{landscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cronograma de Desarrollo del Curso} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}\small
+\setlength{\extrarowheight}{0ex}
+\setlength{\belowrulesep}{.6ex}
+\begin{longtable}{cccL{12cm}L{7.5cm}}
+    \toprule
+    &&\thead{Fecha}&\thead{Detalle de contenido} & \thead{Observación} \\
+    \midrule
+  \endfirsthead
+    \multicolumn{5}{l}{\footnotesize \ldots viene de la página anterior}\\
+    \toprule
+    &&\thead{Fecha}&\thead{Detalle de contenido} & \thead{Observación} \\
+    \midrule
+  \endhead
+        \bottomrule  \multicolumn{5}{r}{\footnotesize Continúa en la siguiente página\ldots}
+  \endfoot
+        \bottomrule
+  \endlastfoot
+1	&	1	&	16-mar	&	Matrices y operaciones con matrices	&		\\	
+	&	2	&	18-mar	&	Sistemas de ecuaciones	&		\\	
+	&	3	&	20-mar	&	Sistemas de ecuaciones	&		\\ \midrule	
+2	&	4	&	23-mar	&	Inversa de matrices	&	Envío Reto 1	\\	
+	&	5	&	25-mar	&	Determinantes: definición y propiedades	&		\\	
+	&	6	&	27-mar	&	Desarrollo por cofactores, Aplicaciones	&		\\ \midrule	
+3	&	7	&	30-mar	&	Vectores en el plano y en Rn	&	Cuestionario en línea 1	- 2	\\	\rowcolor{celeste!50}
+	&	8	&	01-abr	&	Actividad de evaluación	&	Examen escrito 1\\	\rowcolor{verde!50}
+	&		&	03-abr	&		&	Feriado	\\ \midrule	
+4	&	9	&	06-abr	&	Espacios vectoriales, Subespacios vectoriales	& 		\\	
+	&	10	&	08-abr	&	Independencia linael, Conjuntos generadores	&	Entrega Video-Exp 1	\\	
+	&	11	&	10-abr	&	Bases, Dimensión	&	Entrega Reto 1	\\ \midrule	
+5	&	12	&	13-abr	&	Coordenadas y cambio de base	&		\\	
+	&	13	&	15-abr	&	Suma de espacios, suma directa de espacios	&		\\	
+	&	14	&	17-abr	&	Espacios con producto interno	&		\\ \midrule	
+6	&	15	&	20-abr	&	Bases ortonormales, Complemento ortogonal	& Envío Reto 2		\\	
+	&	16	&	22-abr	&	Aplicaciones lineales, núcleo e imagen	&		\\	
+	&	17	&	24-abr	&	Propiedades de aplicaciones lineales, Isomorfismos	&	Entrega Video-Exp 2	\\ \midrule	
+7	&	18	&	27-abr	&	Matriz asociada a una aplicación lineal	&	Cuestionario en línea 2	\\	
+	&	19	&	29-abr	&	Valores y vectores propios de una matriz	&		\\	\rowcolor{verde!50}
+	&		&	01-may	&		&	Feriado	\\ \midrule	
+8	&	20	&	04-may	&	Valores y vectores propios de una aplicación lineal	&	Entrega Reto 2	\\	
+	&	21	&	06-may	&	Diagonalización de matrices	&		\\	\rowcolor{celeste!50}
+	&	22	&	08-may	&	Actividad de evaluación	&	Examen escrito 2	\\ 
+\end{longtable}
+\end{center}
+\end{landscape}
+
+\end{document} 
