@@ -239,4 +239,40 @@ En esta sección asumiremos que $m\in\{2,3\}$.
     Dada una curva $C$, la recta tangente en uno de sus puntos es invariante bajo cambio de parámetro.
 \end{prop}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Aplicaciones al movimiento}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En las secciones siguientes, consideraremos una curva $C$, parametrizada por la función $\func{\alpha}{I}{\R^m}$, la cual supondremos se puede derivar cuantas veces sea preciso y que $\alpha'(t)\neq 0$ para todo $t\in I$.
+
+\begin{defi}
+    Si consideramos que $\alpha$ describe el movimiento de una partícula por la curva $C$, tenemos que, para todo $t\in I$,
+    \begin{itemize}
+        \item $\alpha(t)$ es la posición de la partícula en el tiempo $t$.
+        \item $\alpha'(t)$ es la velocidad de la partícula en el tiempo $t$; se la denotará por $v_\alpha(t)$.
+        \item $\|\alpha'(t)\|$ es la rapidez de la partícula en el tiempo $t$; se la denotará por $\rho_\alpha(t)$.
+        \item $\alpha''(t)$ es la aceleración de la partícula en el tiempo $t$; se la denotará por $a_\alpha(t)$.
+    \end{itemize}
+\end{defi}
+
+\begin{defi}[Movimiento rectilíneo]
+    Un movimiento se dice rectilíneo si la posición tiene la forma
+    \[
+        \alpha(t)=a+u(t) b,
+    \]
+    donde $a,b\in\R^n$ y $\func{u}{I}{\R}$ es una función continua.
+\end{defi}
+
+\begin{defi}[Movimiento circular]
+    Un movimiento se dice circular si la posición tiene la forma
+    \[
+        \alpha(t)=a\cos(u(t))\mathbf{i}+a\sen(u(t))\mathbf{j},
+    \]
+    donde $a>0$ y $\func{u}{I}{\R}$ es una función continua.
+\end{defi}
+
+\begin{defi}[Movimiento planar]
+    Un movimiento se dice planar si su vector posición pertenece al mismo plano, para todo $t$.
+\end{defi}
+
 \end{document}

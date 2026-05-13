@@ -1,0 +1,120 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientale}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 02: Geometría de curvas}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar los conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales, integrales de funciones vectoriales con el apoyo de asistentes computacionales.
+    % \item \textbf{RdA 3:} Aplicar distintos tópicos del Cálculo Vectorial para la solución de problemas reales en diferentes contextos.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Calcular los vectores unitario tangente $T$, normal principal $N$ y binormal $B$ de una curva en $\R^3$.
+    \item Identificar y determinar los planos osculador, normal y rectificante asociados a una curva.
+    \item Calcular la longitud de arco de una curva parametrizada.
+    \item Calcular la curvatura y la torsión de una curva, e interpretar su significado geométrico.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+¿Cómo podemos medir qué tan «curvada» o «retorcida» es una curva en el espacio?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Marco de Frenet-Serret}
+Se introducen los tres vectores ortonormales asociados a una curva —tangente unitario $T$, normal principal $N$ y binormal $B$— y los planos que estos definen: osculador, normal y rectificante. Se enfatiza la relación entre la aceleración y la descomposición en las direcciones $T$ y $N$.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} recuperar el video visto para casa \href{https://youtu.be/VIqA8U9ozIA?si=G4a9bhE6ieUn622f}{Torsion: How curves twist in space, and the TNB or Frenet Frame} y discutir la intuición geométrica del marco TNB.
+    \item \textbf{Clase magistral:} se definen los vectores $T_\alpha$, $N_\alpha$ y $B_\alpha$, los planos osculador, normal y rectificante, y la descomposición de la aceleración. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen03.pdf}{Resumen03.pdf}.
+    \item \textbf{Resolución de ejercicios:} los estudiantes calcularán los vectores $T$, $N$, $B$ y los planos asociados para curvas concretas, usando el documento \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios03.pdf}{Ejercicios03.pdf}.
+    \item \textbf{Implementación computacional:} visualización del marco TNB a lo largo de una curva mediante el cuaderno \href{https://andres-merino.github.io/MatematicaIII-05-N0051/02ResumenPython/ResumenPy03.pdf}{ResumenPy03.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿Cómo se obtiene $N_\alpha(t)$ a partir de $T_\alpha(t)$?
+    \item ¿En qué plano está contenida la aceleración de una partícula?
+    \item ¿Qué información geométrica representa el plano osculador?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Longitud de arco, curvatura y torsión}
+Se define la longitud de arco como integral de la rapidez y se prueba su invariancia bajo cambio de parámetro. Se introducen la curvatura como medida de cambio de dirección y la torsión como medida de «salida del plano osculador», ambas invariantes bajo reparametrización.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Clase magistral:} se definen longitud de arco, curvatura $\kappa$ y torsión $\tau$; se presentan las fórmulas de cálculo en términos de $v_\alpha$ y $a_\alpha$. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen03.pdf}{Resumen03.pdf}.
+    \item \textbf{Resolución de ejercicios:} los estudiantes calcularán longitud de arco, curvatura y torsión de curvas dadas, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios03.pdf}{Ejercicios03.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿Cómo se calcula la longitud de arco de $\alpha:[a,b]\to\R^3$?
+    \item ¿Qué significa que la curvatura de una curva sea cero en un punto?
+    \item ¿Qué indica la torsión sobre la geometría de la curva?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 3.2, ejercicios 1, 3, 5, 7, 17, 19, 28, 30, 31.
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿Cómo se usa la curvatura en el diseño de carreteras o vías de tren para garantizar la seguridad de los vehículos?
+    \item ¿Qué relación existe entre la torsión de una curva y la estructura helicoidal del ADN?
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}  
+Visualizar el video \href{https://youtu.be/OaLD6idwXBc?si=GhjqGT12JOkhIztb}{¿Cómo sabemos si algo está dentro... o fuera?} y \href{https://youtu.be/MgEp4Gb9TCA?si=rBe-cqnWIYNkJO_R}{Existen BOLAS CUADRADAS}.
+
+\end{document}

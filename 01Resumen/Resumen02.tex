@@ -1,0 +1,146 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 02: Geometría de curvas}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vectores y planos asociados}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección consideraremos $\func{\alpha}{I}{\R^3}$, dos veces derivable tal que $\alpha'(t)\neq 0$ para todo $t\in I$.
+
+\begin{defi}[Vector unitario tangente]
+    Se define el vector unitario tangente por
+    \[
+        T_\alpha(t)=\frac{\alpha'(t)}{\|\alpha'(t)\|},
+    \]
+    para todo $t\in I$.
+\end{defi}
+
+\begin{defi}[Vector normal principal]
+    Si $T_\alpha'(t)\neq 0$ para todo $t\in I$, se define el vector normal principal por
+    \[
+        N_\alpha(t)=\frac{T_\alpha'(t)}{\|T_\alpha'(t)\|},
+    \]
+    para todo $t\in I$.
+\end{defi}
+
+\begin{defi}[Vector binormal principal]
+    Si $T_\alpha'(t)\neq 0$ para todo $t\in I$, se define el vector binormal principal por
+    \[
+        B_\alpha(t)=T_\alpha(t)\times N_\alpha(t),
+    \]
+    para todo $t\in I$.
+\end{defi}
+
+\begin{defi}[Plano osculador]
+    El plano
+    \[
+        P(\alpha(t);T_\alpha(t),N_\alpha(t))
+    \]
+    se lo denomina plano osculador de la trayectoria en el punto $\alpha(t)$.
+\end{defi}
+
+\begin{defi}[Plano normal]
+    El plano
+    \[
+        P(\alpha(t);B_\alpha(t),N_\alpha(t))
+    \]
+    se lo denomina plano normal de la trayectoria en el punto $\alpha(t)$.
+\end{defi}
+
+\begin{defi}[Plano rectificante]
+    El plano
+    \[
+        P(\alpha(t);T_\alpha(t),B_\alpha(t))
+    \]
+    se lo denomina plano rectificante de la trayectoria en el punto $\alpha(t)$.
+\end{defi}
+
+\begin{prop}
+    El vector aceleración en el tiempo $t$ es una combinación lineal de los vectores $T_\alpha(t)$ y $T_\alpha'(t)$ para todo $t\in I$, además
+    \[
+        a_\alpha(t)=\rho'_\alpha(t) T_\alpha(t)+\rho_\alpha(t) T_\alpha'(t).
+    \]
+\end{prop}
+
+\begin{advertencia}
+    En las definiciones anteriores, si no existe ambigüedad en cuanto a la parametrización de la curva $C$, se omitirá el uso del subíndice $\alpha$.
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Longitud de arco y curvatura}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Longitud de arco]
+    Si $\func{\alpha}{[a,b]}{\R^n}$, la longitud de arco de la curva $C$ está dada por
+    \[
+        \ell(C)=\int_a^b \rho_\alpha(t)\, dt.
+    \]
+\end{defi}
+
+\begin{prop}
+    La longitud de arco es invariante bajo cambio de parámetro.
+\end{prop}
+
+En esta sección consideraremos $\func{\alpha}{I}{\R^3}$, dos veces derivable, con $\alpha'(t)\neq 0$ para todo $t\in I$.
+
+\begin{defi}[Curvatura]
+    El vector curvatura se define por
+    \[
+        K_\alpha(t)=\frac{1}{\rho_\alpha(t)}T_\alpha'(t),
+    \]
+    para todo $t\in I$. Además, la curvatura se define por
+    \[
+        \kappa_\alpha(t)=\frac{\|T_\alpha'(t)\|}{\rho_\alpha(t)},
+    \]
+    para todo $t\in I$.
+\end{defi}
+
+\begin{prop}
+    La curvatura es invariante bajo cambio de parámetro.
+\end{prop}
+
+\begin{prop}
+    Se tiene que
+    \[
+        a_\alpha(t)=\rho_\alpha'(t)\, T_\alpha(t) + \kappa_\alpha(t)\, \rho^2_\alpha(t)\, N_\alpha(t),
+    \]
+    para todo $t\in I$. Además,
+    \[
+        \kappa_\alpha(t) = \frac{\|a_\alpha(t)\times v_\alpha(t)\|}{\rho^3_\alpha(t)}
+    \]
+    para todo $t\in I$.
+\end{prop}
+
+\begin{defi}[Torsión]
+    La torsión se define por
+    \[
+        \tau_\alpha(t)= \frac{v_\alpha(t)\cdot(a_\alpha(t)\times a_\alpha'(t))}{\| v_\alpha(t)\times a_\alpha(t) \|^2},
+    \]
+    para todo $t\in I$.
+\end{defi}
+
+\begin{prop}
+    La torsión es invariante bajo cambio de parámetro.
+\end{prop}
+
+\end{document}
