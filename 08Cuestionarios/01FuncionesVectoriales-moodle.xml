@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was generated on 2026-05-16 by XeLaTeX -->
+<!-- running on *NIX with the package moodle v0.9 -->
+
+<quiz>
+ 
+<question type="category">
+  <category>
+    <text>$course$/top/Conceptos de funciones vectoriales y curvas</text>
+  </category>
+</question>
+ 
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[FV-Def-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \( f\colon \Omega  \rightarrow \mathbb {R}^m\) con \(\Omega \subset \mathbb {R}^n\). ¿Cuál de los siguientes casos corresponde a una <B>trayectoria</B>? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(n=1\) y \(m>1\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(n>1\) y \(m=1\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(n>1\) y \(m>1\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(n=1\) y \(m=1\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[FV-Def-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \( f\colon \Omega  \rightarrow \mathbb {R}^m\) con \(\Omega \subset \mathbb {R}^n\). ¿Cuál de los siguientes casos corresponde a un <B>campo escalar</B>? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(n>1\) y \(m=1\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(n=1\) y \(m>1\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(n>1\) y \(m>1\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(n=1\) y \(m=1\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[FV-NivelCurva-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Dado un campo escalar \( f\colon \Omega  \rightarrow \mathbb {R}\) con \(\Omega \subset \mathbb {R}^2\) y \(c\in \mathbb {R}\), ¿cómo se llama al conjunto \(L_c(f)=\{x\in \Omega : f(x)=c\}\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Curva de nivel</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Superficie de nivel</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Trayectoria de nivel</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Campo de nivel</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[FV-VectorTangente-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Dada una curva \(C\) parametrizada por \( \alpha \colon I \rightarrow \mathbb {R}^m\), ¿cuál es el vector tangente a \(C\) en el punto \(\alpha (t)\), cuando existe y es no nulo? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\alpha &rsquo;(t)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\alpha (t)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\alpha &rsquo;&rsquo;(t)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\|\alpha &rsquo;(t)\|\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[FV-Movimiento-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(\alpha \) describe el movimiento de una partícula, ¿cuál de las siguientes afirmaciones es correcta? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\alpha &rsquo;(t)\) es la velocidad y \(\|\alpha &rsquo;(t)\|\) es la rapidez en el tiempo \(t\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\alpha &rsquo;(t)\) es la aceleración en el tiempo \(t\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\alpha &rsquo;&rsquo;(t)\) es la velocidad en el tiempo \(t\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\|\alpha &rsquo;(t)\|\) es la aceleración escalar en el tiempo \(t\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[FV-CadenaRegla-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \( u\colon I \rightarrow \mathbb {R}\) es derivable en \(a\) y \( \alpha \colon J \rightarrow \mathbb {R}^m\) es derivable en \(u(a)\), la regla de la cadena para \(\alpha \circ u\) establece que: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\((\alpha \circ u)&rsquo;(a)=u&rsquo;(a)&#8239;\alpha &rsquo;(u(a))\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((\alpha \circ u)&rsquo;(a)=\alpha &rsquo;(a)&#8239;u&rsquo;(u(a))\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((\alpha \circ u)&rsquo;(a)=\alpha &rsquo;(u(a))+u&rsquo;(a)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((\alpha \circ u)&rsquo;(a)=u&rsquo;(a)+\alpha &rsquo;(a)\)</p>]]></text>
+  </answer>
+</question>
+ 
+<question type="category">
+  <category>
+    <text>$course$/top/Geometría de curvas</text>
+  </category>
+</question>
+ 
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[GC-VectoresTriedro-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Dada \( \alpha \colon I \rightarrow \mathbb {R}^3\) con \(\alpha &rsquo;(t)\neq 0\), ¿cuál es la definición del vector unitario tangente \(T_\alpha (t)\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(T_\alpha (t)=\dfrac {\alpha &rsquo;(t)}{\|\alpha &rsquo;(t)\|}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(T_\alpha (t)=\dfrac {T_\alpha &rsquo;(t)}{\|T_\alpha &rsquo;(t)\|}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(T_\alpha (t)=T_\alpha (t)\times N_\alpha (t)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(T_\alpha (t)=\alpha &rsquo;(t)\cdot \alpha &rsquo;&rsquo;(t)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[GC-VectoresTriedro-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El vector binormal principal \(B_\alpha (t)\) se define como: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(B_\alpha (t)=T_\alpha (t)\times N_\alpha (t)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(B_\alpha (t)=N_\alpha (t)\times T_\alpha (t)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(B_\alpha (t)=\dfrac {T_\alpha &rsquo;(t)}{\|T_\alpha &rsquo;(t)\|}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(B_\alpha (t)=\dfrac {\alpha &rsquo;(t)}{\|\alpha &rsquo;(t)\|}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[GC-Planos-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Cuál de los siguientes planos contiene a los vectores \(T_\alpha (t)\) y \(N_\alpha (t)\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Plano osculador</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Plano normal</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Plano rectificante</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Plano tangente</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[GC-Curvatura-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La curvatura \(\kappa _\alpha (t)\) se define como: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\kappa _\alpha (t)=\dfrac {\|T_\alpha &rsquo;(t)\|}{\rho _\alpha (t)}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\kappa _\alpha (t)=\|T_\alpha (t)\|\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\kappa _\alpha (t)=\rho _\alpha (t)&#8239;\|T_\alpha &rsquo;(t)\|\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\kappa _\alpha (t)=\dfrac {\rho _\alpha (t)}{\|T_\alpha &rsquo;(t)\|}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[GC-Curvatura-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La curvatura también puede calcularse con la fórmula alternativa: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\kappa _\alpha (t)=\dfrac {\|a_\alpha (t)\times v_\alpha (t)\|}{\rho ^3_\alpha (t)}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\kappa _\alpha (t)=\dfrac {\|v_\alpha (t)\times a_\alpha (t)\|}{\rho _\alpha (t)}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\kappa _\alpha (t)=\dfrac {v_\alpha (t)\cdot a_\alpha (t)}{\rho ^2_\alpha (t)}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\kappa _\alpha (t)=\dfrac {\|a_\alpha (t)\|}{\|v_\alpha (t)\|}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[GC-Torsion-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La torsión \(\tau _\alpha (t)\) se define como: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\tau _\alpha (t)=\dfrac {v_\alpha (t)\cdot \left (a_\alpha (t)\times a_\alpha &rsquo;(t)\right )}{\|v_\alpha (t)\times a_\alpha (t)\|^2}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\tau _\alpha (t)=\dfrac {\|T_\alpha &rsquo;(t)\|}{\rho _\alpha (t)}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\tau _\alpha (t)=\dfrac {a_\alpha (t)\cdot v_\alpha (t)}{\rho ^3_\alpha (t)}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\tau _\alpha (t)=\dfrac {\|v_\alpha (t)\times a_\alpha (t)\|}{v_\alpha (t)\cdot a_\alpha &rsquo;(t)}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[GC-LongitudArco-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La longitud de arco de la curva descrita por \( \alpha \colon [a,b] \rightarrow \mathbb {R}^n\) está dada por: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\ell (C)=\displaystyle \int _a^b \rho _\alpha (t)&#8239;dt\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\ell (C)=\displaystyle \int _a^b \|\alpha (t)\|&#8239;dt\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\ell (C)=\displaystyle \int _a^b \alpha &rsquo;(t)&#8239;dt\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\ell (C)=\displaystyle \int _a^b \kappa _\alpha (t)&#8239;dt\)</p>]]></text>
+  </answer>
+</question>
+ 
+<question type="category">
+  <category>
+    <text>$course$/top/Tipo de funciones</text>
+  </category>
+</question>
+ 
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[TF-Clasif-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La función \( f\colon \mathbb {R}^2 \rightarrow \mathbb {R}^3\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un campo vectorial</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una trayectoria</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo escalar</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[TF-Clasif-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La función \( f\colon \mathbb {R}^3 \rightarrow \mathbb {R}\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un campo escalar</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo vectorial</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una trayectoria</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[TF-Clasif-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La función definida por \(f(t)=(t^2, t)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una trayectoria</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo escalar</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo vectorial</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[TF-Clasif-04]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La función definida por \(f(t)=(t, \cos t, \sen t)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una trayectoria</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo escalar</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo vectorial</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[TF-Clasif-05]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La función definida por \(f(x,y)=x^2+y^2\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un campo escalar</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una trayectoria</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo vectorial</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[TF-Clasif-06]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La función definida por \(F(x,y)=(x+y,&#8239; x-y,&#8239; xy)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un campo vectorial</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una trayectoria</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo escalar</p>]]></text>
+  </answer>
+</question>
+ 
+<question type="category">
+  <category>
+    <text>$course$/top/Gráficas de funciones</text>
+  </category>
+</question>
+ 
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[GF-Graf-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La representación gráfica de la función \(\alpha (t)=(t,&#8239; t)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una curva en el plano</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una curva en el espacio</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una superficie</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo de flechas en el plano</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[GF-Graf-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La representación gráfica de la función \(\alpha (t)=(t,&#8239; t^2,&#8239; t^3)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una curva en el espacio</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una curva en el plano</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una superficie en \(\mathbb {R}^3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo de flechas en \(\mathbb {R}^3\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[GF-Graf-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La representación gráfica de la función \(f(x,y)=x^2+y^2\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una superficie en \(\mathbb {R}^3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una curva en el plano</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una curva en el espacio</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo de flechas en \(\mathbb {R}^2\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[GF-Graf-04]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La representación gráfica de la función \(F(x,y)=(-y,&#8239; x)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un campo de flechas en el plano</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una curva en el plano</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una superficie en \(\mathbb {R}^3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una curva en el espacio</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[GF-Graf-05]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La representación gráfica de la función \(\alpha (t)=(\cos t,&#8239; \sen t)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una curva en el plano (una circunferencia)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una curva en el espacio</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una superficie en \(\mathbb {R}^3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un punto en el plano</p>]]></text>
+  </answer>
+</question>
+ 
+<question type="category">
+  <category>
+    <text>$course$/top/Cálculo en trayectorias</text>
+  </category>
+</question>
+ 
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[CT-Deriv-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\alpha (t)=(t^2,&#8239; t^3)\). La primera componente de \(\alpha &rsquo;(1)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>2</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[CT-Deriv-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\alpha (t)=(\sen t,&#8239; \cos t)\). La segunda componente de \(\alpha &rsquo;(0)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>0</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[CT-Deriv-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\alpha (t)=(e^t,&#8239; t^2,&#8239; 3t)\). La tercera componente de \(\alpha &rsquo;(0)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>3</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[CT-Integ-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\alpha (t)=(2t,&#8239; 1)\). La primera componente de \(\displaystyle \int _0^1 \alpha (t)&#8239;dt\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>1</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[CT-Integ-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\alpha (t)=(t,&#8239; t^2)\). La segunda componente de \(\displaystyle \int _0^1 \alpha (t)&#8239;dt\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>0.333</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[CT-Norma-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\alpha (t)=(\cos t,&#8239; \sen t)\). La rapidez \(\rho _\alpha (t)=\|\alpha &rsquo;(t)\|\) es igual a (escribe el valor numérico): </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>1</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+ 
+<question type="category">
+  <category>
+    <text>$course$/top/Tangentes a trayectorias</text>
+  </category>
+</question>
+ 
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[TT-Tangente-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El vector tangente a la trayectoria \(\alpha (t)=(t^2,&#8239; 2t)\) en \(t=1\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\((2,&#8239; 2)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((1,&#8239; 2)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((2,&#8239; 1)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((4,&#8239; 2)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[TT-Tangente-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El vector tangente a la trayectoria \(\alpha (t)=(\cos t,&#8239; \sen t,&#8239; t)\) en \(t=0\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\((0,&#8239; 1,&#8239; 1)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((1,&#8239; 0,&#8239; 0)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((-1,&#8239; 0,&#8239; 1)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((0,&#8239; 0,&#8239; 1)\)</p>]]></text>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[TT-TangenteNum-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\alpha (t)=(t^3,&#8239; t^2)\). La primera coordenada del vector tangente en \(t=2\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>12</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[TT-TangenteNum-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\alpha (t)=(\sen t,&#8239; \cos t,&#8239; 2t)\). La tercera coordenada del vector tangente en \(t=0\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>2</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[TT-Tangente-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El vector tangente a la trayectoria \(\alpha (t)=(e^t,&#8239; e^{-t})\) en \(t=0\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\((1,&#8239; -1)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((1,&#8239; 1)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((0,&#8239; 0)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((-1,&#8239; 1)\)</p>]]></text>
+  </answer>
+</question>
+ 
+<question type="category">
+  <category>
+    <text>$course$/top/Ideas de curvatura y torsión</text>
+  </category>
+</question>
+ 
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ICT-Curv-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Intuitivamente, ¿qué mide la curvatura \(\kappa \) de una curva en un punto? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Qué tanto se dobla o se curva la trayectoria en ese punto.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La velocidad con que se recorre la curva.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La longitud total de la curva.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El ángulo que forma la curva con el eje horizontal.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ICT-Curv-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Una línea recta tiene curvatura: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\kappa =0\) en todos sus puntos.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\kappa =1\) en todos sus puntos.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\kappa \) variable según el punto.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\kappa \) indefinida, pues no se puede calcular en rectas.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ICT-Curv-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Una circunferencia de radio \(r\) grande comparada con una de radio \(r\) pequeño tiene: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Menor curvatura, pues se curva menos.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Mayor curvatura, pues es más larga.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La misma curvatura, pues ambas son circunferencias.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Curvatura cero, pues en el límite se parece a una recta.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ICT-Tors-01]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Intuitivamente, ¿qué mide la torsión \(\tau \) de una curva en el espacio? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Qué tanto la curva se aparta del plano osculador, es decir, cuánto «se tuerce» fuera de ese plano.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Qué tanto se dobla la curva en ese punto.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La velocidad escalar de la partícula que recorre la curva.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La longitud de arco acumulada hasta ese punto.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ICT-Tors-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Una curva plana (contenida en un plano) tiene torsión: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\tau =0\) en todos sus puntos.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\tau =1\) en todos sus puntos.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\tau \) variable que depende de la curvatura.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\tau \) indefinida, pues la torsión solo se define en el espacio.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ICT-Tors-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Cuál de las siguientes curvas tiene torsión no nula? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una hélice circular \(\alpha (t)=(\cos t,&#8239; \sen t,&#8239; t)\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una circunferencia en el plano \(xy\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una parábola en el plano \(xz\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una recta en \(\mathbb {R}^3\).</p>]]></text>
+  </answer>
+</question>
+ 
+</quiz>
