@@ -1,0 +1,556 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Para obtener solo el pdf, compilar con pdfLaTeX.
+% Para obtener el xml compilar con XeLaTeX.
+
+% -- Paquetes adicionales
+\usepackage[handout]{aleph-moodle}
+% \usepackage{aleph-moodle}
+\moodleregisternewcommands
+% Todos los comandos nuevos deben ir luego del comando anterior
+\usepackage{aleph-comandos}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Cuestionario No. 1: Funciones vectoriales y geometría de curvas}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+\vspace*{-8mm}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Indicaciones}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Asocia las funciones de varias variables con su ley de asignación y su representación gráfica», correspondiente al \textbf{resultado de aprendizaje}: Identificar los conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Banco de preguntas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Conceptos de funciones vectoriales y curvas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {FV-Def-01}
+    % - Enunciado
+    Sea $\func{f}{\Omega}{\R^m}$ con $\Omega\subset\R^n$. ¿Cuál de los siguientes casos corresponde a una \textbf{trayectoria}?
+    \item* $n=1$ y $m>1$
+    \item $n>1$ y $m=1$
+    \item $n>1$ y $m>1$
+    \item $n=1$ y $m=1$
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {FV-Def-02}
+    % - Enunciado
+    Sea $\func{f}{\Omega}{\R^m}$ con $\Omega\subset\R^n$. ¿Cuál de los siguientes casos corresponde a un \textbf{campo escalar}?
+    \item* $n>1$ y $m=1$
+    \item $n=1$ y $m>1$
+    \item $n>1$ y $m>1$
+    \item $n=1$ y $m=1$
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {FV-NivelCurva-01}
+    % - Enunciado
+    Dado un campo escalar $\func{f}{\Omega}{\R}$ con $\Omega\subset\R^2$ y $c\in\R$, ¿cómo se llama al conjunto $L_c(f)=\{x\in\Omega : f(x)=c\}$?
+    \item* Curva de nivel
+    \item Superficie de nivel
+    \item Trayectoria de nivel
+    \item Campo de nivel
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {FV-VectorTangente-01}
+    % - Enunciado
+    Dada una curva $C$ parametrizada por $\func{\alpha}{I}{\R^m}$, ¿cuál es el vector tangente a $C$ en el punto $\alpha(t)$, cuando existe y es no nulo?
+    \item* $\alpha'(t)$
+    \item $\alpha(t)$
+    \item $\alpha''(t)$
+    \item $\|\alpha'(t)\|$
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {FV-Movimiento-01}
+    % - Enunciado
+    Si $\alpha$ describe el movimiento de una partícula, ¿cuál de las siguientes afirmaciones es correcta?
+    \item* $\alpha'(t)$ es la velocidad y $\|\alpha'(t)\|$ es la rapidez en el tiempo $t$.
+    \item $\alpha'(t)$ es la aceleración en el tiempo $t$.
+    \item $\alpha''(t)$ es la velocidad en el tiempo $t$.
+    \item $\|\alpha'(t)\|$ es la aceleración escalar en el tiempo $t$.
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {FV-CadenaRegla-01}
+    % - Enunciado
+    Si $\func{u}{I}{\R}$ es derivable en $a$ y $\func{\alpha}{J}{\R^m}$ es derivable en $u(a)$, la regla de la cadena para $\alpha\circ u$ establece que:
+    \item* $(\alpha\circ u)'(a)=u'(a)\,\alpha'(u(a))$
+    \item $(\alpha\circ u)'(a)=\alpha'(a)\,u'(u(a))$
+    \item $(\alpha\circ u)'(a)=\alpha'(u(a))+u'(a)$
+    \item $(\alpha\circ u)'(a)=u'(a)+\alpha'(a)$
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Geometría de curvas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {GC-VectoresTriedro-01}
+    % - Enunciado
+    Dada $\func{\alpha}{I}{\R^3}$ con $\alpha'(t)\neq 0$, ¿cuál es la definición del vector unitario tangente $T_\alpha(t)$?
+    \item* $T_\alpha(t)=\dfrac{\alpha'(t)}{\|\alpha'(t)\|}$
+    \item $T_\alpha(t)=\dfrac{T_\alpha'(t)}{\|T_\alpha'(t)\|}$
+    \item $T_\alpha(t)=T_\alpha(t)\times N_\alpha(t)$
+    \item $T_\alpha(t)=\alpha'(t)\cdot\alpha''(t)$
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {GC-VectoresTriedro-02}
+    % - Enunciado
+    El vector binormal principal $B_\alpha(t)$ se define como:
+    \item* $B_\alpha(t)=T_\alpha(t)\times N_\alpha(t)$
+    \item $B_\alpha(t)=N_\alpha(t)\times T_\alpha(t)$
+    \item $B_\alpha(t)=\dfrac{T_\alpha'(t)}{\|T_\alpha'(t)\|}$
+    \item $B_\alpha(t)=\dfrac{\alpha'(t)}{\|\alpha'(t)\|}$
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {GC-Planos-01}
+    % - Enunciado
+    ¿Cuál de los siguientes planos contiene a los vectores $T_\alpha(t)$ y $N_\alpha(t)$?
+    \item* Plano osculador
+    \item Plano normal
+    \item Plano rectificante
+    \item Plano tangente
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {GC-Curvatura-01}
+    % - Enunciado
+    La curvatura $\kappa_\alpha(t)$ se define como:
+    \item* $\kappa_\alpha(t)=\dfrac{\|T_\alpha'(t)\|}{\rho_\alpha(t)}$
+    \item $\kappa_\alpha(t)=\|T_\alpha(t)\|$
+    \item $\kappa_\alpha(t)=\rho_\alpha(t)\,\|T_\alpha'(t)\|$
+    \item $\kappa_\alpha(t)=\dfrac{\rho_\alpha(t)}{\|T_\alpha'(t)\|}$
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {GC-Curvatura-02}
+    % - Enunciado
+    La curvatura también puede calcularse con la fórmula alternativa:
+    \item* $\kappa_\alpha(t)=\dfrac{\|a_\alpha(t)\times v_\alpha(t)\|}{\rho^3_\alpha(t)}$
+    \item $\kappa_\alpha(t)=\dfrac{\|v_\alpha(t)\times a_\alpha(t)\|}{\rho_\alpha(t)}$
+    \item $\kappa_\alpha(t)=\dfrac{v_\alpha(t)\cdot a_\alpha(t)}{\rho^2_\alpha(t)}$
+    \item $\kappa_\alpha(t)=\dfrac{\|a_\alpha(t)\|}{\|v_\alpha(t)\|}$
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {GC-Torsion-01}
+    % - Enunciado
+    La torsión $\tau_\alpha(t)$ se define como:
+    \item* $\tau_\alpha(t)=\dfrac{v_\alpha(t)\cdot\left(a_\alpha(t)\times a_\alpha'(t)\right)}{\|v_\alpha(t)\times a_\alpha(t)\|^2}$
+    \item $\tau_\alpha(t)=\dfrac{\|T_\alpha'(t)\|}{\rho_\alpha(t)}$
+    \item $\tau_\alpha(t)=\dfrac{a_\alpha(t)\cdot v_\alpha(t)}{\rho^3_\alpha(t)}$
+    \item $\tau_\alpha(t)=\dfrac{\|v_\alpha(t)\times a_\alpha(t)\|}{v_\alpha(t)\cdot a_\alpha'(t)}$
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {GC-LongitudArco-01}
+    % - Enunciado
+    La longitud de arco de la curva descrita por $\func{\alpha}{[a,b]}{\R^n}$ está dada por:
+    \item* $\ell(C)=\displaystyle\int_a^b \rho_\alpha(t)\,dt$
+    \item $\ell(C)=\displaystyle\int_a^b \|\alpha(t)\|\,dt$
+    \item $\ell(C)=\displaystyle\int_a^b \alpha'(t)\,dt$
+    \item $\ell(C)=\displaystyle\int_a^b \kappa_\alpha(t)\,dt$
+\end{multi}
+
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Tipo de funciones}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {TF-Clasif-01}
+    % - Enunciado
+    La función $\func{f}{\R^2}{\R^3}$ es:
+    \item* Un campo vectorial
+    \item Una trayectoria
+    \item Un campo escalar
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {TF-Clasif-02}
+    % - Enunciado
+    La función $\func{f}{\R^3}{\R}$ es:
+    \item* Un campo escalar
+    \item Un campo vectorial
+    \item Una trayectoria
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {TF-Clasif-03}
+    % - Enunciado
+    La función definida por $f(t)=(t^2, t)$ es:
+    \item* Una trayectoria
+    \item Un campo escalar
+    \item Un campo vectorial
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {TF-Clasif-04}
+    % - Enunciado
+    La función definida por $f(t)=(t, \cos t, \sen t)$ es:
+    \item* Una trayectoria
+    \item Un campo escalar
+    \item Un campo vectorial
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {TF-Clasif-05}
+    % - Enunciado
+    La función definida por $f(x,y)=x^2+y^2$ es:
+    \item* Un campo escalar
+    \item Una trayectoria
+    \item Un campo vectorial
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {TF-Clasif-06}
+    % - Enunciado
+    La función definida por $F(x,y)=(x+y,\, x-y,\, xy)$ es:
+    \item* Un campo vectorial
+    \item Una trayectoria
+    \item Un campo escalar
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Gráficas de funciones}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {GF-Graf-01}
+    % - Enunciado
+    La representación gráfica de la función $\alpha(t)=(t,\, t)$ es:
+    \item* Una curva en el plano
+    \item Una curva en el espacio
+    \item Una superficie
+    \item Un campo de flechas en el plano
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {GF-Graf-02}
+    % - Enunciado
+    La representación gráfica de la función $\alpha(t)=(t,\, t^2,\, t^3)$ es:
+    \item* Una curva en el espacio
+    \item Una curva en el plano
+    \item Una superficie en $\R^3$
+    \item Un campo de flechas en $\R^3$
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {GF-Graf-03}
+    % - Enunciado
+    La representación gráfica de la función $f(x,y)=x^2+y^2$ es:
+    \item* Una superficie en $\R^3$
+    \item Una curva en el plano
+    \item Una curva en el espacio
+    \item Un campo de flechas en $\R^2$
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {GF-Graf-04}
+    % - Enunciado
+    La representación gráfica de la función $F(x,y)=(-y,\, x)$ es:
+    \item* Un campo de flechas en el plano
+    \item Una curva en el plano
+    \item Una superficie en $\R^3$
+    \item Una curva en el espacio
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {GF-Graf-05}
+    % - Enunciado
+    La representación gráfica de la función $\alpha(t)=(\cos t,\, \sen t)$ es:
+    \item* Una curva en el plano (una circunferencia)
+    \item Una curva en el espacio
+    \item Una superficie en $\R^3$
+    \item Un punto en el plano
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Cálculo en trayectorias}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{numerical}[tolerance=0.01]%
+    % - Identificador
+    {CT-Deriv-01}
+    % - Enunciado
+    Sea $\alpha(t)=(t^2,\, t^3)$. La primera componente de $\alpha'(1)$ es:
+    \item 2
+\end{numerical}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{numerical}[tolerance=0.01]%
+    % - Identificador
+    {CT-Deriv-02}
+    % - Enunciado
+    Sea $\alpha(t)=(\sen t,\, \cos t)$. La segunda componente de $\alpha'(0)$ es:
+    \item 0
+\end{numerical}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{numerical}[tolerance=0.01]%
+    % - Identificador
+    {CT-Deriv-03}
+    % - Enunciado
+    Sea $\alpha(t)=(e^t,\, t^2,\, 3t)$. La tercera componente de $\alpha'(0)$ es:
+    \item 3
+\end{numerical}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{numerical}[tolerance=0.01]%
+    % - Identificador
+    {CT-Integ-01}
+    % - Enunciado
+    Sea $\alpha(t)=(2t,\, 1)$. La primera componente de $\displaystyle\int_0^1 \alpha(t)\,dt$ es:
+    \item 1
+\end{numerical}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{numerical}[tolerance=0.01]%
+    % - Identificador
+    {CT-Integ-02}
+    % - Enunciado
+    Sea $\alpha(t)=(t,\, t^2)$. La segunda componente de $\displaystyle\int_0^1 \alpha(t)\,dt$ es:
+    \item 0.333
+\end{numerical}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{numerical}[tolerance=0.01]%
+    % - Identificador
+    {CT-Norma-01}
+    % - Enunciado
+    Sea $\alpha(t)=(\cos t,\, \sen t)$. La rapidez $\rho_\alpha(t)=\|\alpha'(t)\|$ es igual a (escribe el valor numérico):
+    \item 1
+\end{numerical}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Tangentes a trayectorias}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {TT-Tangente-01}
+    % - Enunciado
+    El vector tangente a la trayectoria $\alpha(t)=(t^2,\, 2t)$ en $t=1$ es:
+    \item* $(2,\, 2)$
+    \item $(1,\, 2)$
+    \item $(2,\, 1)$
+    \item $(4,\, 2)$
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {TT-Tangente-02}
+    % - Enunciado
+    El vector tangente a la trayectoria $\alpha(t)=(\cos t,\, \sen t,\, t)$ en $t=0$ es:
+    \item* $(0,\, 1,\, 1)$
+    \item $(1,\, 0,\, 0)$
+    \item $(-1,\, 0,\, 1)$
+    \item $(0,\, 0,\, 1)$
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{numerical}[tolerance=0.01]%
+    % - Identificador
+    {TT-TangenteNum-01}
+    % - Enunciado
+    Sea $\alpha(t)=(t^3,\, t^2)$. La primera coordenada del vector tangente en $t=2$ es:
+    \item 12
+\end{numerical}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{numerical}[tolerance=0.01]%
+    % - Identificador
+    {TT-TangenteNum-02}
+    % - Enunciado
+    Sea $\alpha(t)=(\sen t,\, \cos t,\, 2t)$. La tercera coordenada del vector tangente en $t=0$ es:
+    \item 2
+\end{numerical}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {TT-Tangente-03}
+    % - Enunciado
+    El vector tangente a la trayectoria $\alpha(t)=(e^t,\, e^{-t})$ en $t=0$ es:
+    \item* $(1,\, -1)$
+    \item $(1,\, 1)$
+    \item $(0,\, 0)$
+    \item $(-1,\, 1)$
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Ideas de curvatura y torsión}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {ICT-Curv-01}
+    % - Enunciado
+    Intuitivamente, ¿qué mide la curvatura $\kappa$ de una curva en un punto?
+    \item* Qué tanto se dobla o se curva la trayectoria en ese punto.
+    \item La velocidad con que se recorre la curva.
+    \item La longitud total de la curva.
+    \item El ángulo que forma la curva con el eje horizontal.
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {ICT-Curv-02}
+    % - Enunciado
+    Una línea recta tiene curvatura:
+    \item* $\kappa=0$ en todos sus puntos.
+    \item $\kappa=1$ en todos sus puntos.
+    \item $\kappa$ variable según el punto.
+    \item $\kappa$ indefinida, pues no se puede calcular en rectas.
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {ICT-Curv-03}
+    % - Enunciado
+    Una circunferencia de radio $r$ grande comparada con una de radio $r$ pequeño tiene:
+    \item* Menor curvatura, pues se curva menos.
+    \item Mayor curvatura, pues es más larga.
+    \item La misma curvatura, pues ambas son circunferencias.
+    \item Curvatura cero, pues en el límite se parece a una recta.
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {ICT-Tors-01}
+    % - Enunciado
+    Intuitivamente, ¿qué mide la torsión $\tau$ de una curva en el espacio?
+    \item* Qué tanto la curva se aparta del plano osculador, es decir, cuánto «se tuerce» fuera de ese plano.
+    \item Qué tanto se dobla la curva en ese punto.
+    \item La velocidad escalar de la partícula que recorre la curva.
+    \item La longitud de arco acumulada hasta ese punto.
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {ICT-Tors-02}
+    % - Enunciado
+    Una curva plana (contenida en un plano) tiene torsión:
+    \item* $\tau=0$ en todos sus puntos.
+    \item $\tau=1$ en todos sus puntos.
+    \item $\tau$ variable que depende de la curvatura.
+    \item $\tau$ indefinida, pues la torsión solo se define en el espacio.
+\end{multi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    % - Identificador
+    {ICT-Tors-03}
+    % - Enunciado
+    ¿Cuál de las siguientes curvas tiene torsión no nula?
+    \item* Una hélice circular $\alpha(t)=(\cos t,\, \sen t,\, t)$.
+    \item Una circunferencia en el plano $xy$.
+    \item Una parábola en el plano $xz$.
+    \item Una recta en $\R^3$.
+\end{multi}
+
+\end{quiz}
+
+\end{document}
