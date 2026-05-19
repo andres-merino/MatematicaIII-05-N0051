@@ -1,0 +1,120 @@
+\documentclass[11pt,a4]{aleph-examen}
+% \documentclass[11pt,respuestas,a4]{aleph-examen}
+
+% -- Paquetes extra
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Taller 01: Funciones vectoriales y geometría diferencial}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+\begin{document}
+
+\encabezado
+
+\section*{Indicaciones}
+\begin{itemize}[leftmargin=*]
+\item
+    En esta actividad se evalúa si el estudiante (Criterio 2.1) representa y describe funciones vectoriales y curvas paramétricas, incluyendo el trazo de curvas en el espacio y el cálculo de propiedades geométricas como curvatura y torsión.
+\item
+    El taller se desarrolla en grupos de hasta 3 personas.
+\item
+    Se permite y se recomienda el uso de asistentes computacionales (GeoGebra, Python, Mathematica, etc.) para graficar y realizar cálculos; sin embargo, cada respuesta de análisis debe estar escrita y justificada por el grupo.
+\item
+    Las resoluciones deben entregarse de forma impresa o digital, con todos los procedimientos y gráficas claramente presentados.
+\item
+    Todas las conclusiones deben estar correctamente redactadas; no basta con presentar el resultado del asistente computacional.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{preguntas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Considere la trayectoria
+\[
+    \funcion{\alpha}{[0,2\pi]}{\R^2}{t}{(\sen(2t),\;\sen(3t)).}
+\]
+\begin{enumerate}
+    \item Evalúe la función en $0$, $1$, $\pi$, , $2\pi$.
+    \item Use un asistente computacional para graficar la curva. Incluya los resultados del literal anterior.
+    \item Calcule $\alpha'(t)$ y determine todos los valores de $t\in[0,2\pi]$ para los que el vector tangente es horizontal ($\alpha_2'(t)=0$) o vertical ($\alpha_1'(t)=0$). ¿Qué ocurre geométricamente en esos puntos?
+    \item La curva pasa varias veces por el origen. Encuentre todos los valores de $t$ para los que $\alpha(t)=(0,0)$. ¿Cuántos «cruces» ocurren?
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Considere el campo escalar
+\[
+    \funcion{f}{\R^2\setminus\{(0,0)\}}{\R}{(x,y)}{2\sen\l(\sqrt{x^2+y^2}\r).}
+\]
+\begin{enumerate}
+    \item Evalúe la función en $(0,0)$, $(1,1)$, $(0,\pi)$, $(\pi,0)$. 
+    \item Use un asistente computacional para graficar la superficie $z=f(x,y)$. Incluya los resultados del literal anterior.
+    \item Determine las curvas de nivel con $c=0$, $c=1$, $c=-1$, $c=2$, $c=-2$. Describa en palabras las curvas de nivel. Muestre un gráfico de las curvas de nivel usando colores para su mejor comprensión.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Considere el campo vectorial
+\[
+    \funcion{F}{\R^2\setminus\{(0,0)\}}{\R^2}{(x,y)}{\l(\dfrac{-y}{x^2+y^2},\;\dfrac{x}{x^2+y^2}\r).}
+\]
+\begin{enumerate}
+    \item Evalúe la función en $(1,1)$, $(1,0)$, $(0,1)$, $(-1,0)$, $(0,-1)$, $(-1,-1)$. 
+    \item Use un asistente computacional para graficar el campo vectorial $F$. Incluya los resultados del literal anterior.
+    \item A partir de la gráfica, describa en palabras el comportamiento de las líneas de campo. ¿Qué fenómeno físico podría modelar este campo?
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+La {astroide} es la curva plana descrita por
+\[
+    \funcion{\alpha}{[0,2\pi]}{\R^2}{t}{(\cos^3 t,\;\sen^3 t).}
+\]
+\begin{enumerate}
+    \item Grafique la astroide con un asistente computacional. 
+    \item Calcule $\alpha'(t)$ y determine los valores de $t$ donde $\alpha'(t)=\vec{0}$. ¿Qué representan estos puntos en la gráfica?
+    \item Calcule $\|\alpha'(t)\|$ y simplifique la expresión para $t\in(0,\pi/2)$.
+    \item Calcule la longitud del arco de la astroide en el primer cuadrante, es decir,
+    \[
+        L_1 = \int_0^{\pi/2}\|\alpha'(t)\|\,dt.
+    \]
+    \item Usando la simetría de la curva, determine la longitud total de la astroide.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Considere la curva espacial
+\[
+    \funcion{\alpha}{[0,2\pi]}{\R^3}{t}{(\cos t,\;\sen t,\;\sen(2t)).}
+\]
+\begin{enumerate}  
+    \item Use un asistente computacional para graficar la curva en $\R^3$. 
+    
+    \item Calcule $\alpha'(t)$, $\alpha''(t)$ y $\alpha'''(t)$.
+    
+    \item Calcule la curvatura.
+    
+    \item Use un asistente computacional para graficar $\kappa(t)$ en el intervalo $[0,2\pi]$.
+    
+    \item Determine los valores de $t\in[0,2\pi]$ donde la curvatura alcanza su valor máximo. Identifique los puntos correspondientes sobre la curva.
+    
+    \item Calcule la torsión.
+\end{enumerate}
+\end{preguntas}
+
+\end{document}
