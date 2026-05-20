@@ -31,7 +31,9 @@
 
 ---
 
-## Resultados de Aprendizaje
+## Resultados de Aprendizaje y Criterios de Evaluación
+
+Nunca cambies los Resultados de Aprendizaje (RdA) ni los Criterios de Evaluación, siempre colocalos de manera literal.
 
 - **RdA 1:** Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
   - 1.1: Representación gráfica y ley de asignación de funciones de varias variables.
@@ -79,14 +81,15 @@ Para cada tema `m`, crear en orden:
 1. **`01Resumen/Resumen0m.tex`** — Resumen teórico  
    - Clase: `aleph-notas`  
    - Definiciones, teoremas, propiedades del tema
+   - Tomar contenido de `01Resumen/ResumenCompilado.tex`.
 
 2. **`04Ejercicios/Ejercicios0m.tex`** — Ejercicios con respuestas  
    - Clase: `aleph-examen`  
-   - Ambiente `preguntas` / `respuesta`
+   - Dejar solo el foramato sin contenido.
 
 3. **`00PlanTemas/PlanTema0m.tex`** — Plan de clase  
    - Clase: `aleph-notas`  
-   - Secciones: RdA asignatura + RdA del tema, Pregunta inicial, Actividades de desarrollo (motivación, clase magistral, ejercicios guiados, videos, implementación computacional), Verificación de aprendizaje, Cierre (tarea, pregunta de investigación, para el próximo tema)
+   - Secciones: RdA asignatura + RdA del tema, Pregunta inicial (enmarcada en situaciones cotidianas sin usar términos técnicos nuevos), Actividades de desarrollo (motivación, clase magistral, ejercicios guiados, videos, implementación computacional), Verificación de aprendizaje, Cierre (tarea, pregunta de investigación, para el próximo tema)
 
 ---
 
@@ -112,12 +115,12 @@ Paquete de comandos matemáticos: `aleph-comandos` (define `\func`, `\funcion`, 
 
 | Criterio | Actividad |
 |----------|-----------|
-| 1.1 | Cuestionario en línea (100%) |
-| 1.2 | Cuestionario en línea (100%) |
-| 1.3 | Cuestionario en línea (100%) |
-| 2.1 | Taller (100%) |
-| 2.2 | Examen escrito (100%) |
-| 2.3 | Examen escrito (100%) |
-| 3.1 | Reto (100%) |
-| 3.2 | Examen escrito (100%) |
-| 3.3 | Reto (100%) |
+| 1.1 | Cuestionario en línea 1 (100%) |
+| 1.2 | Cuestionario en línea 2 (100%) |
+| 1.3 | Cuestionario en línea 3 (100%) |
+| 2.1 | Taller 1 (100%) |
+| 2.2 | Examen escrito 1 (100%) |
+| 2.3 | Examen escrito 2 (100%) |
+| 3.1 | Reto 1 (100%) |
+| 3.2 | Examen escrito 3 (100%) |
+| 3.3 | Reto 2 (100%) |
