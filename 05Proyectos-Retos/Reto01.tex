@@ -1,0 +1,186 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{aleph-comandos}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\hypersetup{
+    urlcolor=colordef!70,
+}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Reto no. 1: Superficie de precios de propiedades}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultado de aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+    \item \textbf{RdA 3 — Criterio 3.1:} Modelado con funciones de varias variables.
+\end{itemize}
+
+Específicamente, el estudiante será capaz de:
+\begin{itemize}
+    \item Ajustar una función de dos variables a datos reales e interpretar su significado.
+    \item Visualizar una función de dos variables mediante superficies 3D y curvas de nivel.
+    \item Calcular e interpretar derivadas parciales en un contexto aplicado.
+    \item Calcular el gradiente y representar el campo vectorial asociado.
+    \item Identificar la dirección de mayor crecimiento de una función en un punto dado.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Descripción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+El precio de una propiedad depende de múltiples factores. En ciencia de datos, una estrategia habitual es ajustar un modelo de regresión que exprese el precio como función de variables clave, generando una \emph{superficie de respuesta} que puede analizarse matemáticamente.
+
+\subsection*{Pregunta esencial}
+\begin{itemize}[leftmargin=*]
+    \item ¿Cómo puede una función de dos variables representar el comportamiento del mercado inmobiliario, y qué información aportan sus derivadas parciales y su gradiente para la toma de decisiones?
+\end{itemize}
+
+\subsection*{Reto}
+
+Tu desafío es construir, visualizar e interpretar matemáticamente una función $\hat{p} = f(x_1, x_2)$ que modele el precio de propiedades en función de dos variables cuantitativas de tu elección. Deberás combinar herramientas de Cálculo Vectorial con implementación en Python para extraer conclusiones concretas.
+
+Debes entregar:
+\begin{itemize}[leftmargin=*]
+    \item Un minitutorial en video (máx. 8 minutos) con la explicación conceptual y el recorrido del análisis.
+    \item Un informe en PDF redactado en \LaTeX\ con el desarrollo matemático y los resultados.
+    \item Un notebook de Jupyter o Google Colab reproducible con todo el código y las visualizaciones.
+\end{itemize}
+
+\subsection*{Preguntas guía}
+\begin{itemize}[leftmargin=*]
+    \item ¿Qué significa matemáticamente que $f(x_1, x_2)$ sea una función de dos variables? ¿Cuál es su dominio natural en este contexto?
+    \item ¿Cómo se interpreta $\frac{\partial f}{\partial x_1}$ en términos del precio de la propiedad?
+    \item ¿Qué representa el gradiente $\nabla f(a_1, a_2)$ para una propiedad con características $(a_1, a_2)$ dadas?
+    \item ¿En qué dirección deben cambiar las características $(x_1, x_2)$ para que el precio aumente más rápidamente?
+    \item ¿Qué información adicional aportan las curvas de nivel (isoprecios) respecto a la superficie 3D?
+\end{itemize}
+
+\subsection*{Actividades guía}
+\begin{enumerate}[leftmargin=*, label={{\arabic*.}}]
+    \item Descargar el dataset \href{https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data}{House Prices: Advanced Regression Techniques} de Kaggle y cargar el archivo \texttt{train.csv}.
+    \item Explorar el dataset: identificar variables cuantitativas disponibles, revisar estadísticas descriptivas y visualizar la distribución del precio de venta (\texttt{SalePrice}).
+    \item Seleccionar dos variables predictoras cuantitativas (por ejemplo, \texttt{GrLivArea} y \texttt{OverallQual}, u otras justificadas) y justificar la elección con un análisis de correlación.
+    \item Ajustar un modelo de regresión polinomial de grado 2 en dos variables:
+    \[
+        \hat{p} = f(x_1, x_2) = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_1^2 + \beta_4 x_2^2 + \beta_5 x_1 x_2,
+    \]
+    usando \texttt{scikit-learn} o \texttt{statsmodels}. Reportar los coeficientes y el $R^2$.
+    \item Visualizar la función ajustada mediante:
+    \begin{itemize}
+        \item superficie 3D con \texttt{matplotlib} o \texttt{plotly};
+        \item mapa de curvas de nivel (isoprecios) con escala de color;
+        \item dispersión de los datos observados superpuesta sobre la superficie.
+    \end{itemize}
+    \item Calcular analíticamente las derivadas parciales $\frac{\partial f}{\partial x_1}$ y $\frac{\partial f}{\partial x_2}$ a partir de los coeficientes del modelo, e interpretarlas en unidades del problema.
+    \item Calcular el gradiente $\nabla f(x_1, x_2)$ como función y representar el campo vectorial gradiente sobre el mapa de curvas de nivel usando \texttt{quiver} o \texttt{streamplot}.
+    \item Seleccionar tres puntos representativos del dataset (precio bajo, medio y alto), calcular el gradiente en cada uno e interpretar en qué dirección y con qué tasa cambiaría el precio estimado.
+    \item Verificar numéricamente una derivada parcial en al menos un punto usando diferencias finitas y comparar con el valor analítico.
+    \item Redactar conclusiones sobre las limitaciones del modelo polinomial y cómo el análisis matemático complementa la interpretación de datos.
+\end{enumerate}
+
+\subsection*{Recursos}
+\begin{itemize}[leftmargin=*]
+    \item \href{https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html}{Documentación de \texttt{PolynomialFeatures} en scikit-learn}.
+    \item \href{https://matplotlib.org/stable/gallery/mplot3d/surface3d.html}{Superficies 3D con Matplotlib}.
+    \item \href{https://plotly.com/python/3d-surface-plots/}{Superficies 3D interactivas con Plotly}.
+    \item Video \href{https://youtu.be/Ag9GBB3pPkU?si=TgUNvD-IEr8Opy6x}{¿Por qué el Gradiente se ve de esta manera?}
+    \item Complementar con al menos dos fuentes académicas (libro o artículo) citadas en formato APA.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Producto}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Minitutorial explicativo}
+Un video de máximo 8 minutos donde se explique:
+\begin{itemize}[leftmargin=*]
+    \item Qué es una función de dos variables y cómo se usa para modelar el precio de propiedades.
+    \item Cómo se interpreta la superficie 3D y las curvas de nivel en el contexto inmobiliario.
+    \item Qué significan las derivadas parciales y el gradiente en este modelo.
+    \item Un ejemplo concreto: dado un punto $(x_1, x_2)$, calcular e interpretar $\nabla f$.
+\end{itemize}
+
+\subsection{Informe de aplicación}
+Un documento en PDF que contenga:
+\begin{enumerate}[leftmargin=*, label={\textbf{\arabic*.}}]
+    \item \textbf{Introducción:} contexto del problema, variables seleccionadas y justificación.
+    \item \textbf{Modelo ajustado:} coeficientes, $R^2$ y expresión explícita de $f(x_1, x_2)$.
+    \item \textbf{Visualizaciones:} superficie 3D, mapa de curvas de nivel y campo gradiente, con descripción de cada una.
+    \item \textbf{Análisis de derivadas parciales:} cálculo analítico e interpretación en unidades del problema.
+    \item \textbf{Análisis del gradiente:} cálculo en tres puntos representativos e interpretación.
+    \item \textbf{Verificación numérica:} comparación de derivada analítica vs. diferencia finita en un punto.
+    \item \textbf{Conclusiones y limitaciones:} hallazgos principales y restricciones del modelo.
+    \item \textbf{Bibliografía} en formato APA.
+\end{enumerate}
+
+\subsection{Entrega técnica}
+\begin{itemize}[leftmargin=*]
+    \item El informe debe ser elaborado en la plantilla \LaTeX\ institucional disponible en Overleaf: \href{https://www.overleaf.com/latex/templates/formato-tareas-puce/nkgwqjtcrvms}{Formato Tareas PUCE}.
+    \item Incluir el enlace al video con permisos de acceso activos.
+    \item Incluir el enlace al notebook (Google Colab o repositorio) con celdas ejecutadas y visibles.
+    \item Si los enlaces no permiten visualizar el material, la actividad no podrá ser calificada y se asignará \textbf{0}.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Rúbrica de calificación}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En caso de presentar un video con voz en off, rostro no visible o fuera del rango de tiempo establecido, se reducirá un nivel a cada punto de la rúbrica.
+
+\begin{landscape}
+\begin{center}\footnotesize
+\begin{tabular}{p{5cm}p{4cm}p{4cm}p{4cm}p{4cm}}
+\toprule
+\textbf{Indicador} & \textbf{Excelente} & \textbf{Bueno} & \textbf{Aceptable} & \textbf{Insuficiente} \\ \midrule
+\textbf{Modelo ajustado y visualizaciones (10 pts)}
+    & Ajusta correctamente el modelo polinomial, reporta coeficientes y $R^2$, y presenta las tres visualizaciones (superficie, curvas de nivel, campo gradiente) con etiquetas y descripción (10)
+    & Modelo correcto con una visualización incompleta o sin descripción (8)
+    & Modelo con errores menores o solo dos visualizaciones (6)
+    & Modelo incorrecto o visualizaciones ausentes (0) \\ \midrule
+\textbf{Derivadas parciales (10 pts)}
+    & Calcula analíticamente $\partial f/\partial x_1$ y $\partial f/\partial x_2$, las interpreta en unidades correctas y verifica numéricamente una de ellas (10)
+    & Cálculo correcto con interpretación incompleta o verificación numérica ausente (8)
+    & Cálculo parcial o interpretación confusa (6)
+    & Errores conceptuales en el cálculo o interpretación ausente (0) \\ \midrule
+\textbf{Análisis del gradiente (10 pts)}
+    & Calcula $\nabla f$ en tres puntos, representa el campo vectorial y da una interpretación concreta para cada punto (10)
+    & Cálculo correcto en los tres puntos con interpretación parcial o campo vectorial ausente (8)
+    & Cálculo en menos de tres puntos o interpretación genérica (6)
+    & Gradiente incorrecto o análisis ausente (0) \\ \midrule
+\textbf{Presentación en video (5 pts)}
+    & Exposición clara y fluida; rostro visible durante toda la presentación (5)
+    & Exposición clara con ligeras interrupciones; rostro visible (4)
+    & Exposición poco fluida o lectura excesiva; rostro visible parcial (3)
+    & Voz en off o rostro no visible / exposición ininteligible (0) \\ \midrule
+\textbf{Gestión del tiempo (5 pts)}
+    & 8:00 $\pm$ 30 s (5)
+    & 8:00 $\pm$ 60 s (4)
+    & 8:00 $\pm$ 90 s (3)
+    & Fuera de $\pm$ 90 s (0) \\ \bottomrule
+\end{tabular}
+\end{center}
+\end{landscape}
+
+\end{document}
