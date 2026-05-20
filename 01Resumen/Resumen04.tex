@@ -1,0 +1,161 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 04: Límites y diferenciabilidad}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+En este resumen consideraremos $\Omega\subset \R^n$ e $I\subset\R$ un intervalo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Límites y continuidad de campos escalares}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Límite]
+    Dados un campo escalar $\func{f}{\Omega}{\R}$, $a\in \Omega'$ y $L\in\R$, se dice que $L$ es el límite de $f$ cuando $x$ tiende a $a$ si: para todo $\epsilon>0$, existe $\delta>0$ tal que para todo $x\in \Omega$,
+    \[
+        0<\|x-a\|<\delta \Imp |f(x)-L| < \epsilon.
+    \]
+    Esto se denota por $\dlim_{x\to a}f(x)=L$.
+\end{defi}
+
+\begin{prop}
+    El límite de una función es único.
+\end{prop}
+
+\begin{defi}[Límite por trayectorias]
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar, $a\in \Omega'$, $\func{\alpha}{I}{\R^n}$ una trayectoria inyectiva tal que existe $t_0\in I$ con $\alpha(t_0)=a$. Se define el límite de $f$ cuando $x$ tiende a $a$ por la trayectoria $\alpha$ mediante
+    \[
+        \lim_{t\to t_0} f(\alpha(t)),
+    \]
+    siempre que este exista.
+\end{defi}
+
+\begin{prop}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega'$. Si existe $\dlim_{x\to a}f(x)=L$, entonces existe el límite por cualquier trayectoria y es igual a $L$.
+\end{prop}
+
+\begin{prop}[Propiedades de los límites]
+    Sean $\func{f,g}{\Omega}{\R}$ campos escalares y $a\in \Omega'$. Si existen $\dlim_{x\to a}f(x)$ y $\dlim_{x\to a}g(x)$, entonces
+    \begin{itemize}
+        \item $\dlim_{x\to a}\l(f(x)+g(x)\r)=\dlim_{x\to a}f(x)+\dlim_{x\to a}g(x)$;
+        \item $\dlim_{x\to a}(f(x)g(x))=\l(\dlim_{x\to a}f(x)\r)\l(\dlim_{x\to a}g(x)\r)$;
+        \item $\dlim_{x\to a}\l(\frac{f(x)}{g(x)}\r)=\frac{\dlim_{x\to a}f(x)}{\dlim_{x\to a}g(x)}$, siempre que $\dlim_{x\to a}g(x)\neq 0$.
+    \end{itemize}
+\end{prop}
+
+\begin{prop}[Teorema del emparedado]
+    Sean $\func{f,g,h}{\Omega}{\R}$ campos escalares y $a\in \Omega'$. Si $g(x)\leq f(x) \leq h(x)$ para todo $x\in \Omega\setminus\{a\}$ y $\dlim_{x\to a}g(x)=\dlim_{x\to a}h(x)=L$, entonces $\dlim_{x\to a}f(x)=L$.
+\end{prop}
+
+\begin{teo}[Cambio de variable]
+    Sean $\Omega_1,\Omega_2\subset \R^n$ y sean $\func{f}{\Omega_1}{\R}$, $\func{g}{\Omega_2}{\R^n}$ tales que $\img(g)\subset \Omega_1$ y $a\in\Omega_2'$. Si existen $\dlim_{x\to a}g(x)=b$ y $\dlim_{y\to b}f(y)$, y se cumple una de:
+    \begin{enumerate}
+        \item $f$ es continua en $b$;
+        \item $b\not\in \Omega_1$;
+        \item existe $B(a,r)$ tal que $g(x) \neq b$ para todo $x\in B(a,r)\setminus\{a\}$;
+    \end{enumerate}
+    entonces $\dlim_{x\to a}f(g(x)) = \dlim_{y\to b}f(y)$.
+\end{teo}
+
+\begin{defi}[Continuidad]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$, se dice que $f$ es continua en $a$ si
+    \[
+        \lim_{x\to a}f(x)=f(a).
+    \]
+    Se dice que $f$ es continua en $\Omega$ si $f$ es continua en cada punto de $\Omega$.
+\end{defi}
+
+\begin{prop}
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar continuo con $\Omega$ cerrado y acotado, se tiene que $f$ alcanza su mínimo y su máximo en $\Omega$.
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Diferenciabilidad}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección consideraremos $\Omega\subset \R^n$ un conjunto abierto.
+
+\begin{defi}[Derivada respecto a un vector]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar, $a\in \Omega$ y $y\in \R^n$, la derivada de $f$ en $a$ respecto a $y$ se define por
+    \[
+        f'(a;y)=\lim_{h\to 0}\frac{f(a+hy)-f(a)}{h},
+    \]
+    siempre que el límite exista.
+\end{defi}
+
+\begin{defi}[Derivadas direccionales y parciales]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar, $a\in \Omega$ y $y\in \R^n$ un vector unitario. A $f'(a;y)$ se la llama la derivada de $f$ en $a$ en la dirección de $y$. Además, si $y=e^k$ (vector de la base canónica), se la llama la $k$-ésima derivada parcial de $f$ en $a$:
+    \[
+        D_k f(a)=\frac{\partial f}{\partial x_k}(a)=f'(a;e^k).
+    \]
+\end{defi}
+
+\begin{defi}[Gradiente]
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si existen todas las derivadas parciales de $f$ en $a$, se define el vector gradiente de $f$ en $a$ por
+    \[
+        \nabla f(a) = \l(D_1 f(a), D_2 f(a),\ldots, D_n f(a)\r).
+    \]
+\end{defi}
+
+\begin{prop}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si existe el gradiente de $f$ en $a$, entonces $f'(a;y)=\nabla f(a)\cdot y$ para todo $y\in\R^n$.
+\end{prop}
+
+\begin{advertencia}
+    La existencia de todas las derivadas direccionales no implica la continuidad del campo escalar.
+\end{advertencia}
+
+\begin{defi}[Diferenciabilidad]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$, se dice que $f$ es diferenciable en $a$ si existe una aplicación lineal $\func{T}{\R^n}{\R}$ tal que
+    \[
+        \lim_{h\to 0}\frac{f(a+h)-f(a)-T(h)}{\|h\|}=0.
+    \]
+    A $T$ se la llama el diferencial de $f$ en $a$ y se lo denota por $f'(a)$ o $Df(a)$.
+\end{defi}
+
+\begin{teo}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si $f$ es diferenciable en $a$, entonces
+    \[
+        [f'(a)]=\nabla f(a),\qquad\text{es decir,}\qquad f'(a)(h)=\nabla f(a)\cdot h
+    \]
+    para todo $h\in\R^n$.
+\end{teo}
+
+\begin{teo}
+    Si $f$ es diferenciable en $a$, entonces $f$ es continua en $a$.
+\end{teo}
+
+\begin{advertencia}
+    Si un campo escalar tiene gradiente, no necesariamente es diferenciable.
+\end{advertencia}
+
+\begin{teo}[Condición suficiente de diferenciabilidad]
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si existen las derivadas parciales de $f$ en una bola de centro en $a$ y estas son continuas en $a$, entonces $f$ es diferenciable en $a$.
+\end{teo}
+
+\begin{teo}[Regla de la cadena]
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar, $\func{\alpha}{I}{\R^n}$ una trayectoria tal que $\img(\alpha)\subset \Omega$. Si $\alpha$ es derivable en $t\in I$ y $f$ es diferenciable en $\alpha(t)$, entonces $f\circ \alpha$ es derivable en $t$ y
+    \[
+        (f\circ \alpha)'(t) = \nabla f(\alpha(t))\cdot \alpha'(t).
+    \]
+\end{teo}
+
+\end{document}

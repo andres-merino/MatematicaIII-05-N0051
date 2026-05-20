@@ -1,0 +1,127 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 04: Límites y diferenciabilidad}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar los conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales de funciones vectoriales con el apoyo de asistentes computacionales.
+    % \item \textbf{RdA 3:} Aplicar distintos tópicos del Cálculo Vectorial para la solución de problemas reales en diferentes contextos.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Calcular límites de campos escalares de varias variables.
+    \item Determinar la no existencia de un límite mediante trayectorias.
+    \item Verificar la continuidad de un campo escalar en un punto.
+    \item Calcular derivadas parciales y direccionales de un campo escalar.
+    \item Determinar si un campo escalar es diferenciable en un punto y calcular su diferencial.
+    \item Aplicar la regla de la cadena para campos escalares compuestos con trayectorias.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+Si la temperatura de un cuarto depende de la posición $(x,y)$ donde estés parado, ¿cómo describirías que la temperatura «no cambia abruptamente» al moverte? ¿Importa desde qué dirección te acerques a un punto?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Límites y continuidad}
+Se define el límite de un campo escalar de varias variables y se discuten las estrategias para calcularlo o demostrar su no existencia: propiedades algebraicas, cambio de variable, trayectorias y el teorema del emparedado.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial y comparar con límites en una variable; enfatizar que en varias variables el límite debe coincidir por \emph{todas} las trayectorias.
+    \item \textbf{Clase magistral:} se definen límite, límite por trayectorias, continuidad y los teoremas de propiedades, cambio de variable y emparedado. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen04.pdf}{Resumen04.pdf}.
+    \item \textbf{Resolución de ejercicios:} los estudiantes calcularán límites usando distintas estrategias y verificarán la no existencia por trayectorias, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios04.pdf}{Ejercicios04.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿Por qué encontrar dos trayectorias con límites distintos prueba que el límite no existe?
+    \item ¿Qué condición adicional distingue un límite que existe de la continuidad en un punto?
+    \item ¿Cómo se aplica el cambio de variable para calcular $\dlim_{(x,y)\to(0,0)}\frac{\sin(x^2+y^2)}{x^2+y^2}$?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Diferenciabilidad}
+Se introduce la derivada direccional y parcial, el gradiente y el concepto de diferenciabilidad como aproximación lineal. Se establece la jerarquía: diferenciable $\Rightarrow$ continuo, diferenciable con continuidad $\Rightarrow$ diferenciable, y se presentan contraejemplos para las implicaciones inversas.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Clase magistral:} se definen derivada respecto a un vector, derivadas parciales, gradiente y diferenciabilidad; se enuncia la condición suficiente (derivadas parciales continuas) y la regla de la cadena. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen04.pdf}{Resumen04.pdf}.
+    \item \textbf{Implementación computacional:} calcular gradientes y verificar diferenciabilidad con un asistente computacional para campos escalares concretos.
+    \item \textbf{Resolución de ejercicios:} los estudiantes calcularán derivadas parciales, gradientes y aplicarán la regla de la cadena, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios04.pdf}{Ejercicios04.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿En qué dirección unitaria crece más rápido un campo escalar en un punto dado?
+    \item ¿Por qué la existencia del gradiente no garantiza la diferenciabilidad?
+    \item ¿Cuál es la relación entre el diferencial $f'(a)$ y el gradiente $\nabla f(a)$?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 2.2, ejercicios 7, 9, 11, 13, y sección 2.3, ejercicios 1--25 (impares).
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿Cómo se usa el gradiente en algoritmos de aprendizaje automático para minimizar funciones de error?
+    \item ¿Qué significa geométricamente que el gradiente sea perpendicular a las curvas de nivel de un campo escalar?
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Ver los videos:
+\begin{itemize}[leftmargin=*]
+    \item \href{https://youtu.be/Ag9GBB3pPkU?si=TgUNvD-IEr8Opy6x}{¿Por qué el Gradiente se ve de esta manera?}.
+    \item \href{https://youtu.be/A6FiCDoz8_4?si=J93rcxDWUy4mN7G0}{¿Qué es el Descenso del Gradiente?}.
+\end{itemize}
+
+
+\end{document}

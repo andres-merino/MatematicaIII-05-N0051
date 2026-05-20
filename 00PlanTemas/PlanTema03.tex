@@ -1,0 +1,122 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 03: Topología de $\mathbb{R}^n$}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar los conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    % \item \textbf{RdA 2:} Calcular derivadas parciales, integrales de funciones vectoriales con el apoyo de asistentes computacionales.
+    % \item \textbf{RdA 3:} Aplicar distintos tópicos del Cálculo Vectorial para la solución de problemas reales en diferentes contextos.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Definir y reconocer bolas abiertas en $\R^n$.
+    \item Identificar conjuntos abiertos y cerrados en $\R^n$.
+    \item Determinar si un conjunto es acotado.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+Si tienes un conjunto de puntos en el plano, ¿cómo decides si un punto está «dentro», «en el borde» o «fuera» del conjunto? ¿Cambia algo si el conjunto tiene o no sus bordes?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Bolas y conjuntos abiertos y cerrados}
+Se introduce la noción de bola abierta como generalización del intervalo abierto en $\R$, y se usan las bolas para definir conjuntos abiertos y cerrados en $\R^n$. Se discuten ejemplos concretos en $\R^2$ y $\R^3$.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial y mostrar con dibujos en $\R^2$ qué significa que todos los puntos de un conjunto tengan «espacio libre» a su alrededor.
+    \item \textbf{Clase magistral:} se definen la bola abierta $B(x_0,r)$, los conjuntos abiertos y cerrados. Se analizan ejemplos: intervalos, discos, semiplanos. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen03.pdf}{Resumen03.pdf}.
+    \item \textbf{Resolución de ejercicios:} los estudiantes clasificarán conjuntos dados como abiertos, cerrados, ambos o ninguno, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios03.pdf}{Ejercicios03.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿Cuál es la diferencia entre una bola abierta y una bola cerrada?
+    \item ¿Puede un conjunto ser a la vez abierto y cerrado? ¿Puede no ser ninguno de los dos?
+    \item Dado $A=\{(x,y)\in\R^2: x^2+y^2\leq 1\}$, ¿es $A$ abierto, cerrado o ninguno?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Clausura, frontera, interior y conjuntos acotados}
+Se definen los operadores topológicos (clausura, derivado, frontera e interior) y el concepto de acotación. Se interpretan geométricamente con ejemplos en $\R^2$.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Clase magistral:} se definen $\cl{A}$, $A'$, $\delta(A)$ e $\inte(A)$, y el concepto de conjunto acotado. Se muestran propiedades y se calculan estos objetos para conjuntos concretos. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen03.pdf}{Resumen03.pdf}.
+    \item \textbf{Resolución de ejercicios:} los estudiantes calcularán la clausura, frontera e interior de conjuntos dados en $\R^2$, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios03.pdf}{Ejercicios03.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿Qué relación existe entre $\cl{A}$ y la frontera $\delta(A)$?
+    \item ¿Siempre $\inte(A)\subset A\subset \cl{A}$?
+    \item ¿Cómo saber si un conjunto en $\R^2$ es acotado?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \paragraph{Tarea:}
+% Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 2.1, ejercicios 1--10.
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿Qué es un conjunto compacto y por qué es importante en análisis matemático?
+    \item ¿Qué relación existe entre conjuntos abiertos y la continuidad de funciones de varias variables?
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Ver los videos:
+\begin{itemize}[leftmargin=*]
+    \item \href{https://youtu.be/ut_iqneq8EA?si=fpEqc0wVl-2i1P2o}{FUNCIONES DE DOS VARIABLES}.
+\end{itemize}
+
+
+\end{document}

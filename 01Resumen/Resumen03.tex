@@ -1,0 +1,85 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 03: Topología de $\mathbb{R}^n$}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+En este resumen consideraremos $n>1$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bolas y conjuntos abiertos y cerrados}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Bola abierta]
+    Dados $x_0\in\R^n$ y $r>0$, se define la bola abierta de centro $x_0$ y radio $r$ como el conjunto
+    \[
+        B(x_0,r)=\{x\in\R^n : \|x-x_0\|<r\}.
+    \]
+\end{defi}
+
+\begin{defi}[Conjunto abierto y cerrado]
+    Dado un conjunto $A\subset \R^n$, se dice que es \textbf{abierto} si para todo $x\in A$, existe $r>0$ tal que
+    \[
+        B(x,r)\subset A.
+    \]
+    Por otro lado, se dice que $A$ es \textbf{cerrado} si $A^c$ es abierto.
+\end{defi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Clausura, frontera e interior}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Clausura, derivado, frontera e interior]
+    Dado un conjunto $A\subset \R^n$, se define:
+    \begin{itemize}
+        \item la \textbf{clausura} de $A$:
+        \[
+            \cl{A}=\{x\in \R^n: (\forall r>0)(B(x,r)\cap A\neq \emptyset)\};
+        \]
+        \item el \textbf{derivado} de $A$:
+        \[
+            A'=\{x\in \R^n: (\forall r>0)((B(x,r)\setminus\{x\})\cap A\neq \emptyset)\};
+        \]
+        \item la \textbf{frontera} de $A$:
+        \[
+            \delta(A)=\{x\in \R^n: (\forall r>0)(B(x,r)\cap A\neq \emptyset\ \land\ B(x,r)\cap A^c\neq \emptyset)\};
+        \]
+        \item el \textbf{interior} de $A$:
+        \[
+            \inte(A)=\{x\in \R^n: (\exists r>0)(B(x,r)\subset A)\}.
+        \]
+    \end{itemize}
+\end{defi}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conjunto acotado}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Conjunto acotado]
+    Dado un conjunto $A\subset \R^n$, se dice que $A$ es \textbf{acotado} si existe $R>0$ tal que
+    \[
+        \|x\|<R,
+    \]
+    para todo $x\in A$.
+\end{defi}
+
+\end{document}
