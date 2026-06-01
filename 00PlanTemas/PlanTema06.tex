@@ -1,0 +1,124 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 06: Derivadas de orden superior}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales con asistentes computacionales.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Calcular derivadas parciales de segundo orden y derivadas mixtas de un campo escalar.
+    \item Construir la matriz hessiana de un campo escalar en un punto.
+    \item Aplicar el teorema de simetría para determinar cuándo las derivadas mixtas coinciden.
+    \item Obtener la aproximación lineal y cuadrática de un campo escalar mediante las fórmulas de Taylor.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+Si conoces cómo varía la temperatura de una habitación al desplazarte en distintas direcciones, ¿podrías predecir con más precisión cómo cambiaría si te mueves en dos direcciones a la vez? ¿Qué información adicional necesitarías?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Derivadas mixtas y matriz hessiana}
+Se extiende la noción de derivada parcial a órdenes superiores, se introduce la simetría de las derivadas mixtas y se construye la matriz hessiana.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} partiendo de las derivadas parciales conocidas, plantear la pregunta de qué ocurre al derivar nuevamente respecto a otra variable; mostrar con un ejemplo concreto que el orden puede o no importar.
+    \item \textbf{Clase magistral:} se define la derivada parcial mixta $D_{j,i}f$; se enuncia el teorema de simetría (coincidencia de derivadas mixtas bajo continuidad); se construye la matriz hessiana como representante de la segunda derivada. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen06.pdf}{Resumen06.pdf}.
+    \item \textbf{Implementación computacional:} calcular matrices hessianas de varios campos escalares con un asistente computacional y verificar la simetría.
+    \item \textbf{Resolución de ejercicios:} calcular derivadas de orden superior y construir matrices hessianas, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios06.pdf}{Ejercicios06.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Para $f(x,y)=x^3y^2$, ¿cuánto vale $D_{1,2}f$ y $D_{2,1}f$ en $(1,1)$? ¿Coinciden?
+    \item ¿Qué condición garantiza que $D_{1,2}f = D_{2,1}f$?
+    \item ¿Cuál es la matriz hessiana de $f(x,y)=e^x\sen(y)$ en el origen?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Fórmulas de Taylor}
+Se presentan las aproximaciones lineal y cuadrática de un campo escalar a través de las fórmulas de Taylor de primer y segundo orden.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Clase magistral:} se enuncian las fórmulas de Taylor de primer y segundo orden; se interpreta la aproximación lineal (plano tangente) y la aproximación cuadrática como mejoras sucesivas; se muestra el papel de la hessiana en la aproximación cuadrática. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen06.pdf}{Resumen06.pdf}.
+    \item \textbf{Resolución de ejercicios:} obtener aproximaciones lineales y cuadráticas de campos escalares dados, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios06.pdf}{Ejercicios06.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿Cuál es la aproximación lineal de $f(x,y)=\cos(x)\cos(y)$ cerca del origen?
+    \item ¿Cuál es la aproximación cuadrática de $f(x,y)=e^{x+y}$ cerca del origen?
+    \item ¿En qué se diferencia la aproximación cuadrática de la lineal cuando nos alejamos del punto de expansión?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 2.4, ejercicios 1--21 (impares) y 22; sección 2.3, ejercicios 43, 44, 45.
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿Cómo se generaliza la fórmula de Taylor a orden $n$ para funciones de varias variables?
+    \item ¿En qué aplicaciones de la física o la ingeniería se usan las aproximaciones de Taylor de campos escalares?
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Ver los videos:
+\begin{itemize}[leftmargin=*]
+    \item \href{https://youtu.be/5mZeT0-fzS0?si=nTnQPSBdLX6ptFpP}{Derivadas parciales de campos vectoriales}.
+    \item \href{https://youtu.be/NO3AqAaAE6o?si=bZUZk__l-ebqPfhN}{Multivariable chain rule}.
+\end{itemize}
+
+
+\end{document}

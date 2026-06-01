@@ -1,0 +1,139 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 09: Rotacional, Divergencia y Campos conservativos}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+En este resumen consideraremos $\Omega\subset \R^n$ un conjunto abierto.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Divergencia y rotacional}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Divergencia]
+    Dado un campo vectorial $\func{F}{\Omega}{\R^n}$ diferenciable, se define la divergencia de $F$ por
+    \[
+        \dive(F)(x) = \sum_{i=1}^n D_i f_i(x) = \sum_{i=1}^n \parcial{f_i}{x_i}(x)
+    \]
+    para todo $x\in\Omega$.
+\end{defi}
+
+\begin{defi}
+    Dados un campo vectorial $\func{F}{\Omega}{\R^n}$ diferenciable y $x\in\Omega$:
+    \begin{itemize}
+        \item si $\dive(F)(x)>0$, se dice que $x$ es una fuente;
+        \item si $\dive(F)(x)<0$, se dice que $x$ es un sumidero.
+    \end{itemize}
+    Si $\dive(F)=0$ en todo $\Omega$, se dice que $F$ es un campo incompresible.
+\end{defi}
+
+\begin{defi}[Rotacional en $\R^2$]
+    Si $n=2$, dado un campo vectorial $\func{F}{\Omega\subset \R^2}{\R^2}$ diferenciable, se define el rotacional de $F$ por
+    \[
+        \rot(F)(x,y) = D_1 f_2(x,y) - D_2 f_1(x,y) = \parcial{f_2}{x}(x,y) - \parcial{f_1}{y}(x,y)
+    \]
+    para $(x,y)\in \Omega$. Si $\rot(F)(x,y)>0$ el campo tiene rotación antihoraria en ese punto; si $\rot(F)(x,y)<0$, rotación horaria.
+\end{defi}
+
+\begin{defi}[Rotacional en $\R^3$]
+    Si $n=3$, dado un campo vectorial $\func{F}{\Omega}{\R^3}$ diferenciable, se define el rotacional de $F$ por
+    \begin{align*}
+        \rot(F)(x,y,z)
+        & = \begin{pmatrix}
+                \parcial{f_3}{y}(x,y,z) - \parcial{f_2}{z}(x,y,z) \\[4mm]
+                \parcial{f_1}{z}(x,y,z) - \parcial{f_3}{x}(x,y,z) \\[4mm]
+                \parcial{f_2}{x}(x,y,z) - \parcial{f_1}{y}(x,y,z)
+            \end{pmatrix}^T
+    \end{align*}
+    para $(x,y,z)\in \Omega$. Si $\rot(F)=0$ en todo $\Omega$, se dice que $F$ es un campo irrotacional.
+\end{defi}
+
+\begin{advertencia}
+    Se suele usar la notación
+    \[
+        \dive(F) = \nabla\cdot F
+        \qquad\text{y}\qquad
+        \rot(F) = \nabla \times F.
+    \]
+\end{advertencia}
+
+\begin{prop}
+    Si $n=3$, dado $\func{f}{\Omega\subset\R^3}{\R}$ un campo escalar diferenciable, se tiene que
+    \[
+        \rot(\nabla f)(x,y,z)=0
+    \]
+    para $(x,y,z)\in \Omega$.
+\end{prop}
+
+\begin{prop}
+    Si $n=3$, dado $\func{F}{\Omega\subset\R^3}{\R^3}$ un campo vectorial diferenciable, se tiene que
+    \[
+        \dive(\rot(F))(x,y,z)=0
+    \]
+    para $(x,y,z)\in \Omega$.
+\end{prop}
+
+\begin{defi}[Laplaciano]
+    Dado un campo escalar $\func{f}{\Omega}{\R}$ diferenciable, se define el laplaciano de $f$ por
+    \[
+        \Delta f (x) = \dive(\nabla f)(x) = \sum_{i=1}^n \frac{\partial^2 f}{\partial x_i^2}(x)
+    \]
+    para todo $x\in\R^n$. Se suele denotar $\Delta f = \nabla^2 f$.
+\end{defi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Campos conservativos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}
+    Dado un campo vectorial $\func{F}{\Omega}{\R^n}$, se dice que es conservativo si existe un campo escalar $\func{f}{\Omega}{\R}$ tal que
+    \[
+        F(x)=\nabla f(x)
+    \]
+    para todo $x\in \Omega$. De ser este el caso, se dice que $f$ es un potencial de $F$.
+\end{defi}
+
+\begin{prop}
+    Sea $\func{F}{\Omega}{\R^n}$ un campo vectorial diferenciable. Si $F$ es conservativo, entonces
+    \[
+        D_i F_j(x) = D_j F_i(x)
+    \]
+    para todo $x\in \Omega$ y todo $i,j=1,\ldots,n$.
+\end{prop}
+
+\begin{defi}
+    Dado $\Omega\subset \R^n$, se dice que $\Omega$ es simplemente conexo si toda curva cerrada puede ser deformada continuamente a un punto en $\Omega$. La idea intuitiva es que $\Omega$ no posee ``huecos''.
+\end{defi}
+
+\begin{prop}
+    Sean $\func{F}{\Omega}{\R^n}$, con $n=2,3$, un campo vectorial diferenciable donde $\Omega$ es simplemente conexo. Entonces $F$ es conservativo si y solo si
+    \[
+        D_i F_j(x) = D_j F_i(x)
+    \]
+    para todo $x\in \Omega$ y todo $i,j=1,\ldots,n$.
+\end{prop}
+
+\begin{prop}
+    Si $n\in\{2,3\}$ y $\func{F}{\Omega}{\R^n}$ es un campo vectorial con $\rot(F)=0$ y $\Omega$ simplemente conexo, entonces $F$ es conservativo.
+\end{prop}
+
+
+\end{document}

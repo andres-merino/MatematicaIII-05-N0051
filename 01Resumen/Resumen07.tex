@@ -1,0 +1,151 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 07: Campos vectoriales y regla de la cadena}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+En este resumen consideraremos $n,m>1$, $\Omega\subset \R^n$ un conjunto abierto e $I\subset\R$ un intervalo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cálculo diferencial de campos vectoriales}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Límite]
+Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega'$, el límite de $F$ cuando $x$ tiende a $a$ es
+\[
+    \lim_{x\to a}F(x)
+    =\left(\lim_{x\to a}f_1(x),\lim_{x\to a}f_2(x),\ldots,\lim_{x\to a}f_m(x)\right)
+\]
+siempre que los límites de la derecha existan.
+\end{defi}
+
+\begin{defi}[Continuidad]
+Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$, se dice que $F$ es continua en $a$ si
+\[
+    \lim_{x\to a}F(x)=F(a).
+\]
+Se dice que $F$ es continua en $\Omega$ si $F$ es continua en cada punto de $\Omega$.
+\end{defi}
+
+\begin{defi}[Derivada respecto a un vector]
+    Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial, $a\in \Omega$ y $y\in \R^n$, la derivada de $F$ en $a$ respecto a $y$ se define por
+    \[
+        F'(a;y)=\lim_{h\to 0}\frac{F(a+hy)-F(a)}{h},
+    \]
+    siempre que el límite exista.
+\end{defi}
+
+\begin{defi}[Derivadas parciales y matriz jacobiana]
+    Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$, la $k$-ésima derivada parcial de $F$ en $a$ es
+    \[
+        D_k F(a)=\frac{\partial F}{\partial x_k}(a)=F'(a;e^k).
+    \]
+    Si existen todas las derivadas parciales de $F$ en $a$, se define la matriz jacobiana de $F$ en $a$ por
+    \[
+        J_F(a) =
+        \begin{bmatrix}
+         D_1f_1(a) & D_2f_1(a) & \cdots & D_nf_1(a) \\
+         D_1f_2(a) & D_2f_2(a) & \cdots & D_nf_2(a) \\
+         \vdots & \vdots &  \ddots & \vdots\\
+         D_1f_m(a) & D_2f_m(a) & \cdots & D_nf_m(a) \\
+        \end{bmatrix}.
+    \]
+\end{defi}
+
+\begin{prop}
+    Sean $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$. Si existe la jacobiana de $F$ en $a$, entonces
+    \[
+        [F'(a;y)]= J_F(a) [y],
+    \]
+    para todo $y\in\R^n$.
+\end{prop}
+
+\begin{advertencia}
+    La existencia de todas las derivadas direccionales no implica la continuidad del campo vectorial. Es decir, que un campo vectorial tenga jacobiana no implica que sea continuo.
+\end{advertencia}
+
+\begin{defi}[Diferenciabilidad]
+    Dados $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$, se dice que $F$ es diferenciable en $a$ si existe una aplicación lineal $\func{T}{\R^n}{\R^m}$ tal que
+    \[
+        \lim_{h\to 0}\frac{F(a+h)-F(a)-T(h)}{\|h\|}=0.
+    \]
+    A la aplicación $T$ se la llama el diferencial de $F$ en $a$ y se lo denota por $F'(a)$ o $DF(a)$.
+\end{defi}
+
+\begin{teo}
+    Sean $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$. Si $F$ es diferenciable en $a$ entonces
+    \[
+        [F'(a)]=J_F(a),
+    \]
+    es decir, $[F'(a)(h)]=J_F(a) [h]$ para todo $h\in\R^n$.
+\end{teo}
+
+\begin{teo}
+    Sean $\func{F}{\Omega}{\R^m}$ un campo vectorial y $a\in \Omega$. Si $F$ es diferenciable en $a$, entonces $F$ es continuo en $a$.
+\end{teo}
+
+\begin{advertencia}
+    Si un campo vectorial tiene jacobiana, no necesariamente es diferenciable.
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Regla de la cadena}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección tomaremos $k\in\N^*$ y $\Omega_1\subset \R^k$, $\Omega_2\subset \R^n$ conjuntos abiertos.
+
+\begin{teo}[Regla de la cadena]
+    Sean $\func{F}{\Omega_1}{\R^m}$ y $\func{G}{\Omega_2}{\R^k}$ campos vectoriales tales que $\img(G)\subset \Omega_1$ y $a\in \Omega_2$. Si $G$ es diferenciable en $a$ y $F$ es diferenciable en $G(a)$, entonces $F\circ G$ es diferenciable en $a$ y se tiene que
+    \[
+        (F\circ G)'(a) = F'(G(a))\circ G'(a).
+    \]
+\end{teo}
+
+\begin{prop}
+    Bajo las hipótesis del teorema anterior,
+    \[
+        J_{F\circ G}(a) = J_F(G(a))\, J_G(a),
+    \]
+    así, si $i=1,\ldots,n$ y $j=1,\ldots,m$, entonces
+    \[
+        D_i (F\circ G)_j(a) = D_1 f_j(b)\, D_i g_1(a) + D_2 f_j(b)\, D_i g_2(a) + \cdots + D_k f_j(b)\, D_i g_k(a),
+    \]
+    donde $b=G(a)$.
+\end{prop}
+
+\begin{advertencia}
+    Si se tiene $b=x(a)$ con
+    \begin{gather*}
+        \funcion{x}{\Omega_2\subset \R^n}{\R^k}{(t_1,\ldots,t_n)}{x(t_1,\ldots,t_n),}\\
+        \funcion{y}{\Omega_1\subset \R^k}{\R^m}{(x_1,\ldots,x_k)}{y(x_1,\ldots,x_k),}
+    \end{gather*}
+    entonces
+    \[
+        \frac{\partial (y\circ x)_j}{\partial t_i}(a)
+            = \frac{\partial y_j}{\partial x_1}(b)\,\frac{\partial x_1}{\partial t_i}(a)
+            + \frac{\partial y_j}{\partial x_2}(b)\,\frac{\partial x_2}{\partial t_i}(a)
+            + \cdots
+            + \frac{\partial y_j}{\partial x_k}(b)\,\frac{\partial x_k}{\partial t_i}(a).
+    \]
+\end{advertencia}
+
+
+\end{document}

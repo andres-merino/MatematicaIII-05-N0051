@@ -1,0 +1,113 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 06: Derivadas de orden superior}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+En este resumen consideraremos $\Omega\subset \R^n$ un conjunto abierto y $n>1$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Derivadas de orden superior}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Derivadas parciales de orden superior]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar tal que, para $i=1,\ldots, n$, existe $D_if(x)$ para todo $x\in \Omega$, para $j=1,\ldots, n$ y $a\in \Omega$, se define la derivada parcial mixta por
+    \[
+        D_{j,i} f(a)=\frac{\partial^2 f}{\partial x_j\partial x_i}(a)
+        =\frac{\partial f}{\partial x_j}\l( \frac{\partial f}{\partial x_i}\r)(a)
+        =D_j(D_i f)(a).
+    \]
+\end{defi}
+
+\begin{teo}
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar tal que sus derivadas parciales mixtas existan y sean continuas en $\Omega$, entonces
+    \[
+        D_j(D_i f)(a) = D_i(D_j f)(a)
+    \]
+    para todo $i,j\in\{1,\ldots, n\}$ y $a\in \Omega$.
+\end{teo}
+
+\begin{defi}[Matriz hessiana]
+    Dado $\func{f}{\Omega}{\R}$ un campo escalar diferenciable con continuidad en $\Omega$, además consideramos $\func{\nabla f}{\Omega}{\R^n}$ como un campo vectorial. Si $\nabla f$ posee matriz jacobiana en $a\in \Omega$, entonces se define la matriz hessiana de $f$ por
+    \[
+        H_f(a)=
+        \begin{bmatrix}
+         D_{1,1}f(a) & D_{1,2}f(a) & \cdots & D_{1,n}f(a) \\
+         D_{2,1}f(a) & D_{2,2}f(a) & \cdots & D_{2,n}f(a) \\
+         \vdots & \vdots &  \ddots & \vdots\\
+         D_{n,1}f(a) & D_{n,2}f(a) & \cdots & D_{n,n}f(a)
+        \end{bmatrix}.
+    \]
+\end{defi}
+
+\begin{advertencia}
+    La matriz hessiana puede ser entendida, de cierto modo, como el representante de la segunda derivada de la función, la cual también es una aplicación lineal.
+\end{advertencia}
+
+\begin{advertencia}
+    Si las derivadas parciales mixtas de una función son continuas, entonces su matriz hessiana es simétrica. En este caso, se dice que la función es dos veces diferenciable con continuidad.
+\end{advertencia}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fórmulas de Taylor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{teo}[Fórmula de Taylor de primer orden]
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar diferenciable y $a\in \Omega$, entonces existe $r>0$ tal que para todo $h\in\R^n$ que cumple $\|h\|<r$, se tiene que
+    \[
+        f(a+h) = f(a) + \nabla f(a) \cdot h + \|h\| E(a,h),
+    \]
+    donde $E(a,h)\to 0$ cuando $h\to 0$.
+\end{teo}
+
+\begin{prop}[Aproximación lineal]
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar diferenciable y $a\in \Omega$, entonces la función definida por
+    \[
+        F(x) = f(a) + \nabla f(a) \cdot (x-a),
+    \]
+    es una buena aproximación lineal de la función $f$ cerca de $a$, es decir,
+    \[
+        \lim_{x\to a} \frac{F(x)-f(x)}{\|x-a\|} = 0.
+    \]
+\end{prop}
+
+\begin{teo}[Fórmula de Taylor de segundo orden]
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar dos veces diferenciable y $a\in \Omega$, entonces existe $r>0$ tal que para todo $h\in\R^n$ que cumple $\|h\|<r$, se tiene que
+    \[
+        f(a+h) = f(a) + \nabla f(a) \cdot h +  \frac{1}{2!}[h]^T H_f(a) [h] +\|h\|^2 E(a,h),
+    \]
+    donde $E(a,h)\to 0$ cuando $h\to 0$.
+\end{teo}
+
+\begin{prop}[Aproximación cuadrática]
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar dos veces diferenciable y $a\in \Omega$, entonces la función definida por
+    \[
+        F(x) = f(a) + \nabla f(a) \cdot (x-a) + \frac{1}{2!}[x-a]^T H_f(a) [x-a],
+    \]
+    es una buena aproximación cuadrática de la función $f$ cerca de $a$, es decir,
+    \[
+        \lim_{x\to a} \frac{F(x)-f(x)}{\|x-a\|^2} = 0.
+    \]
+\end{prop}
+
+
+\end{document}
