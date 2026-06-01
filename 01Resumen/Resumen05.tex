@@ -1,0 +1,122 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 05: Derivadas parciales y gradiente}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+En este resumen consideraremos $\Omega\subset \R^n$ un conjunto abierto e $I\subset\R$ un intervalo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Diferenciabilidad}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección consideraremos $\Omega\subset \R^n$ un conjunto abierto.
+
+\begin{defi}[Derivada respecto a un vector]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar, $a\in \Omega$ y $y\in \R^n$, la derivada de $f$ en $a$ respecto a $y$ se define por
+    \[
+        f'(a;y)=\lim_{h\to 0}\frac{f(a+hy)-f(a)}{h},
+    \]
+    siempre que el límite exista.
+\end{defi}
+
+\begin{defi}[Derivadas direccionales y parciales]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar, $a\in \Omega$ y $y\in \R^n$ un vector unitario. A $f'(a;y)$ se la llama la derivada de $f$ en $a$ en la dirección de $y$. Además, si $y=e^k$ (vector de la base canónica), se la llama la $k$-ésima derivada parcial de $f$ en $a$:
+    \[
+        D_k f(a)=\frac{\partial f}{\partial x_k}(a)=f'(a;e^k).
+    \]
+\end{defi}
+
+\begin{defi}[Gradiente]
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si existen todas las derivadas parciales de $f$ en $a$, se define el vector gradiente de $f$ en $a$ por
+    \[
+        \nabla f(a) = \l(D_1 f(a), D_2 f(a),\ldots, D_n f(a)\r).
+    \]
+\end{defi}
+
+\begin{prop}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si existe el gradiente de $f$ en $a$, entonces $f'(a;y)=\nabla f(a)\cdot y$ para todo $y\in\R^n$.
+\end{prop}
+
+\begin{advertencia}
+    La existencia de todas las derivadas direccionales no implica la continuidad del campo escalar.
+\end{advertencia}
+
+\begin{defi}[Diferenciabilidad]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$, se dice que $f$ es diferenciable en $a$ si existe una aplicación lineal $\func{T}{\R^n}{\R}$ tal que
+    \[
+        \lim_{h\to 0}\frac{f(a+h)-f(a)-T(h)}{\|h\|}=0.
+    \]
+    A $T$ se la llama el diferencial de $f$ en $a$ y se lo denota por $f'(a)$ o $Df(a)$.
+\end{defi}
+
+\begin{teo}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si $f$ es diferenciable en $a$, entonces
+    \[
+        [f'(a)]=\nabla f(a),\qquad\text{es decir,}\qquad f'(a)(h)=\nabla f(a)\cdot h
+    \]
+    para todo $h\in\R^n$.
+\end{teo}
+
+\begin{teo}
+    Si $f$ es diferenciable en $a$, entonces $f$ es continua en $a$.
+\end{teo}
+
+\begin{advertencia}
+    Si un campo escalar tiene gradiente, no necesariamente es diferenciable.
+\end{advertencia}
+
+\begin{teo}[Condición suficiente de diferenciabilidad]
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si existen las derivadas parciales de $f$ en una bola de centro en $a$ y estas son continuas en $a$, entonces $f$ es diferenciable en $a$.
+\end{teo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Propiedades del gradiente}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{prop}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Si existe el gradiente de $f$ en $a$ con $\nabla f(a)\neq 0$, entonces el mayor valor de $f'(a;y)$, con $\|y\|=1$, se alcanza en la dirección $\dfrac{\nabla f(a)}{\|\nabla f(a)\|}$ y su valor es $\|\nabla f(a)\|$.
+\end{prop}
+
+\begin{prop}
+    En $\R^2$, sean $\func{f}{\Omega}{\R}$ un campo escalar diferenciable y $C$ una de sus curvas de nivel. Se tiene que:
+    \begin{itemize}
+        \item El gradiente de $f$ es normal a $C$.
+        \item La derivada direccional de $f$ a lo largo de $C$ es $0$.
+        \item La derivada direccional de $f$ tiene su valor máximo en la dirección normal a $C$.
+    \end{itemize}
+\end{prop}
+
+\begin{prop}
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar diferenciable y $C$ uno de sus conjuntos de nivel. Se tiene que el gradiente de $f$ es normal a toda curva contenida en $C$.
+\end{prop}
+
+\begin{advertencia}
+    En $\R^2$, si $\func{f}{\Omega}{\R}$ es un campo escalar diferenciable en $(x_0,y_0)\in \Omega$, entonces la ecuación del plano tangente a la gráfica de $f$ en el punto $(x_0,y_0)$ es
+    \[
+        z = f(x_0,y_0) + \nabla f(x_0,y_0) \cdot (x-x_0,\, y-y_0)
+    \]
+    para $(x,y,z)\in\R^3$.
+\end{advertencia}
+
+
+\end{document}
+

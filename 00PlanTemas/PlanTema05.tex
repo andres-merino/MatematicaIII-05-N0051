@@ -1,0 +1,123 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 05: Derivadas parciales y gradiente}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales con asistentes computacionales.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Calcular derivadas direccionales y parciales de un campo escalar en un punto.
+    \item Determinar el gradiente de un campo escalar y calcular sus propiedades geométricas.
+    \item Interpretar el gradiente como dirección de máximo crecimiento y como vector normal a las curvas de nivel.
+    \item Determinar la ecuación del plano tangente a la gráfica de un campo escalar en un punto.
+    \item Verificar si un campo escalar es diferenciable aplicando la condición suficiente de diferenciabilidad.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+Si una montaña tiene forma dada por una función de altura $f(x,y)$, ¿en qué dirección deberías caminar para subir lo más rápido posible? ¿Cómo describirías matemáticamente el plano que toca la montaña en un punto?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Derivadas parciales y gradiente}
+Se introduce la derivada respecto a un vector, las derivadas parciales y el gradiente de un campo escalar.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial; mostrar visualmente cómo varía una función al moverse en distintas direcciones desde un punto, motivando la necesidad de derivar en una dirección.
+    \item \textbf{Clase magistral:} se define la derivada respecto a un vector, las derivadas direccionales y parciales, y el gradiente; se enuncia la relación $f'(a;y) = \nabla f(a)\cdot y$. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen05.pdf}{Resumen05.pdf}.
+    \item \textbf{Implementación computacional:} calcular derivadas parciales y gradientes de varios campos escalares con un asistente computacional; visualizar el gradiente superpuesto a las curvas de nivel.
+    \item \textbf{Resolución de ejercicios:} calcular derivadas parciales, gradientes y derivadas direccionales, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios05.pdf}{Ejercicios05.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿En qué dirección unitaria crece más rápido $f(x,y)=x^2+y^2$ en el punto $(1,1)$?
+    \item ¿Por qué el gradiente es perpendicular a las curvas de nivel?
+    \item Si $\nabla f(a) = (3, -1)$, ¿cuál es la derivada direccional de $f$ en $a$ en la dirección de $(1,1)$?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Diferenciabilidad y plano tangente}
+Se define la diferenciabilidad de un campo escalar, se establece su relación con el gradiente y se obtiene la ecuación del plano tangente.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Clase magistral:} se define el diferencial de un campo escalar; se enuncia que la diferenciabilidad implica continuidad y que la existencia del gradiente no garantiza diferenciabilidad; se presenta la condición suficiente (derivadas parciales continuas) y se deduce la fórmula del plano tangente. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen05.pdf}{Resumen05.pdf}.
+    \item \textbf{Resolución de ejercicios:} verificar diferenciabilidad usando la condición suficiente y calcular planos tangentes, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios05.pdf}{Ejercicios05.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿Es $f(x,y)=x^2-y^2$ diferenciable en $(2,1)$? Justificar usando la condición suficiente.
+    \item ¿Cuál es la ecuación del plano tangente a $f(x,y)=x^2-y^2$ en el punto $(2,1)$?
+    \item ¿Puede un campo escalar tener todas sus derivadas parciales en un punto y no ser diferenciable allí?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 2.3, ejercicios 1--25 (impares).
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿En qué situaciones reales (física, economía, ingeniería) se interpreta el gradiente como la dirección de mayor crecimiento?
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Ver los videos:
+\begin{itemize}[leftmargin=*]
+    \item \href{https://youtu.be/UbsiwPk2E8E?si=Thhkl8eagjImxL_0}{Higher-Order Partial Derivatives}.
+\end{itemize}
+
+
+\end{document}

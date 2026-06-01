@@ -1,0 +1,127 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 09: Rotacional, Divergencia y Campos conservativos}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales con asistentes computacionales.
+    \item \textbf{RdA 3:} Aplicar Cálculo Vectorial para resolver problemas reales.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Calcular la divergencia y el rotacional de un campo vectorial.
+    \item Interpretar físicamente la divergencia (fuentes y sumideros) y el rotacional (rotación local).
+    \item Determinar si un campo vectorial es conservativo usando la condición de igualdad de derivadas cruzadas.
+    \item Calcular el potencial de un campo vectorial conservativo.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+El viento en una zona puede fluir de manera que en algunos puntos el aire ``sale'' hacia afuera (como sobre una montaña) y en otros ``entra'' (como en un valle). ¿Podría describirse matemáticamente este comportamiento? ¿Y si el viento gira alrededor de ciertos puntos?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Divergencia y rotacional}
+Se introducen la divergencia y el rotacional como operadores diferenciales que capturan el comportamiento local de expansión y rotación de un campo vectorial.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial con visualizaciones de campos vectoriales donde se identifican visualmente fuentes, sumideros y zonas de rotación.
+    \item \textbf{Clase magistral:} se definen la divergencia, el rotacional (en $\R^2$ y $\R^3$) y el laplaciano; se enuncian las identidades $\rot(\nabla f)=0$ y $\dive(\rot F)=0$; se presenta la notación nabla. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen09.pdf}{Resumen09.pdf}.
+    \item \textbf{Implementación computacional:} calcular divergencia y rotacional de distintos campos vectoriales con un asistente computacional y visualizar el resultado.
+    \item \textbf{Resolución de ejercicios:} calcular divergencia, rotacional y laplaciano, y verificar las identidades vectoriales, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios09.pdf}{Ejercicios09.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Para $F(x,y,z)=(xy,\,yz,\,xz)$, ¿cuánto vale $\dive(F)$ y $\rot(F)$ en $(1,1,1)$?
+    \item ¿Por qué $\rot(\nabla f)=0$ para cualquier campo escalar diferenciable?
+    \item ¿Qué significa físicamente que un campo tenga divergencia cero en todos sus puntos?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Campos conservativos y potencial}
+Se define el campo conservativo, se establece la condición necesaria y suficiente (en conjuntos simplemente conexos) y se muestra cómo calcular el potencial.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} plantear si es posible que un campo vectorial sea el gradiente de alguna función; conectar con la energía potencial en física.
+    \item \textbf{Clase magistral:} se define campo conservativo y potencial; se enuncia la condición necesaria ($D_iF_j=D_jF_i$) y la condición necesaria y suficiente en conjuntos simplemente conexos ($\rot F=0$); se muestra el procedimiento para calcular el potencial por integración. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen09.pdf}{Resumen09.pdf}.
+    \item \textbf{Resolución de ejercicios:} determinar si un campo es conservativo y, de serlo, calcular su potencial, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios09.pdf}{Ejercicios09.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿Es $F(x,y)=(2xy,\,x^2+3y^2)$ un campo conservativo? Si lo es, ¿cuál es su potencial?
+    \item ¿Es $F(x,y)=(y^2,\,x)$ conservativo? ¿Por qué?
+    \item ¿Qué rol juega la condición de que el dominio sea simplemente conexo para garantizar que $F$ sea conservativo?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 3.4, ejercicios 1--13.
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿Cómo se usa el concepto de campo conservativo en la mecánica clásica para definir la energía potencial?
+    \item ¿Qué relación tienen la divergencia y el rotacional con las ecuaciones de Maxwell del electromagnetismo?
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Ver los videos:
+\begin{itemize}[leftmargin=*]
+    \item \href{https://youtu.be/ux7EQ3ip2DU?si=lG-a2LZMwXjNJT6N}{Multivariable maxima and minima}.
+    \item \href{https://youtu.be/8aAU4r_pUUU?si=Xlqsv6h_FrTwnLFp}{Saddle points}.
+    \item \href{https://youtu.be/vwUV2IDLP8Q?si=SLtsA2HiDLrlH4nY}{Constrained optimization introduction}.
+\end{itemize}
+
+
+\end{document}

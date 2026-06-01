@@ -1,0 +1,124 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 08: Función implícita}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales con asistentes computacionales.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Identificar cuándo una función está definida de manera implícita por una ecuación.
+    \item Calcular las derivadas parciales de una función definida implícitamente aplicando el teorema de la función implícita.
+    \item Interpretar geométricamente la función implícita en el contexto de curvas y superficies de nivel.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+La ecuación $x^2 + y^2 = 1$ describe un círculo, pero no define $y$ como una función de $x$ en todo su dominio. ¿Hay alguna manera de calcular cómo cambia $y$ al variar $x$ sin necesidad de despejar $y$ explícitamente?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Función definida implícitamente}
+Se introduce la noción de función definida de manera implícita y se contrasta con la definición explícita.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial con el círculo unitario; discutir por qué en muchas situaciones reales (curvas de nivel, restricciones físicas) las relaciones entre variables no se pueden despejar fácilmente.
+    \item \textbf{Clase magistral:} se define la función implícita $f$ respecto a $\hat{f}$; se enuncia el teorema que proporciona la fórmula de las derivadas parciales de $f$ en términos de las de $\hat{f}$; se trabajan ejemplos en $\R^2$ y $\R^3$. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen08.pdf}{Resumen08.pdf}.
+    \item \textbf{Implementación computacional:} verificar las derivadas obtenidas implícitamente comparándolas con las obtenidas despejando, usando un asistente computacional.
+    \item \textbf{Resolución de ejercicios:} calcular derivadas parciales de funciones definidas implícitamente, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios08.pdf}{Ejercicios08.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Para $x^2+y^2=1$, ¿cuánto vale $\dfrac{dy}{dx}$ usando la función implícita? ¿Coincide con el resultado al despejar?
+    \item Para $x^2+y^2+z^2=1$, ¿cuánto valen $\parcial{z}{x}$ y $\parcial{z}{y}$?
+    \item ¿Qué condición sobre $\hat{f}$ garantiza que se puede aplicar el teorema?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Aplicación a planos tangentes y curvas de nivel}
+Se aplica la función implícita para obtener rectas y planos tangentes a curvas y superficies de nivel.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Clase magistral:} se muestra cómo la función implícita permite calcular la recta tangente a una curva $\hat{f}(x,y)=0$ y el plano tangente a una superficie $\hat{f}(x,y,z)=0$; se conecta con la propiedad del gradiente como vector normal al conjunto de nivel. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen08.pdf}{Resumen08.pdf}.
+    \item \textbf{Resolución de ejercicios:} determinar rectas y planos tangentes a curvas y superficies dadas implícitamente, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios08.pdf}{Ejercicios08.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿Cuál es la recta tangente a $x^3+y^3=2$ en el punto $(1,1)$?
+    \item ¿Cuál es el plano tangente a $x^2+y^2-z=0$ en el punto $(1,1,2)$?
+    \item ¿Por qué el gradiente de $\hat{f}$ es normal a la superficie $\hat{f}(x,y,z)=0$?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 2.6, ejercicios 17--30 (impares).
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿Qué establece el teorema de la función implícita en su versión completa y qué condiciones garantizan la existencia local de la función?
+    \item ¿En qué áreas de la ingeniería o la física aparecen funciones definidas implícitamente que no pueden despejarse explícitamente?
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Ver los videos:
+\begin{itemize}[leftmargin=*]
+    \item \href{https://youtu.be/GRXgv9GCOCo?si=PEnJrz5_Sjy36cPX}{Clase sobre Divergencia y Rotacional}.
+    \item \href{https://youtu.be/cMtxUdzhBLg?si=FTWGbNGlKSHpQS6W}{Clase sobre Divergencia y Rotacional 2}.
+    \item \href{https://youtu.be/rB83DpBJQsE?si=xTd73OwzR8vpNF-k}{Divergencia y curvatura}.
+\end{itemize}
+
+
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 08: Función implícita}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+En este resumen consideraremos $\Omega\subset\R^n$ un conjunto abierto.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Función implícita}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}
+    Sean $\func{f}{\Omega}{\R}$ y $\func{\hat{f}}{\R^{n+1}}{\R}$ campos escalares. Se dice que $f$ está definida de manera implícita con respecto a $\hat{f}$ si para todo $(x_1,\ldots,x_n)\in \Omega$ se tiene que
+    \[
+        \hat{f}(x_1,\ldots,x_n,f(x_1,\ldots,x_n))=0.
+    \]
+\end{defi}
+
+\begin{teo}
+    Sean $\func{f}{\Omega}{\R}$ y $\func{\hat{f}}{\R^{n+1}}{\R}$ campos escalares tales que $f$ está definida de manera implícita con respecto a $\hat{f}$. Si $\hat{f}$ es diferenciable, entonces para cada $k=1,\ldots, n$ se tiene que
+    \[
+        D_k f(x_1,\ldots,x_n) =
+        -\frac{D_k \hat{f}(x_1,\ldots,x_n,f(x_1,\ldots,x_n))}{D_{n+1} \hat{f}(x_1,\ldots,x_n,f(x_1,\ldots,x_n))}
+    \]
+    para todo $(x_1,\ldots,x_n)\in \Omega$ tal que $D_{n+1} \hat{f}(x_1,\ldots,x_n,f(x_1,\ldots,x_n))\neq 0$.
+\end{teo}
+
+\begin{advertencia}
+    Bajo el teorema anterior,
+    \[
+        \parcial{f}{x_k}(x_1,\ldots,x_n)=
+        -\frac{\parcial{\hat{f}}{x_k}(x_1,\ldots,x_n,f(x_1,\ldots,x_n))}
+              {\parcial{\hat{f}}{x_{n+1}}(x_1,\ldots,x_n,f(x_1,\ldots,x_n))}.
+    \]
+\end{advertencia}
+
+
+\end{document}

@@ -1,0 +1,124 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 07: Campos vectoriales y regla de la cadena}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales con asistentes computacionales.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Calcular la matriz jacobiana de un campo vectorial en un punto.
+    \item Determinar si un campo vectorial es diferenciable en un punto.
+    \item Aplicar la regla de la cadena para calcular derivadas parciales de composiciones de campos vectoriales.
+    \item Relacionar la jacobiana de una composición con el producto de las jacobianas.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+Si un robot transforma coordenadas de posición y luego una cámara transforma esas posiciones en píxeles, ¿cómo cambia un píxel al mover ligeramente al robot? ¿Podría calcularse eso sin conocer directamente la función total?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Diferenciabilidad y matriz jacobiana}
+Se extiende la diferenciabilidad a campos vectoriales y se introduce la matriz jacobiana como representante del diferencial.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial; mostrar que para funciones $\func{F}{\R^n}{\R^m}$ con $m>1$ la derivada ya no es un número ni un vector, sino una aplicación lineal representada por una matriz.
+    \item \textbf{Clase magistral:} se definen derivadas parciales y jacobiana de un campo vectorial; se enuncia la diferenciabilidad y su relación con la jacobiana; se contrasta con el caso escalar. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen07.pdf}{Resumen07.pdf}.
+    \item \textbf{Implementación computacional:} calcular matrices jacobianas de distintos campos vectoriales con un asistente computacional.
+    \item \textbf{Resolución de ejercicios:} calcular jacobianas y verificar diferenciabilidad, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios07.pdf}{Ejercicios07.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿Cuál es la matriz jacobiana de $F(x,y)=(x^2+y,\, xy)$ en el punto $(1,2)$?
+    \item ¿Por qué la existencia de la jacobiana no garantiza la diferenciabilidad de un campo vectorial?
+    \item ¿Qué condición sobre las derivadas parciales garantiza que $F$ es diferenciable?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Regla de la cadena}
+Se enuncia y aplica la regla de la cadena para composiciones de campos vectoriales diferenciables.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Clase magistral:} se enuncia la regla de la cadena $(F\circ G)'(a)=F'(G(a))\circ G'(a)$ y su versión en jacobianas $J_{F\circ G}(a)=J_F(G(a))\,J_G(a)$; se trabaja la notación de derivadas parciales compuestas. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen07.pdf}{Resumen07.pdf}.
+    \item \textbf{Resolución de ejercicios:} calcular derivadas parciales de composiciones usando la regla de la cadena, usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios07.pdf}{Ejercicios07.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿Qué relación hay entre la jacobiana de $F\circ G$ y las jacobianas de $F$ y $G$?
+    \item Dados $G(s,t)=(s^2,st)$ y $F(x,y)=x+y$, ¿cuál es $\parcial{(F\circ G)}{s}$ en $(1,1)$?
+    \item ¿En qué se diferencia la regla de la cadena para campos vectoriales de la versión escalar?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 2.5, ejercicios 1--27 (impares).
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿Cómo se usa la jacobiana en visión por computadora o en robótica para calcular transformaciones de movimiento?
+    \item ¿Qué ocurre cuando la jacobiana de una transformación es singular (determinante cero)? ¿Qué implica geométricamente?
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Ver los videos:
+\begin{itemize}[leftmargin=*]
+    \item \href{https://youtu.be/qb40J4N1fa4?si=edqBdY06q7YXj68v}{Diferenciación implícita, ¿qué está pasando aquí?}.
+    \item \href{https://youtu.be/SUfJPLNZwBo?si=xHjCz3ZnXwdLOpaz}{Implicit Function Theorem}.
+\end{itemize}
+
+
+\end{document}

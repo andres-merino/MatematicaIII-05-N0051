@@ -15,19 +15,20 @@
 | 1  | 1–2   | Funciones vectoriales y curvas paramétricas |
 | 2  | 3–4   | Geometría diferencial de curvas |
 | 3  | 5     | Topología de ℝⁿ |
-| 4  | 6–7   | Límites y diferenciabilidad |
-| 5  | 8–9   | Derivadas parciales y gradiente |
-| 6  | 10    | Función implícita y Hessiana |
-| 7  | 11–12 | Campos vectoriales |
-| 8  | 13    | Campos conservativos |
-| 9  | 14–15 | Optimización |
-| 10 | 16–17 | Integrales dobles |
-| 11 | 18    | Cambio de variable |
-| 12 | 19–20 | Integrales triples |
-| 13 | 21    | Cambio de variable en integrales triples |
-| 14 | 22–23 | Integrales de línea |
-| 15 | 24    | Integrales de superficie |
-| 16 | 25    | Teoremas integrales |
+| 4  | 6     | Límites y continuidad |
+| 5  | 7–8   | Derivadas parciales y gradiente |
+| 6  | 9     | Derivadas de orden superior |
+| 7  | 10    | Campos vectoriales y regla de la cadena |
+| 8  | 11    | Función implícita |
+| 9  | 12–13 | Rotacional, Divergencia y Campos conservativos |
+| 10 | 14–15 | Optimización |
+| 11 | 16–17 | Integrales dobles |
+| 12 | 18    | Cambio de variable |
+| 13 | 19–20 | Integrales triples |
+| 14 | 21    | Cambio de variable en integrales triples |
+| 15 | 22–23 | Integrales de línea |
+| 16 | 24    | Integrales de superficie |
+| 17 | 25    | Teoremas integrales |
 
 ---
 
