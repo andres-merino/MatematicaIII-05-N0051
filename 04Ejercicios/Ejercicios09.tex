@@ -25,11 +25,262 @@
 \encabezado
 
 \begin{ejer}
-
+Dado $\func{F}{\R^3}{\R^3}$ un campo vectorial y $\func{g}{\R^3}{\R}$ un campo escalar, ambos diferenciable, demostrar que
+    \[
+        \dive(gF) = \nabla g\cdot F + g\dive(F) 
+    \]
 \end{ejer}
 
 \begin{proof}[Solución]
-
+Tomemos 
+    \[
+        F(x,y,z) = (f_1(x,y,z),f_2(x,y,z),f_3(x,y,z)) 
+    \]
+    para $(x,y,z)\in\R^3$, se tiene que (omitiendo por un momento las evaluaciones)
+    \begin{align*}
+        \dive(gF) & = \dive(gf_1,gf_2,gf_3) \\
+            & = \parcial{gf_1}{x} + \parcial{gf_1}{y} + \parcial{gf_1}{z} \\
+            & = \parcial{g}{x} f_1 + g\parcial{f_1}{x} 
+            + \parcial{g}{y} f_2 + g\parcial{f_2}{y} 
+            + \parcial{g}{z} f_3 + g\parcial{f_3}{z} \\
+            & = \l( \parcial{g}{x},\parcial{g}{y},\parcial{g}{z} \r) \cdot (f_1,f_2,f_3) + g\l(\parcial{f_1}{x} +\parcial{f_1}{y} +\parcial{f_1}{z} \r)\\
+            & = \nabla g\cdot f + g\dive(f).
+    \end{align*}
 \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sean
+    \[
+        \funcion{F}{\R^3}{\R^3}{(x,y,z)}{(x,y,z)}
+    \]
+    y $a \in \R^3$ un vector constante. Demostrar que $\rot(a \times F)=2a.$
+\end{ejer}
+
+\begin{proof}[Solución]
+Sea $a=(a_1,a_2,a_3)$ entonces
+    \[
+        (a \times F){(x,y,z)}=(a_2z-a_3y ,a_3 x-a_1z, a_1y-a_2x)
+    \]
+    de aquí se tiene que 
+    \begin{align*}
+        \rot(a \times F)(x,y,z)
+            &=\left( \frac{\partial}{\partial y} (a_1y-a_2x)-\frac{\partial}{\partial z}(a_3 x-a_1z),\frac{\partial}{\partial z} (a_2z-a_3y)-\frac{\partial}{\partial x}(a_1y-a_2x),\frac{\partial}{\partial x} (a_3 x-a_1z)-\frac{\partial}{\partial y}(a_2z-a_3y) \right)\\
+            &=(2a_1,2a_2,2a_3)\\
+            &=2(a_1,a_2,a_3),
+    \end{align*}
+    con lo cual se demuestra que $\rot(a \times F)=2a$
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado un campo escalar $\phi:\R^3 \longrightarrow \R$, determinar la divergencia y el rotacional de $\nabla \phi$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Se supone que $F:\R^3 \longrightarrow \R^3$ es un gradiente, es decir $F=\nabla \phi $, donde $\phi:\R^3 \longrightarrow \R$ es un campo escalar.  
+    
+    Entonces, omitiendo las notaciones por un momento,
+    \[
+    F=\left( \frac{\partial \phi}{\partial x},\frac{\partial \phi}{\partial y},\frac{\partial \phi}{\partial z} \right)
+    \]
+    y la divergencia de $F$ es
+    \[
+    \dive(F)=\frac{\partial^2 \phi}{\partial x^2}+\frac{\partial^2 \phi}{\partial y^2}+\frac{\partial^2 \phi}{\partial z^2} .
+    \]
+    Así pues, la divergencia de un gradiente $F=\nabla \phi$ es el laplaciano de $\phi$ y simbólicamente se expresa como
+    \[
+    \dive(F)=\dive(\nabla \phi)=\nabla ^2 \phi.
+    \]
+    Por otro lado se tiene que el rotacional de $F$ viene dado por
+    \[
+    \rot(F)=\left( \frac{\partial^2 \phi}{\partial y \partial z}-\frac{\partial^2 \phi}{\partial z \partial y},\frac{\partial^2 \phi}{\partial z \partial x}-\frac{\partial^2 \phi}{\partial x \partial z},\frac{\partial^2 \phi}{\partial x \partial y}-\frac{\partial^2 \phi}{\partial y \partial z} \right), 
+    \]
+    cuando estas derivadas parciales mixtas son continuas entonces 
+    \[
+    \rot(F)=\rot(\nabla \phi)=0.
+    \]
+    Esto demuestra que $rot(F)=0$ es condición necesaria para que un campo vectorial $F$  derivable con continuidad sea un gradiente.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Calcular el vector rotacional del campo vectorial
+    \[
+        \funcion{F}{\R^3}{\R^3}{(x,y,z)}{(x^2-y,xe^z,xy)}
+    \]
+    y evalué $\rot(F)(2,5,9)$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Se conoce que
+    \[
+    \rot F= \triangledown \times F,
+    \]
+    es decir,
+    \[
+        \rot F=
+        \left[
+        \begin{array}{ccc}
+		i & j & k \\
+		\dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z}\\
+        x^2-y & xe^z & xy
+        \end{array} 
+        \right]
+        =(x-xe^z,-1-y,e^z)
+    \]
+    evaluando,
+    \[
+    \rot F(2,5,9)=(2(1-e^9), -1-5, e^9).
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+\begin{enumerate}
+        \item Dado el campo vectorial
+            \[
+                \funcion{G}{\R^2}{\R^2}{(x,y)}{(x^2,y^2)}
+            \]
+            calcular la divergencia de $G$ en los puntos $(2,2)$ y $(-2,-2)$, interpretar el resultado.
+    
+        \item Dado el campo vectorial 
+            \[
+                \funcion{F}{\R^2}{\R^2}{(x,y)}{(-y,x)}
+            \]
+            calcular su rotacional en cualquier punto e interpretar el resultado.
+    \end{enumerate}
+\begin{respuesta}
+    \begin{enumerate}
+        \item Se tiene que
+        \[
+            \dive (G)(x,y)=D_1g_1(x,y)+D_2g_2(x,y)=2x+2y,
+        \]
+        de donde $\dive (G)(2,2)=8$ y $\dive (G)(-2,-2)=-8$. Con esto se concluye que el punto $(2,2)$ es una fuente y el punto $(-2,-2)$ un sumidero.
+    
+        \item Se tiene que
+        \[
+            \rot(F)(x,y)=D_1f_2(x,y)-D_2f_1(x,y)=2
+        \]
+        para cualquier $(x,y)\in\R^2$, con lo que se concluye que el campo rota en sentido antihorario en todo punto $(x,y)\in\R^2$.
+    \end{enumerate}
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Identifique si la función dada es un campo conservativo. Si lo es determine su potencial.
+	\begin{enumerate}
+	\item 
+		\[
+			\funcion{F}{\R^2}{\R^2}{x}{(3x_1^2-2x_2^2,4x_1x_2+3).}
+		\]
+\end{ejer}
+
+\begin{proof}[Solución]
+Dado que el campo es diferenciable, se tiene que 
+	\[
+	    \parcial{f_1}{x_2}(x_1,x_2) = -4x_2
+	\]
+	y
+	\[
+	    \parcial{f_2}{x_1}(x_1,x_2) = 4x_2
+	\]
+	para todo $(x_1,x_2)\in\R^2$. Dado que estos no son iguales, se tiene que $F$ no es conservativo.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sea el campo vectorial
+	\[
+		\funcion{F}{\R^3}{\R^3}{x}{(P(x),Q(x),R(x))} 
+	\]
+	donde $P$, $Q$ y $R$ tienen derivadas de primer orden continuas. Demuestre que si $F$ es conservativo, entonces
+	\[
+		D_2 P =D_1 Q,\qquad D_3 P =D_1 Q \yds D_3 Q =D_2 R.
+	\]
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el campo vectorial
+    \[
+        \funcion{F}{\R^2}{\R^2}{(x,y)}{F(x,y)=(2xy^3,3x^2 y^2)}
+    \]
+    Determine el campo escalar $f:\R^2\rightarrow \R$, tal que $F(x,y)=\nabla f(x,y)$ para $(x,y)\in\R^2$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Se calcula
+    \[
+        D_1F_2=6xy^2 \texty D_2F_1=6xy^2,
+    \]
+    con lo cual se verifica que $F$ es un gradiente ya que $\R^2$ es simplemente conexo. Se sabe entonces que existe una función $\func{f}{\R^2}{\R}$ tal que \[
+        F(x,y)=\nabla f
+    \]
+    donde
+    \begin{align*}
+         F_1(x,y)&=\dfrac{\partial f}{\partial x}(x,y)=2xy^3,\\
+         F_2(x,y)&=\dfrac{\partial f}{\partial y}(x,y)=3x^2y^2,
+    \end{align*}
+    integrando la primera ecuación con respecto $x$ se tiene
+    \[
+        f(x,y)=x^2y^3+g(y),
+    \]
+    derivando esta expresión con respecto a $y$
+    \[
+        \dfrac{\partial f}{\partial y}(x,y)=3x^2y^2+\dfrac{dg}{dy}(y)=3x^2y^2
+    \]
+    de donde 
+    \[
+        \dfrac{dg}{dy}(y)=0
+    \]
+    entonces $g(y)=c$, con $c\in\R$.
+    Finalmente, la función potencial del campo vectorial $F$ es
+    \[
+        \funcion{f}{\R^2}{\R}{(x,y)}{x^2y^3+c}
+    \]
+    con $c\in\R$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Determinar el mínimo de la función
+	\[
+	    \funcion{C}{\R^2}{\R}{x}
+	    {3x_1^2+2x_1x_2+4x_2^2-12x_1-26x_2+50.}
+	\]
+\end{ejer}
+
+\begin{proof}[Solución]
+Las derivadas parciales del campo escalar $C$ son
+	\[
+		D_1 C(x)=6x_1+2x_2-12\yds 
+		D_2 C(x)=8x_2+2x_1-26
+	\]
+	para todo $x\in\R^2$. Ahora, para encontrar los puntos críticos del campo escalar debemos resolver el sistema
+	\[
+		\begin{cases}
+		6x_1+2x_2=12\\
+		8x_2+2x_1=26,
+		\end{cases}
+	\]
+	que es equivalente a $\nabla C(x)=0$. La solución del sistema anterior es $x_1= 1$ y $x_2=3$. Para determinar si el punto crítico $(1,3)$ es un mínimo o un máximo debemos hallar la Hessiana. Así,
+	\[
+		H_f(x)=
+			\begin{pmatrix}
+				6&2\\
+				2&8
+			\end{pmatrix}
+	\]
+	para cada $x\in\R^2$. La matriz Hessiana es constante y 
+	\[
+		\det(H_f(x))=48-4=44>0.
+	\]
+	Como los dos menores de la matriz Hessiana son siempre positivos, por el criterio de Sylvester, se deduce que $f$ alcanza su mínimo en $(1,3)$ y este mínimo es
+	\[
+		f(1,3)=3+2(3)+4(9)-12-26(3)+50=5.
+	\]
+\end{proof}
+
 
 \end{document}

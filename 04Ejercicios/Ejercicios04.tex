@@ -25,11 +25,704 @@
 \encabezado
 
 \begin{ejer}
-
+Dado el campo escalar:
+    \[
+        \funcion{f}{\Omega}{\R}{(x,y)}{\dfrac{xy+1}{x^2-y^2}}
+    \]
+    donde $\Omega=\lbrace (x,y)\in\R^2:x^2\neq y^2 \rbrace$.
+    Determine el límite de $f$ cuando $(x,y) \to (1,-1)$ a través de las trayectorias:
+    \[
+        \funcion{\alpha}{\R}{\R^2}{t}{(t,-1)}
+    \]
+    y 
+    \[
+        \funcion{\beta}{\R}{\R^2}{s}{(s,-s^2)}
+    \]
+    ¿Qué se puede concluir?
 \end{ejer}
 
 \begin{proof}[Solución]
-
+Se debe calcular el límite
+    \[
+        \lim_{(x,y)\to (1,-1)} f(x,y).
+    \]
+    Por definición de límites por trayectorias, para $\alpha(t)$
+    \[
+        \lim_{t\to t_0} f(\alpha(t))
+    \]
+    donde $t_0=1$ ya que $\alpha(1)=(1,-1)$, entonces
+    \[
+    \begin{aligned}
+        \lim_{t\to t_0} f(\alpha(t))&=\lim_{t\to 1} \dfrac{-t+1}{t^2-1}\\
+        &=\lim_{t\to 1} \dfrac{-t+1}{(t-1)(t+1)}\\
+        &=\lim_{t\to 1} \dfrac{-1}{(t+1)}\\
+        &=-\dfrac{1}{2}.
+    \end{aligned}
+    \]
+    Para $\beta(t)$
+    \[
+        \lim_{s\to s_0} f(\beta(s))
+    \]
+    donde $s_0=1$ ya que $\beta(1)=(1,-1)$, entonces 
+    \[
+    \begin{aligned}
+        \lim_{s\to s_0} f(\beta(s))&=\lim_{s\to 1} \dfrac{-s^3+1}{s^2-s^4}\\
+        &=\lim_{s\to 1} \dfrac{s^2+s+1}{(s+1)(s^2+1)}\\
+        &=\dfrac{3}{2}.
+    \end{aligned}
+    \]
+El límite de $f$ cuando $(x,y) \rightarrow (1,-1)$ a través de las trayectorias $\alpha(t)$ y $\beta(t)$ son distintos, por lo tanto se puede concluir que el límite de $f$ cuando $(x,y) \to (1,-1)$ no existe.
 \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el campo escalar
+    \[
+    	\funcion{f}{\R^2}{\R}{(x,y)}%
+            	{\begin{cases}
+            		\dfrac{\sen(x^2+y^2)}{x^2+y^2} &\text{ si }   (x,y)\neq(0,0), \\
+             		1 &  \text{ si }  (x,y)=(0,0).
+                 \end{cases}}
+    \]
+	Probar que $f$ es continuo en $(0,0)$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Para que el campo $f$ sea continuo en $(0,0)$, necesariamente se debe dar que
+    \[
+        \dlim_{(x,y)\to (0,0)}f(x,y)=f(0,0),
+    \]
+    para lo cual se analiza la existencia del límite de $f$ cuando $(x,y)\to (0,0)$. Se realiza el cambio de variable $\theta=x^2+y^2$, además nótese que si $(x,y)\to (0,0)$ entonces $\theta \to 0$, de aquí
+    \begin{align*}
+        \dlim_{(x,y)\to (0,0)}f(x,y)&=\dlim_{\theta\to 0}\dfrac{\sen \theta}{\theta}\\
+        &=1\\
+        &=f(0,0).
+    \end{align*}
+    Con esto se verifica que $f$ es continua en $(0,0)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el campo escalar:
+    \[
+        \funcion{f}{\R^2}{\R}{(x,y)}{f(x,y)=
+    \begin{cases}
+         1 & \text{si } y \geq x^4, \\
+         -1 & \text{si } y\leq0, \\
+         0 & \text{caso contrario.}
+    \end{cases}}
+    \]
+    Obtenga los siguientes límites o explique porqué no existen:
+    \begin{enumerate}
+        \item $\dlim_{(x,y) \to (0,1)} f(x,y)$
+        \item $\dlim_{(x,y) \to (2,3)} f(x,y)$
+        \item $\dlim_{(x,y) \to (0,0)} f(x,y)$
+    \end{enumerate}
+\end{ejer}
+
+\begin{proof}[Solución]
+\begin{enumerate}
+            \item $\dlim_{(x,y) \to (0,1)} f(x,y)=1$ porque cualquier camino que pase por $(0,1)$ y su entorno, satisface la condición $y \geq x^4$ en dicho punto.
+            \item $\dlim_{(x,y) \to (2,3)} f(x,y)=0$ porque cualquier camino que pase por $(2,3)$ y su entorno, no satisface las condiciones $y \leq x^4$ o $y \geq x^4$ en dicho punto.
+            \item Tomando las trayectorias,
+                \[
+                    \funcion{\alpha}{\R}{\R^2}{t}{(0,t)}
+                \]
+                nótese que $\alpha(0)=(0,0)$, entonces
+                \[
+                    \dlim_{t \to 0} f\l(\alpha(t)\r)=1
+                \]
+                y
+                \[
+                    \funcion{\beta}{\R}{\R^2}{t}{(t^2,t)}
+                \]
+                nótese que $\beta(0)=(0,0)$, entonces
+                \[
+                    \dlim_{t \to 0} f\l(\beta(t)\r)=0
+                \]
+                
+                Por lo tanto el límite no existe en $(0,0)$.
+\end{enumerate}
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Determinar el valor de $\alpha\in\R$ para que el campo escalar
+    \[
+        \funcion{f}{\R^2}{\R}{x}
+        {\begin{cases}
+            \dfrac{x^3+xy^2+2x^2+2y^2}{x^2+y^2}&\text{ si} (x,y)\neq(0,0),\\
+            \alpha&\text{ si} (x,y)=(0,0)
+        \end{cases}}
+    \]
+    sea continua en $(0,0)$.
+\end{ejer}
+
+\begin{proof}[Solución]
+% Para que la función sea continua en $(0,0)$, es preciso que
+    % \[
+    %     \lim_{(x,y)\to(0,0)} f(x,y) = f(0,0).
+    % \]
+    % Se tiene que
+    % \begin{align*}
+    %     \dfrac{x^3+xy^2+2x^2+2y^2}{x^2+y^2}&=\dfrac{(x+2)(x^2+y^2)}{x^2+y^2}\\
+    %     &=x+2,
+    % \end{align*}
+    % por lo tanto 
+    % \begin{align*}
+    %      \lim_{(x,y)\to(0,0)} f(x,y)&= \lim_{(x,y)\to(0,0)} (x+2)\\
+    %      &=2,
+    % \end{align*}
+    entonces $f(0,0)$ debería ser 2, es decir  $\alpha=2$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Considere el campo escalar
+    \[
+        \funcion{f}{\R^2}{\R}{(x,y)}{
+        \begin{cases}
+            \dfrac{3(x-1)^2y + (x-1)y^2 + (x-1)^3 + y^3}{(x-1)^3 + y^3} &\text{ si } (x,y)\neq(1,0),\\
+            1 & \text{ si } (x,y) = (1,0).
+        \end{cases}}
+    \]
+    Estudie la continuidad de $f$ en $(1,0)$.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Considere el campo escalar
+    \[
+        \funcion{f}{\R^2}{\R}{(x,y)}{
+        \begin{cases}
+            \dfrac{xy^2}{x^2 + y^4} & \text{ si } x \neq 0,\\
+            0 & \text{ si } x = 0.
+        \end{cases}}
+    \]
+    Muestre que no es continuo en el origen.
+\end{ejer}
+
+\begin{proof}[Solución]
+Para determinar si $f$ es continua en $(0,0)$ estudiemos la existencia del límite de $f$ cuando $(x,y)$ tiende a $(0,0)$.
+    
+    Iniciemos analizando la existencia de los límites iterados, notemos que
+    \[
+        \dlim_{x\to 0}\dlim_{y\to 0}f(x,y)=\dlim_{y\to 0}\dlim_{x\to 0}f(x,y)=0,
+    \]
+    dado que los límites iterados existen y son iguales, si el límite existe, debe ser igual a 0.
+    
+    Ahora, analicemos la existencia del límite mediante la trayectoria
+    \[
+        \funcion{\alpha}{\R}{\R^2}{t}{(t^2,t),}
+    \]
+    tenemos que $\alpha(t)=(0,0)$ en $t=0$. Entonces, el límite de $f$ a lo largo de la trayectoria $\alpha$ cuando $t$ tiende a 0 es
+    
+    \[
+        \dlim_{t\to0}{f(\alpha(t))}=\dlim_{t\to0}{f(t^2,t)}=\dfrac{1}{2},
+    \]
+    por lo tanto, si el límite existe, debe ser igual a $\dfrac{1}{2}$, lo que contradice lo anterior. De aquí, concluimos que no existe el límite de $f$ cuando $(x,y)$ tiende a $(0,0)$, lo que implica que $f$ no es continua en el origen.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Considere el campo escalar
+    \[
+        \funcion{f}{\R^3}{\R}{(x,y,z)}{
+        \begin{cases}
+            \dfrac{xy + yz^2 + xz^2}{x^2 + y^2 + z^4} & \text{ si } (x,y,z) \neq (0,0,0),\\
+            0 & \text{ si } (x,y,z) = (0,0,0).
+        \end{cases}}
+    \]
+    Muestre que es no es continuo en el origen.
+    
+\begin{respuesta}
+    Analicemos este límite por trayectorias, tomemos $k\in\R$ y consideremos la trayectoria
+    \[
+        \funcion{\alpha_k}{\R}{\R^3}{t}{(kt^2,t^2,t).}
+    \]
+    Notemos que si $\alpha_k(t)=(0,0,0)$, entonces $t=0$. Luego, tenemos que 
+    \[
+        \dlim_{t\to0}{f(\alpha_k(t))}=\dlim_{t\to0}{f(kt^2,t^2,t)}=\dlim_{t\to0}{\dfrac{kt^4 + t^4 + kt^4}{k^2t^4 + t^4 + t^4}}=\dfrac{2k+1}{k^2 + 2}.
+    \]
+    Ya que el límite anterior toma valores distintos que dependen del valor de $k$, concluimos que no existe el límite de $f$ cuando $(x,y,z)$ tiende a $(0,0,0)$, lo que implica que $f$ no es continua en el origen.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sea la función:
+	\[
+        \funcion{F}{\R^2}{\R^3}{(x,y)}
+        {\l(e^x,e^{-y},xy\r)}
+    \]
+Hallar la derivada $F'(a;y)$ en el punto $a=(1,1)$ y la dirección $y=(1,2)$.
+\end{ejer}
+
+\begin{proof}[Solución]
+\
+Por definición de derivada de $F: \R^2 \rightarrow \R^3 $ en $a \in R^2$ respecto a $ y\in R^2$.
+    \[
+       f'(a;y)=\l(f_1'(a;y),f_2'(a;y),f_3'(a;y)\r)
+    \]
+La derivada de cada campo escalar será:
+	\[
+    \begin{aligned}
+       f_1'(a;y) & = \lim_{h\to 0} \dfrac{f_1(a+hy)-f_1(a)}{h}\\
+        & =  \lim_{h\to 0} \dfrac{f_1((1,1)+h(1,2))-f_1(1,1)}{h}\\
+        & =  \lim_{h\to 0} \dfrac{f_1((1+h,1+2h)-f_1(1,1)}{h}\\
+        & =  \lim_{h\to 0} \dfrac{e^{1+h}-e^1}{h}\\
+        & =  \lim_{h\to 0} \dfrac{e(e^h-1)}{h}\\
+        & =  e
+     \end{aligned}
+    \]
+    
+	\[
+    \begin{aligned}
+       f_2'(a;y) & = \lim_{h\to 0} \dfrac{f_2(a+hy)-f_2(a)}{h}\\
+        & =  \lim_{h\to 0} \dfrac{e^{-1-2h}-e^{-1}}{h}\\
+        & =  \lim_{h\to 0} \dfrac{-2e^{-1}(e^{-2h}-1)}{-2h}\\
+        & =  \dfrac{-2}{e}
+     \end{aligned}
+    \]
+    
+	\[
+    \begin{aligned}
+       f_3'(a;y) & = \lim_{h\to 0} \dfrac{f_3(a+hy)-f_3(a)}{h}\\
+        & =  \lim_{h\to 0} \dfrac{(1+h)(1+2h)}{h}\\
+        & =  \lim_{h\to 0} \dfrac{1+2h+h+2h^2-1}{h}\\
+        & =  3
+     \end{aligned}
+    \]
+Por lo tanto $F'(a;y)$ en el punto $a=(1,1)$ y la dirección $y=(1,2)$ es:
+    \[
+       F'(a;y)=\l(e,\dfrac{-2}{e},3\r)
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el campo escalar
+    \[
+        \funcion{f}{\R^n}{\R}{x}{f{(x)=\| x \|^n}}
+    \]
+    Calcule $f'(a,y)$
+\end{ejer}
+
+\begin{proof}[Solución]
+Definimos
+    \[
+        \funcion{g}{I}{\R}{t}{g{(t)=f(a+ty)}}
+    \]
+    donde $a,y\in \R^n$        
+    \[
+        g(t)=\| a+ty \|^n
+    \]  
+    \[
+        g(t)=(\| a+ty \|^2)^{\frac{n}{2}}
+    \]
+    \[
+        g(t)=[(a+ty)\cdot (a+ty)]^{\frac{n}{2}}
+    \]
+    Derivando     
+    \[
+        g'(t)=\frac{n}{2}[(a+ty)\cdot (a+ty)]^{\frac{n}{2}-1}[y\cdot(a+ty)+(a+ty)\cdot y]
+    \]
+    Si $t=0$
+    \[
+        g'(0)=\frac{n}{2}(a\cdot a)^{\frac{n}{2}-1}[ya+ay]
+    \]
+    \[
+        g'(0)=\frac{n}{2}(\| a \|^2)^{\frac{n}{2}-1}(2ay)
+    \]
+    \[
+        g'(0)=n\|a\|^{n-2}(ay)
+    \] 
+    \[
+        f'(a,y)=n\|a\|^{n-2}(ay)
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el campo escalar
+    \[
+        \funcion{f}{\R^2}{\R}{(x,y)}{\sen(xy),}
+    \]
+    comprobar que es diferenciable con continuidad en todo $\R^2$. Además, hallar su derivada en el punto $(\pi,1)$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Para determinar si la función es diferenciable con continuidad, hallemos primero sus derivadas parciales, las cuales son:
+    \[
+        D_1f(x,y)=y\cos(xy)
+        \texty
+        D_2f(x,y)=x\cos(xy),
+    \]
+    para todo $(x,y)\in\R^2$. Dado que sus derivadas parciales son continuas, se tiene que $f$ es diferenciable con continuidad, además, 
+    \[
+        \nabla f(x,y)=(y\cos(xy),x\cos(xy)),
+    \]
+    para todo $(x,y)\in\R^2$, por lo tanto,
+    \[
+        \funcion{f'(x,y)}{\R^2}{\R}{(h,k)}{\nabla f(x,y)\cdot(h,k)=y\cos(xy)h+x\cos(xy)k),}
+    \]
+    para todo $(x,y)\in\R^2$. Con esto, se tiene $f'(\pi,1)$ es la función dada por
+    \[
+        \funcion{f'(\pi,1)}{\R^2}{\R}{(h,k)}{f'(\pi,1)(h,k)=-h-\pi k.}\qedhere
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el campo escalar 
+    \[
+        \funcion{f}{\R^2}{\R}{(x,y)}
+            {\begin{cases}
+                \dfrac{xy}{x^2+y^2} & \text{si }(x,y)\neq(0,0), \\
+                0 & \text{si }(x,y)=(0,0).
+            \end{cases}}
+    \]
+    Determinar las derivadas parciales de $f$ en $(0,0)$ y comprobar que $f$ no es diferenciable en $(0,0)$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Para las derivadas parciales, se tiene que
+    \[
+        D_1f(0,0)
+        = f'((0,0);(1,0))
+        = \lim_{t\to 0} \frac{f((0,0)+t(1,0))-f(0,0)}{t}
+        = \lim_{t\to 0} \frac{f(t,0)-0}{t} = 0.
+    \]
+    De manera análoga, se obtiene que
+    \[
+        D_2f(0,0) = 0,
+    \]
+    de donde
+    \[
+        \nabla f(0,0)=(0,0)
+    \]
+    
+    Ahora, para analizar su diferenciablidad en $(0,0)$, analicemos 
+    \[
+        \lim_{(h,k)\to (0,0)}\frac{f((0,0))+(h,k))-f(0,0)-\nabla f(0,0)\cdot (h,k)} {\norma{(h,k)}},
+    \]
+    así, tenemos que
+    \begin{align*}
+        \lim_{(h,k)\to (0,0)}\frac{f((0,0))+(h,k))-f(0,0)-\nabla f(0,0)\cdot (h,k)} {\norma{(h,k)}}
+            & =  \lim_{(h,k)\to (0,0)}\frac{\dfrac{hk}{h^2+k^2}-(0,0)\cdot (h,k)}{\norma{(h,k)}}\\
+            & =  \lim_{(h,k)\to (0,0)}\frac{hk}{(\sqrt{h^2+k^2})^3}.
+    \end{align*}
+    Si consideramos el límite mediante la curva de ecuación $y=x$, tenemos que este límite no existe, por lo tanto, se tiene que la función no es diferenciable.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sean el campo escalar
+	\[
+		\funcion{f}{\R^2}{\R}{x}{\|x\|^2}
+	\]
+	y la trayectoria
+	\[
+		\funcion{r}{\lcl0,1\rcl}{\R}{t}{(t,t^2).}
+	\]
+	Muestre que se cumple que
+	\[
+		(f\circ r)'(t)=\nabla f(r(t))\cdot r'(t)
+	\]
+	para todo $t\in \lcl0,1\rcl$.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sea el campo vectorial $\func{f}{\R^n}{\R^m}$, donde $n$ y $m$ son enteros positivos. Demuestre que si $f$ es una aplicación lineal, entonces $f$ es una función continua en todo su dominio.
+\end{ejer}
+
+\begin{proof}[Solución]
+Sea $a\in\R^n$. Vamos a demostrar que $f$ es continua en $a$. Sea $\vepsilon>0$ debemos hallar $\delta>0$ tal que para todo $x\in\R^n$ se cumpla que
+	\[
+	    0<\|x-a\|<\delta \Imp \|f(x)-f(a)\|<\vepsilon.
+	\]
+	Para cualquier $x\in\R^n$, se tiene que
+	\begin{align*}
+		f(x)-f(a)
+		&=f\l(\sum_{i=1}^nx_ie^i\r)-f\l(\sum_{i=1}^na_ie^i\r)\\
+		&=\sum_{i=1}^nx_if\l(e^i\r)-\sum_{i=1}^na_if\l(e^i\r)\\
+		&=\sum_{i=1}^n(x_i-a_i)f\l(e^i\r),
+	\end{align*}
+	sea $k=\max\{\|f(e^i)\|: i=1,2,\ldots,n\}$; se sigue que
+	\begin{align*}
+		\|f(x)-f(a)\|
+		&=\l\|\sum_{i=1}^n(x_i-a_i)f\l(e^i\r)\r\|\\
+		&\leq\sum_{i=1}^n|x_i-a_i| \l\|f\l(e^i\r)\r\|\\
+		&\leq k\sum_{i=1}^n|x_i-a_i|\\
+		&\leq k \sqrt{n}\|x-a\|,
+	\end{align*}
+	donde en el ultimo paso utilizamos la desigualdad de Cauchy-Schwarz con los vectores de $\R^n$: $(|x_1-a_1|,|x_2-a_2|,\ldots,|x_n-a_n|)$ y $(1,1,\ldots,1)$. Finalmente, se tiene que si tomamos $\delta=\dfrac{\vepsilon}{k \sqrt{n}}>0$ se tiene que para todo $x\in\R^n$ tal que
+	\[
+	    0<\|x-a\|<\delta
+	\]
+	se cumple que
+	\[
+	    \|f(x)-f(a)\|\leq k \sqrt{n}\|x-a\|<  k \delta\sqrt{n}  =\vepsilon.
+	\]
+	Por la definición de continuidad, se tiene que $f$ es continua en $a$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el campo vectorial
+	\[
+		\funcion{F}{\R^2}{\R^2}{(x,y)}{(x^2-y,xy).}
+	\]
+	Suponiendo que $F$ es diferenciable, calcular $F'(1,1)$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Suponiendo que $F$ es diferenciable, se tiene que
+    \[
+        [F'(1,1)(h,k)] = J_F(1,1) [(h,k)]
+    \]
+    para todo $(h,k)\in\R^2$. Por lo tanto, empecemos calculando la matiz jacobiana de $F$,
+    \[
+        J_F(x,y)=
+            \begin{bmatrix}
+                2x  & -1\\
+                y   & x
+            \end{bmatrix},
+    \]
+    de donde
+    \[
+        J_F(1,1)=
+            \begin{bmatrix}
+                2  & -1\\
+                1   & 1
+            \end{bmatrix}.
+    \]
+    Así, tenemos que
+    \[
+        [F'(1,1)(h,k)] 
+            = J_F(1,1) [(h,k)]
+            = \begin{bmatrix}
+                2  & -1\\
+                1   & 1
+            \end{bmatrix}
+            \begin{bmatrix}
+                h \\
+                k 
+            \end{bmatrix}
+            = \begin{bmatrix}
+                2h - k \\
+                h + k 
+            \end{bmatrix},
+    \]
+    para todo $(h,k)\in\R^2$, por lo tanto
+    \[
+        F'(1,1)(h,k) = (2h - k,h + k),
+    \]
+    para todo $(h,k)\in\R^2$. Con esto, se tiene que
+    \[
+        \funcion{F'(1,1)}{\R^2}{\R}{(h,k)}{F'(1,1)(h,k) = (2h - k,h + k).}
+        \qedhere
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dada la función vectorial 
+    \[
+        \funcion{F}{D}{\R^3}{(x_1,x_2)}{f(x_1,x_2)=\l(e^{x_1+x_2},\frac{1}{x_1},\sen(x_1x_2)\r)}
+    \]
+    donde $D=\{(x_1,x_2)\in\R^2:x_1\neq 0\}$. Para $a=(-1,0)$ y $y=\in\R^2$, determine la derivada de $F$ respecto al vector $y$ en el punto $a$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Por definición
+	\[
+        [F'(a;y)]=J_f(a)[y].
+    \]
+	Se sabe que
+    \[
+        J_f(a)=\left( \begin{array}{lcr}
+        D_{1}f_1(a)    &D_{2}f_1(a) \\
+        D_{1}f_2(a)    &D_{2}f_2(a)\\
+        D_{1}f_3(a)    &D_{2}f_3(a)
+        \end{array}\right) 
+    \]
+    Se tiene que    
+    \[
+        J_f(x)= \begin{pmatrix}
+        & e^{x_1+x_2}    &e^{x_1+x_2} \\
+        & \frac{1}{x_2}  &0\\
+        & x_2\cos(x_1x_2)    &x_1\cos(x_1x_2)
+        \end{pmatrix} 
+    \]
+    Evaluando en a=(-1,0)
+    \[
+        J_f(a)= \begin{pmatrix}
+        e^{-1} &e^{-1} \\
+        -1     &0\\
+        0      &-1
+        \end{pmatrix}  
+    \]
+    Entonces la derivada de $F$ en $a$ en la dirección de cualquier vector $y$  es
+    \[
+        F'(a;y)= \begin{pmatrix}
+        e^{-1} &e^{-1} \\
+        -1     &0\\
+        0      &-1
+        \end{pmatrix}  
+        \begin{pmatrix}
+        y_1  \\
+        y_2  
+        \end{pmatrix}= 
+        \begin{pmatrix}
+        e^{-1}y_1+e^{-1}y_2\\
+        -y_1     \\
+        -y_2     
+        \end{pmatrix} 
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el campo vectorial
+	\[
+		\funcion{F}{\R^2}{\R^2}{x}{(x_1^2-x_2,x_1x_2^2).}
+	\]
+	Mostrar que $F$ es diferenciable en todo $\R^2$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Primero calculemos su matriz Jacobiana:
+	\[
+		J_F(x)=
+		\begin{pmatrix}
+			2x_1&-1\\
+			x_2^2&2x_1x_2
+		\end{pmatrix}
+	\]
+	para todo $x\in\R^2$.
+    
+    Ahora, sea $a\in\R^2$, vamos a demostrar que $F$ es diferenciable en $a$. Procediendo como en el ejercicio anterior, se tiene que
+    \[
+        F'(a_1,a_2)(h_1,h_2)=(2a_1h_1-h_2, a_2^2h_1+2a_1a_2h_2),
+    \]
+    para todo $h\in\R^2$. Por otro lado, para cada $h\in\R^2$ no nulo, se tiene que
+	\begin{align*}
+		(a+h)-F(a)-F'(a)(h)
+			&=((a_1+h_1)^2-(a_2+h_2),(a_1+h_1)(a_2+h_2)^2)
+			-(a_1^2-a_2,a_1 a_2^2) \\
+			&\phantom{=}-(2a_1h_1-h_2, a_2^2h_1+2a_1a_2h_2) \\
+			&=\l(h_1^2, a_1h_2^2+2a_2h_1h_2+h_1h_2^2\r),
+	\end{align*}
+	por lo tanto
+	\[
+	    \frac{F(a+h)-F(a)-F'(a)(h)}{\|h\|}=\l(\frac{h_1^2}{\|h\|},\frac{a_1h_2^2+2a_2h_1h_2+h_1h_2^2}{\|h\|}\r).
+	\]
+	Dado que
+	\[
+		|h_i|\leq \|h\|
+	\]
+	para $i\in\{1, 2\}$, se sigue que
+	\[
+		0\leq \dfrac{h_1^2}{\|h\|}\leq \|h\|, 
+		\qquad
+		0\leq \dfrac{h_2^2}{\|h\|}\leq \|h\|
+		\yds
+		0\leq \dfrac{|h_1h_2|}{\|h\|}\leq \frac{\|h\|}{2}, 
+	\]
+	de donde, por el teorema del Sanduche, 
+	\[
+		\lim_{h\to 0}\dfrac{h_1^2}{\|h\|}=0
+		\yds
+		\lim_{h\to 0}\dfrac{a_1h_2^2+2 a_2h_1h_2+h_1h_2^2}{\|h\|}=0.
+	\]
+	De esta manera, se tiene que
+	\[
+		\lim_{h\to 0}\dfrac{F(a+h)-F(a)-F'(a)(h)}{\|h\|}=0
+	\]
+	lo que significa que la función $f$ es diferenciable en $a$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el campo vectorial
+    \[
+        \funcion{F}{\R^2}{\R^2}{(x,y)}{f(x,y)=(x+y^2,y-2xy)}
+    \]
+    Verifique que $F$ es diferenciable en el punto $a=(2,1)$.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dados los campos vectoriales
+	\[
+ 	    \funcion{G}{\R^2}{\R^3}{(r,s)}{(r+s,r-s,rs)}
+ 	    \texty
+ 	    \funcion{F}{\R^3}{\R^3}{(x,y,z)}{(x^2-y^2,xyz,x^2+y^2+z)}
+	\]
+	Determine $J_{F\circ G}(a)$, para $a\in\R^2$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Si $G$ es diferenciable en $a$ y $F$ es diferenciable en $G(a)$, entonces
+    \[ 
+        J_{F\circ G} (a)= J_F (G(a))J_G (a)
+    \]
+    Se debe plantear la jacobiana de $F$ y de $G$
+    \begin{align*}
+        &J_F(x,y,z) = \begin{pmatrix}
+        2x & -2y & 0 \\
+        yz & xz & xy\\
+        2x & 2y & 1
+        \end{pmatrix}\\
+        &J_g(r,s) = \begin{pmatrix}
+        1 & 1  \\
+        1 & -1 \\
+        s & r
+        \end{pmatrix}
+    \end{align*}
+    Evaluando la jacobiana de $F$ en $G(a)$
+    \[ 
+        J_F(G(r,s)) = \begin{pmatrix}
+        2(r+s) & -2(r-s) & 0 \\
+        (r-s)rs & (r+s)rs & (r+s)(r-s)\\
+        2(r+s) & 2(r-s) & 1
+        \end{pmatrix}
+    \]
+    Operando
+    \[ 
+        J_F(r,s) = \begin{pmatrix}
+        2r+2s & -2r+2s & 0 \\
+        r^2s-rs^2 & r^2s+rs^2 & r^2-s^2\\
+        2r+2s & 2r-2s & 1
+        \end{pmatrix}
+	\]
+    Entonces calculamos $(F\circ G)'(r,s)$ 
+    \begin{align*}
+        (F\circ G)'(r,s)= \begin{pmatrix}
+        2r+2s & -2r+2s & 0 \\
+        r^2s-rs^2 & r^2s+rs^2 & r^2-s^2\\
+        2r+2s & 2r-2s & 1
+        \end{pmatrix} \begin{pmatrix}
+        1 & 1  \\
+        1 & -1 \\
+        s & r
+        \end{pmatrix}\\
+	    (F\circ G)'(r,s)= \begin{pmatrix}
+        4s & 4r \\
+        3r^2s-s^3 & r^3-3rs^2\\
+        4r+s & 4s+r
+        \end{pmatrix}
+    \end{align*} 
+    Si $a=(1,2)$, entonces
+    \[ 
+        (F\circ G)'(a)= \begin{pmatrix}
+        8 & 4 \\
+        -2 & -11\\
+        6 & 9
+        \end{pmatrix}
+    \]
+\end{proof}
+
 
 \end{document}

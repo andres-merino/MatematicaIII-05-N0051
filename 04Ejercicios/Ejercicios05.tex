@@ -25,11 +25,641 @@
 \encabezado
 
 \begin{ejer}
-
+Dados $\Omega\subseteq \R^2$, y $\func{f}{\Omega}{\R}$ un campo escalar diferenciable tal que su derivadas parciales sean 0 en todo punto de $\Omega$, demostrar que $f$ es constante.
 \end{ejer}
 
 \begin{proof}[Solución]
-
+Sean $x,y\in \Omega$, debemos demostrar que $f(x)=f(y)$. Llamemos $h=y-x$, dado que $f$ es diferenciable, existen las derivadas en todo punto y en toda dirección, por lo tanto, por el teorema del valor medio para campos escalares, tenemos que existe $\zeta\in(0,1)$ tal que
+    \[
+        f(x+h)-f(x) = f'(x+\zeta h;h) = \nabla f(x+\zeta h)\cdot h.
+    \]
+    Dado que todas las derivadas parciales de $f$ son 0, se tiene que $\nabla f(x+\zeta h)=0$, por lo tanto
+    \[
+        f(x+h)-f(x)=0,
+    \]
+    lo que equivale a
+    \[
+        f(y)=f(x),
+    \]
+    y por lo tanto la función es constante.
 \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el campo escalar
+    \[
+        \funcion{f}{\R^3}{\R}{(x,y,z)}{\cos{(xyz)}}
+    \]
+    Utilizando la definición determine las derivadas parciales de $f$.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Utilizando la función
+    \[
+        \funcion{p}{\R^{+}\times\R^{+}}{\R}{(u,v)}{p(u,v)=1.01u^{0.75}v^{0.25},}
+    \]
+    Cobb y Douglas modelaron la economía americana de 1899 a 1922, en donde la primera variable representa a la cantidad de la mano de obra y la segunda a la cantidad de capital.
+    \begin{enumerate}
+        \item Determine $D_1 p$ y $D_2 p$.
+        \item Encuentre la productividad marginal de la mano de obra y la productividad marginal del capital en el año 1920 en $(194, 407)$ (comparado con los valores asignados en 1899 de $(100,100)$). Interprete los resultados.
+        \item En el año 1920, ¿qué producción tendría más beneficio, un incremento de inversión de capital o un incremento en el gasto en mano de obra?
+    \end{enumerate}
+\end{ejer}
+
+\begin{proof}[Solución]
+\begin{enumerate}
+        \item 
+        Notemos que $p$ es diferenciable en $\R^{+} \times \R^{+}$, por tanto, sus derivadas parciales $D_1 p$ y $D_2 p$ existen y están definidas por
+        \[
+            D_1 p(u,v) = 0.7575 u^{-0.25} v^{0.25}
+        \]
+        y
+        \[
+            D_2 p(u,v) = 0.2525 u^{0.75} v^{-0.75}
+        \]
+        para cada $(u,v)\in \R^{+} \times \R^{+}$, luego, se tiene que 
+        \[
+            \funcion{D_1 p}{\R^{+}\times\R^{+}}{\R}{(u,v)}{D_1 p(u,v) = 0.7575 u^{-0.25} v^{0.25}}
+        \]
+        y
+        \[
+            \funcion{D_2 p}{\R^{+}\times\R^{+}}{\R}{(u,v)}{D_2 p(u,v) = 0.2525 u^{0.75} v^{-0.75}.}
+        \]
+        \item
+        Para determinar la productividad marginal evaluamos $D_1 p$ y $D_2 p$ en los valores asignados para los años 1920 y 1899, respectivamente.
+        
+        Para 1920 tenemos que,
+        \[
+            D_1 p (194, 407) \approx 0.912 \texty D_2 p (194, 407) \approx 0.319.
+        \]
+        Para 1920 tenemos que,
+        \[
+            D_1 p (100, 100) \approx 0.758 \texty D_2 p (100, 100) \approx 0.555.
+        \]
+        Como podemos notar, comparando los valores marginales obtenidos para cada año concluimos que respecto a la mano de obra, fue mas rentable invertir en este rubro en el año 1920 que en el año 1899. De forma similar, se concluye que respecto al capital, fue más rentable invertir en este rubro en 1899 que en 1920. 
+        \item 
+        Gracias al literal anterior concluimos que por cada unidad invertida en el gasto de mano de obra se obtuvo una ganancia de 0.912 unidades, mientras que por cada unidad gastada en inversión de capital, solamente se obtuvieron 0.319 unidades de ganancia. Por lo tanto, se obtuvo un mayor beneficio al gastar en la mano de obra que en invertir una mayor cantidad de capital.
+    \end{enumerate}
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado $a\in\R^n$, determinar el vector gradiente del campo escalar definido por
+    \[
+        \funcion{f}{\R^n}{\R}{x}{f(x)=a\cdot x.}
+    \]
+\end{ejer}
+
+\begin{proof}[Solución]
+Empecemos calculando las derivadas parciales del campo escalar, así, sea $i\in\{1,\ldots,n\}$, tenemos que, para $x\in\R^n$,
+    \begin{align*}
+        D_if(x) 
+            & = D_i \l( \sum_{j=1}^n a_jx_j \r)\\
+            & = \sum_{j=1}^n D_i (a_jx_j)\\
+            & = a_i.
+    \end{align*}
+    Por lo tanto, tenemos que
+    \[
+        \nabla f(x)
+        =\l(D_1f(x), \ldots, D_nf(x)\r)
+        =(a_1,\ldots,a_n) = a,
+    \]
+    para todo $x\in \R^n$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dados $\Omega\subset \R^2$ y $\func{f,g}{\Omega}{\R}$ dos campos escalares derivables tal que $g(x)\neq 0$ para todo $x\in \Omega$, demuestre que
+    \[
+        \nabla\l(\frac{f}{g}\r)(x)=\frac{g(x)\nabla f(x)-f(x)\nabla g(x)}{g(x)^2}.
+    \]
+\end{ejer}
+
+\begin{proof}[Solución]
+Para $x\in\Omega$, tenemos que
+    \begin{align*}
+        D_1\l(\frac{f}{g}\r)(x)
+            & = D_1 \l(\frac{f(x)}{g(x)}\r) \\
+            & = \frac{g(x) D_1 f(x)  - f(x) D_1g(x)}{g(x)^2}
+    \end{align*}
+    y
+    \begin{align*}
+        D_2\l(\frac{f}{g}\r)(x)
+            & = D_2\l(\frac{f(x)}{g(x)}\r) \\
+            & = \frac{g(x) D_2f(x) - f(x) D_2g(x)}{g(x)^2}
+    \end{align*}
+    Por lo tanto,
+    \begin{align*}
+        \nabla\l(\frac{f}{g}\r)(x)
+            & = \l(D_1\l(\frac{f}{g}\r)(x),D_2\l(\frac{f}{g}\r)(x) \r)\\[2mm]
+            & = \l( \frac{g(x)D_1 f(x) + f(x)D_1g(x)}{g(x)^2} , \frac{g(x)D_2 f(x) + f(x)D_2g(x)}{g(x)^2} \r)\\[2mm]
+            & = \frac{g(x)\l(D_1f(x),D_2f(x)\r) - f(x)\l(D_1g(x),D_2g(x)\r)}{g(x)^2}\\[2mm]
+            & = \frac{g(x)\nabla f(x)-f(x)\nabla g(x)}{g(x)^2}.\qedhere
+    \end{align*}
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sean $\func{f}{\R^2}{\R}$ un campo escalar diferenciable, $a=(1,2)$, $u=(2,2)$ y $v=(1,1)$. Se tiene que la derivada de la función en el punto $a$ en dirección al punto $u$ es 2 y la derivada de la función en el punto $a$ en dirección al punto $v$ es $-2$. Determinar el vector gradiente de $f$ en $a$ y calcular la derivada de $f$ en $a$ en dirección al punto $(4,6)$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Tenemos que $f'(a;u-a)=2$ y $f'(a;v-a)=-2$. Por otra parte, se tiene que
+    \begin{align*}
+        f'(a;u-a) 
+            & = \nabla f(a) \cdot (u-a) \\
+            & = (D_1f(a),D_2f(a))\cdot (1,0) \\
+            & = D_1f(a)
+    \end{align*}
+    y
+    \begin{align*}
+        f'(a;v-a) 
+            & = \nabla f(a) \cdot (v-a) \\
+            & = (D_1f(a),D_2f(a))\cdot (0,-1) \\
+            & = -D_2f(a),
+    \end{align*}
+    por lo tanto
+    \[
+        D_1f(a)=2
+        \texty
+        D_2f(a)=2,
+    \]
+    lo que implica que
+    \[
+        \nabla f(a)=(2,2). 
+    \]
+    Finalmente, tenemos que la dirección de (1,2) a (4,6) es (3,4), entonces la derivada direccional en esta dirección es
+    \[
+        \nabla f(a) \cdot \left( \frac{3}{5},\frac{4}{5} \right)=\frac{14}{5} \qedhere
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sea la función
+   		\[
+            \funcion{f}{\R^3}{\R}{(x,y,z)}{x^2+y^2-4z^2.}
+        \]
+    Determinar la razón de cambio de $f$ en el punto $a=(1,3,-2)$ en la dirección del vector $v=\veci-\vecj+\veck$.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el campo escalar
+	\[
+		\funcion{f}{\R^2}{\R}{x}{2x_1^2-3x_2.}
+	\]
+	Encuentre la dirección en el que la derivada direccional de $f$ en el punto $(1,2)$ es máxima y verifique que esta coincide con la del gradiente de $f$ en dicho punto.
+\end{ejer}
+
+\begin{proof}[Solución]
+Como $f$ es un polinomio, $f$ tiene todas sus derivadas direccionales en todo punto y toda dirección. Así, para cada $y$ unitario de $\R^2$, se tiene que
+	\begin{align*}
+		f'((1,2);y)
+			&=\lim_{h\to 0}\dfrac{f((1,2)+hy)-f(1,2)}{h}    \\
+			&=\lim_{h\to 0}\dfrac{f(1+hy_1,2+hy_2)-f(1,2)}{h}\\	
+			&=\lim_{h\to 0}\dfrac{2(1+hy_1)^2-3(2+hy_2)+4}{h}    \\
+	        &=\lim_{h\to 0}\dfrac{4hy_1+2h^2y_1^2-3hy_2}{h}    \\
+			&=4y_1-3y_2.
+	\end{align*}
+    Como $y$ es unitario, se cumple que $y_1^2+y_2^2=1$. Por lo tanto, $|y_2|=\sqrt{1-y_1^2}$. Por lo tanto,
+    \[
+        f'((1,2);y)
+        =\begin{cases}
+            4y_1-3\sqrt{1-y_1^2}& \text{si }y_2\geq0,\\
+            4y_1+3\sqrt{1-y_1^2}& \text{si }y_2<0.
+        \end{cases}
+    \]
+    Para hallar la dirección unitaria $y$ en la cual $f'((1,2);y)$ es máxima, conviene definir dos funciones. Sean
+    \[
+        \funcion{\alpha}{[-1,1]}{\R}{x}{4x-3\sqrt{1-x^2}}
+        \yds
+        \funcion{\beta}{[-1,1]}{\R}{x}{4x+3\sqrt{1-x^2}.}
+    \]
+    Mediante la optimización usual en variable real, se deduce que
+    \[
+        \max\{\alpha(x):x\in[-1,1]\}=\alpha(1)=4
+        \yds
+        \max\{\beta(x):x\in[-1,1]\}=\alpha(0.8)=5.
+    \]
+    Así, la dirección que maximiza la derivada direccional es
+    \[
+        y_1=0.8
+        \yds
+        y_2=-0.6.
+    \]
+    Por otra parte,
+    \[
+        \nabla f(x)=(4x_1,-3)
+    \]
+    para cada $x\in\R^2$. En particular,
+    \[
+        \nabla f(1,2)=(4,-3),
+    \]
+    de donde, su dirección es
+    \[
+        \dfrac{\nabla f(1,2)}{\|\nabla f(1,2)\|}
+        =\dfrac{(4,-3)}{5}
+        =(0.8;-0.6),
+    \]
+	lo que prueba que la dirección del gradiente maximiza la derivada direccional en el punto $(1,2)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Se detectó una explosión nuclear en un lugar indeterminado, el equipo especializado trata de buscar el origen de la misma, para lo cual se envía un dron con materiales de medición. A partir de un punto de referencia, el dron se desplaza 1 metro al norte y detecta que la radiación aumenta 0.1 Sv, luego de esto, regresa al punto original y se desplaza un metro al este y la radiación disminuye 0.2 Sv. Determinar, aproximadamente, la dirección en la cual ocurrió la explosión.
+\end{ejer}
+
+\begin{proof}[Solución]
+Primero, utilizaremos las siguientes notaciones:
+    \begin{itemize}
+        \item $x$: distancia, en metros, desde el punto de referencia en dirección norte.
+        \item $y$: distancia, en metros, desde el punto de referencia en dirección este.
+        \item $f(x,y)$: nivel de radiación, en Sv, en las coordenadas $(x,y)$.
+    \end{itemize}
+    Así, se tiene que 
+    \[
+        D_2f(0,0)\approx 0.1
+        \texty
+        D_1f(0,0)\approx -0.2,
+    \]
+    por lo tanto,
+    \[
+        \nabla f(0,0)\approx (-0.2,0.1).
+    \]
+    Dado que el gradiente de una función da la dirección de máximo crecimiento, tenemos que la dirección aproximada en la cual ocurrió la explosión es: $(-0.2,0.1)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Del ejercicios anterior, se detecta que el nivel de radiación del lugar en el que se encuentra el dron es crítico, es decir, el dron no puede avanzar a un lugar con mayor radiación que la existente en su posición. ¿En qué dirección puede ir el dron para que no exista un incremento en el nivel de la radiación?
+\end{ejer}
+
+\begin{proof}[Solución]
+Se busca una dirección $(h,k)\in\R^2$ tal que
+    \[
+        f'((0,0);(h,k))=0,
+    \]
+    dado que $f'((0,0);(h,k))=\nabla f(0,0)\cdot (h,k)$, se tiene que se necesita que
+    \[
+        (-0.2,0.1)\cdot (h,k) = 0
+    \]
+    que equivale a $-2h+k=0$, por lo tanto, $k=2h$, así, una dirección en la que puede ir el dron para que no exista incremento en el nivel de radiación es $(1,2)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sea el campo escalar
+    \[
+        \funcion{f}{D\subseteq\R^3}{\R}{(x,y,z)}{f{(x,y,z)=axy^2+byz+cz^2x^3}}
+    \]
+    donde $a,b$ y $c\in R$ y son constantes. Halle los valores de $a,b$ y $c$ tales que la derivada direccional de $f$ en el punto $(1,2,-1)$ tenga el valor máximo de 64 en una dirección paralela al eje $z$.
+\end{ejer}
+
+\begin{proof}[Solución]
+El valor máximo de la derivada sucede cuando
+    \[
+        f'\l(a;\frac{\nabla f(a)}{\|\nabla f(a)\|}\r)=\|\nabla f(a)\|
+    \]
+    Primero debemos obtener el vector gradiente de $f$ en a. 
+    \[
+        \nabla f(a)=\l(D_1f(a),D_2f(a),D_3f(a)\r)
+    \]
+    Las derivadas parciales de $f$ en el punto $a=(1,2,-1)$
+    \[
+        D_1f(a)=(4a+3c),
+        \qquad
+        D_2f(a)=(4a-b)
+        \texty
+        D_3f(a)=(2b-2c)
+    \]
+    Entonces:
+    \[
+    \nabla f(a)=(4a+3c,4a-b,2b-2c)
+           \]
+    Por otro lado, como el vector $y$ es paralelo al eje $z$
+    \[
+        y=(0,0,k),
+    \]
+    con $k\in\R$. Para que la derivada de $f$ en el punto $a$ y en la dirección del vector $y$ sea máxima, se debe cumplir
+    \[
+        y=\frac{\nabla f(a)}{\| \nabla f(a) \|}=(0,0,k),
+    \]
+    \[
+        \|\nabla f(a) \|=\sqrt{(4a+3c)^2+(4a-b)^2+(2b-2c)^2}
+    \]
+    Entonces:
+    \[
+        \frac{\nabla f(a)}{\| \nabla f(a)\|}=\frac{(4a+3c,4a-b,2b-2c)}{\sqrt{(4a+3c)^2+(4a-b)^2+(2b-2c)^2}}=(0,0,k)
+    \]
+    Considerando que $\|\nabla f(a) \| \neq0$, se obtienen el sistema de ecuaciones
+    \[
+        \begin{cases}
+            4a+3c=0 \\
+            4a-b=0 \\
+            2b-2c=k,
+        \end{cases}
+    \]
+    del cual se sigue que
+    \[
+        a=\frac{3k}{32}
+        \qquad
+        b=\frac{3k}{8}
+        \texty
+        c=-\frac{k}{8}
+    \]
+    Reemplazando estos valores en el módulo del vector gradiente, se tiene que
+    \[
+        \| \nabla f(a)\| = \sqrt{k^2} 
+    \]
+    Pero se considera que el valor máximo de la derivada de $f$ en $a$ en la dirección del vector $y$ es igual a 64.
+    \[
+        64 = |k|
+    \]
+    Entonces sustituyendo este valor,  obtenemos
+    \[
+        a=6
+        \qquad
+        b=24
+        \texty
+        c=-8
+    \]
+    o
+    \[
+        a=-6
+        \qquad
+        b=-24
+        \texty
+        c=8
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+La distribución de temperatura de una placa metálica está dada por la función
+	\[
+        \funcion{T}{\R^2}{\R}
+        {(x,y)}{T(x,y) = xe^{2y} + y^3 e,}
+	\]
+	Donde $(x,y)$ representa las coordenadas de un punto sobre la placa.
+    \begin{enumerate}
+        \item ¿En qué dirección aumenta más rápidamente la temperatura de la placa metálica en el punto $(2, 0)$?
+        \item ¿En qué dirección la temperatura decrece más rápidamente?
+    \end{enumerate}
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+La ecuación de la superficie de una colina es $z = 1200 - 3x^2 - 2y^2$, donde la distancia se mide en metros, el eje $x$ apunta al Este y el eje $y$ apunta al Norte. Un hombre se encuentra en el punto $(-10, 5, 850)$.
+    \begin{enumerate}
+        \item ¿Cuál es la dirección de la ladera más pronunciada?
+        \item Si el hombre se mueve en la dirección Este. ¿Está ascendiendo o descendiendo? ¿Cuál es la pendiente?
+        \item Si el hombre se mueve en la dirección S-O. ¿Está ascendiendo o descendiendo? ¿Cuál es la pendiente?
+    \end{enumerate}
+\end{ejer}
+
+\begin{proof}[Solución]
+Supongamos que la variable $z$, que representa la altura a la cual se encuentra el individuo, es una función que depende de las variables $x$ e $y$, las coordenadas cartesianas de la ubicación de este, es decir, a $z$ le asociamos la función $f$ definida por
+    \[
+        \funcion{f}{\R^2}{\R}
+        {(x, y)}{f(x, y) = 1200 - 3x^2 - 2y^2.}
+    \]
+
+    \begin{enumerate}
+    \item 
+        Recordemos que para un campo escalar $h$ definido sobre un abierto $D\subseteq\R^2$, en un punto $a\in D$, la dirección en donde $h'(a;w)$ alcanza su mayor valor es
+        \[
+            w = \frac{\nabla h(a)}{\|\nabla h(a)\|},
+        \]
+        siempre que $\|\nabla h(a)\|\neq 0$.
+
+        Sean $a = (a_1, a_2)\in\R^2$ y $w = (w_1, w_2)\in\R^2$ un punto y una dirección cualesquiera, calculemos la derivada de $f$ en el punto $a$ respecto a la dirección $w$, para esto definimos la función $g$ por
+        \[
+            \funcion{g}{\R}{\R}
+            {t}{g(t) = f(a + tw) = 1200 - 3(a_1 + tw_1)^2 - 2(a_2 + tw_2)^2.}
+        \]
+        Notemos que $g$ es derivable para todo $t\in\R$ con derivada
+        \[
+            g'(t) = f'(a + tw; w) = - 6w_1(a_1 + tw_1) - 4w_2(a_2 + tw_2),
+        \]
+        para todo $t\in\R$. En particular, si $t=0$ se tiene que $g'(0) = f'(a;w) = - 6w_1 a_1 - 4w_2 a_2$.
+
+        Entonces, el gradiente de $f$ está dado por
+        \[
+            \nabla f(x, y) = (- 6x , - 4y),
+        \]
+        para todo $(x, y)\in\R^2$. 
+
+        En particular, si $(x, y) = (-10, 5)$ metros, se tiene que $\nabla f(-10, 5) = (60 , - 20)$, con $\|\nabla f(-10, 5)\| = \|(60 , - 20)\| = 20\sqrt{10}$. 
+
+        Por tanto, la dirección $w$ de la ladera más pronunciada es
+        \[
+            w = \l(\dfrac{3}{\sqrt{10}}, -\dfrac{1}{\sqrt{10}}\r).
+        \]
+    \item 
+        En este caso, la dirección que el individuo toma es $w = (1, 0)$, entonces, con $a = (-10, 5)$ metros se tiene que $f'(a;w) = 60$, lo que implica que el individuo asciende por la colina con una pendiente de $60$.
+    \item 
+        En este caso, la dirección que el individuo toma es $w = \l(-\dfrac{\sqrt{2}}{2},-\dfrac{\sqrt{2}}{2}\r)$, entonces, con $a = (-10, 5)$ metros se tiene que $f'(a;w) = -20\sqrt{2}$, lo que implica que el individuo desciende por la colina de pendiente $-20\sqrt{2}$.
+    \end{enumerate}
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el campo escalar
+    \[
+        \funcion{f}{\R^2}{\R}{x}{x_1^2+x_1x_2,}
+    \]
+    comprobar que es diferenciable en todo $\R^2$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Sea $x\in\R^2$, para determinar su diferenciabilidad, debemos estudiar el límite
+    \[
+        \lim_{h\to 0}\frac{f(x+h)-f(x)-\nabla f(x)\cdot h}{\|h\|}.
+    \]
+    Se tiene que el gradiente de la función es
+    \[
+        \nabla f(x) = (2x_1+x_2,x_1),
+    \]
+    así, tenemos que
+    \begin{align*}
+        \lim_{h\to 0}\frac{f(x+h)-f(x)-\nabla f(x)\cdot h}{\|h\|}
+            & =  \lim_{h\to 0}\frac{f(x_1+h_1,x_2+h_2)-f(x_1,x_2) - (2x_1+x_2,x_1)\cdot(h_1,h_2)}{\|h\|}\\
+            & =  \lim_{h\to 0}\frac{(x_1+h_1)^2+(x_1+h_1)(x_2+h_2)-x_1^2-x_1x_2 - 2x_1h_1-x_2h_1-x_1h_2}{\|h\|}\\
+            & =  \lim_{h\to 0}\frac{h_1h_2+h_1^2}{\|h\|}.
+    \end{align*}
+    Notemos que, para $h\in\R^2$, con $h\neq 0$,
+    \[
+        \l|\frac{h_1h_2+h_2^2}{\|h\|}\r| 
+        = \frac{\l|(h_1,h_2)\cdot(h_2,h_2)\r|}{\|h\|}
+        \leq \frac{\|(h_1,h_2)\|\|(h_2,h_2)\|}{\|h\|}
+        =\|(h_2,h_2)\|=|h_2|\sqrt{2},
+    \]
+    Por lo tanto,
+    \[
+        \lim_{h\to 0}\l|\frac{h_1h_2+h_2^2}{\|h\|}\r|\leq \lim_{h\to 0}|h_2|\sqrt{2}  =0.
+    \]
+    Así, se tiene que
+    \[
+        \lim_{h\to 0}\frac{f(x+h)-f(x)-\nabla f(x)\cdot h}{\|h\|}=0,
+    \]
+    por lo tanto, se tiene que la función es diferenciable.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sean 
+	\[
+        \funcion{f}{\R^2}{\R}
+        {(x,y)}{f(x,y) = x^2 y - y^2,}
+	\]
+    y 
+    \[
+        \funcion{r}{\R}{\R^2}
+        {t}{r(t) = (\sen(t), e^t).}
+	\]
+    Hallar $(f \circ r)'(t)$ para todo $t\in\R$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Notemos que $f$ es derivable en $\R^2$ y $r$ es derivable en $\R$, por lo tanto $f\circ r$ es derivable en $\R$. Tenemos además que
+    \[
+        r'(t)=(\cos(t), e^t)
+    \]
+    para todo $t\in\R$ y
+    \[
+        \nabla f(x,y) = (2xy, x^2 - 2y),
+    \]
+    para todo $(x,y)\in\R^2$, por lo tanto
+    \begin{align*}
+        (f \circ r)'(t) 
+            &= \nabla f(r(t)) \cdot r'(t)\\
+    		&= (2\sen(t) e^t, \sen^2(t) - 2e^t)\cdot (\cos(t), e^t)\\
+            &= e^t(\sen(2t) + \sen^2(t) - 2e^t),
+    \end{align*}
+    para todo $t\in\R$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Hallar la derivada direccional de la función:
+	\[
+        \funcion{f}{\R^3}{\R}{(x,y,z)}
+        {x+y+z^2}
+    \]
+en $a=(1,1,-2)$ a lo largo de la curva C que resulta de la intersección de la superficie $S_1:2x^2-2y^2+z^2=4$ con el plano $S_2:x+y-z=4$
+\end{ejer}
+
+\begin{proof}[Solución]
+Aplicando la definición de la regla de la cadena para la derivada direccional a lo largo de una trayectoria $\alpha$,
+	\[
+        (f\circ \alpha)'(t)=\nabla f(r(t)) \cdot T(t)
+    \]
+conociendo que:
+	\[
+        T(t)=\dfrac{\alpha'(t)}{\|\alpha'(t)\|}
+    \]
+En un punto dado , el vector gradiente es normal a la curva de nivel que pasa por ese punto. Ahora si se tiene un punto en una superficie, hay infinitas curvas de nivel que pasan por ese punto, y todas comparten el mismo vector normal, de donde se puede deducir que el vector gradiente de una superficie, es ortogonal al plano tangente en ese punto. Es decir, que si se tienen 2 superficies distintas que se intersecan en un mismo punto, se tendrán dos vectores linealmente independientes que a su vez resultan ortogonales al vector tangente de la curva de intersección de las dos superficies. 
+	\[
+    \begin{aligned}
+        r'(t) & = \nabla S_1 \times \nabla S_1\\
+        & = \begin{bmatrix}
+    	4 & -4 & -4\\
+   		1 & 1 & -1
+		\end{bmatrix}\\
+        & = (8,0,8)
+    \end{aligned}
+    \]
+El vector tangente unitario será:
+	\[
+        T(t)=\dfrac{(8,0,8)}{\sqrt{128}}
+    \]
+Por otro lado,
+	\[
+    \begin{aligned}
+	\nabla f(r(t)) & = \nabla f(x,y,z)\\
+    & = (1,1,2z)
+    \end{aligned}
+    \]
+Por lo tanto,
+	\[
+    \begin{aligned}
+        (f\circ r)'(t) & = (1,1,-4) \cdot \dfrac{(8,0,8)}{\sqrt{128}}\\
+        & = \dfrac{-24}{\sqrt{128}}
+        \end{aligned}
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sea 
+    \[
+        \funcion{f}{\R^3}{\R}{(x,y,z)}
+        {\sqrt[2]{x^2+y^2}+(x^2+y^2)^\frac{3}{2}-z.}
+    \]
+    Encontrar un vector $V \in \R^3$ normal a la superficie de nivel $L_0(f)$ en cualquier punto $(x,y,z) \neq 0$ de la superficie. Hallar el coseno del ángulo $\theta$ formado por el vector $V$ y el eje $z$ y determinar el límite de $\cos(\theta)$ cuando $(x,y,z) \to (0,0,0)$
+\end{ejer}
+
+\begin{proof}[Solución]
+Sea $(x,y,z)\in L_0(f)$ tal que $(x,y,z)\neq 0$. Tenemos que $\nabla f(x,y,z)$ es normal a $L_0(f)$ en el punto $(x,y,z)$. Por lo tanto, definimos
+    \begin{align*}
+        V
+            & =\nabla f(x,y,z)\\
+            & =\left(\frac{3x^3+3xy^2+x}{\sqrt{x^2+y^2}},\frac{3y^3+3x^2y+y}{\sqrt{x^2+y^2}},-1\right).
+    \end{align*}
+    Así, el coseno del ángulo $\theta$ que forma el vector $V$ con el eje $z$ está dado por
+    \begin{align*}
+        \cos (\theta)
+            & = \left( \frac{V \cdot (0,0,1)}{\|V\| \|(0,0,1)\|} \right) \\
+            & = -\frac{1}{9(x^2+y^2)^2+6(x^2+y^2)+2},
+    \end{align*}
+    de donde tenemos que
+    \begin{align*}
+        \lim_{(x,y,z) \to (0,0,0)}\cos (\theta)
+            & = \lim_{(x,y,z) \to (0,0,0)} -\frac{1}{9(x^2+y^2)^2+6(x^2+y^2)+2} \\
+            & = -\frac{1}{2}.
+    \end{align*}
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado $a\in\R$, hallar la ecuación cartesiana del plano tangente a la superficie 
+    \[
+       \{(x,y,z)\in\R^3 : xyz=a^3\}
+    \]
+    en cualquiera de sus puntos.
+\end{ejer}
+
+\begin{proof}[Solución]
+La superficie es el conjunto de nivel $L_{a^3}(f)$ de la función 
+    \[ 
+        \funcion {f}{\R^3}{\R}{(x,y,z)}{xyz}
+    \]
+    y el gradiente de $f$ en cualquier punto $(x_0,y_0,z_0)$ de la superficie es
+    \[
+        \nabla f(x_0,y_0,z_0)=(y_0z_0,x_0z_0,x_0y_0).
+    \]
+    Por otra parte, tenemos que $\nabla f(x_0,y_0,z_0)$ es normal a la superficie en $(x_0,y_0,z_0)$ por lo tanto normal al plano tangente a la superficie en dicho punto, entonces, para todo $(x,y,z)$ que pertenece al plano, se tiene que
+    \begin{align*}
+        0
+            & = ((x,y,z)-(x_0,y_0,z_0)) \cdot \nabla f(x_0,y_0,z_0) \\
+            & = y_0z_0x+x_0z_0y+x_0y_0z-3x_0y_0z_0,
+    \end{align*}
+    por lo tanto, la ecuación cartesiana del plano es
+    \[
+        \frac{x}{3x_0}+\frac{y}{3y_0}+\frac{z}{3z_0}=1.
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el campo vectorial
+	\[
+		\funcion{F}{\R^2\setminus\{0\}}{\R^2}{x}{\l(\dfrac{x_1x_2}{x_1^2+x_2^2},\dfrac{x_1^2x_2^2}{x_1^2+x_2^2}\r).}
+	\]
+	Estudie la existencia del límite de $F$ cuando $x$ tiende a $(0,0)$.
+\end{ejer}
+
 
 \end{document}

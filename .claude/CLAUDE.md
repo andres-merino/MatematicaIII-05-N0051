@@ -4,7 +4,7 @@
 **Programa:** Catálogo STEM  
 **Periodo:** 2026-1  
 **Docente:** Andrés Merino (aemerinot@gmail.com)  
-**Clases totales:** 25 (+ 1 retroalimentación)
+**Clases totales:** 26
 
 ---
 
@@ -12,23 +12,23 @@
 
 | # | Clases | Nombre |
 |---|--------|--------|
-| 1  | 1–2   | Funciones vectoriales y curvas paramétricas |
-| 2  | 3–4   | Geometría diferencial de curvas |
-| 3  | 5     | Topología de ℝⁿ |
-| 4  | 6     | Límites y continuidad |
-| 5  | 7–8   | Derivadas parciales y gradiente |
-| 6  | 9     | Derivadas de orden superior |
-| 7  | 10    | Campos vectoriales y regla de la cadena |
-| 8  | 11    | Función implícita |
-| 9  | 12–13 | Rotacional, Divergencia y Campos conservativos |
-| 10 | 14–15 | Optimización |
-| 11 | 16–17 | Integrales dobles |
-| 12 | 18    | Cambio de variable |
-| 13 | 19–20 | Integrales triples |
-| 14 | 21    | Cambio de variable en integrales triples |
-| 15 | 22–23 | Integrales de línea |
-| 16 | 24    | Integrales de superficie |
-| 17 | 25    | Teoremas integrales |
+| 1  | 1–2   | Funciones vectoriales y curvas |
+| 2  | 3     | Movimiento en el espacio |
+| 3  | 4–5   | Geometría de curvas |
+| 4  | 6     | Topología de ℝⁿ |
+| 5  | 7–8   | Límites y diferenciabilidad |
+| 6  | 9–10  | Derivadas parciales y gradiente |
+| 7  | 11    | Función implícita y Hessiana |
+| 8  | 12–13 | Campos vectoriales |
+| 9  | 14    | Campos conservativos |
+| 10 | 15–16 | Optimización |
+| 11 | 17–18 | Integrales dobles |
+| 12 | 19    | Cambio de variable |
+| 13 | 20–21 | Integrales triples |
+| 14 | 22    | Cambio de variable en integrales triples |
+| 15 | 23–24 | Integrales de línea |
+| 16 | 25    | Integrales de superficie |
+| 17 | 26    | Teoremas integrales |
 
 ---
 
@@ -36,18 +36,18 @@
 
 Nunca cambies los Resultados de Aprendizaje (RdA) ni los Criterios de Evaluación, siempre colocalos de manera literal.
 
-- **RdA 1:** Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
-  - 1.1: Representación gráfica y ley de asignación de funciones de varias variables.
-  - 1.2: Concepto de derivada en varias variables.
-  - 1.3: Concepto de integrales en varias variables.
-- **RdA 2:** Calcular derivadas parciales e integrales con asistentes computacionales.
-  - 2.1: Dominios de funciones de varias variables.
-  - 2.2: Cálculo de derivadas de funciones de varias variables.
-  - 2.3: Cálculo de integrales de funciones de varias variables.
-- **RdA 3:** Aplicar Cálculo Vectorial para resolver problemas reales.
-  - 3.1: Modelado con funciones de varias variables.
-  - 3.2: Optimización con derivadas.
-  - 3.3: Áreas, superficies y volúmenes con integrales múltiples.
+- **RdA 1:** Identificar los conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+  - 1.1: Asocia las funciones de varias variables con su ley de asignación y su representación gráfica.
+  - 1.2: Interpreta el concepto de derivada en varias variables y reconocer sus elementos y propiedades.
+  - 1.3: Interpreta el concepto de integrales en varias variables y reconocer sus elementos y propiedades.
+- **RdA 2:** Calcular derivadas parciales, integrales de funciones vectoriales con el apoyo de asistentes computacionales.
+  - 2.1: Determina dominios de funciones de varias variables a través de su representación gráfica o su ley de asignación.
+  - 2.2: Calcula derivadas de funciones de varias variables.
+  - 2.3: Calcula integrales de funciones de varias variables.
+- **RdA 3:** Aplicar distintos tópicos del Cálculo Vectorial para la solución de problemas reales en diferentes contextos.
+  - 3.1: Utiliza funciones de varias variables para modelar problemas.
+  - 3.2: Emplea la derivada para resolver problemas de optimización.
+  - 3.3: Emplea integrales múltiples para determinar áreas, superficies y volúmenes.
 
 ---
 
@@ -63,14 +63,19 @@ MatematicaIII-05-N0051/
 ├── 01Resumen/
 │   ├── ResumenCompilado.tex    # Todos los resúmenes juntos
 │   └── Resumen0m.tex           # Resumen del tema m
+├── 02ResumenPython/            # Resúmenes con implementación en Python
+├── 03Extra/                    # Material adicional
 ├── 04Ejercicios/
 │   ├── EjerciciosCompilado.tex # Todos los ejercicios juntos
 │   └── Ejercicios0m.tex        # Ejercicios del tema m
-├── 03Extra/                    # Material adicional
 ├── 05Proyectos-Retos/          # Retos aplicados
 ├── 06Examenes/                 # Exámenes escritos
 ├── 07Exposiciones/             # Video-exposiciones
-└── 08Cuestionarios/            # Cuestionarios en línea
+├── 08Cuestionarios/            # Cuestionarios en línea
+├── 09Talleres/
+│   └── Taller0m.tex            # Talleres evaluados
+└── 10Laboratorios/
+    └── Lab0m.ipynb             # Laboratorios computacionales (Jupyter Notebook)
 ```
 
 ---
@@ -125,3 +130,13 @@ Paquete de comandos matemáticos: `aleph-comandos` (define `\func`, `\funcion`, 
 | 3.1 | Reto 1 (100%) |
 | 3.2 | Examen escrito 3 (100%) |
 | 3.3 | Reto 2 (100%) |
+
+## graphify
+
+This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
+
+Rules:
+- For codebase questions, first run `graphify query "<question>"` when graphify-out/graph.json exists. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
+- If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
+- Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
+- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).

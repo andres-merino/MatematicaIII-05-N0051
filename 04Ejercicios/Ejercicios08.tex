@@ -25,11 +25,169 @@
 \encabezado
 
 \begin{ejer}
-
+Suponga que la función $f:\R^2 \rightarrow \R$ cumple que
+    \[
+        e^{xy}-e^{yf(x,y)}+f(x,y)e^x-1=0
+    \]
+    para todo $(x,y)\in \R^2$. Determine $D_1f$ y $D_2f$ en el punto $(0,0)$.
 \end{ejer}
 
 \begin{proof}[Solución]
-
+Definamos la función
+    \[
+        \funcion{g}{\R^3}{\R}{(x,y,z)}{e^{xy}-e^{yz}+ze^x-1,}
+    \]
+    tenemos que cumple
+    \[
+        g(x,y,f(x,y))=0
+    \]
+	para todo $(x,y)\in \R^2$. Notemos que, en el punto $(0,0)$, tenemos que
+	\[
+	    e^{0}-e^{0}+f(0,0)e^0-1=0,
+    \]	
+    de donde, $f(0,0)=1$. Por tanto,
+	\[
+        D_1f(x,y)=-\frac{D_1g(x,y,f(x,y))}{D_3g(x,y,f(x,y))}	
+    \]
+	para todo $(x,y)\in \R^2$ tal que $D_3g(x,y,f(x,y))\neq 0$. Con esto,  se calcula, para $(x,y,z)\in \R^3$,
+	\[
+        D_1g(x,y,z)=ye^{xy}+ze^x,
+	\]
+	y
+	\[
+	    D_3g(x,y,z)=-ye^{yz}+e^x.
+	\]      
+	Entonces 
+	\begin{align*}
+	    D_1f(x,y)
+	    & =-\frac{D_1g(x,y,f(x,y))}{D_3g(x,y,f(x,y))}\\
+		& =-\frac{ye^{xy}+f(x,y)e^x}{e^x-ye^{yf(x,y)}}.
+	\end{align*}
+	Evaluando en el punto $(0,0)$
+	\[
+        D_1f(0,0)=-1.
+    \]
+	Para la derivada $D_2f(x,y)$
+	\[
+	    D_2f(x,y)=-\frac{D_2g(x,y,f(x,y))}{D_3g(x,y,f(x,y))},
+    \]
+	derivando $g$ con respecto a $y$
+	\[
+        D_2g(x,y,z)=xe^{xy}-ze^{yz},
+    \]
+	por lo tanto 
+	\[
+        D_2f(x,y)=-\frac{xe^{xy}-f(x,y)e^{yf(x,y)}}{e^x-ye^{yf(x,y)}},
+    \]
+	evaluando en el punto $(0,0)$
+	\[
+        D_2f(0,0)=-1.
+    \]
 \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Suponga que la función $\func{f}{\R^2}{\R}$, verifica que
+    \[
+        x^2 f^2(x, y) + x y^2 - f^3(x, y) + 4 y f(x, y) = 5,
+    \]
+    para todo $(x, y)\in \R^2$. Determinar $D_1 f(x, y)$ y $D_2 f(x, y)$ para $(x, y)\in \R^2$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Se define la función
+    \[
+    \funcion{g}{\R^3}{\R}
+    {(x, y, z)}{g(x, y, z) = x^2 z^2 + x y^2 - z^3 + 4yz - 5,}
+	\]
+    entonces, se verifica que
+    \[
+    g(x, y, f(x, y)) = 0,
+    \]
+    para todo $(x, y)\in D$. Luego, se tiene que
+    \[
+    D_1 f(x, y) = -\dfrac{D_1 g(x, y, f(x, y))}{D_3 g(x, y, f(x, y))},
+    \]
+    y
+    \[
+    D_2 f(x, y) = -\dfrac{D_2 g(x, y, f(x, y))}{D_3 g(x, y, f(x, y))},
+    \]
+    para todo $(x, y) \in D$ tal que $D_3 g(x, y, f(x, y)) \neq 0$.
+    Calculemos las derivadas buscadas:
+    \begin{align*}
+    D_1 g(x, y, f(x, y)) &= 2xz^2 + y^2,\\
+    D_2 g(x, y, f(x, y)) &= 2xy + 4z, \mbox{ y}\\
+    D_3 g(x, y, f(x, y)) &= 2x^2 z - 3z^2 + 4y,
+    \end{align*}
+    para todo $(x, y, z)\in\R^3$, por lo cual:
+    \begin{align*}
+        D_1 f(x, y) &= -\dfrac{D_1 g(x, y, f(x, y))}{D_3 g(x, y, f(x, y))}\\
+        &= \dfrac{2xf^2(x, y) + y^2}{3f^2(x, y) - 2x^2 f(x, y) - 4y},
+    \end{align*}
+    \begin{align*}
+        D_2 f(x, y) &= -\dfrac{D_2 g(x, y, f(x, y))}{D_3 g(x, y, f(x, y))}\\
+        &= \dfrac{2xy + 4f(x, y)}{3f^2(x, y) - 2x^2 f(x, y) - 4y},
+    \end{align*}
+    para todo $(x, y)\in D$ tal que $3f^2(x, y) - 2x^2 f(x, y) - 4y \neq 0$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Consideremos las funciones
+    \[
+        \funcion{f}{\R^2}{\R}{(x,y)}{F(x,y),}
+    \]
+    y 
+    \[
+        \funcion{h}{\R^2}{\R}{(x,y)}{h(x,y).}
+    \]
+    Si se cumple que
+    \[
+        f(x+y+h(x,y),x^2+y^2+(h(x,y))^2)=0
+    \]
+    para todo $(x,y)\in\R^2$, determinar las derivadas parciales de $h$ para $(x,y) \in\R^2$ en función de las derivadas parciales de $f$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Sean
+    \[
+    \funcion{g_1}{D \subseteq \R^2}{\R}{(x,y)}{x+y+h(x,y)}  \texty  \funcion{g_2}{D \subseteq \R^2}{\R}{(x,y)}{x^2+y^2+(h(x,y))^2}
+    \]
+    entonces
+    \[
+    \frac{\partial}{\partial x}f(g_1(x,y),g_2(x,y))=D_1f(g_1(x,y),g_2(x,y))\frac{\partial g_1}{\partial x}(x,y)+D_2f(g_1(x,y),g_2(x,y))\frac{\partial g_2}{\partial x}(x,y)
+    \]
+    para todo $(x,y) \in D$. Para lo cual se calcula  
+    \begin{align*}
+    \frac{\partial}{\partial x}f(g_1(x,y),g_2(x,y))&=0\\
+    \frac{\partial g_1}{\partial x}(x,y)&=1+\frac{\partial h}{\partial x}(x,y),\\
+    \frac{\partial g_2}{\partial x}(x,y)&=2x+2h(x,y) \frac{\partial h}{\partial x}(x,y)
+    \end{align*}
+    para todo $(x,y) \in D$. Por lo tanto
+    \[
+    D_1f(g_1(x,y),g_2(x,y))\left(1+\frac{\partial h}{\partial x}(x,y)\right)+D_2f(g_1(x,y),g_2(x,y))\left(2x+2h(x,y) \frac{\partial h}{\partial x}(x,y)\right)=0
+    \]
+    y
+    \[
+    \frac{\partial h}{\partial x}(x,y)=-\frac{D_1f(g_1(x,y),g_2(x,y))+2xD_2f(g_1(x,y),g_2(x,y))}{D_1f(g_1(x,y),g_2(x,y))+2h(x,y)D_2f(g_1(x,y),g_2(x,y))}
+    \]
+    para todo $(x,y) \in D$. 
+    
+    De manera similar se calcula
+    \[
+    \frac{\partial h}{\partial y}(x,y)=-\frac{D_1f(g_1(x,y),g_2(x,y))+2yD_2f(g_1(x,y),g_2(x,y))}{D_1f(g_1(x,y),g_2(x,y))+2h(x,y)D_2f(g_1(x,y),g_2(x,y))}
+    \]
+    para todo $(x,y) \in D$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Verificar que en el campo vectorial
+    \[
+    \funcion{F}{\R^3}{\R^3}{(x,y,z)}{(xy^2z^2,z^2\sen y,x^2e^y)}
+    \]
+    la $\dive(F)=y^2z^2+z^2 \cos y$.
+\end{ejer}
+
 
 \end{document}

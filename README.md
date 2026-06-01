@@ -75,12 +75,15 @@ Este proyecto contiene el material del curso Matemática III (05-N0051), corresp
 - **00Cronograma/**: Cronograma del curso y actividades de evaluación.
 - **00PlanTemas/**: Planes de clase por tema (`PlanTema0m.tex`). Formato: RdA, pregunta inicial, actividades de desarrollo, verificación, cierre y tarea.
 - **01Resumen/**: Resúmenes de contenido por tema (`Resumen0m.tex`) y compilado (`ResumenCompilado.tex`).
-- **04Ejercicios/**: Ejercicios por tema (`Ejercicios0m.tex`) y compilado (`EjerciciosCompilado.tex`).
+- **02ResumenPython/**: Resúmenes con implementación computacional en Python.
 - **03Extra/**: Material adicional.
+- **04Ejercicios/**: Ejercicios por tema (`Ejercicios0m.tex`) y compilado (`EjerciciosCompilado.tex`).
 - **05Proyectos-Retos/**: Retos aplicados.
 - **06Examenes/**: Exámenes escritos.
 - **07Exposiciones/**: Video-exposiciones.
 - **08Cuestionarios/**: Cuestionarios en línea.
+- **09Talleres/**: Talleres evaluados (`Taller0m.tex`).
+- **10Laboratorios/**: Laboratorios computacionales en Jupyter Notebook (`Lab0m.ipynb`).
 
 ### Flujo de trabajo por tema
 

@@ -25,11 +25,258 @@
 \encabezado
 
 \begin{ejer}
+Dados los campos vectoriales
+    \[
+        \funcion{F}{\R^3}{\R^2}{(x,y,z)}{(x^2+y+z,2x+y+z^2)}
+        \texty
+        \funcion{G}{\R^3}{\R^3}{(u,v,w)}{(uv^2w^2,w^2\sen(v),u^2e^v)}
+    \]
+    Determinar la matriz jacobiana de $F\circ G$ en $(u,v,w)$.
+\end{ejer}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Considere las funciones
+	\[
+ 	    \funcion{f}{\R^2}{\R}{(x,y)}{xy}
+ 	    \texty 
+ 	    \funcion{G}{\R^2}{\R^2}{(u,v)}{(\cos(v+u),\sen(v-u)).}
+    \]
+	Determine $D_1(f\circ G)$ y $D_2(f\circ G)$ en el punto $(u,v)\in\R^2$.
 \end{ejer}
 
 \begin{proof}[Solución]
-
+Dado $(u,v)\in\R^2$, tenemos que para $D_1(f\circ G)(u,v)$
+	\[
+	D_1(f\circ G)(u,v)=D_1f(G(u,v))D_1g_1(u,v)+D_2f(G(u,v)D_1g_2(u,v)
+	        \]
+		\[
+	D_1g_1(u,v)=- \sen (v+u)\qquad  D_1g_2(u,v)=-\cos(v-u)
+	        \]
+    y para $(x,y)\in \R^2$
+    	\[
+	D_1f(x,y)=y\qquad D_2f(x,y)=x
+	        \]
+	por lo tanto:
+		\[
+	D_1f(G(u,v))=D_1f(\cos(v+u),\sen(v-u))=\sen(v-u)
+	        \]
+	y
+	\[
+	D_2f(G((u,v))=D_2f(\cos(v+u),\sen(v-u))=\cos(v+u)
+	        \]
+	así, se tiene que
+    \begin{align*}
+    D_1(f\circ G)(u,v)&=D_1f(G(u,v))D_1g_1(u,v)+D_2f(G(u,v))D_1g_2(u,v),\\
+    &=(\sen(v-u))(-\sen(v+u))+(\cos(v+u))(-\cos(v-u)),\\
+    &=-[\cos(v-u)\cos(v+u)+\sen(v-u)\sen(v+u)],\\
+    &=-[\cos(v-u-v-u)],\\
+    D_1(f\circ G)(u,v)&=-\cos(2u).
+    \end{align*}
+    Para hallar $D_2(f\circ G)(u,v)$
+    \[
+	D_2(f\circ G)((u,v))=D_1f(G(u,v))D_2g_1(u,v)+D_2f(G(u,v))D_2g_2(u,v)
+	        \]
+	En este caso necesitamos         
+	\[
+	D_2g_1(u,v)=-\sen(v+u)\qquad D_2g_2(u,v)=\cos(v-u)
+	        \]
+    por tanto
+	 \begin{align*}
+    D_2(f\circ G)(u,v)&=(\sen(v-u))(-\sen(v+u))+(\cos(v+u))(\cos(v-u)),\\
+    &=\cos(v-u)\cos(v+u)-\sen(v-u)\sen(v+u),\\
+    &=\cos(v-u+v+u),\\
+    D_2(f\circ G)(u,v)&=\cos(2v).
+    \end{align*}
 \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Supongamos que:
+	\[
+        \funcion{f}{\Omega}{\R}{(x,y,z)}
+        {xy+yz+\phi \l( \dfrac{x}{y}\r)} \texty \funcion{G}{\R^3}{\R^3}{(r,s,t)}
+        {\l(1+rse^t,rs^2e^{-t},r^2s \sen t\r)}
+    \]
+    Donde $\phi: \R \rightarrow \R$ es una función derivable y $\Omega=\{(x,y,z)\in\R^3:y\neq 0\} $. Determinar $D_2(f \circ G) $ en el punto $(r,s,t)=(2,1,0)$ sabiendo que $\phi' \l(\dfrac{3}{2}\r)=-1 $
+\end{ejer}
+
+\begin{proof}[Solución]
+Para $(r,s,t) \in \R^3$ se tiene que:
+	\[
+	    D_2(f \circ G)(r,s,t)=D_1f(G(r,s,t))D_2g_1(r,s,t)+D_2f(G(r,s,t))D_2g_2(r,s,t)+D_3f(G(r,s,t))D_2g_3(r,s,t).
+    \]
+    Además
+	\[
+    	D_2g_1(r,s,t)=re^t,
+    \]
+
+    \[
+	    D_2g_2(r,s,t)=2rse^{-t}
+    \]
+    y
+    \[
+	    D_2g_3(r,s,t)=r^2 \sen t.
+    \]
+    Para $(x,y,z) \in \R^3$,
+    \[
+	    D_1f(x,y,z)=\l(y + \phi' \l( \dfrac{x}{y} \r) \dfrac{1}{y}\r),
+    \]
+    
+    \[
+	    D_2f(x,y,z)=\l(x+z+ \phi' \l( \dfrac{x}{y} \r) \dfrac{-x}{y^2}\r)
+    \]
+    y
+    \[
+	    D_3f(x,y,z)=y.
+    \]
+    Por lo tanto,
+    \[
+        \begin{aligned}
+        D_1f(G(r,s,t))&= D_1f\l(1+rse^t,rs^2e^{-t},r^2s \sen t\r)\\&=rs^2e^{-t} + \phi' \l( \dfrac{1+rse^t}{rs^2e^{-t}} \r) \dfrac{1}{rs^2e^{-t}},
+        \end{aligned}
+    \]
+    
+	\[
+        \begin{aligned}
+	    D_2f(G(r,s,t))&= D_2f\l(1+rse^t,rs^2e^{-t},r^2s \sen t\r)\\&=1+rse^t + r^2s \sen t + \phi' \l( \dfrac{1+rse^t}{rs^2e^{-t}} \r) \dfrac{-1-rse^t}{\left(rs^2e^{-t}\right)^2}
+        \end{aligned}
+    \]
+    y
+	\[
+        \begin{aligned}
+	    D_3f(G(r,s,t))&= D_3f\l(1+rse^t,rs^2e^{-t},r^2s \sen t\r)\\&=rs^2e^{-t}.
+        \end{aligned}
+    \]
+    Se tiene entonces que,
+	\[
+	    D_2(f \circ G)(r,s,t)=D_1f(G(r,s,t))D_2g_1(r,s,t)+D_2f(G(r,s,t))D_2g_2(r,s,t)+D_3f(G(r,s,t))D_2g_3(r,s,t)
+    \]
+    \[
+        \begin{aligned}
+	    D_2(f \circ G)(r,s,t)&=\l(rs^2e^{-t} + \phi' \l( \dfrac{1+rse^t}{rs^2e^{-t}} \r) \dfrac{1}{rs^2e^{-t}}\r) \l(re^t\r) \\ &+ \l(1+rse^t + r^2s \sen t + \phi' \l( \dfrac{1+rse^t}{rs^2e^{-t}} \r) \dfrac{-1-rse^t}{\left(rs^2e^{-t}\right)^2}\r) \l(2rse^{-t}\r) \\ &+ \l(rs^2e^{-t}\r) \l(r^2 \sen t\r).
+        \end{aligned}
+    \]
+    Evaluando en el punto $(r,s,t)=(2,1,0)$ y conociendo que $\phi' \l(\dfrac{3}{2}\r)=-1 $,
+    \[
+        \begin{aligned}
+	    D_2(f \circ G)(2,1,0)&=\l(2+\phi' \l( \dfrac{3}{2}\r) \l(\dfrac{1}{2}\r)\r)(2) + \l(3+ \phi' \l( \dfrac{3}{2}\r)\l(\dfrac{-3}{4}\r)\r)(4) + (2)(0)\\
+        &=\l(2- \dfrac{1}{2}\r)(2) + \l(3+ \dfrac{3}{4}\r)(4) + 0\\
+        &=3+15+0\\
+        &=18
+        \end{aligned}
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Supongamos que:
+	\[
+        \funcion{f}{\R^2}{\R}{(x,y)}
+        {x^2+y^2}
+    \]
+    y
+    \[
+        \funcion{G}{\R^2}{\R^2}{(u,v)}
+        {\l(e^{u+v},u^2+v\r)}
+    \]
+    Determinar $D_1(f \circ G) $ en el punto $(u,v)=(1,1) \in \R^2$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Para $(u,v) \in \R^2$ se tiene que:
+	\[
+	D_1(f \circ G)(u.v)=D_1f(G(u,v)D_1g_1(u,v)+D_2f(G(u,v))D_1g_2(u,v)
+    \]
+    Además
+	\[
+	D_1g_1(u,v)=e^{u+v}
+    \]
+    y
+    \[
+	D_1g_2(u,v)=2u
+    \]
+    y para $(x,y) \in \R^2$,
+    \[
+	D_1f(x,y)=2x
+    \]
+    y
+    \[
+	D_2f(x,y)=2y
+    \]
+
+    Por lo tanto,
+    \[
+    D_1f(G(r,s,t))=D_1f\l(e^{u+v},u^2+v\r)=2\l(e^{u+v}\r)
+    \]
+    y
+	\[
+	D_2f(G(r,s,t))= D_2f\l(e^{u+v},u^2+v\r)=2\l(u^2+v\r)
+    \]
+
+    Se tiene entonces que,
+    \[
+    \begin{aligned}
+	D_1(f \circ G)(u.v)&=D_1f(G(u,v)D_1g_1(u,v)+D_2f(G(u,v))D_1g_2(u,v)\\ &=2\l(e^{u+v}\r)\l(e^{u+v}\r) + 2\l(u^2+v\r)\l(2u\r)
+    \end{aligned}
+    \]
+    Evaluando en el punto $(u,v)=(1,1) \in \R^2$,
+    \[
+    \begin{aligned}
+	D_1(f \circ G)(u.v)&=2\l(e^{1+1}\r)\l(e^{1+1}\r) + 2\l(1^2+1\r)\l(2(1)\r)\\ &=2e^4+8
+    \end{aligned}
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sea 
+	\[
+        \funcion{f}{\R^2}{\R}
+        {(x,y)}{f(x,y) = 
+            \begin{cases}
+            e^x + e^y + \dfrac{xy}{x^2 + y^2}& \text{si } (x, y) \neq (0, 0),\\
+            2 & \text{si } (x, y) = (0, 0).
+            \end{cases}}
+	\]
+    Hallar $D_{1,1}f(0, 0)$ y $D_{2,1}f(0, 0)$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Calculemos en primer lugar $D_1f$. Nótese que para todo $(x, y)\in\R^2\setminus\{(0,0)\}$
+    \[
+        D_1f(x,y) = e^x + \dfrac{y^3 - x^2 y}{(x^2 + y^2)^2},
+    \]
+    mientras que si $(x, y) = (0, 0)$, se tiene que
+    \[
+        \lim_{h \to 0}{\dfrac{f(0 + h, 0) - f(0, 0)}{h}} = \lim_{h \to 0}{\dfrac{f(h, 0) - f(0, 0)}{h}} = \lim_{h \to 0}{\dfrac{e^h - 1}{h}} = 1.
+    \]
+    Por tanto, 
+    \[
+        \funcion{D_1f}{\R^2}{\R^2}
+        {(x,y)}{D_1f(x,y) = 
+            \begin{cases}
+            e^x + \dfrac{y^3 - x^2 y}{(x^2 + y^2)^2}& \text{si } (x, y) \neq (0, 0),\\
+            1 & \text{si } (x, y) = (0, 0).
+            \end{cases}}
+	\]
+    Calculemos ahora $D_{1,1}(f)(0,0)$,
+    \begin{align*}
+        D_{1,1}f(0,0) 
+            & = \lim_{h \to 0}{\dfrac{D_1f(0+h, 0) - D_1f(0, 0)}{h}}\\
+    		& = \lim_{h \to 0}{\dfrac{D_1f(h, 0) - D_1f(0, 0)}{h}}\\
+            & = \lim_{h \to 0}{\dfrac{e^h - 1}{h}} = 1,
+    \end{align*}
+    es decir, $D_{1,1}f(0,0) = 1$.
+    Finalmente, tenemos que
+    \begin{align*}
+        \lim_{h \to 0}{\dfrac{D_1f(0, 0+ h) - D_1f(0, 0)}{h}}
+    	    &= \lim_{h \to 0}{\dfrac{D_1f(0, h) - D_1f(0, 0)}{h}}\\
+            &= \lim_{h \to 0}{\dfrac{1}{h^2}} \\
+            &= +\infty,
+    \end{align*}
+    es decir, $D_{2,1}f(0,0)$ no existe.
+\end{proof}
+
 
 \end{document}

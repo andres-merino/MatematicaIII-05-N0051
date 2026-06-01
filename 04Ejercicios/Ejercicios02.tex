@@ -25,11 +25,804 @@
 \encabezado
 
 \begin{ejer}
-
+En cada uno de los literales siguientes, $\alpha(t)$ representa el vector posición en el instante $t$ correspondiente a una partícula que se mueve sobre una curva $C$. En cada caso, determinar los vectores velocidad $v(t)$ y aceleración $a(t)$, para cada $t\in\R$.	
+    \begin{enumerate}
+    \item 
+        \[
+            \funcion{\alpha}{\R}{\R^3}{t}{(\cos(t),\sen(t),e^t)}
+        \]
+    \item
+        \[
+            \funcion{\alpha}{\R}{\R^3}{t}{t\veci+\sen(t)\vecj+(1-\cos(t))\veck}
+        \]
+    \item
+    	\[
+        	\funcion{\alpha}{\R}{\R^3}{t}{(t-\sen(t))\veci+(1-\cos(t))\vecj+4\sen\l(\frac{t}{2}\r)\veck}
+       	\]
+    \end{enumerate}
 \end{ejer}
 
 \begin{proof}[Solución]
-
+\begin{enumerate}
+    \item
+        Tenemos que
+        \[
+            v(t)=\alpha'(t)=(-\sen(t),\cos(t),e^t)
+            \texty
+            a(t)=\alpha''(t)=(-\cos(t),-\sen(t),e^t).
+        \]
+    \item
+        Tenemos que
+        \[
+            v(t)=\alpha'(t)=\veci +\cos(t)\vecj +\sen(t)\veck
+            \texty
+            a(t)=\alpha''(t)= -\sin(t)\vecj +\cos(t)\veck.
+        \]
+    \item
+    	Tenemos que
+        \[
+            v(t)=\alpha'(t)=(1-\cos(t))\veci +\sen(t)\vecj +2\cos\l(\frac{t}{2}\r)\veck
+        \]
+        y
+        \[
+            a(t)=\alpha''(t)= \sen(t)\veci +\cos(t)\vecj -\sin\l(\frac{t}{2}\r)\veck. \qedhere
+        \]
+    \end{enumerate}
 \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dada la trayectoria
+    \[
+    	\funcion{\alpha}{\R}{\R^3}{t}{3t\cos(t) \ \veci+3t\sen(t)\   \vecj\ + 4t\ \veck,}
+    \]
+    la cual representa el vector posición de un movimiento, determinar los vectores velocidad $v(t)$ y aceleración $a(t)$ y la rapidez $\rho(t)$, para cada $t\in\R$.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Considere las trayectorias $\func{\alpha,\beta}{\l[0,+\infty\r[}{\R^3}$, definidas por $\alpha(t)=(\cos(t),\sen(t),t)$ y $\beta(t)=(1,0,t)$ para todo $t\in\l[0,+\infty\r[$. Estas trayectorias representan los vectores posición en un instante $t$ de dos partículas que se mueven sobre dos curvas descritas por $\alpha$ y $\beta$ respectivamente. ¿En qué puntos, si los hay, estas partículas se encuentran?
+\end{ejer}
+
+\begin{proof}[Solución]
+Buscamos los elementos $t\in \l[0,+\infty\r[$ tal que
+    \[
+        \alpha(t)=\beta(t),
+    \]
+    es decir,
+    \[
+       (\cos(t),\sen(t),t)=(1,0,t).
+    \]
+    Así, se tienen las ecuaciones
+    \[
+        \cos(t)=1,
+        \qquad
+        \sen(t)=0
+        \texty
+        t=t.
+    \]
+    Por lo tanto, se tiene que las partículas se encuentran cuando
+    \[
+        t\in\{2k\pi:k\in\N\},
+    \]
+    y lo hacen en los puntos 
+    \[
+        \{(1,0,2k\pi):k\in\N\}.\qedhere
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Suponga que no conocemos la trayectoria de un planeador, solo su vector de
+aceleración, que está dada por $a(t)= \l(-3 \cos t, -3 \sen t, 2 \r)$, para $t\in \l[0,+\infty\r[$. También sabemos que inicialmente
+(en el instante $t=0$), el planeador partió del punto $(3, 0, 0)$ con una velocidad inicial $v(0)=\l(0,3,0\r)$. Obtenga la posición del planeador como una función de $t$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Sea $\func{r}{\l[0,+\infty\r[}{\R^3}$ la posición de la partícula. Conocemos que la velocidad $v$ es la derivada de la posición $r$ y la aceleración $a$, la derivada de $v$. Entonces, teniendo la función aceleración, la integramos dos veces para obtener la posición, entonces
+    \[
+        a(t)=\dfrac{dv}{dt}(t)=\dfrac{d}{dt}\dfrac{dr}{dt}(t)= \l(-3 \cos t, -3 \sen t, 2 \r)
+    \]
+    para $t\in\l[0,+\infty\r[$, con condiciones iniciales:
+    \[
+        v(0)= \l(0,3,0\r)
+        \texty
+        r(0)= \l(3,0,0\r).
+    \]
+    Al integrar ambos lados de esta expresión tenemos
+    \[
+        v(t)= \l(-3 \sen t+C_1, 3 \cos t+C_2, 2t +C_3 \r),
+    \]
+    utilizando la condición inicial $v(0)= \l(0,3,0\r)$ se determina que $C_1=0$, $C_3=0$ y $C_3=0$.
+
+    Luego, la velocidad del planeador es
+    \[
+        v(t)= \l(-3 \sen t, 3 \cos t, 2t \r)
+    \]
+    para todo $t\in\l[0,+\infty\r[$. Al integrar la velocidad $v$ se obtiene la posición del planeador
+    \[
+        r(t)= \l(3 \cos t + C_4, 3 \sen t + C_5, t^2 + C_6 \r),
+    \]
+    utilizando la condición inicial $r(0)= \l(3,0,0\r)$ de donde, $C_4=0$, $C_5=0$ y $C_6=0$.
+
+    Por lo tanto la posición del planeador es
+    \[
+        r(t)= \l(3 \cos t, 3 \sen t, t^2\r)
+    \]
+    para todo $t\in\l[0,+\infty\r[$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Un cohete descompuesto se mueve de acuerdo con la trayectoria
+\[
+\funcion{\alpha}{[0,+\infty[\setminus \lbrace 0 \rbrace}{\R^3}
+{t}{\alpha(t)=\l(e^{2t},3t^3-2t,t-\dfrac{1}{t}\r)}
+\]
+con la esperanza de llegar a una estación de reparación ubicada en el punto $(7e^4,35,5)$. El tiempo se mide en minutos y las coordenadas espaciales se miden en millas. Los motores del cohete se apagan de súbito a los dos minutos, si sobre el cohete no actúa ninguna fuerza externa, ¿llegará el cohete con su solo impulso a la estación de reparación?
+\end{ejer}
+
+\begin{proof}[Solución]
+Notemos que $\alpha$ es derivable con derivada
+\[
+\alpha'(t) = \l(2e^{2t},9t^2-2,1+\dfrac{1}{t^2}\r)
+\]
+para cada $t\in \l] 0,\infty \r[ $. Entonces, a los dos minutos, el cohete se encuentra en la posición $\alpha(2)=\l(e^4,20,\dfrac{3}{2}\r)$ con velocidad $\alpha'(2)=\l(2e^4,34,\dfrac{5}{4}\r)$. 
+
+Ya que el cohete deja de funcionar a los dos minutos, este deberá continuar por la trayectoria de la recta tangente a $\alpha$ en 2, es decir, la recta
+\begin{align*}
+    L(\alpha(2),\alpha'(2)) &= \l\{\l(e^4,20,\dfrac{3}{2}\r) + (t-2)\l(2e^4,34,\dfrac{5}{4}\r)\,:\,t \geq 2\r\}\\
+    &= \l\{\l((2t-3)e^4, 34t-48,\dfrac{5}{4}t-1\r)\,:\,t \geq 2\r\}\\
+\end{align*}
+Si el cohete logra alcanzar la estación de reparación debe tenerse que $(7e^4,35,5)\in L(\alpha(2),\alpha'(2))$, es decir, se tiene
+\[
+(7e^4,35,5) = \l((2t-3)e^4, 34t-48,\dfrac{5}{4}t-1\r)
+\]
+para algún $t \geq 2$. En particular tenemos
+\[
+7e^4 = (2t-3)e^4
+\]
+lo que se verifica cuando $t=5$. Notemos ahora que si $t=5$ el cohete se encontrará en la posición $\l(7e^4,122,\dfrac{21}{4}\r)\neq(7e^4,35,5)$.
+
+Por lo tanto, el cohete no logrará llegar hasta la estación de reparación.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sea la trayectoria 
+    \[
+        \funcion{\alpha}{[-1,3]}{\R^2}{t}{(t,\sen(\pi t)).}
+    \]
+    Si $\alpha$ describe la trayectoria de una mosca, halle la recta tangente a su trayectoria en $t=1$. Interprete este resultado. Encuentre el desplazamiento total de la mosca.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado un  vector fijo no nulo $b\in\R^3$, se tiene un movimiento con vector posición definido por $\func{\alpha}{\R}{\R^3}$, que satisface
+    \[
+        \alpha'(t) = b\times \alpha(t)
+    \]
+    para todo $t\in\R$. Demostrar que el vector aceleración es siempre ortogonal a $b$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Calculemos el vector aceleración para $t\in\R$,
+    \[
+        a(t)=\alpha''(t)=(b\times \alpha(t))'=0+b\times \alpha'(t)=b\times \alpha'(t).
+    \]
+    Ahora, para comprobar que es ortogonal a $b$, notemos que
+    \[
+        b\cdot a(t) = b\cdot (b\times \alpha'(t)) = 0
+    \]
+    para todo $t\in\R$, así, el vector aceleración es siempre ortogonal a $b$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dada la trayectoria
+	\[
+        \funcion{\alpha}{\R}{\R^3}{(t)}{b\cos(\omega t)\veci+b\sen(\omega t)\vecj +(c\omega t)\veck}
+    \]
+    donde $\omega$ es una constante positiva y $b,c\in \R$. Compruebe que los vectores velocidad $v(t)$ y aceleración $a(t)$ tienen longitud constante para todo $t\in \R$ y que
+    \[
+        \frac{\|v(t)\times a(t)\|}{\|v(t)\|^3}=\frac{b}{b^2+c^2},
+    \]
+    para todo $t\in \R$.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Compruebe que, para cualquier movimiento, el producto escalar de los vectores velocidad y aceleración es igual a la mitad de la derivada del cuadrado de la rapidez, es decir, dado un movimiento definido por la trayectoria $\func{\alpha}{I}{\R^n}$, se tiene que
+	\[
+        v(t)\cdot a(t)=\dfrac{1}{2} \dfrac{d}{dt} (\rho^2(t))
+    \]
+    para todo $t\in\R$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Se conoce que $\|v(t)\|=\rho(t)$, para todo $t\in I$, por lo tanto
+    \begin{align*}
+        \rho^2(t) = v(t)\cdot v(t).
+	\end{align*}
+    Derivando esto respecto al tiempo, tenemos
+    \begin{align*}
+		\dfrac{d}{dt} (\rho^2(t))
+		    & =\dfrac{d}{dt} (v(t) \cdot v(t)) \\
+            & = v'(t) \cdot v(t) + v(t) \cdot v(t)'\\
+            & = 2 v(t) \cdot v(t)',
+	\end{align*}
+	para todo $t\in I$. Por lo tanto, como la aceleración es la derivada del vector velocidad, 
+	\[
+        \dfrac{d}{dt} (\rho^2(t))=2v(t)\cdot a(t),
+   	\]
+	para todo $t\in I$; reordenamos la expresión y obtenemos
+	\[
+   		\dfrac{1}{2} \dfrac{d}{dt} (\rho^2(t))=v(t)\cdot a(t),
+    \]
+    para todo $t\in I$, como queríamos.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dada la trayectoria 
+	\[	
+        \funcion{\alpha}{\l[0,+\infty\r[}{\R^n}{t}{\alpha(t)=c+\dfrac{1-e^{-kt}}{k}d,}
+    \]
+	donde $k>0$ y $c,d\in\R^n$.	Muestre que $\alpha$ verifica
+    \[
+        \alpha''=-k\alpha'.
+    \]
+	Hallar la relación de $c$ y $d$ con la posición inicial y calcular
+    \[
+    	\lim_{t\to+\infty} (\alpha(t) - \alpha(0))
+    \]
+    en términos de la velocidad inicial (a este límite se lo conoce como la velocidad total de desplazamiento de la partícula).
+\end{ejer}
+
+\begin{proof}[Solución]
+Es fácil notar que $\alpha$ es infinitamente derivable y se tiene que
+	\[
+		\alpha'(t)=e^{-kt}d 
+		\texty
+		\alpha''(t)=-ke^{-kt}d
+	\]
+	para cada $t\in\R$. Así,
+	\[
+		\alpha''=-k\alpha'.
+	\]
+	Por otro lado, puesto que
+	\[
+		\alpha(0)=c\quad \text y \quad 
+		\alpha'(0)=d,
+	\]
+	es decir, $c$ es la posición inicial y $d$ es la velocidad inicial. Además, se tiene que
+	\[
+		\lim_{t\to+\infty}( \alpha(t) - \alpha(0) )
+		=\lim_{t\to+\infty} \l(c+\dfrac{1-e^{-kt}}{k}d\r) - c
+		=\lim_{t\to+\infty} \dfrac{1-e^{-kt}}{k}d
+		=\dfrac{1}{k}d,
+	\]
+	dado que $k>0$. Finalmente, la velocidad total de desplazamiento de la partícula es
+	\[
+		\lim_{t\to+\infty}( \alpha(t) - \alpha(0) )
+		=\dfrac{1}{k}\alpha'(0). \qedhere
+	\]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Compruebe que, en un movimiento representado por la función $\func{\alpha}{I}{\R^3}$, si el vector aceleración $a(t)$ es cero para todo $t\in I$, el movimiento es rectilíneo.
+\end{ejer}
+
+\begin{proof}[Solución]
+Tenemos que
+    \[
+    	\funcion{\alpha}{I}{\R^3}{t}{(\alpha_1(t),\alpha_2(t),\alpha_3(t)),}
+    \]
+    y dado que $a(t)=0$ para todo $t\in I$, se tiene que
+    \[
+        \alpha_1''(t)=0,
+        \qquad
+        \alpha_2''(t)=0
+        \texty
+        \alpha_3''(t)=0,
+    \]
+    y por lo tanto
+    \[
+        \alpha_1(t)=a_1+tb_1,
+        \qquad
+        \alpha_2(t)=a_2+tb_2
+        \texty
+        \alpha_3(t)=a_3+tb_3,
+    \]
+    donde $a_i,b_i\in\R$ para todo $i\in\{1,2,3\}$.
+    Así, el vector posición es
+    \[
+        \alpha(t)=(a_1+tb_1,a_2+tb_2,a_3+tb_3)=a+tb
+    \]
+    para todo $t\in I$, donde $a=(a_1,a_2,a_3)$ y $b=(b_1,b_2,b_3)$, y por lo tanto el movimiento descrito por $r$ es rectilíneo.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Verificar que la trayectoria 
+    \[
+        \funcion{\alpha}{\R}{\R^3}{t}{(\sen t^2,\cos t^2,e)}
+    \]
+    describe un movimiento planar.
+\end{ejer}
+
+\begin{proof}[Solución]
+Para esto se debe verificar que la dirección del vector binormal es constante, entonces
+    \begin{align*}
+        \alpha'(t)&=(2t\cos t^2,-2t\sen t^2,0), \\
+        \rho(t)&=2t
+    \end{align*}
+    de donde 
+    \[
+        T(t)=(\cos t^2,-\sen t^2,0)
+    \]
+    y
+    \begin{align*}
+        T'(t)&=(-2t\sen t^2,-2t\cos t^2,0)\\
+        \|T'(t)\|&=2t\\
+        N(t)&=(-\sen t^2,-\cos t^2,0).
+    \end{align*}
+    Finalmente
+    \begin{align*}
+        B(t)&=T(t) \times N(t)\\
+        &=(\cos t^2,-\sen t^2,0) \times (-\sen t^2,-\cos t^2,0)\\
+        &=(0,0,-1)
+    \end{align*}
+    con lo que se verifica que el movimiento descrito es planar.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dada una curva $C$ en $\R^3$, con dos parametrizaciones equivalente
+    \[
+        \func{\alpha}{I}{\R^3}
+        \texty
+        \func{\beta}{J}{\R^3}
+    \]
+    con cambio de parámetro $\func{u}{I}{J}$ creciente, demostrar que los vectores principales no se ven afectados por el cambio de parámetro.
+\end{ejer}
+
+\begin{proof}[Solución]
+Dado que $u$ es el cambio de parámetro, se tiene que
+    \[
+        \beta(u(t))=\alpha(t)
+    \]
+    para todo $t\in I$. Además, dado que $u$ es creciente, se tiene que $u'(t)\geq 0$ para todo $t\in\R$.
+    
+    Fijemos $t\in \R$ y llamemos $\tau=u(t)$. Calculemos los vectores principales en en el punto $\beta(\tau)$. Con la parametrización $\beta$, tenemos que
+    \[
+        T_\beta(\tau)= \frac{\beta'(\tau)}{\|\beta'(\tau)\|},
+        \qquad
+        N_\beta(\tau)= \frac{T_\beta'(\tau)}{\|T_\beta'(\tau)\|}
+        \texty
+        B_\beta(\tau)= T_\beta(\tau)\times N_\beta(\tau).
+    \]
+    Ahora, hallemos los vectores en el mismo punto pero con la parametrización $\alpha$, es decir en el punto $\beta(\tau)=\beta(u(t))=\alpha(t)$ y tenemos
+    \[
+        T_\alpha(t)= \frac{\alpha'(t)}{\|\alpha'(t)\|},
+        \qquad
+        N_\alpha(t)= \frac{T_\alpha'(\tau)}{\|T_\alpha'(t)\|}
+        \texty
+        B_\alpha(t)= T_\alpha(t)\times N_\alpha(t).
+    \]
+    Pero notemos que
+    \begin{align*}
+        T_\alpha(t)
+            & = \frac{\alpha'(t)}{\|\alpha'(t)\|} = \frac{(\beta(u(t)))'}{\|(\beta(u(t)))'\|}\\[1mm]
+            & = \frac{u'(t)\beta'(u(t))}{\|u'(t)\beta'(u(t))\|} = \frac{u'(t)\beta'(u(t))}{|u'(t)|\|\beta'(u(t))\|}\\[1mm]
+            & = \frac{\beta'(u(t))}{\|\beta'(u(t))\|} = \frac{\beta'(\tau)}{\|\beta'(\tau)\|}\\[1mm]
+            & = T_\beta(\tau),
+    \end{align*}
+    es decir, $T\alpha(t)=T_\beta(u(t))$. Por otro lado, 
+    \begin{align*}
+        N_\alpha(t)
+            & = \frac{T_\alpha'(t)}{\|T_\alpha'(t)\|} = \frac{(T_\beta(u(t)))'}{\|(T_\beta(u(t)))'\|}\\[1mm]
+            & = \frac{u'(t)T_\beta'(u(t))}{\|u'(t)T_\beta'(u(t))\|} = \frac{u'(t)T_\beta'(u(t))}{|\beta'(t)|\|T_\beta'(u(t))\|}\\[1mm]
+            & = \frac{T_\beta'(u(t))}{\|T_\beta'(u(t))\|} = \frac{T_\beta'(\tau)}{\|T_\beta'(\tau)\|}\\[1mm]
+            &= N_\beta(\tau).
+    \end{align*}
+    Finalmente
+    \[
+        B_\alpha(t)= T_\alpha(t)\times N_\alpha(t) 
+        = T_\beta(\tau)\times N_\beta(\tau)=B_\beta(\tau),
+    \]
+    es decir,
+    \[
+        T_\alpha(t)= T_\beta(\tau),
+        \qquad
+        N_\alpha(t)= N_\beta(\tau)
+        \texty
+        B_\alpha(t)= B_\beta(\tau).\qedhere
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Demostrar que el módulo de la componente normal del vector aceleración en $t$ es $\dfrac{\|v(t) \times a(t)\|}{\|v(t)\|}$ para cualquier curva.
+\end{ejer}
+
+\begin{proof}[Solución]
+Sabemos que $a(t)$ se puede escribir como una combinación lineal de los vectores tangente y normal, es decir,
+    \[
+        a(t)=\alpha T(t)+\beta N(t),
+    \]
+    donde $\alpha,\beta\in\R$.
+    Ahora, tenemos que
+    \[
+        v(t)\times a(t)=\alpha v(t)\times T(t)+\beta v(t)\times N(t).
+    \]
+    Notemos que, gracias a que $v(t)$ y $T(t)$ son paralelos, $v(t)\times T(t)=0$, por lo tanto
+    \[
+        v(t)\times a(t)=\beta v(t)\times N(t).
+    \]
+    Así, se tiene que
+    \[
+         \| v(t)\times a(t) \| = |\beta| \| v(t)\times N(t) \|,
+    \]
+    y por lo tanto
+    \begin{align*}
+        |\beta| 
+            & = \frac{\| v(t)\times a(t) \|}{\| v(t)\times N(t) \|} \\
+            & = \frac{\| v(t)\times a(t) \|}{\| v(t) \| \| N(t) \| \sen\l(\frac{\pi}{2}\r)} \\
+            & = \frac{\| v(t)\times a(t) \|}{\| v(t) \| \| N(t) \|}\\
+            & = \frac{\| v(t)\times a(t) \|}{\| v(t) \|}.
+    \end{align*}
+    Luego, la componente normal de la aceleración es
+    \[
+        \frac{\| v(t)\times a(t) \|}{\| v(t) \|} N(t)
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dado el movimiento representado por 
+	\[
+		\funcion{\alpha}{\R}{\R^3}{t}{(\sen(t),\cos(t),t^2)}.
+	\]
+	Verifique que se cumple que
+	\[
+        a(t)=\rho'(t) T(t)+\rho(t) T' (t).
+	\]
+	para cada $t\in\R$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Se tiene que
+	\begin{align*}
+        v(t)
+        &=\alpha'(t)=(\cos(t),-\sen(t),2t),
+        &\rho(t)&=\|v(t)\|=\sqrt{1+4t^2},\\
+        a(t)&=\alpha''(t)=(-\sen(t),-\cos(t),2),
+        &\rho'(t)&=\dfrac{4t}{\sqrt{1+4t^2}}
+	\end{align*}
+	para cada $t\in\R$. Puesto que $\alpha'(t)\neq0$ para cada $t\in\R$, se sigue que
+	\begin{align*}
+		T(t)=\l(\dfrac{\cos(t)}{\sqrt{1+4t^2}},\dfrac{-\sen(t)}{\sqrt{1+4t^2}},\dfrac{2t}{\sqrt{1+4t^2}}\r)
+	\end{align*}
+	y además, 
+	\[
+		T'(t)
+		=\l(\dfrac{-(1+4t^2) \sen(t) -4t\cos(t))}{(1 + 4 t^2)^\frac{3}{2}},
+		\dfrac{ 4t\sen(t)-(1+4t^2) \cos(t))}{(1 + 4 t^2)^\frac{3}{2}},
+		\dfrac{ 2}{(1 + 4 t^2)^\frac{3}{2}}\r)
+	\]
+	para todo $t\in\R$. Finalmente, para cada $t\in\R$, se tiene que
+	\begin{align*}
+		\rho'(t) T(t)+&\rho(t) T' (t)=\\
+		&= \dfrac{4t}{\sqrt{1+4t^2}}\l(\dfrac{\cos(t)}{\sqrt{1+4t^2}},\dfrac{-\sen(t)}{\sqrt{1+4t^2}},\dfrac{2t}{\sqrt{1+4t^2}}\r)\\
+	    &\phantom{=}+\sqrt{1+4t^2}\l(\dfrac{-(1+4t^2) \sen(t) -4t\cos(t))}{(1 + 4t^2)^\frac{3}{2}},
+			\dfrac{ 4t\sen(t)-(1+4t^2) \cos(t))}{(1 + 4 t^2)^\frac{3}{2}},
+			\dfrac{ 2}{(1 + 4 t^2)^\frac{3}{2}}\r)\\[2mm]
+		&= 4t\l(\dfrac{\cos(t)}{1+4t^2},\dfrac{-\sen(t)}{1+4t^2},\dfrac{2t}{1+4t^2}\r)\\
+		&\phantom{=}+\l(\dfrac{-(1+4t^2) \sen(t) -4t\cos(t))}{1 + 4t^2},
+			\dfrac{ 4t\sen(t)-(1+4t^2) \cos(t))}{1 + 4t^2},
+			\dfrac{ 2}{1 + 4t^2}\r)\\[2mm]
+		&=\l(\dfrac{-(1+4t^2) \sen(t))}{1 + 4t^2},
+			\dfrac{-(1+4t^2) \cos(t))}{1 + 4t^2},
+			\dfrac{8t^2+2}{1 + 4t^2}\r)\\[1mm]
+		&=(-\sen(t),-\cos(t),2)\\
+		&=a(t).
+	\end{align*}
+	Así, se concluye que
+	\[
+		a(t)=\rho'(t) T(t)+\rho(t) T' (t)
+	\]
+	para cada $t\in\R$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Calcule la longitud de $C$ representada por la trayectoria $\func{\alpha}{[0,2\pi]}{\R^3}$ donde $\alpha$ se define como en el ejercicio anterior. Además, calcular su vector curvatura y su curvatura.
+\end{ejer}
+
+\begin{proof}[Solución]
+Utilizando los cálculos anteriores y la definición, se tiene que
+	\[
+		\ell(C)=\int_0^{2\pi}\rho(t)dt=\int_0^{2\pi}\sqrt{1 + 4t^2}dt=
+		\pi \sqrt{1 + 16 \pi^2} + \dfrac{1}{4} \senh^{-1}(4\pi)\approx 40.4.
+	\]
+	Por otro lado, se tiene que
+	\begin{align*}
+		K(t)=\dfrac{T'(t)}{\rho(t)}
+		&=\dfrac{1}{\sqrt{1+4t^2}}\l(\dfrac{-(1+4t^2) \sen(t) -4t\cos(t))}{(1 + 4 t^2)^\frac{3}{2}},
+		\dfrac{ 4t\sen(t)-(1+4t^2) \cos(t))}{(1 + 4 t^2)^\frac{3}{2}},
+		\dfrac{ 2}{(1 + 4 t^2)^\frac{3}{2}}\r)\\[2mm]
+		&=\l(\dfrac{-(1+4t^2) \sen(t) -4t\cos(t))}{(1 + 4 t^2)^2},
+		\dfrac{ 4t\sen(t)-(1+4t^2) \cos(t))}{(1 + 4 t^2)^2},
+		\dfrac{ 2}{(1 + 4 t^2)^2}\r)
+	\end{align*}
+	y
+	\begin{align*}
+		\kappa(t)=\dfrac{\|T'(t)\|}{\rho(t)}
+		&=\dfrac{1}{(1+4t^2)^2}
+		\sqrt{(-(1+4t^2) \sen(t) -4t\cos(t)))^2
+				+(4t\sen(t)-(1+4t^2) \cos(t)))^2
+				+4}\\
+		&=\dfrac{1}{(1+4t^2)^2}
+			\sqrt{
+			(1+4t^2)^2 +16t^2+4}\\
+		&=\dfrac{1}{(1+4t^2)^2}
+			\sqrt{
+				(4 t^4 + 16 t^2 + 5}
+	\end{align*}
+	para todo $t\in\lcl0,2\pi\rcl$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dada la trayectoria 
+ 	\[
+        \funcion{\alpha}{\left[0,2\pi \right]}{\R^2}{t}{a(1-\cos (t)) \veci+a(t-\sen (t)) \vecj}
+    \]
+	con $a>0$. Hallar 
+	\begin{enumerate}
+	    \item La longitud de la curva $C$ descrita por $\alpha$. (Distancia) 
+	    \item Desplazamiento entre los puntos inicial y final de la curva $C$.
+	\end{enumerate}
+\end{ejer}
+
+\begin{proof}[Solución]
+\begin{enumerate}
+	  \item
+	 	El vector velocidad correspondiente es
+    	\[
+       		v(t)=\alpha'(t)= a \sen(t) \veci+(a-a \cos (t)) \vecj,
+        \]
+    	para todo $t\in[0,2\pi]$ y la rapidez asociada es
+    	\[
+            \rho(t) = \| v(t) \| = a \sqrt{2-2\cos(t)} 
+      	\]
+    	para todo $t\in\left[0,2\pi\right]$. Por la definición de la longitud de arco de la curva descrita por $r$, se tiene que
+    	\begin{align*}
+    		\ell(C)
+                & =\int_0^{2\pi} \|v(t)\|\ dt\\
+                & =\int_0^{2\pi}a \sqrt{2-2\cos(t)}\  dt\\
+                & =8a.\qedhere
+        \end{align*}
+    \item
+        El desplazamiento $\Delta r$ es la diferencia entre los puntos final e inicial, que son $\alpha(2\pi)$ y $\alpha(0)$ respectivamente, entonces
+        \begin{align*}
+            \Delta r&=a(0,2\pi)-a(0,0)\\
+            &=a(0,2\pi)
+        \end{align*}
+        y su norma es $\| \Delta r\|=2a\pi$.
+    \end{enumerate}
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+La trayectoria definida por
+	\[
+        \funcion{\alpha}{[0, 2\pi]}{\R^2}{t}
+        {\alpha(t) = (a\sen{t}, b\cos{t})}
+	\]
+    donde $0 < b < a$ son números reales, es la parametrización de una elipse. Probar que la longitud $L$ de una elipse está dada por la integral
+    \[
+        L = 4a\int_{0}^{\pi/2}{\sqrt{1 - e^{2}\sen^{2}{t}}\ dt,}
+    \]
+    donde $e = \dfrac{\sqrt{a^{2} - b^{2}}}{a}$. Al número $e$ se lo llama excentricidad de la elipse.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dada la curva definida por la trayectoria
+    \[
+        \funcion{\alpha}{\R}{\R^3}
+        {t}{\alpha(t) = (e^{t}\cos{t}, e^{t}\sen{t}, e^{t})}
+	\]
+    Hallar la curvatura y la ecuación del plano osculador cuando $t = 0$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Nótese que $\alpha$ es al menos dos veces derivable. En efecto, sus dos primeras derivadas $\alpha'$ y $\alpha''$ están dadas por
+    \[
+        \alpha'(t) = (e^{t}\cos{t} - e^{t}\sen{t}, e^{t}\cos{t} + e^{t}\sen{t}, e^{t}),
+    \]
+    y
+    \[
+        \alpha''(t) = (-2e^{t}\sen{t}, 2e^{t}\cos{t}, e^{t}),
+    \]
+    para todo $t \in \mathbb{R}$. Además,
+    \[
+        \| \alpha'(t) \| = \sqrt{(e^{t}\cos{t} - e^{t}\sen{t})^{2} + (e^{t}\cos{t} + e^{t}\sen{t})^2 + e^{2t}} = \sqrt{3} e^{t},
+    \]
+    para todo $t\in\R$. En particular, en $t = 0$, se tiene que $\alpha'(0)= (1,1,1)$, $\alpha''(0) = (0,2,1)$ y $\|\alpha'(0)\| = \sqrt{3}$, por tanto, la curvatura de $\alpha$ en $t = 0$, es
+    \begin{align*}
+        \kappa(0) 
+            &= \frac{\|\alpha'(0) \times \alpha''(0) \|}{\| \alpha'(0) \|^{3}}\\
+            &= \frac{\|(1,1,1) \times (0,2,1) \|}{\sqrt{3}^{3}}\\
+            &= \frac{\|(-1,-1,2)\|}{3\sqrt{3}}\\
+            &= \frac{\sqrt{2}}{3}.
+    \end{align*}
+    Para determinar la ecuación del plano osculador, calculemos el vector unitario tangente $T(t)$ y el vector normal principal $N(t)$. El vector unitario tangente está dado por
+    \[
+        T(t) = \frac{1}{\| \alpha'(t)\|}\alpha'(t) = \frac{\sqrt{3}}{3}\alpha'(t),
+    \]
+    para todo $t\in\R$ y cuya derivada $T'$ está dada por
+    \[
+        T'(t) = \frac{\sqrt{3}}{3}(-\cos{t} - \sen{t}, \cos{t} - \sen{t}, 0), 
+    \]
+    con norma $\| T'(t)\| = \frac{\sqrt{6}}{3}$, para todo $t \in\R$. El vector normal principal, está dado por
+    \[
+        N(t) = \frac{1}{\|T'(t)\|}T'(t) = \frac{\sqrt{2}}{2}T'(t).
+    \]
+    Nótese que un vector perpendicular al plano osculador es $B(t) = T(t) \times N(t)$ para todo $t\in\R$, por lo tanto, en $t = 0$, 
+    \[
+        B(0) = T(0) \times N(0) 
+        = \l(\frac{\sqrt{3}}{3}\alpha'(0)\r)\times \l(\frac{\sqrt{2}}{2}T'(0)\r)
+        =\frac{\sqrt{6}}{6} \l( (1,1,1) \times (-1, 1, 0) \r)
+        = \frac{\sqrt{6}}{6} (-1, -1, 2).
+    \]
+    Con esto, se tiene que la ecuación del plano está dada por
+    \[
+        B(0)\cdot (x,y,z) = B(0)\cdot \alpha(0),
+    \]
+    es decir,
+    \[
+        (-1, -1, 2)\cdot(x,y,z) =(-1, -1, 2)\cdot(1, 0, 1)
+    \]
+    así, la ecuación del plano es
+    \[
+        -x - y + 2z = -1.\qedhere
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Si un punto se mueve por una curva, parametrizada por la función
+    \[
+        \func{\alpha}{I}{\R^3,}
+    \]
+    de manera que sus vectores velocidad y aceleración tienen siempre longitud constante, probar que la curvatura de la curva es constante en todos sus puntos.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Determinar el punto de la parábola de ecuación $y=x^2$ en el que la curvatura alcanza su valor máximo.
+\end{ejer}
+
+\begin{proof}[Solución]
+Definamos la trayectoria
+    \[
+        \funcion{\alpha}{\R}{\R^2}{t}{(t,t^2).}
+    \]
+    Tenemos que
+    \[
+        \kappa(t)=\frac{1}{\rho(t)}\|T'(t)\|,
+    \]
+    para todo $t\in\R$, donde
+    \begin{align*}
+        T'(t)
+            & = \l(\frac{\alpha'(t)}{\|\alpha'(t)\|}\r)' \\
+            & = \frac{\rho(t)\alpha''(t)-\rho'(t)\alpha'(t)}{\rho^3(t)}.
+    \end{align*}
+    Así,
+    \[
+        \kappa(t)=\frac{2}{\l(\sqrt{1+4t^2}\r)^3}
+    \]
+    para todo $t\in\R$.
+    Ahora, buscamos $t\in\R$ de modo que $\kappa$ alcance su valor máximo. Notemos que $\kappa$ es diferenciable en $\R$, por lo tanto
+    \[
+        \kappa'(t)=-\frac{24t}{(1+4t^2)^\frac{5}{2}},
+    \]
+    para todo $t\in\R$, de donde se tiene que $\kappa'(t)=0$ si y solo si $t=0$, es decir que $t=0$ es un punto crítico para $\kappa$. Finalmente, notemos que $\kappa'(t)>0$ si $t<0$ y $\kappa'(t)<0$ si $t>0$, es decir, $\kappa$ alcanza su valor máximo cuando $t=0$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Demostrar que en una circunferencia de radio 1 la curvatura es constante.
+\end{ejer}
+
+\begin{proof}[Solución]
+Consideremos la trayectoria
+    \[
+        \funcion{\alpha}{[0,2\pi]}{\R^2}{t}{(\cos(t),\sin(t)).}
+    \]
+    Se tiene que
+    \[
+        \rho(t)=1
+        \texty
+        T(t)=(-\sen(t),\cos(t)),
+    \]
+    para todo $t\in[0,2\pi]$, por lo tanto
+    \begin{align*}
+        \kappa(t)
+            & = \frac{1}{\rho(t)}\|T'(t)\| \\
+            & = \|(-\cos(t),-\sen(t))\| \\
+            & = 1,
+    \end{align*}
+    para todo $t\in[0,2\pi]$, lo que implica que la curvatura es constante.
+\end{proof}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% JO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tema 5: Limites y diferenciabilidad
+\item 
+    Sea el campo escalar
+    \[
+        \funcion{f}{\R^2}{\R}{(x,y)}{xy^2.}
+    \]
+    Dado que $f$ es un polinomio, $f$ es continuo y se cumple que
+    \[
+        \Lim_{(x,y)\to (3,2)}f(x,y)=f(3,2)=12.
+    \]
+    Para $\epsilon=1$, determine explícitamente un $\delta>0$ tal que
+    \[
+    (\forall (x,y)\in\R^2)(\|(x,y)-(3,2)\|< \delta \Imp |xy^2-12|<1).
+    \]
+
+\begin{proof}    
+    De la definición de norma, para cada $(x,y)\in\R^2$, se tiene que
+    \[
+        \|(x,y)-(3,2)\|=\sqrt{(x-3)^2+(y-2)},
+    \]
+    luego $\|(x,y)-(3,2)\|\geq |x-3|$ y $\|(x,y)-(3,2)\|\geq |y-2|$. Queremos acotar el término
+    \[
+        |xy^2-12|
+    \]
+    cerca del punto $(3,2)$. Con esto y dado que $(x,y)\to (3,2)$,  $|x-3|$ y $|y-2|$ deben ser términos pequeños, se tiene que para cada $(x,y)\in\R^2$, 
+    \begin{equation}\label{eq:dtri}
+        \begin{split}|xy^2-12|
+        &=|(x-3)(y^2-4)+4x+3y^2-24|\\
+        &=|(x-3)(y^2-4)+4(x-3)+3(y^2-4)|\\
+        &\leq |x-3||y^2-4|+4|x-3|+3|y^2-4|\\
+        &=|x-3||y-2||y+2|+4|x-3|+3|y-2||y+2|.
+        \end{split}
+    \end{equation}
+    Así, debemos acotar cada uno de los términos anteriores. Como el $\delta$ debe ser pequeño, podemos suponer que $\delta\leq 1$. Entonces si $(x,y)\in\R^2$ tales que
+    \[
+        \|(x,y)-(3,2)\|<\delta\leq 1,
+    \]
+    se tiene que 
+    \[
+        |x-3|\leq \|(x,y)-(3,2)\|<\delta \yds 
+        |y-2|\leq \|(x,y)-(3,2)\|<\delta.
+    \]
+    Ahora bien, como $|y-2|<1$, se tiene que $|y+2|<5$. Por todo esto,
+    \[
+        |x-3||y-2||y+2|+4|x-3|+3|y-2||y+2|
+        <(\delta)( \delta) 5+4\delta +3 (\delta) 5
+        =5\delta^2+19\delta. 
+    \]
+    De la última desigualdad y \eqref{eq:dtri}, es suficiente encontrar $\delta>0$, tal que
+    \[
+        5\delta^2+19\delta\leq 1
+    \]
+    lo qué ocurre cuando 
+    \[
+        0<\delta\leq \dfrac{ \sqrt{381} - 19}{10}.
+    \]
+    Por lo tanto, es suficiente tomar
+    \[
+        \delta=\dfrac{ \sqrt{381} - 19}{10}\approx 0.0519. \qedhere
+    \]
+\end{proof}
+
 
 \end{document}

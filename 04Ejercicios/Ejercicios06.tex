@@ -25,11 +25,204 @@
 \encabezado
 
 \begin{ejer}
-
+Dado el campo escalar:
+    \[
+        \funcion{f}{\R^3}{\R}{(x,y,z)}{\dfrac{x+y}{y-z}}
+    \]
+Obtenga su matriz Hessiana en el punto $a=(0,1,-1)$:
 \end{ejer}
 
 \begin{proof}[Solución]
-
+Por definición de la matriz Hessiana en $\R^3$.
+    \[
+        H_f(x,y,z)=\l(J_{\nabla f}(x,y,z)\r)^T= \begin{pmatrix}
+        D_{1,1}f(x,y,z) & D_{1,2}f(x,y,z) & D_{1,3}f(x,y,z)\\
+        D_{2,1}f(x,y,z) & D_{2,2}f(x,y,z) & D_{2,3}f(x,y,z)\\
+        D_{3,1}f(x,y,z) & D_{3,2}f(x,y,z) & D_{3,3}f(x,y,z)
+        \end{pmatrix}
+    \]
+Se tiene entonces que las segundas derivadas parciales de $f$ respecto a $x$,
+    \[
+        D_{1,1}f(x,y,z)=0
+        \yds
+        D_{2,1}f(x,y,z)=-\dfrac{1}{(y-z)^2}
+        \yds
+        D_{3,1}f(x,y,z)=\dfrac{1}{(y-z)^2},
+    \]
+para $y-z \neq 0$. Respecto a $y$,
+    \[
+        D_{1,2}f(x,y,z)=-\dfrac{1}{(y-z)^2}
+        \yds
+        D_{2,2}f(x,y,z)=\dfrac{2(x+z)}{(y-z)^3}
+        \yds
+        D_{3,2}f(x,y,z)=-\dfrac{(y-z)+2(x+z)}{(y-z)^3},
+    \]
+para $y-z \neq 0$. Respecto a $z$,
+    \[
+        D_{1,3}f(x,y,z)=\dfrac{1}{(y-z)^2}
+        \yds
+        D_{2,3}f(x,y,z)=\dfrac{(y-z)-2(x+z)}{(y-z)^3}
+        \yds
+        D_{3,3}f(x,y,z)=\dfrac{2(y+x)}{(y-z)^3},
+    \]
+para $y-z \neq 0$. Evaluando sus segundas derivadas parciales en $a=(0,1,-1)$, se obtiene la matriz Hessiana de $f$ en $a$,
+    \[
+        H_f(a)= \begin{pmatrix}
+        0 & -\dfrac{1}{4} & \dfrac{1}{4}\\
+        -\dfrac{1}{4} & -\dfrac{1}{4} & 0\\
+        \dfrac{1}{4} & 0 & \dfrac{1}{4}
+        \end{pmatrix}
+    \]
 \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dada la función
+    \[
+        \funcion{f}{\R^3}{\R}{(x,y,z)}{f(x,y,z)=\sen(xyz),}
+    \]
+    determinar $\nabla f(x,y,z)$ y $H_f(x,y,z)$ para todo $(x,y,z)\in\R^3$.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sea el campo escalar
+    \[
+        \funcion{f}{\R^2}{\R}{(x,y)}{x^2e^{x-y}.}
+    \]
+\begin{enumerate}
+    \item Encuentre la aproximación lineal en el punto $(1,0)$.
+    \item Encuentre la aproximación cuadrática en el punto $(1,0)$.
+    \item Calcule con ambas aproximaciones estime $f(1,0)$ y $f(1,1)$; y compare con su valor real.
+\end{enumerate}
+\end{ejer}
+
+\begin{proof}[Solución]
+$f$ es diferenciable pues es la multiplicación de un polinomio con una función exponencial. Así,
+    \begin{align*}
+        \nabla f(a)&= \l(a_1 (a_1 + 2) e^{a_1 - a_2}, a_1^2 (-e^{a_1 - a_2})\r)\\
+        H_f(a)&=
+        \begin{pmatrix}
+            (a_1^2 e^{a_1 - a_2} + 4 a_1 e^{a_1 - a_2} + 2 e^{a_1 - a_2} & a_1^2 (-e^{a_1 - a_2}) - 2 a_1 e^{a_1 - a_2}\\
+            a_1^2 (-e^{a_1 - a_2}) - 2 a_1 e^{a_1 - a_2} & a_1^2 e^{a_1 - a_2})  
+        \end{pmatrix}
+    \end{align*}
+    para todo $a\in\R^2$. Por lo tanto la aproximación lineal de $f$ en el punto $a=(1,0)$ para $(x,y)\in\R^2$ cerca de $a$ es
+    \begin{align*}
+        f(x,y)
+        &\approx f(1,0)+\nabla f (a) \cdot ((x,y)-a)\\
+        &\approx e+(3e,-e) \cdot (x-1,y)\\
+        &\approx e(1+3x-3-y)\\
+        &\approx e(1+3x-y-3).
+    \end{align*}
+    Además, la aproximación cuadrática de $f$ en el punto $a$ para $(x,y)\in\R^2$ cerca de $a$ es
+    \begin{align*}
+        f(x,y)
+        &\approx f(1,0)+\nabla f (a) \cdot ((x,y)-a)+\dfrac1 2 ((x,y)-a) H_f(a) ((x,y)-a)^t\\
+        &\approx e(1+3x-y-3)+\dfrac1 2 (x-1,y) 
+        \begin{pmatrix}
+            7e & -3e\\ 
+            -3e &e
+        \end{pmatrix}
+        (x-1,y)^t\\
+        &\approx e(1+3x-y-3)+\dfrac{e}2(7 x^2 - 6 x y - 14 x + y^2 + 6 y + 7)\\
+        &\approx \dfrac{e}{2}(7 x^2 - 6 x y - 8 x + y^2 + 4 y + 3).
+    \end{align*}
+    Por lo tanto, la aproximación lineal de $f$ en $(1,0)$ para $(1,0)$ es
+    \[
+        e(1+3(1)-(0)-3)=e
+    \]
+    y la cuadrática es
+    \[
+        \dfrac{1}{2}(7-8+3)=e.
+    \]
+    Lo que indica que ambas aproximaciones coinciden con $f(1,0)=e$, lo cual es lo esperado ya que estás aproximaciones entre más cerca al punto $a=(1,0)$ son mejor. La ventaja es que para números cercanos a $(1,0)$ también funcionan. En efecto, ambas aproximaciones para $(1,1)$ son
+    \[
+        e(1-1)= 0 \yds \dfrac{e}2\approx 1.36,
+    \]
+    respectivamente. Comparado con el valor $f(1,1)=1$ la aproximación cuadrática es mejor. En la práctica es más cómodo trabajar con aproximaciones pues son polinomios aunque se pierda un poco de exactitud.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dada la función
+    \[
+        \funcion{f}{\R^2}{\R}{(x,y)}{f(x,y)=\sen(x)\cos(y),}
+    \]
+    determinar la aproximación lineal y la aproximación cuadrática de la función alrededor del punto $(0,0)$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Llamemos $F_1$ a la aproximación lineal de $f$ en $(0,0)$, tenemos que
+    \[
+        F_1(x,y) = f(0,0) + \nabla f(0,0) \cdot ((x,y)-(0,0)),
+    \]
+    para todo $(x,y)\in\R ^2$, por lo tanto, empecemos calculando el gradiente de $f$,
+    \[
+        \nabla f(x,y) = (\cos(x) \cos(y), -\sen(x) \sen(y) ),
+    \]
+    para $(x,y)\in\R^2$. Con esto, se tiene que
+    \[
+        \nabla f(0,0) = (1,0).
+    \]
+    Por lo tanto, la aproximación lineal de $f$ en $(0,0)$ es
+    \begin{align*}
+        F_1(x,y)
+            & = f(0,0) + \nabla f(0,0) \cdot ((x,y)-(0,0))\\
+            & = 0 + (1,0)\cdot (x,y)\\
+            & = x,
+    \end{align*}
+    para $(x,y)\in\R^2$.
+    
+    Ahora, llamemos $F_2$ a la aproximación cuadrática de $f$ en $(0,0)$, tenemos que
+    \[
+        F_2(x,y) = f(0,0) + \nabla f(0,0) \cdot ((x,y)-(0,0))  + \frac{1}{2!}[(x,y)-(0,0)]^T Hf(0,0) [(x,y)-(0,0)],
+    \]
+    para todo $(x,y)\in\R ^2$, por lo tanto, empecemos calculando la jacobiana de $f$,
+    \[
+        H_f(x,y) = 
+        \begin{pmatrix}
+            -\sen(x)\cos(y) & -\cos(x)\sen(y)\\
+            -\cos(x) \sen(y) & \sen(x) (-\cos(y)))
+        \end{pmatrix},
+    \]
+    para $(x,y)\in\R^2$. Con esto, se tiene que
+    \[
+        H_f(0,0) = \begin{pmatrix}
+            0 & 0\\
+            0 & 0
+        \end{pmatrix},
+    \]
+    Por lo tanto, la aproximación cuadrática de $f$ en $(0,0)$ es
+    \begin{align*}
+        F_2(x,y)
+            & = f(0,0) + \nabla f(0,0) \cdot ((x,y)-(0,0))+ \frac{1}{2!}[(x,y)-(0,0)]^T Hf(0,0) [(x,y)-(0,0)]\\
+            & = 0 + (1,0)\cdot (x,y) +
+            \frac 1 2 
+            \begin{pmatrix}
+            x&y
+            \end{pmatrix}
+            \begin{pmatrix}
+            0 & 0\\
+            0 & 0
+            \end{pmatrix}
+            \begin{pmatrix}
+            x\\y
+            \end{pmatrix}\\
+            & = x,
+    \end{align*}
+    para $(x,y)\in\R^2$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Utilizando el ejercicio anterior, encuentre una estimación del valor de $\sen(0.2)\cos(0.1)$. Para esto, utilice la aproximación lineal y la aproximación cuadrática de la función.
+\end{ejer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Considere $\func{g}{\R^2}{\R}$ una función diferenciable tal que $g(x,f(x))=0$ y una función diferenciable $\func{f}{\R}{\R}$. Exprese la derivada $f$ en términos de las derivadas parciales de $g$.
+\end{ejer}
+
 
 \end{document}

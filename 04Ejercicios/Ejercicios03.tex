@@ -25,11 +25,262 @@
 \encabezado
 
 \begin{ejer}
-
+Suponga que está trabajando en una empresa de productos lácteos cuyo producto estrella es un yogur, que se vende en un envase cónico de altura 30 cm y de radio 20 cm. La empresa cuenta con un sensor que llena el envase de yogur ``exactamente'' hasta la altura determinada. Al momento de elaborar el envase se podría tolerar errores en la altura o el radio, pero el error en la cantidad del líquido que se coloca no puede ser mayor a 1 decímetro cúbico. Usted está encargado de resolver este problema. Para ello determine una función que modele la aprobación o rechazo de los envases y el rango en el cual pueden estar la altura y radio de los mismos.
 \end{ejer}
 
 \begin{proof}[Solución]
-
+Si $x$ es la altura y $y$ el radio del envase medido en decímetros, se tiene que su volumen es
+    \[
+        \dfrac{1}{3}\pi y^2 x.        
+    \]
+    Como la constante $\dfrac{\pi}{3}\approx 1$, no va a alterar los cálculos ?`por qué? No la vamos a considerar y se define la función
+    \[
+        \funcion{f}{\R^+\times \R^+}{\R^+}{(x,y)}{xy^2.}
+    \]
+    El caso ideal es cuando $x=3$ y $y=2$, ahora queremos saber que tan cerca pueden estar estas variables para que el volumen del líquido no sea muy diferente al ideal. Lo que queremos saber es que tolerancia $\delta >0$, me permite deducir
+    \[
+        \sqrt{(x-3)^2+(y-2)^2}<\delta \Imp |xy^2-12|<1.
+    \]
+    Por el ejercicio anterior, conocemos que esto se verifica para cualquier
+    \[
+        0<\delta \leq \dfrac{ \sqrt{381} - 19}{10}\approx 0.0519.
+    \]
+    Puesto que entre más precisión tenga la maquina de medición, más costosa y sensible será, se considera la tolerancia permitida mayor $0.0519$ decímetros; es decir, el radio debe estar en el rango $[1.9481;2.0519]$ y la altura en el rango $[2.9481;3.0519]$ en decímetros. En otras palabras, el radio debe estar en el rango $[19.481;20.519]$ y la altura en el rango $[29.481;30.519]$ en centímetros.
 \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Demostrar que el campo escalar
+	\[
+		\funcion{f}{\R^n}{\R}{x}{\|x\|}
+	\]
+	es una función continua en $\R^n$.
+\end{ejer}
+
+\begin{proof}[Solución]
+Sea $a\in\R^n$ arbitrario. Vamos a demostrar que $f$ es continua en $a$; es decir, que
+	\[
+		\lim_{x\to a}f(x)=f(a).
+	\]
+	Sea $\epsilon>0$. Vamos a demostrar que existe $\delta>0$ tal que para todo $x\in\R^n$,
+	\[
+		0<\|x-a\|<\delta \Imp \l|\|x\|-\|a\|\r|<\epsilon.
+	\]
+	Probemos que tomando $\delta =\epsilon$ se cumple la proposición anterior. Sea $x\in\R^n$ tal que
+	\[
+		0<\|x-a\|<\delta.
+	\]
+	Por la desigualdad triangular se tiene que
+	\[
+		\|x\|=\|(x-a)+a\|\leq\|x-a\|+\|a\|
+	\]
+	o equivalentemente 
+	\[
+		\|x\|-\|a\|\leq \|x-a\|
+	\]
+	y de idéntica manera se tiene que
+	\[
+		\|a\|-\|x\|\leq \|x-a\|
+	\]
+	o
+	\[
+		-\|x-a\|\leq \|x\|-\|a\|.
+	\]
+	Así,
+	\[
+		-\|x-a\|\leq \|x\|-\|a\|\leq \|x-a\|
+	\]
+	lo que es equivalente a que
+	\[
+		\l|\|x\|-\|a\|\r|\leq \|x-a\|
+	\]
+	y dado que $\|x-a\|<\delta=\epsilon$, se tiene que
+	\[
+		\l|\|x\|-\|a\|\r|<\epsilon.
+	\]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Calcular, paso a paso
+    \[
+        \lim_{x\to 2}\lim_{y\to 0}f(x,y),
+    \]
+    donde
+    \[
+        \funcion{f}{[0,3]\times[-1,1]}{\R}
+        {(x,y)}{f(x,y)=x^2+y+2.}
+    \]
+\end{ejer}
+
+\begin{proof}[Solución]
+Para $x\in [0,3]$, definimos
+    \[
+        \funcion{f_x}{[-1,1]}{\R}{y}{f_x(y)=x^2+y+2.}
+    \]
+    Notemos que, para $x\in[0,3]$, fijo, se tiene que
+    \[
+        \lim_{y\to 0}f_x(y)=\lim_{y\to 0}x^2+y+2=x^2+2.
+    \]
+    Por lo tanto, podemos definir la función
+    \[
+        \funcion{g}{[0,3]}{\R}{x}{g(x)=x^2+2.}
+    \]
+    Finalmente, tenemos que
+    \[
+        \lim_{x\to 2}g(x)=\lim_{x\to 2}x^2+2=6.
+    \]
+    Por lo tanto,
+    \[
+        \lim_{x\to 2}\lim_{y\to 0}f(x,y) = 6.\qedhere
+    \]
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Sea $\func{f}{\Omega}{\R}$, con $\Omega \subset \R^2$. Se sabe que si 
+    \[
+        \lim_{(x,y)\to(a,b)}f(x,y)=L
+    \]
+    y existen los dos límites iterados 
+    \[
+              \dlim_{x\to a}\dlim_{y\to b}f(x,y) \texty \dlim_{y\to b}\dlim_{x\to a}f(x,y)
+    \]
+    entonces estos son iguales a $L$. 
+    \begin{enumerate}
+        \item Sea
+            \[
+                \funcion{g}{\Omega}{\R}{(x,y)}{\frac{x-y}{x+y}}
+            \]
+            donde $\Omega=\lbrace (x,y)\in \R^2:x+y\neq 0 \rbrace $. Verificar, cuando $(x,y)\to (0,0)$, que los límites iterados son diferentes y deducir que $g$ no tiende a un límite.
+        \item Sea
+            \[
+                \funcion{g}{\Omega}{\R}{(x,y)}{\frac{x^2y^2}{x^2y^2+(x-y)^2}}
+            \]
+            donde $\Omega \in \R^2 \setminus \lbrace 0 \rbrace$. Demostrar que aunque los límites iterados son iguales cuando $(x,y)\to (0,0)$, la función $g$ no tiende a ningún límite.
+        \item Sea
+            \[
+                \funcion{g}{\R^2}{\R}{(x,y)}
+                    {\begin{cases}                    
+                    x\sen\l(\dfrac{1}{y}\r) &\text{si }y\neq 0,\\[4mm]
+                    0&\text{si }y= 0.
+                \end{cases}}
+            \]
+            Verificar que 
+            \[
+                \lim_{(x,y)\to (0,0)}g(x,y)=0,
+            \]
+            sin embargo los límites iterados son diferentes.
+    \end{enumerate}
+\end{ejer}
+
+\begin{proof}[Solución]
+\begin{enumerate}
+        \item 
+            Se tiene que
+            \[
+                \dlim_{x\to 0}\dlim_{y\to 0}g(x,y)=1,
+            \]
+            mientras que
+            \[
+                \dlim_{y\to 0}\dlim_{x\to 0}g(x,y)=-1.
+            \]
+            Si el límite
+            \[
+                \dlim_{(x,y)\to (0,0)}g(x,y)
+            \]
+            existe, ya que los dos límites iterados existen entonces estos deberían ser iguales, lo cual es una contradicción. Finalmente, se puede decir  que \textbf{ya que los límites iterados existen y no son iguales entonces el \boldmath$\lim_{(x,y)\to (0,0)}g(x,y)$ no existe.} 
+            
+        \item
+            Se tiene que
+            \[
+                \dlim_{x\to 0}\dlim_{y\to 0}g(x,y)=0,
+            \]
+            mientras que
+            \[
+                \dlim_{y\to 0}\dlim_{x\to 0}g(x,y)=0.
+            \]
+            Nótese que la existencia del límite 
+            \[
+                \dlim_{(x,y)\to (0,0)}g(x,y)
+            \]
+            implica la igualdad de los límites iterados si estos existen, no recíprocamente. Por esto \textbf{la igualdad de los límites iterados no nos dice nada sobre el \boldmath$\lim_{(x,y)\to (0,0)}g(x,y)$.} 
+            
+            En este ejemplo, si calculamos el límite de $g$ cuando $(x,y)\to (0,0)$ por la trayectoria inyectiva
+            \[
+                \funcion{\alpha}{\R}{\R^2}{t}{(t,t),}
+            \]
+            se tiene que $\alpha(0)=(0,0)$, entonces
+            \begin{align*}
+                \dlim_{t\to 0}f(\alpha(t))&=\dlim_{t\to 0}\dfrac{t^4}{t^4}\\
+                &=1.
+            \end{align*}
+            De esta manera se concluye que el $\lim_{(x,y)\to (0,0)}g(x,y)$ no existe ya que debería ser único.
+            
+        \item   
+            Se tiene que 
+            \begin{align*}
+                \dlim_{y\to 0}\dlim_{x\to 0}g(x,y)&=\dlim_{y\to 0}\l(\dlim_{x\to 0} x\sen \dfrac{1}{y} \r)\\
+                &=\dlim_{y\to 0}0\\
+                &=0.
+            \end{align*}
+            Por otro lado
+            \begin{align*}
+                \dlim_{x\to 0}\dlim_{y\to 0}g(x,y)&=\dlim_{x\to 0}\l(\dlim_{y\to 0} x\sen \dfrac{1}{y} \r)
+            \end{align*}
+            no existe ya que $\sen \dfrac{1}{y}$ no tiende a un límite cuando $y\to 0$.
+            
+            \textbf{Si al menos uno de los límites iterados no existe, entonces no se puede concluir nada sobre el \boldmath$\lim_{(x,y)\to (0,0)}g(x,y)$.} 
+            
+            Además, nótese que $\sen \dfrac{1}{y}$, cuando $y\to 0$, varía entre $[-1,1]$, por lo que 
+            \[
+                \dlim_{(x,y)\to (0,0)}x\sen \dfrac{1}{y}=0.
+            \]
+            \textbf{A pesar de la existencia de este límite, no se puede concluir que los límites iterados son iguales ya que uno de ellos no existe.} 
+            
+    \end{enumerate}
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ejer}
+Dadas la función 
+	\[
+		\funcion{f}{\R^2\setminus\{(1,0)\}}{\R}{x}%
+			{\dfrac{x_1^2-2x_2-1}{\sqrt{(x_1-1)^2+x_2^2}}.}
+	\]
+	y la trayectoria
+	\[
+		\funcion{\alpha}{\R}{\R^2}{t}{(t,1-t).}
+	\]
+	¿Existe el límite de $f$ en $(1,0)$ por la trayectoria $\alpha$?
+\end{ejer}
+
+\begin{proof}[Solución]
+Se puede observar que $\alpha$ es inyectiva. Además, para todo $t\in\R\setminus\{1\}$, se tiene que
+	\begin{align*}
+		f(\alpha(t))
+			&=f(t,1-t)\\
+			&=\dfrac{t^2-2(1-t)-1}{\sqrt{(t-1)^2+(1-t)^2}}\\
+			&=\dfrac{t^2+2t-3}{\sqrt 2 |t-1|}\\
+			&=\dfrac{(t+3)(t-1)}{\sqrt 2 |t-1|}\\
+			&=
+				\begin{cases}
+					-\dfrac{t+3}{\sqrt 2}&\text{ si }t<1\\[2mm]
+					\dfrac{t+3}{\sqrt 2}&\text{ si }t>1,\\
+				\end{cases}
+	\end{align*}
+	de donde
+	\[
+		\lim_{t\to 1^-}f(\alpha(t))=-2\sqrt 2
+		\yds 
+		\lim_{t\to 1^+}f(\alpha(t))=2\sqrt 2.
+	\]
+	Así, el límite
+	\[
+		\lim_{t\to 1}f(\alpha(t))
+	\]
+	no existe.
+\end{proof}
+
 
 \end{document}

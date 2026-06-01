@@ -1,0 +1,348 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "course_learning_outcomes",
+        "label": "Matem\u00e1tica III Course Learning Outcomes and C\u00e1lculo Vectorial",
+        "nodes": [
+          "concept_rda1",
+          "concept_rda2",
+          "concept_rda3",
+          "concept_calculo_vectorial"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.95,
+        "source_file": "README.md"
+      },
+      {
+        "id": "project_identity",
+        "label": "Project Identity: Institution, Course, and Branding",
+        "nodes": [
+          "readme_matematicaiii",
+          "logo_puce",
+          "concept_puce_institution"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "README.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "Matem\u00e1tica III (05-N0051) README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": "https://github.com/andres-merino/MatematicaIII-05-N0051",
+      "captured_at": null,
+      "author": "Andr\u00e9s Merino",
+      "contributor": null,
+      "id": "readme_matematicaiii",
+      "community": 1,
+      "norm_label": "matematica iii (05-n0051) readme"
+    },
+    {
+      "label": "MIT License",
+      "file_type": "document",
+      "source_file": "LICENSE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2024-01-01",
+      "author": "Andr\u00e9s Esteban Merino Toapanta",
+      "contributor": null,
+      "id": "license_mit",
+      "community": 1,
+      "norm_label": "mit license"
+    },
+    {
+      "label": "GitHub Actions: Compile LaTeX Documents",
+      "file_type": "code",
+      "source_file": ".github/workflows/latex_build.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "workflow_latex_build",
+      "community": 2,
+      "norm_label": "github actions: compile latex documents"
+    },
+    {
+      "label": "PUCE Logo \u2014 Pontificia Universidad Cat\u00f3lica del Ecuador",
+      "file_type": "image",
+      "source_file": "Logos/logoPUCE_04_ac.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "logo_puce",
+      "community": 1,
+      "norm_label": "puce logo \u2014 pontificia universidad catolica del ecuador"
+    },
+    {
+      "label": "C\u00e1lculo Vectorial",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": "line 25",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_calculo_vectorial",
+      "community": 0,
+      "norm_label": "calculo vectorial"
+    },
+    {
+      "label": "RdA 1: Identificar conceptos de funciones vectoriales y derivadas parciales",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": "line 32",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_rda1",
+      "community": 0,
+      "norm_label": "rda 1: identificar conceptos de funciones vectoriales y derivadas parciales"
+    },
+    {
+      "label": "RdA 2: Calcular derivadas e integrales con asistentes computacionales",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": "line 36",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_rda2",
+      "community": 0,
+      "norm_label": "rda 2: calcular derivadas e integrales con asistentes computacionales"
+    },
+    {
+      "label": "RdA 3: Aplicar C\u00e1lculo Vectorial para problemas reales",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": "line 40",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_rda3",
+      "community": 0,
+      "norm_label": "rda 3: aplicar calculo vectorial para problemas reales"
+    },
+    {
+      "label": "LaTeX Document Compilation Workflow",
+      "file_type": "rationale",
+      "source_file": ".github/workflows/latex_build.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_latex_workflow",
+      "community": 2,
+      "norm_label": "latex document compilation workflow"
+    },
+    {
+      "label": "PUCE \u2014 Facultad de Ciencias Exactas, Naturales y Ambientales",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": "line 25",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_puce_institution",
+      "community": 1,
+      "norm_label": "puce \u2014 facultad de ciencias exactas, naturales y ambientales"
+    }
+  ],
+  "links": [
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "Logos/logoPUCE_04_ac.png",
+      "source_location": null,
+      "weight": 0.75,
+      "source": "logo_puce",
+      "target": "readme_matematicaiii"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 25",
+      "weight": 1.0,
+      "source": "readme_matematicaiii",
+      "target": "concept_calculo_vectorial"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 25",
+      "weight": 1.0,
+      "source": "readme_matematicaiii",
+      "target": "concept_puce_institution"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 32",
+      "weight": 1.0,
+      "source": "readme_matematicaiii",
+      "target": "concept_rda1"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 36",
+      "weight": 1.0,
+      "source": "readme_matematicaiii",
+      "target": "concept_rda2"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 40",
+      "weight": 1.0,
+      "source": "readme_matematicaiii",
+      "target": "concept_rda3"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 102",
+      "weight": 1.0,
+      "source": "readme_matematicaiii",
+      "target": "license_mit"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".github/workflows/latex_build.yml",
+      "source_location": null,
+      "weight": 0.85,
+      "source": "workflow_latex_build",
+      "target": "readme_matematicaiii"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/latex_build.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "workflow_latex_build",
+      "target": "concept_latex_workflow"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Logos/logoPUCE_04_ac.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "logo_puce",
+      "target": "concept_puce_institution"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.95,
+      "source": "concept_rda1",
+      "target": "concept_calculo_vectorial"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.95,
+      "source": "concept_rda2",
+      "target": "concept_calculo_vectorial"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.95,
+      "source": "concept_rda3",
+      "target": "concept_calculo_vectorial"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.65,
+      "source": "concept_rda1",
+      "target": "concept_rda2"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.65,
+      "source": "concept_rda2",
+      "target": "concept_rda3"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "course_learning_outcomes",
+      "label": "Matem\u00e1tica III Course Learning Outcomes and C\u00e1lculo Vectorial",
+      "nodes": [
+        "concept_rda1",
+        "concept_rda2",
+        "concept_rda3",
+        "concept_calculo_vectorial"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "README.md"
+    },
+    {
+      "id": "project_identity",
+      "label": "Project Identity: Institution, Course, and Branding",
+      "nodes": [
+        "readme_matematicaiii",
+        "logo_puce",
+        "concept_puce_institution"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md"
+    }
+  ]
+}
