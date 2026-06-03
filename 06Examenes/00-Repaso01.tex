@@ -1,5 +1,5 @@
-% \documentclass[11pt,respuestas,a4]{aleph-examen}
-\documentclass[11pt,a4]{aleph-examen}
+\documentclass[11pt,respuestas,a4]{aleph-examen}
+% \documentclass[11pt,a4]{aleph-examen}
 
 % -- Paquetes extra
 \usepackage{aleph-comandos}
@@ -44,19 +44,71 @@ Considere la función
 
 \begin{respuesta}
 \begin{enumerate}
-    \item Sobre $y=x^2$, es decir $(x,y)=(t,t^2)$:
+    \item Calculemos los límites iterados. Primero cuando \(y\to0\) y luego cuando \(x\to0\):
     \[
-        f(t,t^2)=\frac{t^2\cdot t^2}{t^4+t^4}=\frac{t^4}{2t^4}=\frac{1}{2}.
+        \lim_{x\to 0}\left(\lim_{y\to 0} f(x,y)\right)
+        =
+        \lim_{x\to 0}\left(\lim_{y\to 0} \frac{x^2y}{x^4+y^2}\right)
+        =
+        \lim_{x\to 0}\left(\frac{x^2(0)}{x^4+(0)^2}\right)
+        =
+        \lim_{x\to 0} 0
+        =
+        0.
     \]
-    Por tanto, el límite sobre esta trayectoria es $\dfrac{1}{2}$.
 
-    \item Sobre $y=0$, es decir $(x,y)=(t,0)$:
+    Ahora cuando \(x\to0\) y luego cuando \(y\to0\):
     \[
-        f(t,0)=\frac{t^2\cdot 0}{t^4+0}=0.
+        \lim_{y\to 0}\left(\lim_{x\to 0} f(x,y)\right)
+        =
+        \lim_{y\to 0}\left(\lim_{x\to 0} \frac{x^2y}{x^4+y^2}\right)
+        =
+        \lim_{y\to 0}\left(\frac{(0)^2y}{(0)^4+y^2}\right)
+        =
+        \lim_{y\to 0} 0
+        =
+        0.
     \]
-    Por tanto, el límite sobre esta trayectoria es $0$.
 
-    \item Como los límites obtenidos en (a) y (b) son distintos ($\tfrac{1}{2}\neq 0$), el límite $\displaystyle\lim_{(x,y)\to(0,0)}f(x,y)$ no existe. En consecuencia, $f$ no es continua en el origen.
+    \item Consideremos la trayectoria \(y=x^2\). Entonces:
+    \[
+        f(x,x^2)
+        =
+        \frac{x^2(x^2)}{x^4+(x^2)^2}
+        =
+        \frac{x^4}{x^4+x^4}
+        =
+        \frac{x^4}{2x^4}
+        =
+        \frac{1}{2}.
+    \]
+    Por tanto,
+    \[
+        \lim_{x\to 0} f(x,x^2)
+        =
+        \frac{1}{2}.
+    \]
+
+    \item Consideremos la trayectoria \(y=0\). Entonces:
+    \[
+        f(x,0)
+        =
+        \frac{x^2(0)}{x^4+0^2}
+        =
+        0.
+    \]
+    Por tanto,
+    \[
+        \lim_{x\to 0} f(x,0)
+        =
+        0.
+    \]
+
+    \item  Como los límites por distintas trayectorias son diferentes, se concluye que:
+    \[
+        \lim_{(x,y)\to(0,0)} f(x,y)
+    \]
+    no existe. Por lo tanto, \(f\) no es continua en \((0,0)\).\qedhere
 \end{enumerate}
 \end{respuesta}
 
@@ -70,84 +122,320 @@ Dada $f(x,y,z) = x^2 \ln(y+z)$ y el punto $P=(2, 1, 0)$:
 
 \begin{respuesta}
 \begin{enumerate}
-    \item Las derivadas parciales son
+    \item Calculemos el gradiente de \(f\). Para ello, usamos las derivadas parciales:
     \[
-        f_x = 2x\ln(y+z),\quad
-        f_y = \frac{x^2}{y+z},\quad
-        f_z = \frac{x^2}{y+z}.
+        \frac{\partial f}{\partial x}(x,y,z)
+        =
+        2x\ln(y+z),
+        \qquad
+        \frac{\partial f}{\partial y}(x,y,z)
+        =
+        x^2\frac{1}{y+z},
+        \qquad
+        \frac{\partial f}{\partial z}(x,y,z)
+        =
+        x^2\frac{1}{y+z}.
     \]
-    Evaluando en $P=(2,1,0)$:
+    Por lo tanto:
     \[
-        f_x(P)=2(2)\ln(1)=0,\quad
-        f_y(P)=\frac{4}{1}=4,\quad
-        f_z(P)=\frac{4}{1}=4.
+        \nabla f(x,y,z)
+        =
+        \left(
+            2x\ln(y+z),\ 
+            \frac{x^2}{y+z},\ 
+            \frac{x^2}{y+z}
+        \right).
     \]
-    Por tanto, $\nabla f(P)=(0,4,4)$.
+    Evaluamos en \(P=(2,1,0)\):
+    \[
+        \nabla f(P)
+        =
+        \left(
+            2(2)\ln(1+0),\ 
+            \frac{2^2}{1+0},\ 
+            \frac{2^2}{1+0}
+        \right)
+        =
+        (0,4,4).
+    \]
+    El gradiente \(\nabla f(P)=(0,4,4)\) indica la dirección de máximo crecimiento de \(f\) en el punto \(P\).
 
-    \item El vector dirección es $\overrightarrow{PQ}=(2,1,1)$, con norma $\|\overrightarrow{PQ}\|=\sqrt{6}$. El vector unitario es $\hat{u}=\tfrac{1}{\sqrt{6}}(2,1,1)$. La derivada direccional es
+    \item Primero calculamos el vector \(\overrightarrow{PQ}\):
     \[
-        D_{\hat{u}}f(P)=\nabla f(P)\cdot\hat{u}
-        =\frac{1}{\sqrt{6}}\bigl(0\cdot2+4\cdot1+4\cdot1\bigr)
-        =\frac{8}{\sqrt{6}}=\frac{4\sqrt{6}}{3}.
+        u = \overrightarrow{PQ}
+        =
+        Q-P
+        =
+        (4,2,1)-(2,1,0)
+        =
+        (2,1,1).
+    \]
+    La derivada direccional de \(f\) en \(P\) en la dirección de \(u\) es:
+    \[
+        f'(P; u)
+        =
+        \nabla f(P)\cdot u.
+    \]
+    Por tanto:
+    \[
+        f'(P; u)
+        =
+        (0,4,4)\cdot(2,1,1)
+        =
+        8.
     \]
 
-    \item La tasa de cambio es cero en cualquier dirección $\hat{u}$ perpendicular a $\nabla f(P)=(0,4,4)$, es decir, en cualquier dirección del plano $4y+4z=0$. Geométricamente, estas son las direcciones tangentes a la superficie de nivel $f(x,y,z)=f(P)$ en el punto $P$.
+    \item La tasa de cambio de \(f\) en \(P\) en la dirección de un vector unitario \(u=(a,b,c)\) es:
+    \[
+        f'(P; u)
+        =
+        \nabla f(P)\cdot u.
+    \]
+    Queremos que esta tasa de cambio sea igual a cero:
+    \[
+        \nabla f(P)\cdot u
+        =
+        0.
+    \]
+    Como \(\nabla f(P)=(0,4,4)\), entonces:
+    \[
+        (0,4,4)\cdot(a,b,c)
+        =
+        0.
+    \]
+    De donde:
+    \[
+        4b+4c
+        =
+        0.
+    \]
+    Por lo tanto:
+    \[
+        b+c=0.
+    \]
+    Así, la tasa de cambio es cero en cualquier dirección unitaria \((a,b,c)\) que satisfaga esta condición, por ejemplo, una dirección posible es:
+    \[
+        (1,0,0).
+    \]
+    Geométricamente, estas direcciones son perpendiculares al gradiente \(\nabla f(P)\). Por tanto, son direcciones tangentes a la superficie de nivel de \(f\) que pasa por \(P\), es decir, direcciones en las que \(f\) no cambia instantáneamente.\qedhere
 \end{enumerate}
 \end{respuesta}
 
 \item
-La ecuación $x^2+2y^2z-z^3-1=0$ define implícitamente $z$ en función de $(x,y)$ cerca del punto $(1,1,1)$.
+La ecuación $x^2+2y^2z-z^3-2=0$ define implícitamente \(z\) en función de \((x,y)\) cerca del punto \((1,1,1)\).
 \begin{enumerate}
-    \item Calcule $\dfrac{\partial z}{\partial x}$ y $\dfrac{\partial z}{\partial y}$ en $(1,1,1)$ usando el teorema de la función implícita.
+    \item Calcule \(\dfrac{\partial z}{\partial x}\) y \(\dfrac{\partial z}{\partial y}\) en \((1,1,1)\) usando el teorema de la función implícita.
 \end{enumerate}
 
 \begin{respuesta}
-\begin{enumerate}
-    \item Las derivadas parciales de $F$ son
+Definimos
     \[
-        F_x=2x,\quad F_y=4yz,\quad F_z=2y^2-3z^2.
+        F(x,y,z)
+        =
+        x^2+2y^2z-z^3-2.
     \]
-    Evaluando en $(1,1,1)$: $F_x=2$, $F_y=4$, $F_z=2-3=-1$.
-
-    Por el teorema de la función implícita:
+    Calculamos las derivadas parciales:
     \[
-        \frac{\partial z}{\partial x}=-\frac{F_x}{F_z}=-\frac{2}{-1}=2,\qquad
-        \frac{\partial z}{\partial y}=-\frac{F_y}{F_z}=-\frac{4}{-1}=4.
+        \frac{\partial F}{\partial x}(x,y,z)
+        =
+        2x,
+        \qquad
+        \frac{\partial F}{\partial y}(x,y,z)
+        =
+        4yz,
+        \qquad
+        \frac{\partial F}{\partial z}(x,y,z)
+        =
+        2y^2-3z^2.
     \]
-\end{enumerate}
+    Evaluando en \((1,1,1)\):
+    \[
+        \frac{\partial F}{\partial x}(1,1,1)
+        =
+        2,
+        \qquad
+        \frac{\partial F}{\partial y}(1,1,1)
+        =
+        4,
+        \qquad
+        \frac{\partial F}{\partial z}(1,1,1)
+        =
+        -1.
+    \]
+    Como
+    \[
+        \frac{\partial F}{\partial z}(1,1,1)\neq 0,
+    \]
+    por el teorema de la función implícita se tendría
+    \[
+        \frac{\partial z}{\partial x}
+        =
+        -\frac{\dfrac{\partial F}{\partial x}}{\dfrac{\partial F}{\partial z}},
+        \qquad
+        \frac{\partial z}{\partial y}
+        =
+        -\frac{\dfrac{\partial F}{\partial y}}{\dfrac{\partial F}{\partial z}}.
+    \]
+    Por tanto,
+    \[
+        \frac{\partial z}{\partial x}(1,1)
+        =
+        -\frac{2}{-1}
+        =
+        2,\qquad\text{y}\qquad
+        \frac{\partial z}{\partial y}(1,1)
+        =
+        -\frac{4}{-1}
+        =
+        4.\qedhere
+    \]
 \end{respuesta}
 
 
 \item
-Sea $f(x,y) = e^{x}\cos y$.
+Sea $f(x,y) = e^{x}\cos(y)$.
 \begin{enumerate}
     \item Calcule la matriz Hessiana $H_f(0,0)$.
-    \item Escriba el polinomio de Taylor de orden 2 de $f$ alrededor de $(0,0)$.
+    \item Escriba el polinomio de Taylor de orden 2 de $f$ alrededor de $(0,0)$ (aproximación cuadrática).
     \item Use el polinomio obtenido para estimar $f(0.1\ ,\ 0.1)$ y compárelo con el valor exacto. ¿Es buena la aproximación?
 \end{enumerate}
 
 \begin{respuesta}
 \begin{enumerate}
-    \item Las derivadas de segundo orden son
+    \item Calculemos las derivadas parciales de segundo orden. Primero:
     \[
-        f_{xx}=e^x\cos y,\quad f_{yy}=-e^x\cos y,\quad f_{xy}=-e^x\sin y.
+        \frac{\partial f}{\partial x}(x,y)
+        =
+        e^x\cos(y),
+        \qquad
+        \frac{\partial f}{\partial y}(x,y)
+        =
+        -e^x\sen(y).
     \]
-    Evaluando en $(0,0)$: $f_{xx}=1$, $f_{yy}=-1$, $f_{xy}=0$. Por tanto,
+    Luego:
     \[
-        H_f(0,0)=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+        \frac{\partial^2 f}{\partial x^2}(x,y)
+        =
+        e^x\cos(y),
+        \qquad
+        \frac{\partial^2 f}{\partial x\partial y}(x,y)
+        =
+        -e^x\sen(y),
+        \qquad
+        \frac{\partial^2 f}{\partial y^2}(x,y)
+        =
+        -e^x\cos(y).
+    \]
+    Evaluamos en \((0,0)\):
+    \[
+        \frac{\partial^2 f}{\partial x^2}(0,0)
+        =
+        1,
+        \qquad
+        \frac{\partial^2 f}{\partial x\partial y}(0,0)
+        =
+        0,
+        \qquad
+        \frac{\partial^2 f}{\partial y^2}(0,0)
+        =
+        -1.
+    \]
+    Por lo tanto:
+    \[
+        H_f(0,0)
+        =
+        \begin{pmatrix}
+            1 & 0\\
+            0 & -1
+        \end{pmatrix}.
     \]
 
-    \item Dado que $f(0,0)=1$, $f_x(0,0)=1$ y $f_y(0,0)=0$, el polinomio de Taylor de orden 2 es
+    \item Usemos la expresión:
     \[
-        T_2(x,y)=1+x+\frac{1}{2}(x^2-y^2).
+        F(x,y)
+        =
+        f(a)
+        +
+        \nabla f(a)\cdot ((x,y)-a)
+        +
+        \frac{1}{2!}[(x,y)-a]^T H_f(a)[(x,y)-a].
+    \]
+    En este caso:
+    \[
+        a=(0,0),
+        \qquad
+        (x,y)-a=(x,y).
+    \]
+    Además:
+    \[
+        f(0,0)
+        =
+        1,
+        \qquad
+        \nabla f(0,0)
+        =
+        (1,0),
+        \qquad
+        H_f(0,0)
+        =
+        \begin{pmatrix}
+            1 & 0\\
+            0 & -1
+        \end{pmatrix}.
+    \]
+    Entonces:
+    \[
+        F(x,y)
+        =
+        1
+        +
+        (1,0)\cdot(x,y)
+        +
+        \frac{1}{2}
+        \begin{pmatrix}
+            x & y
+        \end{pmatrix}
+        \begin{pmatrix}
+            1 & 0\\
+            0 & -1
+        \end{pmatrix}
+        \begin{pmatrix}
+            x\\
+            y
+        \end{pmatrix}.
+    \]
+    Por lo tanto, la aproximación cuadrática es
+    \[
+        F(x,y)
+        =
+        1+x+\frac{1}{2}(x^2-y^2).
     \]
 
-    \item Evaluando en $(0.1, 0.1)$:
+    \item Usamos el polinomio obtenido para estimar \(f(0.1,\ 0.1)\):
     \[
-        T_2(0.1,0.1)=1+0.1+\frac{1}{2}(0.01-0.01)=1.1.
+        F(0.1,\ 0.1)
+        =
+        1+0.1+\frac{1}{2}\left((0.1)^2-(0.1)^2\right)
+        =
+        1.1.
     \]
-    El valor exacto es $f(0.1,0.1)=e^{0.1}\cos(0.1)\approx 1.1052\times 0.9950\approx 1.1002$.
-    El error es aproximadamente $0.0002$, por lo que la aproximación es muy buena para valores pequeños de $(x,y)$.
+    El valor exacto es:
+    \[
+        f(0.1,\ 0.1)
+        =
+        e^{0.1}\cos(0.1)
+        \approx
+        1.09965.
+    \]
+    Por tanto, el error absoluto es:
+    \[
+        |f(0.1,\ 0.1)-F(0.1,\ 0.1)|
+        \approx
+        |1.09965-1.1|
+        =
+        0.00035.
+    \]
+    La aproximación es buena, pues el error es pequeño.\qedhere
 \end{enumerate}
 \end{respuesta}
 
@@ -161,22 +449,97 @@ Dado el campo vectorial $F(x,y) = (x^2y,\; xy^2)$:
 
 \begin{respuesta}
 \begin{enumerate}
-    \item Con $\mathbf{F}=(P,Q,R)=(xy,yz,xz)$:
+    \item Sea \(F(x,y)=(f_1(x,y),f_2(x,y))\), donde:
     \[
-        \mathrm{div}\,\mathbf{F}
-        =\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}
-        =y+z+x.
+        f_1(x,y)=x^2y,
+        \qquad
+        f_2(x,y)=xy^2.
     \]
+    La divergencia de \(F\) es:
     \[
-        \mathrm{rot}\,\mathbf{F}
-        =\begin{vmatrix}\mathbf{i}&\mathbf{j}&\mathbf{k}\\\partial_x&\partial_y&\partial_z\\xy&yz&xz\end{vmatrix}
-        =(0-y)\,\mathbf{i}-(z-0)\,\mathbf{j}+(0-x)\,\mathbf{k}
-        =(-y,\,-z,\,-x).
+        \mathrm{div}(F)(x,y)
+        =
+        \frac{\partial f_1}{\partial x}(x,y)
+        +
+        \frac{\partial f_2}{\partial y}(x,y).
+    \]
+    Entonces:
+    \[
+        \mathrm{div}(F)(x,y)
+        =
+        2xy+2xy
+        =
+        4xy.
     \]
 
-    \item $\mathrm{div}\,\mathbf{F}=x+y+z$. Hay fuentes donde $x+y+z>0$ (semiespacios positivos respecto al plano $x+y+z=0$) y sumideros donde $x+y+z<0$. En el plano $x+y+z=0$ la divergencia es nula.
+    El rotacional de \(F\) en el plano es:
+    \[
+        \mathrm{rot}(F)(x,y)
+        =
+        \frac{\partial f_2}{\partial x}(x,y)
+        -
+        \frac{\partial f_1}{\partial y}(x,y).
+    \]
+    Por tanto:
+    \[
+        \mathrm{rot}(F)(x,y)
+        =
+        y^2-x^2.
+    \]
 
-    \item $\mathrm{rot}\,\mathbf{F}=(-y,-z,-x)=\mathbf{0}$ si y solo si $x=y=z=0$, es decir, únicamente en el origen. Por tanto, $\mathbf{F}$ no es irrotacional en ninguna región abierta del espacio.
+    \item Para determinar dónde hay fuentes o sumideros, analizamos el signo de la divergencia.
+    Hay fuentes donde:
+    \[
+        \mathrm{div}(F)(x,y)>0.
+    \]
+    Esto ocurre cuando:
+    \[
+        xy>0.
+    \]
+    Es decir, en los cuadrantes I y III. Hay sumideros donde:
+    \[
+        \mathrm{div}(F)(x,y)<0.
+    \]
+    Esto ocurre cuando:
+    \[
+        xy<0.
+    \]
+    Es decir, en los cuadrantes II y IV. Además, sobre los ejes:
+    \[
+        xy=0,
+    \]
+    por lo que:
+    \[
+        \mathrm{div}(F)(x,y)=0.
+    \]
+    En los ejes no hay fuentes ni sumideros locales.
+
+    \item Para determinar dónde \(\mathrm{rot}(F)=0\), resolvemos:
+    \[
+        y^2-x^2=0.
+    \]
+    Entonces:
+    \[
+        (y-x)(y+x)=0.
+    \]
+    Por lo tanto:
+    \[
+        y=x
+        \qquad
+        \text{o}
+        \qquad
+        y=-x.
+    \]
+
+    Así, el rotacional se anula sobre las rectas:
+    \[
+        y=x
+        \qquad
+        \text{y}
+        \qquad
+        y=-x.
+    \]
+    En estas regiones, el campo no presenta rotación instantánea local.\qedhere
 \end{enumerate}
 \end{respuesta}
 
