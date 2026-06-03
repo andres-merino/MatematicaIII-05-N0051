@@ -1,0 +1,185 @@
+% \documentclass[11pt,respuestas,a4]{aleph-examen}
+\documentclass[11pt,a4]{aleph-examen}
+
+% -- Paquetes extra
+\usepackage{aleph-comandos}
+\usepackage{systeme}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Repaso -- Criterio 2.2}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+
+\begin{preguntas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Considere la función
+\[
+    f(x,y) = \begin{cases}
+        \dfrac{x^2 y}{x^4 + y^2} & \text{si } (x,y)\neq(0,0),\\[6pt]
+        0 & \text{si } (x,y)=(0,0).
+    \end{cases}
+\]
+\begin{enumerate}
+    \item Calcule los límites iterados cuando $(x,y)\to(0,0)$.
+    \item Calcule el límite cuando $(x,y)\to(0,0)$ por la trayectoria $y=x^2$.
+    \item Calcule el límite por la trayectoria $y=0$.
+    \item ¿Es $f$ continua en el origen? Justifique a partir de los incisos anteriores.
+\end{enumerate}
+
+\begin{respuesta}
+\begin{enumerate}
+    \item Sobre $y=x^2$, es decir $(x,y)=(t,t^2)$:
+    \[
+        f(t,t^2)=\frac{t^2\cdot t^2}{t^4+t^4}=\frac{t^4}{2t^4}=\frac{1}{2}.
+    \]
+    Por tanto, el límite sobre esta trayectoria es $\dfrac{1}{2}$.
+
+    \item Sobre $y=0$, es decir $(x,y)=(t,0)$:
+    \[
+        f(t,0)=\frac{t^2\cdot 0}{t^4+0}=0.
+    \]
+    Por tanto, el límite sobre esta trayectoria es $0$.
+
+    \item Como los límites obtenidos en (a) y (b) son distintos ($\tfrac{1}{2}\neq 0$), el límite $\displaystyle\lim_{(x,y)\to(0,0)}f(x,y)$ no existe. En consecuencia, $f$ no es continua en el origen.
+\end{enumerate}
+\end{respuesta}
+
+\item
+Dada $f(x,y,z) = x^2 \ln(y+z)$ y el punto $P=(2, 1, 0)$:
+\begin{enumerate}
+    \item Calcule $\nabla f(P)$, interprete el resultado.
+    \item Calcule la derivada direccional de $f$ en $P$ en la dirección del vector $\overrightarrow{PQ}$, donde $Q=(4,2,1)$.
+    \item ¿En qué dirección la tasa de cambio de $f$ en $P$ es igual a cero? ¿Qué representa geométricamente?
+\end{enumerate}
+
+\begin{respuesta}
+\begin{enumerate}
+    \item Las derivadas parciales son
+    \[
+        f_x = 2x\ln(y+z),\quad
+        f_y = \frac{x^2}{y+z},\quad
+        f_z = \frac{x^2}{y+z}.
+    \]
+    Evaluando en $P=(2,1,0)$:
+    \[
+        f_x(P)=2(2)\ln(1)=0,\quad
+        f_y(P)=\frac{4}{1}=4,\quad
+        f_z(P)=\frac{4}{1}=4.
+    \]
+    Por tanto, $\nabla f(P)=(0,4,4)$.
+
+    \item El vector dirección es $\overrightarrow{PQ}=(2,1,1)$, con norma $\|\overrightarrow{PQ}\|=\sqrt{6}$. El vector unitario es $\hat{u}=\tfrac{1}{\sqrt{6}}(2,1,1)$. La derivada direccional es
+    \[
+        D_{\hat{u}}f(P)=\nabla f(P)\cdot\hat{u}
+        =\frac{1}{\sqrt{6}}\bigl(0\cdot2+4\cdot1+4\cdot1\bigr)
+        =\frac{8}{\sqrt{6}}=\frac{4\sqrt{6}}{3}.
+    \]
+
+    \item La tasa de cambio es cero en cualquier dirección $\hat{u}$ perpendicular a $\nabla f(P)=(0,4,4)$, es decir, en cualquier dirección del plano $4y+4z=0$. Geométricamente, estas son las direcciones tangentes a la superficie de nivel $f(x,y,z)=f(P)$ en el punto $P$.
+\end{enumerate}
+\end{respuesta}
+
+\item
+La ecuación $x^2+2y^2z-z^3-1=0$ define implícitamente $z$ en función de $(x,y)$ cerca del punto $(1,1,1)$.
+\begin{enumerate}
+    \item Calcule $\dfrac{\partial z}{\partial x}$ y $\dfrac{\partial z}{\partial y}$ en $(1,1,1)$ usando el teorema de la función implícita.
+\end{enumerate}
+
+\begin{respuesta}
+\begin{enumerate}
+    \item Las derivadas parciales de $F$ son
+    \[
+        F_x=2x,\quad F_y=4yz,\quad F_z=2y^2-3z^2.
+    \]
+    Evaluando en $(1,1,1)$: $F_x=2$, $F_y=4$, $F_z=2-3=-1$.
+
+    Por el teorema de la función implícita:
+    \[
+        \frac{\partial z}{\partial x}=-\frac{F_x}{F_z}=-\frac{2}{-1}=2,\qquad
+        \frac{\partial z}{\partial y}=-\frac{F_y}{F_z}=-\frac{4}{-1}=4.
+    \]
+\end{enumerate}
+\end{respuesta}
+
+
+\item
+Sea $f(x,y) = e^{x}\cos y$.
+\begin{enumerate}
+    \item Calcule la matriz Hessiana $H_f(0,0)$.
+    \item Escriba el polinomio de Taylor de orden 2 de $f$ alrededor de $(0,0)$.
+    \item Use el polinomio obtenido para estimar $f(0.1\ ,\ 0.1)$ y compárelo con el valor exacto. ¿Es buena la aproximación?
+\end{enumerate}
+
+\begin{respuesta}
+\begin{enumerate}
+    \item Las derivadas de segundo orden son
+    \[
+        f_{xx}=e^x\cos y,\quad f_{yy}=-e^x\cos y,\quad f_{xy}=-e^x\sin y.
+    \]
+    Evaluando en $(0,0)$: $f_{xx}=1$, $f_{yy}=-1$, $f_{xy}=0$. Por tanto,
+    \[
+        H_f(0,0)=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+    \]
+
+    \item Dado que $f(0,0)=1$, $f_x(0,0)=1$ y $f_y(0,0)=0$, el polinomio de Taylor de orden 2 es
+    \[
+        T_2(x,y)=1+x+\frac{1}{2}(x^2-y^2).
+    \]
+
+    \item Evaluando en $(0.1, 0.1)$:
+    \[
+        T_2(0.1,0.1)=1+0.1+\frac{1}{2}(0.01-0.01)=1.1.
+    \]
+    El valor exacto es $f(0.1,0.1)=e^{0.1}\cos(0.1)\approx 1.1052\times 0.9950\approx 1.1002$.
+    El error es aproximadamente $0.0002$, por lo que la aproximación es muy buena para valores pequeños de $(x,y)$.
+\end{enumerate}
+\end{respuesta}
+
+\item
+Dado el campo vectorial $F(x,y) = (x^2y,\; xy^2)$:
+\begin{enumerate}
+    \item Calcule $\mathrm{div}(F)$ y $\mathrm{rot}(F)$.
+    \item Determine las regiones del espacio donde $F$ tiene fuentes y donde tiene sumideros.
+    \item Determine las regiones donde $\mathrm{rot}(F)=0$.
+\end{enumerate}
+
+\begin{respuesta}
+\begin{enumerate}
+    \item Con $\mathbf{F}=(P,Q,R)=(xy,yz,xz)$:
+    \[
+        \mathrm{div}\,\mathbf{F}
+        =\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}
+        =y+z+x.
+    \]
+    \[
+        \mathrm{rot}\,\mathbf{F}
+        =\begin{vmatrix}\mathbf{i}&\mathbf{j}&\mathbf{k}\\\partial_x&\partial_y&\partial_z\\xy&yz&xz\end{vmatrix}
+        =(0-y)\,\mathbf{i}-(z-0)\,\mathbf{j}+(0-x)\,\mathbf{k}
+        =(-y,\,-z,\,-x).
+    \]
+
+    \item $\mathrm{div}\,\mathbf{F}=x+y+z$. Hay fuentes donde $x+y+z>0$ (semiespacios positivos respecto al plano $x+y+z=0$) y sumideros donde $x+y+z<0$. En el plano $x+y+z=0$ la divergencia es nula.
+
+    \item $\mathrm{rot}\,\mathbf{F}=(-y,-z,-x)=\mathbf{0}$ si y solo si $x=y=z=0$, es decir, únicamente en el origen. Por tanto, $\mathbf{F}$ no es irrotacional en ninguna región abierta del espacio.
+\end{enumerate}
+\end{respuesta}
+
+\end{preguntas}
+
+\end{document}
