@@ -1,0 +1,467 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Para obtener solo el pdf, compilar con pdfLaTeX.
+% Para obtener el xml compilar con XeLaTeX.
+
+% -- Paquetes adicionales
+\usepackage[handout]{aleph-moodle}
+% \usepackage{aleph-moodle}
+% \usepackage{aleph-moodle}
+\moodleregisternewcommands
+% Todos los comandos nuevos deben ir luego del comando anterior
+\usepackage{aleph-comandos}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Cuestionario No. 2: Derivada en varias variables}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+\vspace*{-8mm}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Indicaciones}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Interpreta el concepto de derivada en varias variables y reconocer sus elementos y propiedades», correspondiente al \textbf{resultado de aprendizaje}: Identificar los conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Banco de preguntas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Derivadas parciales: concepto e interpretación}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{multi}[]%
+    {DP-Concepto-01}
+    Sea $f$ un campo escalar. ¿Qué tipo de objeto es $\dfrac{\partial f}{\partial x}$?
+    \item* Un campo escalar
+    \item Un campo vectorial
+    \item Una matriz
+    \item Un número real
+\end{multi}
+
+\begin{multi}[]%
+    {DP-Concepto-02}
+    La derivada parcial $\dfrac{\partial f}{\partial x}(a,b)$ representa geométricamente:
+    \item* La pendiente en la dirección de la primera variable $(a,b)$.
+    \item La pendiente del plano tangente a la gráfica de $f$ en $(a,b)$.
+    \item La tasa de cambio de $f$ en la dirección del vector gradiente.
+    \item La longitud del vector normal a la superficie en $(a,b)$.
+\end{multi}
+
+\begin{multi}[]%
+    {DP-Concepto-03}
+    Para calcular $\dfrac{\partial f}{\partial x}(x,y)$ se considera $y$ como:
+    \item* Una constante y se deriva respecto de $x$.
+    \item Una variable y se aplica la regla del producto.
+    \item La variable independiente principal.
+    \item Una función de $x$.
+\end{multi}
+
+\begin{multi}[]%
+    {DP-Concepto-04}
+    El teorema de Schwarz establece que, bajo condiciones de regularidad:
+    \item* $\dfrac{\partial^2 f}{\partial x \partial y} = \dfrac{\partial^2 f}{\partial y \partial x}$
+    \item $\dfrac{\partial f}{\partial x} = \dfrac{\partial f}{\partial y}$
+    \item $\dfrac{\partial^2 f}{\partial x^2} = \dfrac{\partial^2 f}{\partial y^2}$
+    \item $\dfrac{\partial^2 f}{\partial x \partial y} = \dfrac{\partial f}{\partial x} \cdot \dfrac{\partial f}{\partial y}$
+\end{multi}
+
+\begin{multi}[]%
+    {DP-Concepto-05}
+    Si $f$ es un campo escalar diferenciable en $(a,b)$, ¿cuál de las siguientes afirmaciones es correcta?
+    \item* $f$ es continua en $(a,b)$.
+    \item $f$ tiene todas sus derivadas parciales de orden superior en $(a,b)$.
+    \item Las derivadas parciales de $f$ son continuas en $(a,b)$.
+    \item $f$ es diferenciable en todo $\R^2$.
+\end{multi}
+
+\begin{multi}[]%
+    {DP-Concepto-06}
+    La notación $f_x(a,b)$ es equivalente a:
+    \item* $\dfrac{\partial f}{\partial x}(a,b)$
+    \item $\dfrac{df}{dx}(a,b)$
+    \item $f'(a,b)$
+    \item $\dfrac{\partial f}{\partial y}(a,b)$
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Cálculo de derivadas parciales: forma simbólica}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{multi}[]%
+    {DPS-Calc-01}
+    Sea $f(x,y) = x^3 y + 2y^2$. Entonces $\dfrac{\partial f}{\partial x}$ es:
+    \item* $3x^2 y$
+    \item $3x^2 y + 2y^2$
+    \item $x^3 + 4y$
+    \item $3x^2$
+\end{multi}
+
+\begin{multi}[]%
+    {DPS-Calc-01b}
+    Sea $f(x,y) = x^3 y + 2y^2$. Entonces $\dfrac{\partial f}{\partial y}$ es:
+    \item* $x^3 + 4y$
+    \item $3x^2 y$
+    \item $x^3 y + 4y$
+    \item $3x^2 + 4y$
+\end{multi}
+
+\begin{multi}[]%
+    {DPS-Calc-02}
+    Sea $f(x,y) = e^{xy}$. Entonces $\dfrac{\partial f}{\partial x}$ es:
+    \item* $y\, e^{xy}$
+    \item $e^{xy}$
+    \item $x\, e^{xy}$
+    \item $xy\, e^{xy-1}$
+\end{multi}
+
+\begin{multi}[]%
+    {DPS-Calc-02b}
+    Sea $f(x,y) = \sen(x^2 + y)$. Entonces $\dfrac{\partial f}{\partial y}$ es:
+    \item* $\cos(x^2 + y)$
+    \item $2x\cos(x^2+y)$
+    \item $-\cos(x^2+y)$
+    \item $\sen(x^2+y)$
+\end{multi}
+
+\begin{multi}[]%
+    {DPS-Calc-03}
+    Sea $f(x,y,z) = x^2 y z^3$. Entonces $\dfrac{\partial f}{\partial z}$ es:
+    \item* $3x^2 y z^2$
+    \item $x^2 y z^2$
+    \item $3x^2 z^3$
+    \item $3y z^2$
+\end{multi}
+
+\begin{multi}[]%
+    {DPS-Calc-04}
+    Sea $f(x,y) = x\ln(y) + y^2$. Entonces $\dfrac{\partial^2 f}{\partial x \partial y}$ es:
+    \item* $\dfrac{1}{y}$
+    \item $\ln(y)$
+    \item $\dfrac{x}{y}$
+    \item $\dfrac{x}{y^2}$
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Cálculo de derivadas parciales: evaluación numérica}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-01}
+    Sea $f(x,y) = x^2 + 3xy$. El valor de $\dfrac{\partial f}{\partial x}(1,2)$ es:
+    \item 8
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-01b}
+    Sea $f(x,y) = x^2 + 3xy$. El valor de $\dfrac{\partial f}{\partial y}(1,2)$ es:
+    \item 3
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-02}
+    Sea $f(x,y) = e^x \sen(y)$. El valor de $\dfrac{\partial f}{\partial y}(0,0)$ es:
+    \item 1
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-02b}
+    Sea $f(x,y) = e^x \cos(y)$. El valor de $\dfrac{\partial f}{\partial x}(0,0)$ es:
+    \item 1
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-03}
+    Sea $f(x,y,z) = x^2 y + yz^2$. El valor de $\dfrac{\partial f}{\partial z}(1,2,3)$ es:
+    \item 12
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-03b}
+    Sea $f(x,y,z) = x^2 y + yz^2$. El valor de $\dfrac{\partial f}{\partial y}(2,1,1)$ es:
+    \item 5
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-04}
+    Sea $f(x,y) = \ln(x^2 + y^2)$. El valor de $\dfrac{\partial f}{\partial x}(1,0)$ es:
+    \item 2
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-04b}
+    Sea $f(x,y) = x^3 - 2x^2 y + y^3$. El valor de $\dfrac{\partial^2 f}{\partial x^2}(1,1)$ es:
+    \item 2
+\end{numerical}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Derivada direccional y gradiente}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{multi}[]%
+    {DG-Dir-01}
+    La derivada direccional $f'({x};{u})$ representa:
+    \item* La tasa de cambio de $f$ en el punto ${x}$ en la dirección del vector  ${u}$.
+    \item El gradiente de $f(x)$ en la dirección ${u}$.
+    \item La derivada parcial de $f$ respecto a la primera variable.
+    \item La longitud del gradiente de $f$ en ${x}$.
+\end{multi}
+
+\begin{multi}[]%
+    {DG-Dir-02}
+    Si $f$ es un campo escalar diferenciable, la relación entre la derivada direccional y el gradiente es:
+    \item* $f'({x};{u}) = \nabla f({x}) \cdot {u}$
+    \item $f'({x};{u}) = \nabla f({x}) \times {u}$
+    \item $f'({x};{u}) = \|\nabla f({x})\| \cdot \|{u}\|$
+    \item $f'({x};{u}) = \nabla f({u}) \cdot {x}$
+\end{multi}
+
+\begin{multi}[]%
+    {DG-Grad-01}
+    Si $f:\R^n\to\R$ es un campo escalar, entonces $\nabla f$ es:
+    \item* Un campo vectorial
+    \item Un campo escalar
+    \item Una matriz de $n\times n$
+    \item Un número real
+\end{multi}
+
+\begin{multi}[]%
+    {DG-Grad-02}
+    El gradiente $\nabla f({x}_0)$ apunta en la dirección de:
+    \item* Máximo crecimiento de $f$ en ${x}_0$.
+    \item Mínimo crecimiento de $f$ en ${x}_0$.
+    \item Crecimiento nulo de $f$.
+    \item La derivada parcial más grande.
+\end{multi}
+
+\begin{multi}[]%
+    {DG-Dir-04}
+    Si ${u}$ es perpendicular a $\nabla f({x}_0)$, entonces $f'({x}_0;{u})$ es:
+    \item* $0$
+    \item $\|\nabla f({x}_0)\|$
+    \item $-\|\nabla f({x}_0)\|$
+    \item Indefinida
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Jacobiano y derivada de campos vectoriales}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{multi}[]%
+    {JC-Def-01}
+    Sea $\func{F}{\R^n}{\R^m}$ un campo vectorial diferenciable. La matriz jacobiana $J_F({x})$ es:
+    \item* Una matriz de $m\times n$
+    \item Una matriz de $n\times m$
+    \item Un vector de $\R^m$
+    \item Un campo escalar
+\end{multi}
+
+\begin{multi}[]%
+    {JC-Def-02}
+    Si $\func{F}{\R^3}{\R^2}$ con $F=(f_1, f_2)$, la entrada $(i,j)$ de la matriz jacobiana es:
+    \item* $\dfrac{\partial f_i}{\partial x_j}$
+    \item $\dfrac{\partial f_j}{\partial x_i}$
+    \item $f_i \cdot x_j$
+    \item $\dfrac{\partial^2 f_i}{\partial x_j^2}$
+\end{multi}
+
+\begin{multi}[]%
+    {JC-Tipo-01}
+    Si $\func{F}{\R^n}{\R^m}$ es un campo vectorial y ${a}\in\R^n$, entonces $\dfrac{\partial F}{\partial x_j}({a})$ es:
+    \item Un número real
+    \item Un campo escalar
+    \item* Un campo vectorial
+    \item Una matriz
+\end{multi}
+
+\begin{multi}[]%
+    {JC-Tipo-02}
+    El jacobiano $J_F$ de un campo vectorial $\func{F}{\R^n}{\R^m}$ es:
+    \item* Una función de $\R^n$ en el espacio de matrices de $m\times n$
+    \item Un campo escalar
+    \item Un campo vectorial de $\R^n$ en $\R^m$
+    \item Un número real
+\end{multi}
+
+\begin{multi}[]%
+    {JC-Interp-01}
+    La matriz jacobiana $J_F({x}_0)$ representa la mejor aproximación lineal de $F$ cerca de ${x}_0$ en el sentido de que:
+    \item* $F({x}_0 + {h}) \approx F({x}_0) + J_F({x}_0)\,{h}$ para ${h}$ pequeño.
+    \item $F({x}_0 + {h}) \approx J_F({x}_0)\,{x}_0$ para todo ${h}$.
+    \item $F({x}_0 + {h}) = F({x}_0) + J_F({x}_0)\,{h}$ exactamente.
+    \item $J_F({x}_0)$ minimiza el error cuadrático de la aproximación.
+\end{multi}
+
+\begin{multi}[]%
+    {JC-EjCalc-01}
+    Sea $F(x,y) = (x^2 + y,\ xy)$. La entrada $(1,2)$ de la matriz jacobiana $JF(x,y)$ es:
+    \item* $x$
+    \item $y$
+    \item $2x$
+    \item $1$
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Matriz Hessiana}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{multi}[]%
+    {H-Def-01}
+    Si $f:\R^n\to\R$ es un campo escalar, la matriz hessiana $H_f({x})$ es:
+    \item* Una matriz de $n\times n$
+    \item Un vector de $\R^n$
+    \item Un campo escalar
+    \item Una matriz de $1\times n$
+\end{multi}
+
+\begin{multi}[]%
+    {H-Def-02}
+    La entrada $(i,j)$ de la matriz hessiana $H_f$ está dada por:
+    \item* $\dfrac{\partial^2 f}{\partial x_i \partial x_j}$
+    \item $\dfrac{\partial f}{\partial x_i} \cdot \dfrac{\partial f}{\partial x_j}$
+    \item $\dfrac{\partial^2 f}{\partial x_i^2}$ solo si $i=j$, y $0$ si $i\neq j$
+    \item $\dfrac{\partial f}{\partial x_i} + \dfrac{\partial f}{\partial x_j}$
+\end{multi}
+
+\begin{multi}[]%
+    {H-Prop-01}
+    Bajo condiciones de regularidad (continuidad de las derivadas de segundo orden), la matriz hessiana $H_f$ es:
+    \item* Simétrica, es decir, $H_f = H_f^\top$
+    \item Antisimétrica, es decir, $H_f = -H_f^\top$
+    \item Diagonal
+    \item Ortogonal
+\end{multi}
+
+\begin{multi}[]%
+    {H-Tipo-01}
+    Si $f:\R^n\to\R$, entonces $H_f$ evaluada en un punto ${a}\in\R^n$ es:
+    \item* Una matriz de $n\times n$
+    \item Un campo escalar
+    \item Un campo vectorial
+    \item Un vector de $\R^n$
+\end{multi}
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Cálculo Hessiana}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    {H-Calc-01}
+    Sea $f(x,y) = x^2 + xy + y^2$. La entrada $(1,2)$ de $H_f$ es:
+    \item* $1$
+    \item $2$
+    \item $0$
+    \item $x+y$
+\end{multi}
+
+\begin{multi}[]%
+    {H-Calc-02}
+    Sea $f(x,y) = x^2 + xy + y^2$. La traza de $H_f$ (suma de entradas diagonales) es:
+    \item* $4$
+    \item $2$
+    \item $1$
+    \item $6$
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Rotacional y divergencia}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{multi}[]%
+    {RD-Div-01}
+    Si $\func{F}{\R^3}{\R^3}$ es un campo vectorial, entonces $\nabla \cdot F$ es:
+    \item* Un campo escalar
+    \item Un campo vectorial
+    \item Una matriz
+    \item Un número real 
+\end{multi}
+
+\begin{multi}[]%
+    {RD-Rot-01}
+    Si $\func{F}{\R^3}{\R^3}$ es un campo vectorial, entonces $\nabla \times F$ es:
+    \item* Un campo vectorial
+    \item Un campo escalar
+    \item Una matriz de $3\times 3$
+    \item Un número real
+\end{multi}
+
+\begin{multi}[]%
+    {RD-Dom-01}
+    ¿Sobre qué tipo de función está definido el rotacional $\nabla \times F$?
+    \item* Campos vectoriales $\func{F}{\R^3}{\R^3}$
+    \item Campos escalares $\func{f}{\R^3}{\R}$
+    \item Trayectorias $\func{\alpha}{\R}{\R^3}$
+    \item Campos vectoriales $\func{F}{\R^2}{\R^2}$
+\end{multi}
+
+\begin{multi}[]%
+    {RD-Dom-02}
+    ¿Sobre qué tipo de función está definida la divergencia $\nabla \cdot F$?
+    \item* Campos vectoriales $\func{F}{\R^n}{\R^n}$
+    \item Campos escalares $\func{f}{\R^n}{\R}$
+    \item Trayectorias $\func{\alpha}{\R}{\R^n}$
+    \item Campos vectoriales $\func{F}{\R^n}{\R^m}$ con $m\neq n$
+\end{multi}
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Calculo Rotacional y divergencia}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multi}[]%
+    {RD-Calc-01}
+    Sea $F(x,y,z) = (x^2, y^2, z^2)$. La divergencia $\nabla \cdot F$ es:
+    \item* $2x + 2y + 2z$
+    \item $(2x, 2y, 2z)$
+    \item $2x \cdot 2y \cdot 2z$
+    \item $6$
+\end{multi}
+
+\begin{multi}[]%
+    {RD-Calc-02}
+    Sea $F(x,y,z) = (yz, xz, xy)$. El rotacional $\nabla \times F$ es:
+    \item* $(0, 0, 0)$
+    \item $(yz, xz, xy)$
+    \item $(1, 1, 1)$
+    \item $(x+y, y+z, x+z)$
+\end{multi}
+
+\end{quiz}
+
+\end{document}

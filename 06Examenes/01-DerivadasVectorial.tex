@@ -1,0 +1,528 @@
+\documentclass[11pt,respuestas,a4]{aleph-examen}
+% \documentclass[10pt,a5]{aleph-examen}
+
+% -- Paquetes extra
+\usepackage{aleph-comandos}
+\usepackage{systeme}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Examen Escrito 1}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+\vspace{-5mm}
+\section*{Indicaciones}
+\begin{itemize}[leftmargin=*]
+\item
+    En esta actividad se evalúa si el estudiante (Criterio 2.2) calcula derivadas de funciones de varias variables.
+\item
+    Los ejercicios deben ser resueltos a manoy entregarse en hojas de forma física al docente, sin ayuda de resúmenes o asistentes computacionales.
+\item
+    Se encuentra prohibido el uso de cualquier otra fuente de información durante todo el examen.
+\item
+    No está permitido tener ningún dispositivo electrónico encendido durante el examen, incluyendo celulares, tablets, computadoras, audífonos, relojes inteligentes, ni similares.
+\item
+    En caso de considerar que existe un error en la pregunta o que esta se encuentra mal planteada, se debe indicar cuál es el error y justificarlo.
+\item
+    Todas las soluciones deben estar correctamente redactadas y explicadas.
+\end{itemize}
+
+\section*{Ejercicios}
+
+\begin{preguntas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Considere la función
+\[
+    f(x,y) = \begin{cases}
+        \dfrac{(x-1)^2(y-2)}{(x-1)^4 + (y-2)^2} & \text{si } (x,y)\neq(1,2),\\[6pt]
+        0 & \text{si } (x,y)=(1,2).
+    \end{cases}
+\]
+\begin{enumerate}[leftmargin=*]
+    \item Calcule los límites iterados cuando $(x,y)\to(1,2)$.\puntaje{3}
+    \item Calcule el límite por la trayectoria $y=2x$.\puntaje{2}
+    \item Calcule el límite cuando $(x,y)\to(1,2)$ por la trayectoria $y-2=(x-1)^2$.\puntaje{2}
+    \item ¿Es $f$ continua en $(1,2)$? Justifique a partir de los incisos anteriores.\puntaje{3}
+\end{enumerate}
+
+
+\begin{respuesta}
+\begin{enumerate}
+    \item Calculemos los límites iterados. Primero cuando $y\to 2$ y luego cuando $x\to 1$:
+    \[
+        \lim_{x\to 1}\left(\lim_{y\to 2}\frac{(x-1)^2(y-2)}{(x-1)^4+(y-2)^2}\right)
+        =
+        \lim_{x\to 1}\frac{(x-1)^2(0)}{(x-1)^4+0}
+        =
+        \lim_{x\to 1} 0
+        =
+        0.
+    \]
+    Ahora cuando $x\to 1$ y luego cuando $y\to 2$:
+    \[
+        \lim_{y\to 2}\left(\lim_{x\to 1}\frac{(x-1)^2(y-2)}{(x-1)^4+(y-2)^2}\right)
+        =
+        \lim_{y\to 2}\frac{(0)^2(y-2)}{(0)^4+(y-2)^2}
+        =
+        \lim_{y\to 2} 0
+        =
+        0.
+    \]
+
+    \item Consideremos la trayectoria $y=2x$, es decir, $y-2=2(x-1)$. Entonces:
+    \[
+        f(x,2x)
+        =
+        \frac{(x-1)^2\cdot 2(x-1)}{(x-1)^4+4(x-1)^2}
+        =
+        \frac{2(x-1)^3}{(x-1)^2\bigl((x-1)^2+4\bigr)}
+        =
+        \frac{2(x-1)}{(x-1)^2+4}.
+    \]
+    Por tanto:
+    \[
+        \lim_{x\to 1} f(x,2x)
+        =
+        \lim_{x\to 1}\frac{2(x-1)}{(x-1)^2+4}
+        =
+        \frac{0}{4}
+        =
+        0.
+    \]
+
+    \item Consideremos la trayectoria $y-2=(x-1)^2$. Entonces:
+    \[
+        f\bigl(x,\,2+(x-1)^2\bigr)
+        =
+        \frac{(x-1)^2\cdot(x-1)^2}{(x-1)^4+\bigl((x-1)^2\bigr)^2}
+        =
+        \frac{(x-1)^4}{(x-1)^4+(x-1)^4}
+        =
+        \frac{(x-1)^4}{2(x-1)^4}
+        =
+        \frac{1}{2}.
+    \]
+    Por tanto:
+    \[
+        \lim_{x\to 1} f\bigl(x,\,2+(x-1)^2\bigr)
+        =
+        \frac{1}{2}.
+    \]
+
+    \item Como los límites por distintas trayectorias son diferentes (por $y=2x$ se obtiene $0$, pero por $y-2=(x-1)^2$ se obtiene $\tfrac{1}{2}$), se concluye que:
+    \[
+        \lim_{(x,y)\to(1,2)} f(x,y)
+    \]
+    no existe. Por lo tanto, $f$ no es continua en $(1,2)$.\qedhere
+\end{enumerate}
+\end{respuesta}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Sea $f(x,y)=x\cos(y^2)\cdot e^{x^2}$.
+\begin{enumerate}[leftmargin=*]
+    \item Calcule $\dfrac{\partial f}{\partial x}$ y $\dfrac{\partial f}{\partial y}$.\puntaje{4}
+    \item Calcule $\nabla f(P)$ en el punto $P=(1,0)$.\puntaje{2}
+    \item Calcule la derivada direccional de $f$ en $P$ en la dirección del vector $\overrightarrow{PQ}$, donde $Q=(3,1)$.\puntaje{2}
+    \item Calcule la derivada direccional máxima de $f$ en $P$ e indique la dirección en la que se alcanza.\puntaje{2}
+\end{enumerate}
+
+
+\begin{respuesta}
+\begin{enumerate}
+    \item Calculemos las derivadas parciales usando la regla del producto y la regla de la cadena:
+    \[
+        \frac{\partial f}{\partial x}(x,y)
+        =
+        \cos(y^2)\cdot e^{x^2}+x\cos(y^2)\cdot 2x e^{x^2}
+        =
+        \cos(y^2)\cdot e^{x^2}(1+2x^2).
+    \]
+    \[
+        \frac{\partial f}{\partial y}(x,y)
+        =
+        x\cdot(-\sen(y^2))\cdot 2y\cdot e^{x^2}
+        =
+        -2xy\,\sen(y^2)\cdot e^{x^2}.
+    \]
+
+    \item Evaluamos en $P=(1,0)$:
+    \[
+        \frac{\partial f}{\partial x}(1,0)
+        =
+        \cos(0)\cdot e^{1}\cdot(1+2)
+        =
+        3e,
+        \qquad
+        \frac{\partial f}{\partial y}(1,0)
+        =
+        -2(1)(0)\,\sen(0)\cdot e^{1}
+        =
+        0.
+    \]
+    Por lo tanto:
+    \[
+        \nabla f(P)
+        =
+        (3e,\ 0).
+    \]
+
+    \item Calculamos el vector $\overrightarrow{PQ}$:
+    \[
+        u = \overrightarrow{PQ}
+        =
+        Q-P
+        =
+        (3,1)-(1,0)
+        =
+        (2,1).
+    \]
+    La derivada direccional de $f$ en $P$ en la dirección de $u$ es:
+    \[
+        f'(P;u)
+        =
+        \nabla f(P)\cdot u
+        =
+        (3e,0)\cdot(2,1)
+        =
+        6e.
+    \]
+
+    \item La máxima tasa de cambio de $f$ en $P$ se alcanza en la dirección del gradiente, es decir, tomando $u=\nabla f(P)=(3e,0)$. La derivada direccional en esa dirección es:
+    \[
+        f'(P;u)
+        =
+        \nabla f(P)\cdot u
+        =
+        (3e,0)\cdot(3e,0)
+        =
+        9e^2.\qedhere
+    \]
+\end{enumerate}
+\end{respuesta}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Aplique la regla de la cadena para calcular las derivadas indicadas.
+\begin{enumerate}[leftmargin=*]
+    \item Calcule $\dfrac{dz}{dt}$ si
+    $\quad
+        z=x^2\sin(y),
+        \quad
+        x=e^t,
+        \quad
+        y=t^2.
+    $\puntaje{3}
+
+    \item Calcule $\dfrac{dz}{dt}$ si
+    $
+        \quad
+        z=e^{xy},
+        \quad
+        x=u^2+v,
+        \quad
+        y=u-v^2,
+        \quad
+        u=\cos(t),
+        \quad
+        v=\sin(t).
+    $\puntaje{5}
+\end{enumerate}
+
+\begin{respuesta}
+\begin{enumerate}
+    \item Aplicamos la regla de la cadena:
+    \[
+        \frac{dz}{dt}
+        =
+        \frac{\partial z}{\partial x}\cdot\frac{dx}{dt}
+        +
+        \frac{\partial z}{\partial y}\cdot\frac{dy}{dt}.
+    \]
+    Calculamos cada factor:
+    \[
+        \frac{\partial z}{\partial x}=2x\sen(y),\qquad
+        \frac{\partial z}{\partial y}=x^2\cos(y),\qquad
+        \frac{dx}{dt}=e^t,\qquad
+        \frac{dy}{dt}=2t.
+    \]
+    Por tanto:
+    \[
+        \frac{dz}{dt}
+        =
+        2x\sen(y)\cdot e^t+x^2\cos(y)\cdot 2t.
+    \]
+
+    \item Aplicamos la regla de la cadena considerando la dependencia completa:
+    \[
+        \frac{dz}{dt}
+        =
+        \frac{\partial z}{\partial x}\cdot\frac{dx}{dt}
+        +
+        \frac{\partial z}{\partial y}\cdot\frac{dy}{dt},
+    \]
+    donde a su vez:
+    \[
+        \frac{dx}{dt}
+        =
+        \frac{\partial x}{\partial u}\cdot\frac{du}{dt}
+        +
+        \frac{\partial x}{\partial v}\cdot\frac{dv}{dt},
+        \qquad
+        \frac{dy}{dt}
+        =
+        \frac{\partial y}{\partial u}\cdot\frac{du}{dt}
+        +
+        \frac{\partial y}{\partial v}\cdot\frac{dv}{dt}.
+    \]
+    Calculamos:
+    \[
+        \frac{\partial z}{\partial x}=ye^{xy},\quad
+        \frac{\partial z}{\partial y}=xe^{xy},\quad
+        \frac{\partial x}{\partial u}=2u,\quad
+        \frac{\partial x}{\partial v}=1,\quad
+        \frac{\partial y}{\partial u}=1,\quad
+        \frac{\partial y}{\partial v}=-2v,
+    \]
+    \[
+        \frac{du}{dt}=-\sen(t),\qquad\frac{dv}{dt}=\cos(t).
+    \]
+    Entonces:
+    \[
+        \frac{dx}{dt}
+        =
+        2u(-\sen t)+\cos t
+        =
+        -2u\,\sen t+\cos t,
+    \]
+    y
+    \[
+        \frac{dy}{dt}
+        =
+        -\sen t+(-2v)\cos t
+        =
+        -\sen t-2v\cos t.
+    \]
+    Por lo tanto:
+    \[
+        \frac{dz}{dt}
+        =
+        e^{xy}\bigl[y(-2u\,\sen t+\cos t)+x(-\sen t-2v\cos t)\bigr].\qedhere
+    \]
+\end{enumerate}
+\end{respuesta}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Sea $f(x,y)=e^{2x}\sen(y)$.
+\begin{enumerate}[leftmargin=*]
+    \item Calcule la matriz Hessiana de $f$ y evalúe es $\left(0,\dfrac{\pi}{2}\right)$.\puntaje{4}
+    \item Escriba el polinomio de Taylor de orden 2 de $f$ alrededor de $a=\!\left(0,\dfrac{\pi}{2}\right)$.\puntaje{5}
+    \item Use el polinomio obtenido para estimar $f\!\left(0.1,\;\dfrac{\pi}{2}+0.1\right)$.\puntaje{3}
+\end{enumerate}
+
+
+\begin{respuesta}
+\begin{enumerate}
+    \item Calculemos las derivadas parciales de segundo orden. Primero:
+    \[
+        \frac{\partial f}{\partial x}(x,y)
+        =
+        2e^{2x}\sen(y),
+        \qquad
+        \frac{\partial f}{\partial y}(x,y)
+        =
+        e^{2x}\cos(y).
+    \]
+    Luego:
+    \[
+        \frac{\partial^2 f}{\partial x^2}(x,y)
+        =
+        4e^{2x}\sen(y),
+        \qquad
+        \frac{\partial^2 f}{\partial x\partial y}(x,y)
+        =
+        2e^{2x}\cos(y),
+        \qquad
+        \frac{\partial^2 f}{\partial y^2}(x,y)
+        =
+        -e^{2x}\sen(y).
+    \]
+    Evaluamos en $\left(0,\dfrac{\pi}{2}\right)$:
+    \[
+        \frac{\partial^2 f}{\partial x^2}\!\left(0,\tfrac{\pi}{2}\right)
+        =
+        4,
+        \qquad
+        \frac{\partial^2 f}{\partial x\partial y}\!\left(0,\tfrac{\pi}{2}\right)
+        =
+        0,
+        \qquad
+        \frac{\partial^2 f}{\partial y^2}\!\left(0,\tfrac{\pi}{2}\right)
+        =
+        -1.
+    \]
+    Por lo tanto:
+    \[
+        H_f\!\left(0,\tfrac{\pi}{2}\right)
+        =
+        \begin{pmatrix}
+            4 & 0\\
+            0 & -1
+        \end{pmatrix}.
+    \]
+
+    \item Usemos la expresión:
+    \[
+        F(x,y)
+        =
+        f(a)
+        +
+        \nabla f(a)\cdot((x,y)-a)
+        +
+        \frac{1}{2!}[(x,y)-a]^T H_f(a)[(x,y)-a].
+    \]
+    En este caso $a=\!\left(0,\dfrac{\pi}{2}\right)$. Calculamos:
+    \[
+        f(a)=e^0\sen\!\left(\tfrac{\pi}{2}\right)=1,
+        \qquad
+        \nabla f(a)=\left(2e^0\sen\!\left(\tfrac{\pi}{2}\right),\;e^0\cos\!\left(\tfrac{\pi}{2}\right)\right)=(2,0).
+    \]
+    Denotando $(x,y)-a=\!\left(x,\,y-\dfrac{\pi}{2}\right)$, entonces:
+    \[
+        F(x,y)
+        =
+        1
+        +
+        (2,0)\cdot\!\left(x,\,y-\tfrac{\pi}{2}\right)
+        +
+        \frac{1}{2}
+        \begin{pmatrix}
+            x & y-\tfrac{\pi}{2}
+        \end{pmatrix}
+        \begin{pmatrix}
+            4 & 0\\
+            0 & -1
+        \end{pmatrix}
+        \begin{pmatrix}
+            x\\[4pt]
+            y-\tfrac{\pi}{2}
+        \end{pmatrix}.
+    \]
+    Por lo tanto, la aproximación cuadrática es:
+    \[
+        F(x,y)
+        =
+        1+2x+2x^2-\frac{1}{2}\!\left(y-\frac{\pi}{2}\right)^{\!2}.
+    \]
+
+    \item Usamos el polinomio obtenido para estimar $f\!\left(0.1,\;\dfrac{\pi}{2}+0.1\right)$:
+    \[
+        F\!\left(0.1,\,\tfrac{\pi}{2}+0.1\right)
+        =
+        1+2(0.1)+2(0.1)^2-\tfrac{1}{2}(0.1)^2
+        =
+        1+0.2+0.02-0.005
+        =
+        1.215.\qedhere
+    \]
+\end{enumerate}
+\end{respuesta}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Dado el campo vectorial $F(x,y)=(x^2y+y^2x,\ x^2y^2)$:
+\begin{enumerate}[leftmargin=*]
+    \item Calcule $\mathrm{div}(F)$ y $\mathrm{rot}(F)$.\puntaje{4}
+    \item Determine dos punto del plano donde $F$ tiene fuentes y dos donde tiene sumideros.\puntaje{4}
+    \item Determine un punto donde $\mathrm{rot}(F)=0$.\puntaje{2}
+\end{enumerate}
+
+
+\begin{respuesta}
+\begin{enumerate}
+    \item Sea $F(x,y)=(f_1(x,y),f_2(x,y))$, donde:
+    \[
+        f_1(x,y)=x^2y+y^2x,
+        \qquad
+        f_2(x,y)=x^2y^2.
+    \]
+    La divergencia de $F$ es:
+    \[
+        \mathrm{div}(F)(x,y)
+        =
+        \frac{\partial f_1}{\partial x}(x,y)
+        +
+        \frac{\partial f_2}{\partial y}(x,y)
+        =
+        (2xy+y^2)+2x^2y.
+    \]
+    El rotacional de $F$ en el plano es:
+    \[
+        \mathrm{rot}(F)(x,y)
+        =
+        \frac{\partial f_2}{\partial x}(x,y)
+        -
+        \frac{\partial f_1}{\partial y}(x,y)
+        =
+        2xy^2-(x^2+2xy).
+    \]
+
+    \item Hay fuentes donde $\mathrm{div}(F)(x,y)>0$. Evaluamos en algunos puntos:
+    \[
+        \mathrm{div}(F)(1,1)=2(1)(1)+(1)^2+2(1)^2(1)=5>0,
+    \]
+    \[
+        \mathrm{div}(F)(2,1)=2(2)(1)+(1)^2+2(2)^2(1)=13>0.
+    \]
+    Por tanto, $(1,1)$ y $(2,1)$ son fuentes. Hay sumideros donde $\mathrm{div}(F)(x,y)<0$:
+    \[
+        \mathrm{div}(F)(1,-2)=2(1)(-2)+(-2)^2+2(1)^2(-2)=-4+4-4=-4<0,
+    \]
+    \[
+        \mathrm{div}(F)(2,-1)=2(2)(-1)+(-1)^2+2(2)^2(-1)=-4+1-8=-11<0.
+    \]
+    Por tanto, $(1,-2)$ y $(2,-1)$ son sumideros.
+
+    \item Para determinar dónde $\mathrm{rot}(F)=0$, notamos que:
+    \[
+        \mathrm{rot}(F)(x,y)
+        =
+        2xy^2-x^2-2xy
+        =
+        x(2y^2-x-2y).
+    \]
+    En $x=0$ el rotacional se anula. Por ejemplo, en el punto $(0,1)$:
+    \[
+        \mathrm{rot}(F)(0,1)
+        =
+        0\cdot(2-0-2)
+        =
+        0.\qedhere
+    \]
+\end{enumerate}
+\end{respuesta}
+
+
+\end{preguntas}
+
+\end{document}
