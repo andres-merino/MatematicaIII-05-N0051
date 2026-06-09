@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file was generated on 2026-06-07 by XeLaTeX -->
+<!-- This file was generated on 2026-06-09 by XeLaTeX -->
 <!-- running on *NIX with the package moodle v0.9 -->
 
 <quiz>
@@ -39,6 +39,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[DP-Concepto-01b]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f:\mathbb {R}^2\to \mathbb {R}\) un campo escalar diferenciable. ¿Qué tipo de objeto es \(\nabla f\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un campo vectorial</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo escalar</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una matriz de \(2\times 2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un número real</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[DP-Concepto-02]]></text>
   </name>
   <questiontext format="html">
@@ -52,7 +79,7 @@
   <shuffleanswers>1</shuffleanswers>
   <answernumbering>abc</answernumbering>
   <answer fraction="100" format="html">
-    <text><![CDATA[<p>La pendiente en la dirección de la primera variable \((a,b)\).</p>]]></text>
+    <text><![CDATA[<p>La pendiente en la dirección de la primera variable en \((a,b)\).</p>]]></text>
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>La pendiente del plano tangente a la gráfica de \(f\) en \((a,b)\).</p>]]></text>
@@ -62,6 +89,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>La longitud del vector normal a la superficie en \((a,b)\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[DP-Concepto-02b]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La derivada parcial \(\dfrac {\partial f}{\partial y}(a,b)\) representa geométricamente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>La pendiente en la dirección de la segunda variable en \((a,b)\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La pendiente del plano tangente a la gráfica de \(f\) en \((a,b)\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La tasa de cambio de \(f\) en la dirección del gradiente.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El valor máximo de \(f\) en \((a,b)\).</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -93,6 +147,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[DP-Concepto-03b]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para calcular \(\dfrac {\partial f}{\partial y}(x,y)\) se considera \(x\) como: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una constante y se deriva respecto de \(y\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una variable y se aplica la regla del cociente.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La variable independiente principal.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una función de \(y\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[DP-Concepto-04]]></text>
   </name>
   <questiontext format="html">
@@ -116,6 +197,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(\dfrac {\partial ^2 f}{\partial x \partial y} = \dfrac {\partial f}{\partial x} \cdot \dfrac {\partial f}{\partial y}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[DP-Concepto-04b]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(f\) tiene derivadas parciales de segundo orden continuas, el teorema de Schwarz implica que la matriz hessiana es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Simétrica</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Diagonal</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Antisimétrica</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Invertible</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -147,6 +255,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[DP-Concepto-05b]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(f\) tiene derivadas parciales en \((a,b)\) pero no es diferenciable en \((a,b)\), entonces: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(f\) puede ser discontinua en \((a,b)\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(f\) es necesariamente continua en \((a,b)\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(f\) posee gradiente en \((a,b)\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(f\) es diferenciable en todo punto cercano a \((a,b)\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[DP-Concepto-06]]></text>
   </name>
   <questiontext format="html">
@@ -170,6 +305,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(\dfrac {\partial f}{\partial y}(a,b)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[DP-Concepto-06b]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La notación \(f_{yy}(a,b)\) es equivalente a: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\dfrac {\partial ^2 f}{\partial y^2}(a,b)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\dfrac {\partial f}{\partial y}(a,b)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\left (\dfrac {\partial f}{\partial y}(a,b)\right )^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\dfrac {\partial ^2 f}{\partial x \partial y}(a,b)\)</p>]]></text>
   </answer>
 </question>
  
@@ -208,6 +370,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[DPS-Calc-01c]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = x^2 y^3 - 5x\). Entonces \(\dfrac {\partial f}{\partial x}\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(2xy^3 - 5\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(3x^2y^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2xy^3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2y^3 - 5\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[DPS-Calc-01b]]></text>
   </name>
   <questiontext format="html">
@@ -231,6 +420,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(3x^2 + 4y\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[DPS-Calc-01d]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = x^2 y^3 - 5x\). Entonces \(\dfrac {\partial f}{\partial y}\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(3x^2 y^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2xy^3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(3y^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(x^2 y^2\)</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -262,10 +478,37 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[DPS-Calc-02c]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = \cos (xy)\). Entonces \(\dfrac {\partial f}{\partial x}\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(-y&#8239;\sin (xy)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(-\sin (xy)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(y&#8239;\sin (xy)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(-xy&#8239;\sin (xy)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[DPS-Calc-02b]]></text>
   </name>
   <questiontext format="html">
-    <text><![CDATA[<p>Sea \(f(x,y) = \sen (x^2 + y)\). Entonces \(\dfrac {\partial f}{\partial y}\) es: </p>]]></text>
+    <text><![CDATA[<p>Sea \(f(x,y) = \sin (x^2 + y)\). Entonces \(\dfrac {\partial f}{\partial y}\) es: </p>]]></text>
   </questiontext>
   <defaultgrade>1.0</defaultgrade>
   <generalfeedback format="html"><text/></generalfeedback>
@@ -284,7 +527,34 @@
     <text><![CDATA[<p>\(-\cos (x^2+y)\)</p>]]></text>
   </answer>
   <answer fraction="0" format="html">
-    <text><![CDATA[<p>\(\sen (x^2+y)\)</p>]]></text>
+    <text><![CDATA[<p>\(\sin (x^2+y)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[DPS-Calc-02d]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = \ln (x + y^2)\). Entonces \(\dfrac {\partial f}{\partial x}\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\dfrac {1}{x+y^2}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\dfrac {1}{x}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\dfrac {2y}{x+y^2}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\ln (1+y^2)\)</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -316,6 +586,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[DPS-Calc-03b]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y,z) = x&#8239;\sin (yz)\). Entonces \(\dfrac {\partial f}{\partial z}\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(xy\cos (yz)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(y\cos (yz)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(x\cos (yz)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(xy&#8239;\sin (yz)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[DPS-Calc-04]]></text>
   </name>
   <questiontext format="html">
@@ -339,6 +636,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(\dfrac {x}{y^2}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[DPS-Calc-04b]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = x^2 e^y\). Entonces \(\dfrac {\partial ^2 f}{\partial y \partial x}\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(2x&#8239;e^y\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(x^2 e^y\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2e^y\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2x\)</p>]]></text>
   </answer>
 </question>
  
@@ -366,6 +690,22 @@
 </question>
 <question type="numerical">
   <name format="html">
+    <text><![CDATA[DPN-Calc-05]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = x^3 - xy^2\). El valor de \(\dfrac {\partial f}{\partial x}(2,1)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>11</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
     <text><![CDATA[DPN-Calc-01b]]></text>
   </name>
   <questiontext format="html">
@@ -382,10 +722,42 @@
 </question>
 <question type="numerical">
   <name format="html">
+    <text><![CDATA[DPN-Calc-05b]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = x^3 - xy^2\). El valor de \(\dfrac {\partial f}{\partial y}(2,1)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>-4</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
     <text><![CDATA[DPN-Calc-02]]></text>
   </name>
   <questiontext format="html">
-    <text><![CDATA[<p>Sea \(f(x,y) = e^x \sen (y)\). El valor de \(\dfrac {\partial f}{\partial y}(0,0)\) es: </p>]]></text>
+    <text><![CDATA[<p>Sea \(f(x,y) = e^x \sin (y)\). El valor de \(\dfrac {\partial f}{\partial y}(0,0)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>1</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[DPN-Calc-06]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = \sin (x)\cos (y)\). El valor de \(\dfrac {\partial f}{\partial x}(0,0)\) es: </p>]]></text>
   </questiontext>
   <defaultgrade>1.0</defaultgrade>
   <generalfeedback format="html"><text/></generalfeedback>
@@ -414,6 +786,22 @@
 </question>
 <question type="numerical">
   <name format="html">
+    <text><![CDATA[DPN-Calc-06b]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = \sin (x)\cos (y)\). El valor de \(\dfrac {\partial f}{\partial y}(0,0)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>0</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
     <text><![CDATA[DPN-Calc-03]]></text>
   </name>
   <questiontext format="html">
@@ -430,6 +818,22 @@
 </question>
 <question type="numerical">
   <name format="html">
+    <text><![CDATA[DPN-Calc-07b]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y,z) = xyz^2\). El valor de \(\dfrac {\partial f}{\partial x}(1,2,3)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>18</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
     <text><![CDATA[DPN-Calc-03b]]></text>
   </name>
   <questiontext format="html">
@@ -441,6 +845,22 @@
   <hidden>0</hidden>
   <answer fraction="100" format="plain_text">
     <text>5</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[DPN-Calc-07]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = x^2 y - y^3\). El valor de \(\dfrac {\partial ^2 f}{\partial x^2}(2,1)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>2</text>
     <tolerance>0.01</tolerance>
   </answer>
 </question>
@@ -466,6 +886,22 @@
   </name>
   <questiontext format="html">
     <text><![CDATA[<p>Sea \(f(x,y) = x^3 - 2x^2 y + y^3\). El valor de \(\dfrac {\partial ^2 f}{\partial x^2}(1,1)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>2</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[DPN-Calc-08b]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = x^2 + 2xy + y^2\). El valor de \(\dfrac {\partial ^2 f}{\partial x \partial y}(3,2)\) es: </p>]]></text>
   </questiontext>
   <defaultgrade>1.0</defaultgrade>
   <generalfeedback format="html"><text/></generalfeedback>
@@ -512,6 +948,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[DG-Dir-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La derivada direccional máxima de \(f\) en un punto \({x}_0\) se alcanza en la dirección de: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\nabla f({x}_0)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(-\nabla f({x}_0)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cualquier vector unitario</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El vector nulo</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[DG-Dir-02]]></text>
   </name>
   <questiontext format="html">
@@ -535,6 +998,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(f&rsquo;({x};{u}) = \nabla f({u}) \cdot {x}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[DG-Dir-05]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(\|\nabla f({x}_0)\| = 5\) y \({u}\) es un vector unitario en la dirección del gradiente, entonces \(f&rsquo;({x}_0;{u})\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(5\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(-5\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(25\)</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -566,6 +1056,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[DG-Grad-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El gradiente \(\nabla f({x}_0)\) apunta en dirección perpendicular a: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Las curvas de nivel de \(f\) que pasan por \({x}_0\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Las tangentes de las trayectorias en \({x}_0\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El eje \(x\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El vector posición \({x}_0\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[DG-Grad-02]]></text>
   </name>
   <questiontext format="html">
@@ -593,6 +1110,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[DG-Grad-04]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(f(x,y) = x^2 + y^2\), entonces \(\nabla f(1,1)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\((2,&#8239; 2)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((1,&#8239; 1)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((2,&#8239; 0)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((0,&#8239; 2)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[DG-Dir-04]]></text>
   </name>
   <questiontext format="html">
@@ -616,6 +1160,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>Indefinida</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[DG-Dir-06]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La derivada direccional mínima de \(f\) en \({x}_0\) se obtiene en la dirección de: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(-\nabla f({x}_0)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\nabla f({x}_0)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cualquier vector perpendicular al gradiente</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El vector posición \({x}_0\)</p>]]></text>
   </answer>
 </question>
  
@@ -654,6 +1225,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[JC-Def-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \( F\colon \mathbb {R}^2 \rightarrow \mathbb {R}^3\). La matriz jacobiana \(J_F({x})\) tiene dimensión: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(3\times 2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2\times 3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(3\times 3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2\times 2\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[JC-Def-02]]></text>
   </name>
   <questiontext format="html">
@@ -677,6 +1275,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(\dfrac {\partial ^2 f_i}{\partial x_j^2}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[JC-Def-04]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(F = (f_1, f_2, f_3)\) con \( F\colon \mathbb {R}^2 \rightarrow \mathbb {R}^3\), la primera columna de \(J_F\) contiene: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Las derivadas parciales de cada \(f_i\) respecto a \(x_1\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Las derivadas parciales de \(f_1\) respecto a \(x_1\) y \(x_2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Los valores de \((f_1, f_2, f_3)\) en un punto</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Las derivadas parciales de \(f_1\) respecto a \(x_1, x_2, x_3\)</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -708,6 +1333,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[JC-Tipo-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \( F\colon \mathbb {R}^n \rightarrow \mathbb {R}^m\), ¿cuántas derivadas parciales tiene cada componente \(f_i\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(n\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(m\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(nm\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(1\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[JC-Tipo-02]]></text>
   </name>
   <questiontext format="html">
@@ -731,6 +1383,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>Un número real</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[JC-Tipo-04]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El rango de la matriz jacobiana \(J_F({a})\) de \( F\colon \mathbb {R}^n \rightarrow \mathbb {R}^m\) es como máximo: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\min (m,n)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(m+n\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(mn\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\max (m,n)\)</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -762,6 +1441,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[JC-Interp-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(J_F({x}_0)\) es invertible, entonces \(F\) es localmente: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Invertible cerca de \({x}_0\) (por el teorema de la función inversa).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Constante cerca de \({x}_0\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Lineal en todo \(\mathbb {R}^n\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>No diferenciable en \({x}_0\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[JC-EjCalc-01]]></text>
   </name>
   <questiontext format="html">
@@ -785,6 +1491,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(1\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[JC-EjCalc-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(F(x,y) = (x^2 - y^2,\ 2xy)\). La entrada \((2,1)\) de la matriz jacobiana \(J_F(x,y)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(2y\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2x\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(-2y\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2xy\)</p>]]></text>
   </answer>
 </question>
  
@@ -823,6 +1556,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[H-Def-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(f:\mathbb {R}^2\to \mathbb {R}\), la diagonal de \(H_f\) contiene: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Las derivadas parciales de segundo orden puras \(\dfrac {\partial ^2 f}{\partial x_i^2}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Las derivadas parciales de primer orden</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Los valores propios de \(H_f\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Las derivadas cruzadas</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[H-Def-02]]></text>
   </name>
   <questiontext format="html">
@@ -846,6 +1606,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(\dfrac {\partial f}{\partial x_i} + \dfrac {\partial f}{\partial x_j}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[H-Def-04]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(f:\mathbb {R}^3\to \mathbb {R}\), ¿cuántas entradas independientes tiene la matriz hessiana \(H_f\) (asumiendo continuidad de las derivadas de segundo orden)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(6\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(9\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(27\)</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -877,6 +1664,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[H-Prop-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La matriz hessiana \(H_f({x}_0)\) es definida positiva si: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Todos sus valores propios son positivos.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Su traza es positiva.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Su determinante es positivo.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Es simétrica.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[H-Tipo-01]]></text>
   </name>
   <questiontext format="html">
@@ -900,6 +1714,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>Un vector de \(\mathbb {R}^n\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[H-Tipo-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(f:\mathbb {R}^2\to \mathbb {R}\), el determinante de \(H_f({a})\) se usa para: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Clasificar puntos críticos de \(f\) como máximos, mínimos o puntos silla.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Calcular el gradiente de \(f\) en \({a}\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Determinar si \(f\) es continua en \({a}\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Hallar los valores propios del jacobiano.</p>]]></text>
   </answer>
 </question>
  
@@ -938,6 +1779,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[H-Calc-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = x^3 - 3xy^2\). La entrada \((2,2)\) de \(H_f(x,y)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(-6x\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(6x\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(-6y\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(6y\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[H-Calc-02]]></text>
   </name>
   <questiontext format="html">
@@ -961,6 +1829,195 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(6\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[H-Calc-04]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = x^2 y^2\). La entrada \((1,2)\) de \(H_f(x,y)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(4xy\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2y^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2x^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(4x^2y^2\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[H-Calc-05]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = e^{x+y}\). El determinante de \(H_f(x,y)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(e^{2(x+y)}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2e^{x+y}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(1\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[H-Calc-06]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = x^2 + y^2\). La traza de \(H_f\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(4\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2x + 2y\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[H-Calc-07]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = \sin (x)\cos (y)\). La entrada \((1,1)\) de \(H_f(x,y)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(-\sin (x)\cos (y)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\cos (x)\cos (y)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(-\cos (x)\sin (y)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\sin (x)\sin (y)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[H-Calc-08]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y,z) = x^2 + y^2 + z^2\). La matriz hessiana \(H_f\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(2I_3\) (dos veces la matriz identidad \(3\times 3\))</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La matriz nula</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una matriz diagonal con entradas \((x,&#8239; y,&#8239; z)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una matriz antisimétrica</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[H-Calc-09]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = x^2 - 4xy + y^2\). El determinante de \(H_f(x,y)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(-12\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(4\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(12\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[H-Calc-10]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y) = x^4 + y^4\). La entrada \((2,2)\) de \(H_f(x,y)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(12y^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(4y^3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(12y\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(4y^2\)</p>]]></text>
   </answer>
 </question>
  
@@ -999,6 +2056,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[RD-Div-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \( F\colon \mathbb {R}^3 \rightarrow \mathbb {R}^3\) con \(F=(P,Q,R)\), la fórmula de la divergencia es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\dfrac {\partial P}{\partial x} + \dfrac {\partial Q}{\partial y} + \dfrac {\partial R}{\partial z}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\left (\dfrac {\partial R}{\partial y} - \dfrac {\partial Q}{\partial z},\ \dfrac {\partial P}{\partial z} - \dfrac {\partial R}{\partial x},\ \dfrac {\partial Q}{\partial x} - \dfrac {\partial P}{\partial y}\right )\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(P + Q + R\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\dfrac {\partial P}{\partial x} \cdot \dfrac {\partial Q}{\partial y} \cdot \dfrac {\partial R}{\partial z}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[RD-Rot-01]]></text>
   </name>
   <questiontext format="html">
@@ -1022,6 +2106,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>Un número real</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[RD-Rot-02]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(F\) es un campo conservativo (gradiente de algún campo escalar), entonces \(\nabla \times F\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El vector cero \((0,0,0)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El gradiente de \(F\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo escalar no nulo</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La divergencia de \(F\)</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -1053,6 +2164,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[RD-Dom-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La divergencia \(\nabla \cdot F\) está definida para campos vectoriales \( F\colon \mathbb {R}^n \rightarrow \mathbb {R}^n\). ¿Qué condición deben cumplir el dominio y el codominio? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Deben tener la misma dimensión.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El dominio debe ser necesariamente \(\mathbb {R}^3\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El codominio debe ser \(\mathbb {R}\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>No hay restricción de dimensión.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[RD-Dom-02]]></text>
   </name>
   <questiontext format="html">
@@ -1076,6 +2214,33 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>Campos vectoriales \( F\colon \mathbb {R}^n \rightarrow \mathbb {R}^m\) con \(m\neq n\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[RD-Dom-04]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Para cuál de las siguientes funciones está bien definido el rotacional \(\nabla \times F\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\( F\colon \mathbb {R}^3 \rightarrow \mathbb {R}^3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\( f\colon \mathbb {R}^3 \rightarrow \mathbb {R}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\( F\colon \mathbb {R}^2 \rightarrow \mathbb {R}^3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\( \alpha \colon \mathbb {R}\rightarrow \mathbb {R}^3\)</p>]]></text>
   </answer>
 </question>
  
@@ -1114,6 +2279,33 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[RD-Calc-03]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(F(x,y,z) = (x, y, z)\). La divergencia \(\nabla \cdot F\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((1,1,1)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(x+y+z\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[RD-Calc-02]]></text>
   </name>
   <questiontext format="html">
@@ -1137,6 +2329,195 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\((x+y, y+z, x+z)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[RD-Calc-05]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(F(x,y,z) = (x^2, y^2, z^2)\). El rotacional \(\nabla \times F\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\((0, 0, 0)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((2x, 2y, 2z)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((x^2, y^2, z^2)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((1, 1, 1)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[RD-Calc-04]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(F(x,y,z) = (xy, yz, zx)\). La divergencia \(\nabla \cdot F\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(x + y + z\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((y, z, x)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(3xyz\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[RD-Calc-06]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(F(x,y,z) = (y, -x, 0)\). La divergencia \(\nabla \cdot F\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(-2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((0, 0, -2)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[RD-Calc-07]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(F(x,y,z) = (y, -x, 0)\). El rotacional \(\nabla \times F\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\((0, 0, -2)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((0, 0, 2)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((1, -1, 0)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((0, 0, 0)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[RD-Calc-08]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(F(x,y,z) = (e^x, e^y, e^z)\). La divergencia \(\nabla \cdot F\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(e^x + e^y + e^z\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(e^{x+y+z}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((e^x, e^y, e^z)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(3&#8239;e^{x+y+z}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[RD-Calc-09]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(F(x,y,z) = (xz, yz, xy)\). La divergencia \(\nabla \cdot F\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(2z\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(xy + yz + xz\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((z, z, 0)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[RD-Calc-10]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(f(x,y,z) = x^2 + y^2 + z^2\), el laplaciano \(\nabla \cdot (\nabla f)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(6\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\((2,2,2)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(2(x^2+y^2+z^2)\)</p>]]></text>
   </answer>
 </question>
  
