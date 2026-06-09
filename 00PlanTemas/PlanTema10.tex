@@ -1,0 +1,126 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 10: Optimización}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales con asistentes computacionales.
+    \item \textbf{RdA 3:} Aplicar Cálculo Vectorial para resolver problemas reales.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Identificar los puntos críticos de un campo escalar y clasificarlos mediante el criterio de la segunda derivada.
+    \item Aplicar el criterio de Sylvester y el criterio de los valores propios para determinar la naturaleza de los puntos críticos.
+    \item Resolver problemas de optimización con restricciones utilizando multiplicadores de Lagrange.
+    \item Modelar situaciones reales mediante funciones de varias variables y encontrar sus extremos.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+Suponga que desea construir una caja rectangular sin tapa con una cantidad fija de material. ¿Cómo elegiría las dimensiones para que la caja tenga el mayor volumen posible? ¿Cambia la respuesta si no hay restricción de material pero sí de peso?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Extremos libres}
+Se introducen los conceptos de máximo, mínimo y punto de ensilladura, y se establece el criterio de la segunda derivada para clasificar los puntos críticos de un campo escalar.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial sin restricciones; discutir intuitivamente qué significa un máximo o mínimo en varias variables usando superficies tridimensionales.
+    \item \textbf{Clase magistral:} se definen máximo absoluto, mínimo absoluto, extremo relativo y punto crítico; se enuncia la condición necesaria $\nabla f(a)=0$; se introduce la clasificación mediante la matriz hessiana (criterio de la segunda derivada, criterio de Sylvester, criterio de los valores propios) y el caso particular en $\R^2$. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen10.pdf}{Resumen10.pdf}.
+    \item \textbf{Implementación computacional:} hallar puntos críticos y clasificarlos con un asistente computacional; visualizar la superficie y los puntos críticos.
+    \item \textbf{Resolución de ejercicios:} encontrar y clasificar extremos de campos escalares usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios10.pdf}{Ejercicios10.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Para $f(x,y)=x^3-3x+y^2-2y$, ¿cuáles son los puntos críticos y cómo se clasifican?
+    \item ¿Puede un punto donde $\nabla f(a)=0$ no ser ni máximo ni mínimo? Dé un ejemplo.
+    \item ¿Qué información nos da el signo de $\det(H_f(a))$ en $\R^2$?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Optimización con restricciones — Multiplicadores de Lagrange}
+Se introduce el método de multiplicadores de Lagrange para optimizar una función sujeta a una o varias restricciones de igualdad.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial con la restricción de superficie fija; discutir por qué los métodos sin restricciones no son suficientes y cómo la condición $\nabla f = \lambda \nabla g$ aparece geométricamente cuando las curvas de nivel son tangentes.
+    \item \textbf{Clase magistral:} se enuncia el teorema de multiplicadores de Lagrange para una y varias restricciones; se define el Lagrangiano $L(\lambda,x)=f(x)-\lambda(g(x)-c)$ y se presenta el procedimiento para resolver el sistema de ecuaciones; se enuncia el criterio de clasificación mediante la hessiana bordada. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen10.pdf}{Resumen10.pdf}.
+    \item \textbf{Resolución de ejercicios:} aplicar multiplicadores de Lagrange a problemas de optimización con restricciones usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios10.pdf}{Ejercicios10.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Maximizar $f(x,y)=xy$ sujeto a $x+y=10$. ¿Cuál es el máximo y en qué punto se alcanza?
+    \item ¿Qué significa geométricamente la condición $\nabla f(a)=\lambda \nabla g(a)$?
+    \item ¿Cómo se generaliza el método cuando hay dos restricciones simultáneas?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 4.1, ejercicios 1--12; sección 4.2, ejercicios 1--10.
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿Cómo se utiliza la optimización con restricciones en problemas de economía, como la maximización de utilidad sujeta a una restricción presupuestaria?
+    \item ¿Qué es la optimización global y en qué se diferencia de la optimización local? ¿Qué herramientas existen para abordarla?
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Ver los videos:
+\begin{itemize}[leftmargin=*]
+    \item \href{https://youtu.be/BHyfMp36Bq0?si=UhMz2x-RiUMKqeMT}{Double integrals introduction}.
+    \item \href{https://youtu.be/iRpPGiDJAto?si=_bRBtAA0OiF0YONX}{Double integrals — Fubini's theorem}.
+\end{itemize}
+
+
+\end{document}

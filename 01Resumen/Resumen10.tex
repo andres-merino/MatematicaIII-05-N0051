@@ -1,0 +1,198 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 10: Optimización}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+En esta sección asumiremos que $n>1$, $\Omega\subset \R^n$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Extremos de campos escalares}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Máximos, mínimos y extremos]
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar y $a\in \Omega$. Se dice que $f$ alcanza un máximo absoluto (resp. mínimo absoluto) en $a$ si
+    \[
+        f(x) \leq f(a)
+    \]
+    (resp. $f(x) \geq f(a)$) para todo $x\in \Omega$. El valor $f(a)$ se llama máximo absoluto (resp. mínimo absoluto) de $f$ en $\Omega$.
+
+    Se dice que $f$ alcanza un máximo relativo (resp. mínimo relativo) en $a$ si existe $r>0$ tal que
+    \[
+        f(x) \leq f(a)
+    \]
+    (resp. $f(x) \geq f(a)$) para todo $x\in B(a,r)$.
+
+    Finalmente, a un máximo relativo o a un mínimo relativo se lo llama extremo de la función.
+\end{defi}
+
+\begin{teo}
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar diferenciable en el interior de $\Omega$. Si $f$ tiene un extremo en $a\in\inte(\Omega)$, entonces
+    \[
+        \nabla f(a) = 0.
+    \]
+\end{teo}
+
+\begin{advertencia}
+    Dado un campo escalar diferenciable $\func{f}{\Omega}{\R}$ y $a\in\inte(\Omega)$. Si tenemos que $\nabla f(a)=0$, se dice que $a$ es un punto crítico de $f$. Esto no necesariamente implica que $f$ tenga un extremo; de no ser este el caso, se dice que $f$ tiene un punto de ensilladura en $a$.
+\end{advertencia}
+
+\begin{defi}
+    Dada una matriz simétrica $M\in \mathbb{R}^{n\times n}$, se dice que la matriz es:
+    \begin{itemize}
+        \item definida positiva si $x^TMx>0$ para todo $x\in \mathbb{R}^{n\times 1}$, $x\neq 0$;
+        \item definida negativa si $x^TMx<0$ para todo $x\in \mathbb{R}^{n\times 1}$, $x\neq 0$; e
+        \item indefinida si existen $x,y\in \mathbb{R}^{n\times 1}$ tales que $x^TMx>0$ y $y^TMy<0$.
+    \end{itemize}
+\end{defi}
+
+\begin{teo}[Criterio de la segunda derivada]
+    Sean $\func{f}{\Omega}{\R}$ un campo escalar dos veces diferenciable en el interior de $\Omega$ y $a\in\inte(\Omega)$ un punto crítico de $f$. Se tiene que
+    \begin{itemize}
+        \item si $H_f(a)$ es definida positiva, entonces $f$ alcanza un mínimo en $a$;
+        \item si $H_f(a)$ es definida negativa, entonces $f$ alcanza un máximo en $a$; y
+        \item si $H_f(a)$ es indefinida, entonces $f$ tiene un punto de ensilladura en $a$.
+    \end{itemize}
+\end{teo}
+
+\begin{prop}[Criterio de los valores propios]
+    Dada una matriz simétrica $M\in \mathbb{R}^{n\times n}$, se tiene que la matriz es:
+    \begin{itemize}
+        \item definida positiva si y solo si todos los valores propios de la matriz son positivos;
+        \item definida negativa si y solo si todos los valores propios de la matriz son negativos;
+        \item indefinida si y solo si tiene valores propios positivos y negativos.
+    \end{itemize}
+\end{prop}
+
+\begin{prop}[Criterio de Sylvester]
+    Dada una matriz simétrica $M\in \mathbb{R}^{n\times n}$, se tiene que la matriz es:
+    \begin{itemize}
+        \item definida positiva si y solo si todos los determinantes de los menores principales de $M$ son positivos;
+        \item definida negativa si y solo si todos los determinantes de los menores principales impares de $M$ son negativos y los pares son positivos;
+        \item indefinida si y solo si el determinante de $M$ es diferente de 0 y los determinantes de los menores principales no siguen los patrones antes señalados.
+    \end{itemize}
+\end{prop}
+
+\begin{teo}
+    En $\R^2$, sean $\func{f}{\Omega}{\R}$ un campo escalar dos veces diferenciable en el interior de $\Omega$ y $a\in\inte(\Omega)$ un punto crítico de $f$. Se tiene que
+    \begin{itemize}
+        \item si $\det(H_f(a))>0$ y $D_{1,1}f(a)>0$, entonces $f$ alcanza un mínimo en $a$;
+        \item si $\det(H_f(a))>0$ y $D_{1,1}f(a)<0$, entonces $f$ alcanza un máximo en $a$; y
+        \item si $\det(H_f(a))<0$, entonces $a$ es un punto de ensilladura de $f$.
+    \end{itemize}
+\end{teo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Multiplicadores de Lagrange}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En esta sección consideraremos resolver el problema:
+\[
+    \left\{
+    \begin{array}{l}
+         \max f(x) \\
+         \text{sujeto a:}\\
+         \quad g(x)=c.
+    \end{array}\right.
+\]
+Donde $f$ y $g$ son campos escalares dos veces diferenciables y $c\in\R$.
+
+\begin{teo}
+    Sean $\func{f,g}{\Omega}{\R}$ campos escalares dos veces diferenciables y $c\in \R$. Denotemos
+    \[
+        S = L_c(g) = \{x\in \R^n: g(x)=c\}.
+    \]
+    Si existe $a\in\R^n$ tal que
+    \begin{itemize}
+        \item $\nabla g(a) \neq 0$ y
+        \item $f$ tiene un extremo para $S$ en $a$,
+    \end{itemize}
+    entonces existe un $\lambda\in\R$ tal que
+    \[
+        \nabla f(a) = \lambda \nabla g(a).
+    \]
+\end{teo}
+
+Así, para resolver el problema antes mencionado, empezamos definiendo
+\[
+    L(\lambda,x) = f(x) - \lambda (g(x)-c)
+\]
+y procedemos a buscar los puntos críticos de manera usual. A esta función se la llama el Lagrangiano del problema.
+
+\begin{teo}
+    Sean $\func{f,g_1,\ldots,g_m}{\Omega}{\R}$ campos escalares dos veces diferenciables, y $c\in \R^m$. Denotemos
+    \[
+        S = \{x\in \R^n: g_1(x)=c_1\land\cdots\land g_m(x)=c_m\}.
+    \]
+    Si existe $a\in\R^n$ tal que
+    \begin{itemize}
+        \item $\nabla g_i(a) \neq 0$, para $i\in\{1,\ldots,m\}$, y
+        \item $f$ tiene un extremo para $S$ en $a$,
+    \end{itemize}
+    entonces existen $\lambda_1,\ldots,\lambda_m\in\R$ tales que
+    \[
+        \nabla f(a) = \lambda_1 \nabla g_1(a) + \cdots + \lambda_m \nabla g_m(a).
+    \]
+\end{teo}
+
+\begin{teo}
+    Sean $\func{f,g_1,\ldots,g_m}{\Omega}{\R}$ campos escalares dos veces diferenciables, y $c\in \R^m$. Denotemos
+    \[
+        S = \{x\in \R^n: g_1(x)=c_1\land\cdots\land g_m(x)=c_m\}.
+    \]
+    Si $(\lambda_1,\ldots,\lambda_m,a)\in\R^{m+n}$ es un punto crítico de $L$ definida por
+    \[
+        L(\lambda_1,\ldots,\lambda_m,x) = f(x) - \lambda_1 (g_1(x)-c_1) - \cdots
+        - \lambda_m (g_m(x)-c_m),
+    \]
+    entonces, definiendo por $H_k$ a los menores principales de $H_L(\lambda_1,\ldots,\lambda_m,a)$ y la siguiente secuencia
+    \[
+        (-1)^m\det(H_{2m+1}),\qquad
+        (-1)^m\det(H_{2m+2}),\qquad
+        \ldots,\qquad
+        (-1)^m\det(H_{m+n}),
+    \]
+    tenemos el siguiente criterio:
+    \begin{itemize}
+        \item Si la secuencia anterior consta solo de números positivos, entonces $f$ tiene un mínimo para $S$ en $a$.
+        \item Si la secuencia anterior empieza con un número negativo y luego se alternan los signos, entonces $f$ tiene un máximo para $S$ en $a$.
+        \item Si no se tiene ningún caso anterior, pero $\det(H_L(\lambda_1,\ldots,\lambda_m,a))\neq 0$, entonces $f$ tiene un punto silla para $S$ en $a$.
+    \end{itemize}
+\end{teo}
+
+\begin{teo}
+    En $\R^2$, sean $\func{f,g}{\Omega}{\R}$ campos escalares dos veces diferenciables, y $c\in \R$. Denotemos
+    \[
+        S = \{x\in \R^2: g(x)=c\}.
+    \]
+    Si $(\lambda,a)\in\R^{3}$ es un punto crítico de $L$ definida por
+    \[
+        L(\lambda,x) = f(x) - \lambda (g(x)-c),
+    \]
+    entonces:
+    \begin{itemize}
+        \item si $\det(H_L(\lambda,a))<0$, entonces $f$ tiene un mínimo para $S$ en $a$;
+        \item si $\det(H_L(\lambda,a))>0$, entonces $f$ tiene un máximo para $S$ en $a$.
+    \end{itemize}
+\end{teo}
+
+
+\end{document}

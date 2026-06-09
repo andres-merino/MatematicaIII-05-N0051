@@ -3,8 +3,8 @@
 % Para obtener el xml compilar con XeLaTeX.
 
 % -- Paquetes adicionales
-\usepackage[handout]{aleph-moodle} 
-% \usepackage{aleph-moodle}
+% \usepackage[handout]{aleph-moodle}
+\usepackage{aleph-moodle}
 \moodleregisternewcommands
 % Todos los comandos nuevos deben ir luego del comando anterior
 \usepackage{aleph-comandos}
@@ -56,12 +56,30 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {DP-Concepto-01b}
+    Sea $f:\R^2\to\R$ un campo escalar diferenciable. ¿Qué tipo de objeto es $\nabla f$?
+    \item* Un campo vectorial
+    \item Un campo escalar
+    \item Una matriz de $2\times 2$
+    \item Un número real
+\end{multi}
+
+\begin{multi}[]%
     {DP-Concepto-02}
     La derivada parcial $\dfrac{\partial f}{\partial x}(a,b)$ representa geométricamente:
-    \item* La pendiente en la dirección de la primera variable $(a,b)$.
+    \item* La pendiente en la dirección de la primera variable en $(a,b)$.
     \item La pendiente del plano tangente a la gráfica de $f$ en $(a,b)$.
     \item La tasa de cambio de $f$ en la dirección del vector gradiente.
     \item La longitud del vector normal a la superficie en $(a,b)$.
+\end{multi}
+
+\begin{multi}[]%
+    {DP-Concepto-02b}
+    La derivada parcial $\dfrac{\partial f}{\partial y}(a,b)$ representa geométricamente:
+    \item* La pendiente en la dirección de la segunda variable en $(a,b)$.
+    \item La pendiente del plano tangente a la gráfica de $f$ en $(a,b)$.
+    \item La tasa de cambio de $f$ en la dirección del gradiente.
+    \item El valor máximo de $f$ en $(a,b)$.
 \end{multi}
 
 \begin{multi}[]%
@@ -74,12 +92,30 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {DP-Concepto-03b}
+    Para calcular $\dfrac{\partial f}{\partial y}(x,y)$ se considera $x$ como:
+    \item* Una constante y se deriva respecto de $y$.
+    \item Una variable y se aplica la regla del cociente.
+    \item La variable independiente principal.
+    \item Una función de $y$.
+\end{multi}
+
+\begin{multi}[]%
     {DP-Concepto-04}
     El teorema de Schwarz establece que, bajo condiciones de regularidad:
     \item* $\dfrac{\partial^2 f}{\partial x \partial y} = \dfrac{\partial^2 f}{\partial y \partial x}$
     \item $\dfrac{\partial f}{\partial x} = \dfrac{\partial f}{\partial y}$
     \item $\dfrac{\partial^2 f}{\partial x^2} = \dfrac{\partial^2 f}{\partial y^2}$
     \item $\dfrac{\partial^2 f}{\partial x \partial y} = \dfrac{\partial f}{\partial x} \cdot \dfrac{\partial f}{\partial y}$
+\end{multi}
+
+\begin{multi}[]%
+    {DP-Concepto-04b}
+    Si $f$ tiene derivadas parciales de segundo orden continuas, el teorema de Schwarz implica que la matriz hessiana es:
+    \item* Simétrica
+    \item Diagonal
+    \item Antisimétrica
+    \item Invertible
 \end{multi}
 
 \begin{multi}[]%
@@ -92,12 +128,30 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {DP-Concepto-05b}
+    Si $f$ tiene derivadas parciales en $(a,b)$ pero no es diferenciable en $(a,b)$, entonces:
+    \item* $f$ puede ser discontinua en $(a,b)$.
+    \item $f$ es necesariamente continua en $(a,b)$.
+    \item $f$ posee gradiente en $(a,b)$.
+    \item $f$ es diferenciable en todo punto cercano a $(a,b)$.
+\end{multi}
+
+\begin{multi}[]%
     {DP-Concepto-06}
     La notación $f_x(a,b)$ es equivalente a:
     \item* $\dfrac{\partial f}{\partial x}(a,b)$
     \item $\dfrac{df}{dx}(a,b)$
     \item $f'(a,b)$
     \item $\dfrac{\partial f}{\partial y}(a,b)$
+\end{multi}
+
+\begin{multi}[]%
+    {DP-Concepto-06b}
+    La notación $f_{yy}(a,b)$ es equivalente a:
+    \item* $\dfrac{\partial^2 f}{\partial y^2}(a,b)$
+    \item $\dfrac{\partial f}{\partial y}(a,b)$
+    \item $\left(\dfrac{\partial f}{\partial y}(a,b)\right)^2$
+    \item $\dfrac{\partial^2 f}{\partial x \partial y}(a,b)$
 \end{multi}
 
 \end{quiz}
@@ -117,12 +171,30 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {DPS-Calc-01c}
+    Sea $f(x,y) = x^2 y^3 - 5x$. Entonces $\dfrac{\partial f}{\partial x}$ es:
+    \item* $2xy^3 - 5$
+    \item $3x^2y^2$
+    \item $2xy^3$
+    \item $2y^3 - 5$
+\end{multi}
+
+\begin{multi}[]%
     {DPS-Calc-01b}
     Sea $f(x,y) = x^3 y + 2y^2$. Entonces $\dfrac{\partial f}{\partial y}$ es:
     \item* $x^3 + 4y$
     \item $3x^2 y$
     \item $x^3 y + 4y$
     \item $3x^2 + 4y$
+\end{multi}
+
+\begin{multi}[]%
+    {DPS-Calc-01d}
+    Sea $f(x,y) = x^2 y^3 - 5x$. Entonces $\dfrac{\partial f}{\partial y}$ es:
+    \item* $3x^2 y^2$
+    \item $2xy^3$
+    \item $3y^2$
+    \item $x^2 y^2$
 \end{multi}
 
 \begin{multi}[]%
@@ -135,12 +207,30 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {DPS-Calc-02c}
+    Sea $f(x,y) = \cos(xy)$. Entonces $\dfrac{\partial f}{\partial x}$ es:
+    \item* $-y\,\sin(xy)$
+    \item $-\sin(xy)$
+    \item $y\,\sin(xy)$
+    \item $-xy\,\sin(xy)$
+\end{multi}
+
+\begin{multi}[]%
     {DPS-Calc-02b}
-    Sea $f(x,y) = \sen(x^2 + y)$. Entonces $\dfrac{\partial f}{\partial y}$ es:
+    Sea $f(x,y) = \sin(x^2 + y)$. Entonces $\dfrac{\partial f}{\partial y}$ es:
     \item* $\cos(x^2 + y)$
     \item $2x\cos(x^2+y)$
     \item $-\cos(x^2+y)$
-    \item $\sen(x^2+y)$
+    \item $\sin(x^2+y)$
+\end{multi}
+
+\begin{multi}[]%
+    {DPS-Calc-02d}
+    Sea $f(x,y) = \ln(x + y^2)$. Entonces $\dfrac{\partial f}{\partial x}$ es:
+    \item* $\dfrac{1}{x+y^2}$
+    \item $\dfrac{1}{x}$
+    \item $\dfrac{2y}{x+y^2}$
+    \item $\ln(1+y^2)$
 \end{multi}
 
 \begin{multi}[]%
@@ -153,12 +243,30 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {DPS-Calc-03b}
+    Sea $f(x,y,z) = x\,\sin(yz)$. Entonces $\dfrac{\partial f}{\partial z}$ es:
+    \item* $xy\cos(yz)$
+    \item $y\cos(yz)$
+    \item $x\cos(yz)$
+    \item $xy\,\sin(yz)$
+\end{multi}
+
+\begin{multi}[]%
     {DPS-Calc-04}
     Sea $f(x,y) = x\ln(y) + y^2$. Entonces $\dfrac{\partial^2 f}{\partial x \partial y}$ es:
     \item* $\dfrac{1}{y}$
     \item $\ln(y)$
     \item $\dfrac{x}{y}$
     \item $\dfrac{x}{y^2}$
+\end{multi}
+
+\begin{multi}[]%
+    {DPS-Calc-04b}
+    Sea $f(x,y) = x^2 e^y$. Entonces $\dfrac{\partial^2 f}{\partial y \partial x}$ es:
+    \item* $2x\,e^y$
+    \item $x^2 e^y$
+    \item $2e^y$
+    \item $2x$
 \end{multi}
 
 \end{quiz}
@@ -175,14 +283,32 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{numerical}
 
 \begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-05}
+    Sea $f(x,y) = x^3 - xy^2$. El valor de $\dfrac{\partial f}{\partial x}(2,1)$ es:
+    \item 11
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
     {DPN-Calc-01b}
     Sea $f(x,y) = x^2 + 3xy$. El valor de $\dfrac{\partial f}{\partial y}(1,2)$ es:
     \item 3
 \end{numerical}
 
 \begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-05b}
+    Sea $f(x,y) = x^3 - xy^2$. El valor de $\dfrac{\partial f}{\partial y}(2,1)$ es:
+    \item -4
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
     {DPN-Calc-02}
-    Sea $f(x,y) = e^x \sen(y)$. El valor de $\dfrac{\partial f}{\partial y}(0,0)$ es:
+    Sea $f(x,y) = e^x \sin(y)$. El valor de $\dfrac{\partial f}{\partial y}(0,0)$ es:
+    \item 1
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-06}
+    Sea $f(x,y) = \sin(x)\cos(y)$. El valor de $\dfrac{\partial f}{\partial x}(0,0)$ es:
     \item 1
 \end{numerical}
 
@@ -193,9 +319,21 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{numerical}
 
 \begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-06b}
+    Sea $f(x,y) = \sin(x)\cos(y)$. El valor de $\dfrac{\partial f}{\partial y}(0,0)$ es:
+    \item 0
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
     {DPN-Calc-03}
     Sea $f(x,y,z) = x^2 y + yz^2$. El valor de $\dfrac{\partial f}{\partial z}(1,2,3)$ es:
     \item 12
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-07b}
+    Sea $f(x,y,z) = xyz^2$. El valor de $\dfrac{\partial f}{\partial x}(1,2,3)$ es:
+    \item 18
 \end{numerical}
 
 \begin{numerical}[tolerance=0.01]%
@@ -205,14 +343,32 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{numerical}
 
 \begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-07}
+    Sea $f(x,y) = x^2 y - y^3$. El valor de $\dfrac{\partial^2 f}{\partial x^2}(2,1)$ es:
+    \item 2
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
     {DPN-Calc-04}
     Sea $f(x,y) = \ln(x^2 + y^2)$. El valor de $\dfrac{\partial f}{\partial x}(1,0)$ es:
     \item 2
 \end{numerical}
 
+% \begin{numerical}[tolerance=0.01]%
+%     {DPN-Calc-08}
+%     Sea $f(x,y) = \arctan\!\left(\dfrac{y}{x}\right)$. El valor de $\dfrac{\partial f}{\partial x}(1,1)$ es:
+%     \item -0.5
+% \end{numerical}
+
 \begin{numerical}[tolerance=0.01]%
     {DPN-Calc-04b}
     Sea $f(x,y) = x^3 - 2x^2 y + y^3$. El valor de $\dfrac{\partial^2 f}{\partial x^2}(1,1)$ es:
+    \item 2
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {DPN-Calc-08b}
+    Sea $f(x,y) = x^2 + 2xy + y^2$. El valor de $\dfrac{\partial^2 f}{\partial x \partial y}(3,2)$ es:
     \item 2
 \end{numerical}
 
@@ -233,12 +389,30 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {DG-Dir-03}
+    La derivada direccional máxima de $f$ en un punto ${x}_0$ se alcanza en la dirección de:
+    \item* $\nabla f({x}_0)$
+    \item $-\nabla f({x}_0)$
+    \item Cualquier vector unitario
+    \item El vector nulo
+\end{multi}
+
+\begin{multi}[]%
     {DG-Dir-02}
     Si $f$ es un campo escalar diferenciable, la relación entre la derivada direccional y el gradiente es:
     \item* $f'({x};{u}) = \nabla f({x}) \cdot {u}$
     \item $f'({x};{u}) = \nabla f({x}) \times {u}$
     \item $f'({x};{u}) = \|\nabla f({x})\| \cdot \|{u}\|$
     \item $f'({x};{u}) = \nabla f({u}) \cdot {x}$
+\end{multi}
+
+\begin{multi}[]%
+    {DG-Dir-05}
+    Si $\|\nabla f({x}_0)\| = 5$ y ${u}$ es un vector unitario en la dirección del gradiente, entonces $f'({x}_0;{u})$ es:
+    \item* $5$
+    \item $0$
+    \item $-5$
+    \item $25$
 \end{multi}
 
 \begin{multi}[]%
@@ -251,6 +425,15 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {DG-Grad-03}
+    El gradiente $\nabla f({x}_0)$ apunta en dirección perpendicular a:
+    \item* Las curvas de nivel de $f$ que pasan por ${x}_0$.
+    \item Las tangentes de las trayectorias en ${x}_0$.
+    \item El eje $x$.
+    \item El vector posición ${x}_0$.
+\end{multi}
+
+\begin{multi}[]%
     {DG-Grad-02}
     El gradiente $\nabla f({x}_0)$ apunta en la dirección de:
     \item* Máximo crecimiento de $f$ en ${x}_0$.
@@ -260,12 +443,30 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {DG-Grad-04}
+    Si $f(x,y) = x^2 + y^2$, entonces $\nabla f(1,1)$ es:
+    \item* $(2,\, 2)$
+    \item $(1,\, 1)$
+    \item $(2,\, 0)$
+    \item $(0,\, 2)$
+\end{multi}
+
+\begin{multi}[]%
     {DG-Dir-04}
     Si ${u}$ es perpendicular a $\nabla f({x}_0)$, entonces $f'({x}_0;{u})$ es:
     \item* $0$
     \item $\|\nabla f({x}_0)\|$
     \item $-\|\nabla f({x}_0)\|$
     \item Indefinida
+\end{multi}
+
+\begin{multi}[]%
+    {DG-Dir-06}
+    La derivada direccional mínima de $f$ en ${x}_0$ se obtiene en la dirección de:
+    \item* $-\nabla f({x}_0)$
+    \item $\nabla f({x}_0)$
+    \item Cualquier vector perpendicular al gradiente
+    \item El vector posición ${x}_0$
 \end{multi}
 
 \end{quiz}
@@ -285,12 +486,30 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {JC-Def-03}
+    Sea $\func{F}{\R^2}{\R^3}$. La matriz jacobiana $J_F({x})$ tiene dimensión:
+    \item* $3\times 2$
+    \item $2\times 3$
+    \item $3\times 3$
+    \item $2\times 2$
+\end{multi}
+
+\begin{multi}[]%
     {JC-Def-02}
     Si $\func{F}{\R^3}{\R^2}$ con $F=(f_1, f_2)$, la entrada $(i,j)$ de la matriz jacobiana es:
     \item* $\dfrac{\partial f_i}{\partial x_j}$
     \item $\dfrac{\partial f_j}{\partial x_i}$
     \item $f_i \cdot x_j$
     \item $\dfrac{\partial^2 f_i}{\partial x_j^2}$
+\end{multi}
+
+\begin{multi}[]%
+    {JC-Def-04}
+    Si $F = (f_1, f_2, f_3)$ con $\func{F}{\R^2}{\R^3}$, la primera columna de $J_F$ contiene:
+    \item* Las derivadas parciales de cada $f_i$ respecto a $x_1$
+    \item Las derivadas parciales de $f_1$ respecto a $x_1$ y $x_2$
+    \item Los valores de $(f_1, f_2, f_3)$ en un punto
+    \item Las derivadas parciales de $f_1$ respecto a $x_1, x_2, x_3$
 \end{multi}
 
 \begin{multi}[]%
@@ -303,12 +522,30 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {JC-Tipo-03}
+    Si $\func{F}{\R^n}{\R^m}$, ¿cuántas derivadas parciales tiene cada componente $f_i$?
+    \item* $n$
+    \item $m$
+    \item $nm$
+    \item $1$
+\end{multi}
+
+\begin{multi}[]%
     {JC-Tipo-02}
     El jacobiano $J_F$ de un campo vectorial $\func{F}{\R^n}{\R^m}$ es:
     \item* Una función de $\R^n$ en el espacio de matrices de $m\times n$
     \item Un campo escalar
     \item Un campo vectorial de $\R^n$ en $\R^m$
     \item Un número real
+\end{multi}
+
+\begin{multi}[]%
+    {JC-Tipo-04}
+    El rango de la matriz jacobiana $J_F({a})$ de $\func{F}{\R^n}{\R^m}$ es como máximo:
+    \item* $\min(m,n)$
+    \item $m+n$
+    \item $mn$
+    \item $\max(m,n)$
 \end{multi}
 
 \begin{multi}[]%
@@ -321,12 +558,30 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {JC-Interp-02}
+    Si $J_F({x}_0)$ es invertible, entonces $F$ es localmente:
+    \item* Invertible cerca de ${x}_0$ (por el teorema de la función inversa).
+    \item Constante cerca de ${x}_0$.
+    \item Lineal en todo $\R^n$.
+    \item No diferenciable en ${x}_0$.
+\end{multi}
+
+\begin{multi}[]%
     {JC-EjCalc-01}
     Sea $F(x,y) = (x^2 + y,\ xy)$. La entrada $(1,2)$ de la matriz jacobiana $JF(x,y)$ es:
     \item* $x$
     \item $y$
     \item $2x$
     \item $1$
+\end{multi}
+
+\begin{multi}[]%
+    {JC-EjCalc-02}
+    Sea $F(x,y) = (x^2 - y^2,\ 2xy)$. La entrada $(2,1)$ de la matriz jacobiana $J_F(x,y)$ es:
+    \item* $2y$
+    \item $2x$
+    \item $-2y$
+    \item $2xy$
 \end{multi}
 
 \end{quiz}
@@ -346,12 +601,30 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {H-Def-03}
+    Si $f:\R^2\to\R$, la diagonal de $H_f$ contiene:
+    \item* Las derivadas parciales de segundo orden puras $\dfrac{\partial^2 f}{\partial x_i^2}$
+    \item Las derivadas parciales de primer orden
+    \item Los valores propios de $H_f$
+    \item Las derivadas cruzadas
+\end{multi}
+
+\begin{multi}[]%
     {H-Def-02}
     La entrada $(i,j)$ de la matriz hessiana $H_f$ está dada por:
     \item* $\dfrac{\partial^2 f}{\partial x_i \partial x_j}$
     \item $\dfrac{\partial f}{\partial x_i} \cdot \dfrac{\partial f}{\partial x_j}$
     \item $\dfrac{\partial^2 f}{\partial x_i^2}$ solo si $i=j$, y $0$ si $i\neq j$
     \item $\dfrac{\partial f}{\partial x_i} + \dfrac{\partial f}{\partial x_j}$
+\end{multi}
+
+\begin{multi}[]%
+    {H-Def-04}
+    Si $f:\R^3\to\R$, ¿cuántas entradas independientes tiene la matriz hessiana $H_f$ (asumiendo continuidad de las derivadas de segundo orden)?
+    \item* $6$
+    \item $9$
+    \item $3$
+    \item $27$
 \end{multi}
 
 \begin{multi}[]%
@@ -364,6 +637,15 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {H-Prop-02}
+    La matriz hessiana $H_f({x}_0)$ es definida positiva si:
+    \item* Todos sus valores propios son positivos.
+    \item Su traza es positiva.
+    \item Su determinante es positivo.
+    \item Es simétrica.
+\end{multi}
+
+\begin{multi}[]%
     {H-Tipo-01}
     Si $f:\R^n\to\R$, entonces $H_f$ evaluada en un punto ${a}\in\R^n$ es:
     \item* Una matriz de $n\times n$
@@ -371,12 +653,23 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
     \item Un campo vectorial
     \item Un vector de $\R^n$
 \end{multi}
+
+\begin{multi}[]%
+    {H-Tipo-02}
+    Si $f:\R^2\to\R$, el determinante de $H_f({a})$ se usa para:
+    \item* Clasificar puntos críticos de $f$ como máximos, mínimos o puntos silla.
+    \item Calcular el gradiente de $f$ en ${a}$.
+    \item Determinar si $f$ es continua en ${a}$.
+    \item Hallar los valores propios del jacobiano.
+\end{multi}
+
 \end{quiz}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{quiz}{Cálculo Hessiana}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{multi}[]%
     {H-Calc-01}
     Sea $f(x,y) = x^2 + xy + y^2$. La entrada $(1,2)$ de $H_f$ es:
@@ -387,12 +680,84 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {H-Calc-03}
+    Sea $f(x,y) = x^3 - 3xy^2$. La entrada $(2,2)$ de $H_f(x,y)$ es:
+    \item* $-6x$
+    \item $6x$
+    \item $-6y$
+    \item $6y$
+\end{multi}
+
+\begin{multi}[]%
     {H-Calc-02}
     Sea $f(x,y) = x^2 + xy + y^2$. La traza de $H_f$ (suma de entradas diagonales) es:
     \item* $4$
     \item $2$
     \item $1$
     \item $6$
+\end{multi}
+
+\begin{multi}[]%
+    {H-Calc-04}
+    Sea $f(x,y) = x^2 y^2$. La entrada $(1,2)$ de $H_f(x,y)$ es:
+    \item* $4xy$
+    \item $2y^2$
+    \item $2x^2$
+    \item $4x^2y^2$
+\end{multi}
+
+\begin{multi}[]%
+    {H-Calc-05}
+    Sea $f(x,y) = e^{x+y}$. El determinante de $H_f(x,y)$ es:
+    \item* $0$
+    \item $e^{2(x+y)}$
+    \item $2e^{x+y}$
+    \item $1$
+\end{multi}
+
+\begin{multi}[]%
+    {H-Calc-06}
+    Sea $f(x,y) = x^2 + y^2$. La traza de $H_f$ es:
+    \item* $4$
+    \item $2$
+    \item $0$
+    \item $2x + 2y$
+\end{multi}
+
+\begin{multi}[]%
+    {H-Calc-07}
+    Sea $f(x,y) = \sin(x)\cos(y)$. La entrada $(1,1)$ de $H_f(x,y)$ es:
+    \item* $-\sin(x)\cos(y)$
+    \item $\cos(x)\cos(y)$
+    \item $-\cos(x)\sin(y)$
+    \item $\sin(x)\sin(y)$
+\end{multi}
+
+\begin{multi}[]%
+    {H-Calc-08}
+    Sea $f(x,y,z) = x^2 + y^2 + z^2$. La matriz hessiana $H_f$ es:
+    \item* $2I_3$ (dos veces la matriz identidad $3\times 3$)
+    \item La matriz nula
+    \item Una matriz diagonal con entradas $(x,\, y,\, z)$
+    \item Una matriz antisimétrica
+\end{multi}
+
+\begin{multi}[]%
+    {H-Calc-09}
+    Sea $f(x,y) = x^2 - 4xy + y^2$. El determinante de $H_f(x,y)$ es:
+    \item* $-12$
+    \item $4$
+    \item $12$
+    \item $0$
+\end{multi}
+
+\begin{multi}[]%
+    {H-Calc-10}
+    Sea $f(x,y) = x^4 + y^4$. La entrada $(2,2)$ de $H_f(x,y)$ es:
+    \item* $12y^2$
+    \item $4y^3$
+    \item $12y$
+    \item $4y^2$
 \end{multi}
 
 \end{quiz}
@@ -408,7 +773,16 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
     \item* Un campo escalar
     \item Un campo vectorial
     \item Una matriz
-    \item Un número real 
+    \item Un número real
+\end{multi}
+
+\begin{multi}[]%
+    {RD-Div-02}
+    Si $\func{F}{\R^3}{\R^3}$ con $F=(P,Q,R)$, la fórmula de la divergencia es:
+    \item* $\dfrac{\partial P}{\partial x} + \dfrac{\partial Q}{\partial y} + \dfrac{\partial R}{\partial z}$
+    \item $\left(\dfrac{\partial R}{\partial y} - \dfrac{\partial Q}{\partial z},\ \dfrac{\partial P}{\partial z} - \dfrac{\partial R}{\partial x},\ \dfrac{\partial Q}{\partial x} - \dfrac{\partial P}{\partial y}\right)$
+    \item $P + Q + R$
+    \item $\dfrac{\partial P}{\partial x} \cdot \dfrac{\partial Q}{\partial y} \cdot \dfrac{\partial R}{\partial z}$
 \end{multi}
 
 \begin{multi}[]%
@@ -421,12 +795,30 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {RD-Rot-02}
+    Si $F$ es un campo conservativo (gradiente de algún campo escalar), entonces $\nabla \times F$ es:
+    \item* El vector cero $(0,0,0)$
+    \item El gradiente de $F$
+    \item Un campo escalar no nulo
+    \item La divergencia de $F$
+\end{multi}
+
+\begin{multi}[]%
     {RD-Dom-01}
     ¿Sobre qué tipo de función está definido el rotacional $\nabla \times F$?
     \item* Campos vectoriales $\func{F}{\R^3}{\R^3}$
     \item Campos escalares $\func{f}{\R^3}{\R}$
     \item Trayectorias $\func{\alpha}{\R}{\R^3}$
     \item Campos vectoriales $\func{F}{\R^2}{\R^2}$
+\end{multi}
+
+\begin{multi}[]%
+    {RD-Dom-03}
+    La divergencia $\nabla \cdot F$ está definida para campos vectoriales $\func{F}{\R^n}{\R^n}$. ¿Qué condición deben cumplir el dominio y el codominio?
+    \item* Deben tener la misma dimensión.
+    \item El dominio debe ser necesariamente $\R^3$.
+    \item El codominio debe ser $\R$.
+    \item No hay restricción de dimensión.
 \end{multi}
 
 \begin{multi}[]%
@@ -437,12 +829,23 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
     \item Trayectorias $\func{\alpha}{\R}{\R^n}$
     \item Campos vectoriales $\func{F}{\R^n}{\R^m}$ con $m\neq n$
 \end{multi}
+
+\begin{multi}[]%
+    {RD-Dom-04}
+    ¿Para cuál de las siguientes funciones está bien definido el rotacional $\nabla \times F$?
+    \item* $\func{F}{\R^3}{\R^3}$
+    \item $\func{f}{\R^3}{\R}$
+    \item $\func{F}{\R^2}{\R^3}$
+    \item $\func{\alpha}{\R}{\R^3}$
+\end{multi}
+
 \end{quiz}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{quiz}{Calculo Rotacional y divergencia}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{multi}[]%
     {RD-Calc-01}
     Sea $F(x,y,z) = (x^2, y^2, z^2)$. La divergencia $\nabla \cdot F$ es:
@@ -453,12 +856,84 @@ Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Int
 \end{multi}
 
 \begin{multi}[]%
+    {RD-Calc-03}
+    Sea $F(x,y,z) = (x, y, z)$. La divergencia $\nabla \cdot F$ es:
+    \item* $3$
+    \item $0$
+    \item $(1,1,1)$
+    \item $x+y+z$
+\end{multi}
+
+\begin{multi}[]%
     {RD-Calc-02}
     Sea $F(x,y,z) = (yz, xz, xy)$. El rotacional $\nabla \times F$ es:
     \item* $(0, 0, 0)$
     \item $(yz, xz, xy)$
     \item $(1, 1, 1)$
     \item $(x+y, y+z, x+z)$
+\end{multi}
+
+\begin{multi}[]%
+    {RD-Calc-05}
+    Sea $F(x,y,z) = (x^2, y^2, z^2)$. El rotacional $\nabla \times F$ es:
+    \item* $(0, 0, 0)$
+    \item $(2x, 2y, 2z)$
+    \item $(x^2, y^2, z^2)$
+    \item $(1, 1, 1)$
+\end{multi}
+
+\begin{multi}[]%
+    {RD-Calc-04}
+    Sea $F(x,y,z) = (xy, yz, zx)$. La divergencia $\nabla \cdot F$ es:
+    \item* $x + y + z$
+    \item $(y, z, x)$
+    \item $0$
+    \item $3xyz$
+\end{multi}
+
+\begin{multi}[]%
+    {RD-Calc-06}
+    Sea $F(x,y,z) = (y, -x, 0)$. La divergencia $\nabla \cdot F$ es:
+    \item* $0$
+    \item $-2$
+    \item $2$
+    \item $(0, 0, -2)$
+\end{multi}
+
+\begin{multi}[]%
+    {RD-Calc-07}
+    Sea $F(x,y,z) = (y, -x, 0)$. El rotacional $\nabla \times F$ es:
+    \item* $(0, 0, -2)$
+    \item $(0, 0, 2)$
+    \item $(1, -1, 0)$
+    \item $(0, 0, 0)$
+\end{multi}
+
+\begin{multi}[]%
+    {RD-Calc-08}
+    Sea $F(x,y,z) = (e^x, e^y, e^z)$. La divergencia $\nabla \cdot F$ es:
+    \item* $e^x + e^y + e^z$
+    \item $e^{x+y+z}$
+    \item $(e^x, e^y, e^z)$
+    \item $3\,e^{x+y+z}$
+\end{multi}
+
+\begin{multi}[]%
+    {RD-Calc-09}
+    Sea $F(x,y,z) = (xz, yz, xy)$. La divergencia $\nabla \cdot F$ es:
+    \item* $2z$
+    \item $xy + yz + xz$
+    \item $0$
+    \item $(z, z, 0)$
+\end{multi}
+
+\begin{multi}[]%
+    {RD-Calc-10}
+    Si $f(x,y,z) = x^2 + y^2 + z^2$, el laplaciano $\nabla \cdot (\nabla f)$ es:
+    \item* $6$
+    \item $0$
+    \item $(2,2,2)$
+    \item $2(x^2+y^2+z^2)$
 \end{multi}
 
 \end{quiz}
