@@ -1,0 +1,87 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 14: Cambio de variable en integrales triples}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cambio de variable en integrales triples}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En adelante, tomaremos la función inyectiva y diferenciable con continuidad
+\[
+    \funcion{T}{\R^3}{\R^3}{(u,v,w)}{T(u,v,w)=(x(u,v,w),\,y(u,v,w),\,z(u,v,w))}
+\]
+a la cual llamaremos una transformación de coordenadas del espacio $uvw$ al espacio $xyz$.
+
+\begin{prop}
+    Sean $\Omega$ y $\Omega^*$ regiones elementales de $\R^3$. Supongamos que $\func{T}{\R^3}{\R^3}$ es una transformación de coordenadas tal que $T(\Omega^*)=\Omega$. Si $\func{f}{\Omega}{\R}$ es una función integrable, entonces
+    \[
+        \iiint_\Omega f(x,y,z)\, dxdydz = \iiint_{\Omega^*} f(T(u,v,w)) \left|\det(J_T(u,v,w))\right| \, dudvdw.
+    \]
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Coordenadas cilíndricas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Las coordenadas cilíndricas expresan un punto del espacio mediante $(r,\theta,z)$, donde $(r,\theta)$ son las coordenadas polares de la proyección sobre el plano $xy$ y $z$ es la altura usual. La transformación es
+\[
+    \funcion{T}{\R^3}{\R^3}{(r,\theta,z)}{(r\cos\theta,\, r\sin\theta,\, z)},
+\]
+con $r\geq 0$, $\theta\in[0,2\pi)$, $z\in\R$. Su jacobiano es
+\[
+    \det(J_T(r,\theta,z)) = r.
+\]
+
+Por tanto,
+\[
+    \iiint_\Omega f(x,y,z)\, dxdydz = \iiint_{\Omega^*} f(r\cos\theta,\, r\sin\theta,\, z)\, r\, drd\theta\, dz.
+\]
+
+\begin{advertencia}
+    Las coordenadas cilíndricas son convenientes cuando la región $\Omega$ presenta simetría cilíndrica (cilindros, conos, paraboloides de revolución alrededor del eje $z$).
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Coordenadas esféricas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Las coordenadas esféricas expresan un punto del espacio mediante $(\rho,\theta,\phi)$, donde $\rho$ es la distancia al origen, $\theta$ es el ángulo azimutal en el plano $xy$ y $\phi$ es el ángulo polar medido desde el eje $z$ positivo. La transformación es
+\[
+    \funcion{T}{\R^3}{\R^3}{(\rho,\theta,\phi)}{(\rho\sin\phi\cos\theta,\, \rho\sin\phi\sin\theta,\, \rho\cos\phi)},
+\]
+con $\rho\geq 0$, $\theta\in[0,2\pi)$, $\phi\in[0,\pi]$. Su jacobiano es
+\[
+    \det(J_T(\rho,\theta,\phi)) = \rho^2\sin\phi.
+\]
+
+Por tanto,
+\[
+    \iiint_\Omega f(x,y,z)\, dxdydz = \iiint_{\Omega^*} f(\rho\sin\phi\cos\theta,\, \rho\sin\phi\sin\theta,\, \rho\cos\phi)\, \rho^2\sin\phi\, d\rho\, d\theta\, d\phi.
+\]
+
+\begin{advertencia}
+    Las coordenadas esféricas son convenientes cuando la región $\Omega$ presenta simetría esférica (esferas, casquetes esféricos, conos con vértice en el origen).
+\end{advertencia}
+
+
+\end{document}

@@ -1,0 +1,125 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 14: Cambio de variable en integrales triples}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales con asistentes computacionales.
+    \item \textbf{RdA 3:} Aplicar Cálculo Vectorial para resolver problemas reales.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Aplicar la fórmula de cambio de variable a integrales triples mediante el jacobiano de la transformación.
+    \item Utilizar coordenadas cilíndricas para calcular integrales triples sobre sólidos con simetría cilíndrica.
+    \item Utilizar coordenadas esféricas para calcular integrales triples sobre sólidos con simetría esférica.
+    \item Seleccionar el sistema de coordenadas más adecuado según la geometría de la región de integración.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+Para calcular el volumen de una pelota de básquetbol (una esfera), un ingeniero plantea una integral triple en coordenadas rectangulares y obtiene límites de integración muy complicados. ¿Existirá una manera de describir la esfera con límites más simples que hagan el cálculo directo?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Coordenadas cilíndricas}
+Se introduce el cambio de variable a coordenadas cilíndricas como extensión natural de las polares al espacio, y se aplica a sólidos con simetría de revolución alrededor del eje $z$.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} mostrar que un cilindro o un paraboloide de revolución tiene una descripción mucho más simple en coordenadas cilíndricas que en rectangulares; conectar con las coordenadas polares del tema anterior.
+    \item \textbf{Clase magistral:} se presenta la transformación $(r,\theta,z)\mapsto(r\cos\theta,r\sin\theta,z)$; se calcula el jacobiano $r$; se identifican los tipos de regiones convenientes (cilindros, conos, paraboloides); se aplica la fórmula de cambio de variable. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen14.pdf}{Resumen14.pdf}.
+    \item \textbf{Implementación computacional:} visualizar sólidos en coordenadas cilíndricas y calcular integrales triples con un asistente computacional.
+    \item \textbf{Resolución de ejercicios:} calcular integrales triples en coordenadas cilíndricas usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios14.pdf}{Ejercicios14.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Calcule el volumen del sólido acotado por $z=r^2$ y $z=4$ usando coordenadas cilíndricas.
+    \item ¿Por qué aparece el factor $r$ en la integral en coordenadas cilíndricas?
+    \item ¿Qué regiones tridimensionales se describen con mayor comodidad en coordenadas cilíndricas? Dé dos ejemplos.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Coordenadas esféricas}
+Se introduce el cambio de variable a coordenadas esféricas y se aplica al cálculo de integrales sobre sólidos con simetría esférica.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial; mostrar que una esfera de radio $a$ se describe simplemente como $0\leq\rho\leq a$, $0\leq\theta\leq 2\pi$, $0\leq\phi\leq\pi$ en coordenadas esféricas.
+    \item \textbf{Clase magistral:} se presenta la transformación $(\rho,\theta,\phi)\mapsto(\rho\sin\phi\cos\theta, \rho\sin\phi\sin\theta, \rho\cos\phi)$; se calcula el jacobiano $\rho^2\sin\phi$; se identifican los tipos de regiones convenientes (esferas, casquetes, conos con vértice en el origen); se aplica la fórmula. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen14.pdf}{Resumen14.pdf}.
+    \item \textbf{Resolución de ejercicios:} calcular integrales triples en coordenadas esféricas usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios14.pdf}{Ejercicios14.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Calcule el volumen de la esfera de radio $a$ usando coordenadas esféricas.
+    \item ¿Por qué aparece el factor $\rho^2\sin\phi$ en la integral en coordenadas esféricas? Interprete cada factor.
+    \item Describa en coordenadas esféricas el casquete esférico $\{(x,y,z): x^2+y^2+z^2\leq 4,\, z\geq 1\}$.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 5.5, ejercicios 27--35 (impares).
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿En qué aplicaciones físicas o de ingeniería se usan las coordenadas esféricas? Investigar al menos un ejemplo concreto.
+    \item ¿Cómo se relacionan las coordenadas cilíndricas y esféricas? ¿Es posible pasar de unas a otras directamente sin pasar por las rectangulares?
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Ver los videos:
+\begin{itemize}[leftmargin=*]
+    \item \href{https://youtu.be/_60sKaoRmhU?si=ZxPAXnud8_u64IQK}{Introduction to the line integral}.
+\end{itemize}
+
+
+\end{document}

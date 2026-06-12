@@ -1,0 +1,122 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 13: Integrales triples}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales con asistentes computacionales.
+    \item \textbf{RdA 3:} Aplicar Cálculo Vectorial para resolver problemas reales.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Interpretar la integral triple como límite de sumas de Riemann tridimensionales y reconocer sus propiedades.
+    \item Aplicar el Teorema de Fubini para calcular integrales triples sobre bloques mediante integrales iteradas.
+    \item Identificar y describir regiones elementales de tipo I, II y III en $\R^3$ y establecer los límites de integración correspondientes.
+    \item Calcular volúmenes, masas y centros de masa de sólidos mediante integrales triples.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+Una empresa fabrica un recipiente metálico con forma irregular. Para estimar cuánto material necesita, necesita conocer el volumen exacto del sólido. ¿Cómo calcularía ese volumen si tiene una fórmula matemática que describe la forma del recipiente?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Integral triple sobre un bloque}
+Se extiende la construcción de la integral de Riemann a funciones de tres variables y se enuncia el Teorema de Fubini para bloques rectangulares.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} analogía con la integral doble; discutir intuitivamente la suma de Riemann tridimensional como suma de «densidades por volúmenes».
+    \item \textbf{Clase magistral:} se definen bloque, partición, subbloque, suma de Riemann e integral triple; se enuncia la integrabilidad para funciones continuas; se presenta el Teorema de Fubini con sus seis órdenes posibles de integración. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen13.pdf}{Resumen13.pdf}.
+    \item \textbf{Implementación computacional:} calcular integrales triples sobre bloques con un asistente computacional y verificar distintos órdenes de integración.
+    \item \textbf{Resolución de ejercicios:} aplicar el Teorema de Fubini usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios13.pdf}{Ejercicios13.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Calcule $\iiint_B xyz\,dV$ donde $B=[0,1]\times[0,2]\times[0,3]$.
+    \item ¿Cuántos órdenes distintos de integración iterada son posibles en el Teorema de Fubini para integrales triples? ¿Siempre producen el mismo resultado?
+    \item ¿Qué representa $\iiint_\Omega 1\,dV$ geométricamente?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Integrales triples sobre regiones elementales y aplicaciones}
+Se extiende la integral triple a regiones no cúbicas mediante las regiones elementales del espacio y se aplica al cálculo de volúmenes y centros de masa.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial; mostrar cómo un sólido delimitado por superficies puede describirse como región elemental de tipo I, II o III.
+    \item \textbf{Clase magistral:} se definen las regiones elementales de tipo I–IV en $\R^3$; se enuncia la reducción a integrales iteradas para cada tipo; se presentan las fórmulas de volumen, masa y centro de masa. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen13.pdf}{Resumen13.pdf}.
+    \item \textbf{Resolución de ejercicios:} calcular integrales triples sobre sólidos y determinar volúmenes y centros de masa usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios13.pdf}{Ejercicios13.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Calcule el volumen del tetraedro con vértices $(0,0,0)$, $(1,0,0)$, $(0,1,0)$ y $(0,0,1)$.
+    \item Describa como región elemental de tipo I el sólido acotado por $z=x^2+y^2$ y $z=4$.
+    \item ¿En qué se diferencia determinar los límites de integración en $\R^3$ respecto a $\R^2$?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 5.4, ejercicios 1--28 (impares).
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿Cómo se calcula el momento de inercia de un sólido con densidad variable? ¿Qué aplicaciones tiene en ingeniería mecánica?
+    \item ¿Qué ocurre cuando el orden de integración es inconveniente? ¿Siempre es posible cambiar el orden? Investigar un ejemplo donde sea necesario hacerlo.
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Leer la ssección «Cambio de variable en integrales triples» del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley} (pág. 364).
+
+
+\end{document}
