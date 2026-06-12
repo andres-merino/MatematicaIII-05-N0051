@@ -1,0 +1,252 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 13: Integrales triples}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+En esta sección asumiremos $a,b,c,d,p,q\in\R$ tal que $a<b$, $c<d$ y $p<q$ y definimos
+\[
+    B=[a,b]\times [c,d] \times [p,q]
+\]
+al cual llamaremos un bloque.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Definición de integral triple}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}
+    Dado un bloque $B$, una partición de orden $n$ es un conjunto
+    \[
+        P=\{(x_i,y_i,z_i)\in\R^3:i=0,\ldots,n\},
+    \]
+    donde
+    \[
+        a=x_0<x_1<\cdots<x_n=b,
+    \qquad
+        c=y_0<y_1<\cdots<y_n=d
+    \]
+    y
+    \[
+        p=z_0<z_1<\cdots<z_n=q.
+    \]
+    \begin{itemize}
+    \item
+        A los conjuntos
+        \[
+            B_{ijk}=[x_{i-1},x_i]\times[y_{j-1},y_j]\times[z_{k-1},z_k],
+        \]
+        con $i,j,k=1,\ldots,n$, se los llama subbloques de la partición.
+    \item
+        A las cantidades
+        \[
+            \Delta x_i=x_i-x_{i-1},
+        \qquad
+            \Delta y_j=y_j-y_{j-1}
+        \texty
+            \Delta z_k=z_k-z_{k-1},
+        \]
+        con $i,j,k=1,\ldots,n$, se las llama el ancho, el alto y la profundidad del subbloque, respectivamente.
+    \item
+        A la cantidad
+        \[
+            \Delta V_{ijk} = \Delta x_i\Delta y_j\Delta z_k,
+        \]
+        con $i,j,k=1,\ldots,n$, se la llama volumen del subbloque.
+    \item
+        A un conjunto
+        \[
+            C = \{c^{ijk}\in\R^3: c^{ijk}\in B_{ijk},\ i,j,k=1,\ldots,n\},
+        \]
+        se lo llama conjunto de etiquetas para $P$.
+    \item
+        Al par $(P,C)$ se lo llama una partición etiquetada de $B$.
+    \item
+        A la cantidad
+        \[
+            |P| = \max_{i=1,\ldots,n}\{\Delta x_i,\Delta y_j,\Delta z_k\}
+        \]
+        se la llama grosor de la partición.
+    \end{itemize}
+\end{defi}
+
+\begin{defi}
+    Sean $\func{f}{B}{\R}$ un campo escalar y $(P,C)$ una partición etiquetada de $B$, entonces
+    \[
+        S(f,P,C) = \sum_{i,j,k=1}^n f(c^{ijk})\Delta V_{ijk}
+    \]
+    es la suma de Riemann de $f$ respecto a la partición etiquetada $(P,C)$.
+\end{defi}
+
+\begin{defi}
+    Sea $\func{f}{B}{\R}$ un campo escalar, se define la integral triple de $f$ por
+    \[
+        \iiint_B f\, dV
+        =\iiint_B f(x,y,z)\,dx\,dy\,dz
+        = \lim_{|P|\to 0} S(f,P,C)
+        = \lim_{|P|\to 0} \sum_{i,j,k=1}^n f(c^{ijk})\Delta V_{ijk},
+    \]
+    siempre que el límite exista. Si el límite existe, se dice que la función es integrable.
+\end{defi}
+
+\begin{prop}
+    Sea $\func{f}{B}{\R}$ un campo escalar; si $f$ es continua, entonces es integrable.
+\end{prop}
+
+\begin{prop}
+    Sea $\func{f}{B}{\R}$ un campo escalar; si $f$ es acotada y si el conjunto de discontinuidades de $f$ tiene volumen cero, entonces $\iiint_B f\, dV$ existe.
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Teorema de Fubini para integrales triples}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{teo}
+    Sea $\func{f}{B}{\R}$ un campo escalar. Supongamos que $f$ es acotada y que $S$, el conjunto de discontinuidades de $f$, tiene volumen cero. Si cada recta paralela a los ejes de coordenadas interseca a $S$ en una cantidad finita de puntos, entonces
+    \begin{align*}
+        \iiint_B f\, dV
+        & = \int_a^b \l(\int_c^d \l(\int_p^q f(x,y,z)\, dz\r)dy\r)dx \\
+        & = \int_a^b \l(\int_p^q\l( \int_c^d f(x,y,z)\, dy\r)dz\r)dx \\
+        & = \int_c^d \l(\int_a^b\l( \int_p^q f(x,y,z)\, dz\r)dx\r)dy \\
+        & = \int_c^d \l(\int_p^q\l( \int_a^b f(x,y,z)\, dx\r)dz\r)dy \\
+        & = \int_p^q \l(\int_a^b\l( \int_c^d f(x,y,z)\, dy\r)dx\r)dz \\
+        & = \int_p^q \l(\int_c^d \l(\int_a^b f(x,y,z)\, dx\r)dy\r)dz.
+    \end{align*}
+\end{teo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Integrales triples sobre regiones elementales}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}
+    Se dice que $W$ es una región elemental en el espacio si puede ser descrita como un subconjunto de $\R^3$ de alguna de las siguientes maneras:
+    \begin{itemize}
+        \item \textbf{Región de tipo I:} si
+        \begin{enumerate}[label=(\alph*)]
+            \item $W=\{(x,y,z)\in\R^3 \, : \, \varphi(x,y) \leq z \leq \psi(x,y), \, \gamma(x)\leq y \leq \delta(x),\, a\leq x\leq b \}$, o
+            \item $W=\{(x,y,z)\in\R^3 \, : \, \varphi(x,y) \leq z \leq \psi(x,y), \, \alpha(y)\leq x \leq \beta(y),\, c\leq y\leq d \}$.
+        \end{enumerate}
+
+        \item \textbf{Región de tipo II:} si
+        \begin{enumerate}[label=(\alph*)]
+            \item $W=\{(x,y,z)\in\R^3 \, : \, \alpha(y,z) \leq x \leq \beta(y,z), \, \gamma(z)\leq y \leq \delta(z),\, p\leq z\leq q \}$, o
+            \item $W=\{(x,y,z)\in\R^3 \, : \, \alpha(y,z) \leq x \leq \beta(y,z), \, \varphi(y)\leq z \leq \psi(y),\, c\leq y\leq d \}$.
+        \end{enumerate}
+
+        \item \textbf{Región de tipo III:} si
+        \begin{enumerate}[label=(\alph*)]
+            \item $W=\{(x,y,z)\in\R^3 \, : \, \gamma(x,z) \leq y \leq \delta(x,z), \, \alpha(z)\leq x \leq \beta(z),\, p\leq z\leq q \}$, o
+            \item $W=\{(x,y,z)\in\R^3 \, : \, \gamma(x,z) \leq y \leq \delta(x,z), \, \varphi(x)\leq z \leq \psi(x),\, a\leq x\leq b \}$.
+        \end{enumerate}
+
+        \item \textbf{Región de tipo IV:} si $W$ es de tipo I, II y III.
+    \end{itemize}
+\end{defi}
+
+A partir de aquí, tomaremos a $\Omega$ como un subconjunto cerrado de $B$.
+
+\begin{defi}
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar. Definimos la extensión de $f$ a $B$ por
+    \[
+        f^{\text{ext}}(x,y,z) = \begin{cases}
+                          f(x,y,z) & \text{ si } (x,y,z)\in \Omega, \\
+                          0 & \text{ si } (x,y,z) \not\in \Omega,
+                         \end{cases}
+    \]
+    para $(x,y,z)\in B$.
+\end{defi}
+
+\begin{defi}
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar, donde $\Omega$ es una región elemental; si $B$ es cualquier bloque que contiene a $\Omega$, definimos
+    \[
+        \iiint_\Omega f\, dV = \iiint_B f^{\text{ext}}\, dV.
+    \]
+\end{defi}
+
+\begin{prop}
+    Sea $\Omega$ una región elemental en $\R^3$ y $\func{f}{\Omega}{\R}$ una función continua.
+    \begin{itemize}
+        \item Si $\Omega$ es de tipo I, entonces
+        \[
+            \iiint_\Omega f\, dV = \int_a^b \l(\int_{\gamma(x)}^{\delta(x)} \l(\int_{\varphi(x,y)}^{\psi(x,y)} f(x,y,z)\, dz\r)dy\r)dx,
+        \]
+        o
+        \[
+            \iiint_\Omega f\, dV = \int_c^d \l(\int_{\alpha(y)}^{\beta(y)} \l(\int_{\varphi(x,y)}^{\psi(x,y)} f(x,y,z)\, dz\r)dx\r)dy.
+        \]
+
+        \item Si $\Omega$ es de tipo II, entonces
+        \[
+            \iiint_\Omega f\, dV = \int_p^q \l(\int_{\gamma(z)}^{\delta(z)} \l(\int_{\alpha(y,z)}^{\beta(y,z)} f(x,y,z)\, dx\r)dy\r)dz,
+        \]
+        o
+        \[
+            \iiint_\Omega f\, dV = \int_c^d \l(\int_{\varphi(y)}^{\psi(y)} \l(\int_{\alpha(y,z)}^{\beta(y,z)} f(x,y,z)\, dx\r)dz\r)dy.
+        \]
+
+        \item Si $\Omega$ es de tipo III, entonces
+        \[
+            \iiint_\Omega f\, dV = \int_p^q \l(\int_{\alpha(z)}^{\beta(z)} \l(\int_{\gamma(x,z)}^{\delta(x,z)} f(x,y,z)\, dy\r)dx\r)dz,
+        \]
+        o
+        \[
+            \iiint_\Omega f\, dV = \int_a^b \l(\int_{\varphi(x)}^{\psi(x)} \l(\int_{\gamma(x,z)}^{\delta(x,z)} f(x,y,z)\, dy\r)dz\r)dx.
+        \]
+    \end{itemize}
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Aplicaciones}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{advertencia}
+    Dada una región elemental $\Omega$ de $\R^3$, se tiene que $\iiint_\Omega 1\, dV$ es el volumen de la región $\Omega$.
+\end{advertencia}
+
+\begin{advertencia}
+    Dados una región elemental $\Omega$ de $\R^3$ y $\func{\delta}{\Omega}{\R}$ un campo escalar que representa la densidad en cada punto, el centro de masas $(\overline{x},\overline{y},\overline{z})$ está dado por
+    \[
+        \overline{x}=
+        \frac{\iiint_\Omega x\,\delta(x,y,z)\, dV}
+        {\iiint_\Omega \delta(x,y,z)\, dV},
+        \quad
+        \overline{y}=
+        \frac{\iiint_\Omega y\,\delta(x,y,z)\, dV}
+        {\iiint_\Omega \delta(x,y,z)\, dV},
+        \quad
+        \overline{z}=
+        \frac{\iiint_\Omega z\,\delta(x,y,z)\, dV}
+        {\iiint_\Omega \delta(x,y,z)\, dV}.
+    \]
+\end{advertencia}
+
+\begin{advertencia}
+    Bajo las mismas condiciones, los momentos de inercia con respecto a los ejes coordenados son:
+    \[
+        I_x = \iiint_\Omega (y^2+z^2)\,\delta\, dV,
+        \qquad
+        I_y = \iiint_\Omega (x^2+z^2)\,\delta\, dV,
+        \qquad
+        I_z = \iiint_\Omega (x^2+y^2)\,\delta\, dV.
+    \]
+\end{advertencia}
+
+
+\end{document}

@@ -1,0 +1,104 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 12: Cambio de variable}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cambio de variable en integrales dobles}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{advertencia}
+    Sea
+    \[
+        \funcion{T}{\R^2}{\R^2}{(u,v)}{T(u,v)}
+    \]
+    una aplicación lineal con representante
+    \[
+        [T]= A =\begin{pmatrix}
+            a & b \\
+            c & d
+          \end{pmatrix},
+    \]
+    tal que $\det(A)\neq 0$. Entonces la función es biyectiva, envía paralelogramos en paralelogramos y vértices de paralelogramos en vértices de paralelogramos. Además, si $\Omega^*$ es un paralelogramo, entonces $\Omega=T(\Omega^*)$ es un paralelogramo y
+    \[
+        \text{Área de } \Omega = |\det(A)| \cdot (\text{Área de } \Omega^*).
+    \]
+\end{advertencia}
+
+En adelante, tomaremos la función inyectiva y diferenciable con continuidad
+\[
+    \funcion{T}{\R^2}{\R^2}{(u,v)}{T(u,v)=(x(u,v),y(u,v))}
+\]
+a la cual llamaremos una transformación de coordenadas.
+
+\begin{prop}
+    Sean $\Omega$ y $\Omega^*$ regiones elementales de $\R^2$. Supongamos que $\func{T}{\R^2}{\R^2}$ es una transformación de coordenadas tal que $T(\Omega^*)=\Omega$. Si $\func{f}{\Omega}{\R}$ es una función integrable, entonces
+    \[
+        \iint_\Omega f(x,y)\, dxdy = \iint_{\Omega^*} f(T(u,v)) |\det(J_T(u,v))| \, dudv.
+    \]
+\end{prop}
+
+\begin{advertencia}
+    Si
+    \[
+        \funcion{T}{\R^2}{\R^2}{(u,v)}{T(u,v)=(x(u,v),y(u,v))}
+    \]
+    es una transformación de coordenadas biyectiva, entonces
+    \[
+        \funcion{T^{-1}}{\R^2}{\R^2}{(x,y)}{T^{-1}(x,y)=(u(x,y),v(x,y))}
+    \]
+    también es una transformación de coordenadas; además,
+    \[
+        \det(J_{T^{-1}}(x,y)) = \frac{1}{\det(J_{T}(u,v))},
+    \]
+    con $(x,y)=T(u,v)$.
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Coordenadas polares}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+La transformación de coordenadas polares es
+\[
+    \funcion{T}{\R^2}{\R^2}{(r,\theta)}{(r\cos\theta,\, r\sin\theta)},
+\]
+con $r\geq 0$ y $\theta\in[0,2\pi)$. Su jacobiano es
+\[
+    \det(J_T(r,\theta)) = r.
+\]
+
+Por tanto, si $\Omega^*$ es la región en coordenadas polares correspondiente a $\Omega$, entonces
+\[
+    \iint_\Omega f(x,y)\, dxdy = \iint_{\Omega^*} f(r\cos\theta,\, r\sin\theta)\, r\, drd\theta.
+\]
+
+\begin{advertencia}
+    Las regiones circulares o sectoriales se describen de forma natural en coordenadas polares. Algunos ejemplos:
+    \begin{itemize}
+        \item Disco de radio $a$: $\Omega^*=\{(r,\theta):0\leq r\leq a,\, 0\leq\theta\leq 2\pi\}$.
+        \item Sector circular: $\Omega^*=\{(r,\theta):0\leq r\leq a,\, \alpha\leq\theta\leq\beta\}$.
+        \item Corona circular: $\Omega^*=\{(r,\theta):a\leq r\leq b,\, 0\leq\theta\leq 2\pi\}$.
+    \end{itemize}
+\end{advertencia}
+
+
+\end{document}

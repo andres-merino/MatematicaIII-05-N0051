@@ -1,0 +1,127 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 11: Integrales dobles}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales con asistentes computacionales.
+    \item \textbf{RdA 3:} Aplicar Cálculo Vectorial para resolver problemas reales.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Interpretar la integral doble como límite de sumas de Riemann y reconocer sus propiedades fundamentales.
+    \item Aplicar el Teorema de Fubini para calcular integrales dobles sobre rectángulos mediante integrales iteradas.
+    \item Identificar y describir regiones elementales de tipo I, tipo II y tipo III en $\R^2$.
+    \item Calcular integrales dobles sobre regiones elementales y aplicarlas al cálculo de áreas y volúmenes.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+Imagine que necesita conocer la cantidad total de lluvia acumulada en una ciudad rectangular después de una tormenta, sabiendo que la intensidad de lluvia varía de un punto a otro. ¿Cómo calcularía esa cantidad total si tiene una fórmula que describe la intensidad en cada punto del mapa?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Integral doble sobre un rectángulo}
+Se introduce la integral doble como límite de sumas de Riemann bidimensionales y se enuncia el Teorema de Fubini para reducirla a integrales iteradas sobre rectángulos.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial; discutir intuitivamente la suma de Riemann en dos variables como suma de volúmenes de prismas rectangulares.
+    \item \textbf{Clase magistral:} se definen partición, subrectángulos, suma de Riemann e integral doble; se enuncia la integrabilidad de funciones continuas; se presenta el Teorema de Fubini y las propiedades de linealidad y monotonía. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen11.pdf}{Resumen11.pdf}.
+    \item \textbf{Implementación computacional:} calcular integrales dobles sobre rectángulos con un asistente computacional; visualizar geométricamente el volumen bajo una superficie.
+    \item \textbf{Resolución de ejercicios:} aplicar el Teorema de Fubini a integrales dobles sobre rectángulos usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios11.pdf}{Ejercicios11.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Calcule $\displaystyle\iint_R (2x+3y)\,dA$ donde $R=[0,1]\times[0,2]$. ¿El orden de integración afecta el resultado?
+    \item Enuncie el Teorema de Fubini con sus hipótesis. ¿Por qué es importante que $f$ sea acotada?
+    \item ¿Qué representa geométricamente $\iint_R f\,dA$ cuando $f(x,y)\geq 0$?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Integral doble sobre regiones elementales}
+Se extiende la integral doble a regiones no rectangulares mediante las regiones elementales de tipo I y tipo II, y se aplica al cálculo de áreas y volúmenes.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} plantear el problema de integrar sobre una región triangular o circular; discutir la extensión de $f$ por cero fuera de $\Omega$ como puente conceptual desde el rectángulo.
+    \item \textbf{Clase magistral:} se definen regiones de tipo I, tipo II y tipo III; se enuncia el teorema de reducción a integrales iteradas para cada tipo; se destaca la importancia de identificar correctamente los límites de integración según el tipo de región. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen11.pdf}{Resumen11.pdf}.
+    \item \textbf{Resolución de ejercicios:} calcular integrales dobles sobre regiones elementales y calcular áreas y volúmenes usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios11.pdf}{Ejercicios11.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Describa la región $\Omega$ acotada por $y=x^2$ e $y=x$ como región de tipo I y de tipo II. ¿Cuál orden de integración resulta más conveniente?
+    \item ¿Cómo se usa la integral doble para calcular el área de una región plana $\Omega$?
+    \item Calcule $\iint_\Omega x\,dA$ donde $\Omega$ es el triángulo con vértices $(0,0)$, $(1,0)$ y $(0,1)$.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 5.1, ejercicios 1--16 (impares); sección 5.2, ejercicios 1--22 (pares).
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿Cómo se puede usar la integral doble para calcular la masa de una lámina plana con densidad variable?
+    \item ¿Qué condiciones garantizan que se puede cambiar el orden de integración en una integral iterada?
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Ver los videos:
+\begin{itemize}[leftmargin=*]
+    \item \href{https://youtu.be/wUF-lyyWpUc?si=bkW6BvU4wMgmxpjL}{Change of Variables \& The Jacobian}.
+    \item \href{https://youtu.be/LUvynduoUX0?si=nv4TJNkUkNjgt_pV}{Change the order of integration to solve tricky integrals}.
+    \item \href{https://youtu.be/IAb98ZgSJNw?si=RxvzpAw7ys28ySQw}{Intro to Polar Coordinates}.
+\end{itemize}
+
+
+\end{document}

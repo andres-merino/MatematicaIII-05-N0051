@@ -1,0 +1,125 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 12: Cambio de variable}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales con asistentes computacionales.
+    \item \textbf{RdA 3:} Aplicar Cálculo Vectorial para resolver problemas reales.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Comprender el rol del jacobiano en el cambio de variable de una integral doble.
+    \item Aplicar la fórmula de cambio de variable a transformaciones generales de coordenadas.
+    \item Utilizar coordenadas polares para calcular integrales dobles sobre regiones circulares o sectoriales.
+    \item Seleccionar el sistema de coordenadas más conveniente según la geometría de la región de integración.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+Imagine que debe calcular el área encerrada por una curva en forma de espiral o de pétalo. Si intentara describir esa región usando coordenadas rectangulares, los límites de integración serían complicados. ¿Existirá alguna forma de «cambiar las coordenadas» para que la región se vea más simple y el cálculo sea más sencillo?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Cambio de variable general}
+Se introduce la fórmula de cambio de variable para integrales dobles a través del jacobiano de una transformación diferenciable.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} recordar el cambio de variable en integrales simples ($u$-sustitución) y discutir cómo la idea se extiende a dos variables; mostrar visualmente cómo una transformación deforma una región.
+    \item \textbf{Clase magistral:} se define transformación de coordenadas; se enuncia la fórmula $\iint_\Omega f\,dxdy = \iint_{\Omega^*} f(T(u,v))\,|\det J_T|\,dudv$; se discute la relación entre el jacobiano y el factor de escala de áreas. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen12.pdf}{Resumen12.pdf}.
+    \item \textbf{Implementación computacional:} visualizar transformaciones de coordenadas y calcular el jacobiano con un asistente computacional.
+    \item \textbf{Resolución de ejercicios:} aplicar cambios de variable a integrales dobles usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios12.pdf}{Ejercicios12.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item ¿Qué representa geométricamente $|\det(J_T(u,v))|$ en el cambio de variable?
+    \item Calcule el jacobiano de la transformación $x=2u+v$, $y=u-3v$ y aplíquelo a una integral doble sobre un paralelogramo.
+    \item Si $T$ es biyectiva, ¿cómo se relacionan $\det(J_T)$ y $\det(J_{T^{-1}})$?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Coordenadas polares}
+Se aplica el cambio de variable al caso particular de las coordenadas polares y se resuelven integrales sobre regiones con simetría circular.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial; mostrar que la región de un disco se describe con $0\leq r\leq a$, $0\leq\theta\leq 2\pi$, mucho más simple que en coordenadas rectangulares.
+    \item \textbf{Clase magistral:} se presenta la transformación polar $x=r\cos\theta$, $y=r\sin\theta$; se calcula el jacobiano $r$; se identifican tipos de regiones convenientes (discos, coronas, sectores); se aplica la fórmula. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen12.pdf}{Resumen12.pdf}.
+    \item \textbf{Resolución de ejercicios:} calcular integrales dobles en coordenadas polares usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios12.pdf}{Ejercicios12.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Calcule $\iint_\Omega e^{x^2+y^2}\,dA$ donde $\Omega$ es el disco de radio 2 centrado en el origen.
+    \item ¿Por qué el factor $r$ aparece en la integral en polares? Interprete su significado.
+    \item Describa en coordenadas polares la región $\Omega=\{(x,y): 1\leq x^2+y^2\leq 4,\, y\geq 0\}$.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 5.5, ejercicios 1--26 (impares).
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿En qué situaciones prácticas se utiliza el cambio de variable en integrales dobles? Investigar al menos un ejemplo en física o ingeniería.
+    \item ¿Existen otros sistemas de coordenadas en el plano además del polar? ¿Para qué tipos de regiones serían convenientes?
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Ver los videos:
+\begin{itemize}[leftmargin=*]
+    \item \href{https://youtu.be/ZIn1rgZVPFw?si=07QWx6a579WPnGmE}{Triple Integrals in Cartesian Coordinates}.
+\end{itemize}
+
+
+\end{document}

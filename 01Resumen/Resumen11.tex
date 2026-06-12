@@ -1,0 +1,203 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 11: Integrales dobles}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+En esta sección asumiremos $a,b,c,d\in\R$ tal que $a<b$ y $c<d$ y definimos
+\[
+    R=[a,b]\times [c,d],
+\]
+al cual llamaremos un rectángulo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Definición de integral doble}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}
+    Dado un rectángulo $R$, una partición de orden $n$ es un conjunto
+    \[
+        P=\{(x_i,y_i)\in\R^2:i=0,\ldots,n\},
+    \]
+    donde
+    \[
+        a=x_0<x_1<\cdots<x_n=b
+    \texty
+        c=y_0<y_1<\cdots<y_n=d.
+    \]
+    \begin{itemize}
+    \item
+        A los conjuntos
+        \[
+            R_{ij}=[x_{i-1},x_i]\times[y_{j-1},y_j],
+        \]
+        con $i,j=1,\ldots,n$, se los llama subrectángulos de la partición.
+    \item
+        A las cantidades
+        \[
+            \Delta x_i=x_i-x_{i-1},
+            \texty
+            \Delta y_i=y_i-y_{i-1},
+        \]
+        con $i,j=1,\ldots,n$, se las llama el ancho y el alto del subrectángulo, respectivamente.
+    \item
+        A la cantidad
+        \[
+            \Delta A_{ij} = \Delta x_i\Delta y_j,
+        \]
+        con $i,j=1,\ldots,n$, se la llama área del subrectángulo.
+    \item
+        A un conjunto
+        \[
+            C = \{c^{ij}\in\R^2: c^{ij}\in R_{ij},\ i,j=1,\ldots,n\},
+        \]
+        se lo llama conjunto de etiquetas para $P$.
+    \item
+        Al par $(P,C)$ se lo llama una partición etiquetada de $R$.
+    \item
+        A la cantidad
+        \[
+            |P| = \max_{i=1,\ldots,n}\{\Delta x_i,\Delta y_i\}
+        \]
+        se la llama grosor de la partición.
+    \end{itemize}
+\end{defi}
+
+\begin{defi}
+    Sean $\func{f}{R}{\R}$ un campo escalar y $(P,C)$ una partición etiquetada de $R$, entonces
+    \[
+        S(f,P,C) = \sum_{i,j=1}^n f(c^{ij})\Delta A_{ij}
+    \]
+    es la suma de Riemann de $f$ respecto a la partición etiquetada $(P,C)$.
+\end{defi}
+
+\begin{defi}
+    Sea $\func{f}{R}{\R}$ un campo escalar, se define la integral doble de $f$ por
+    \[
+        \iint_R f\, dA =\iint_R f(x,y)\,dx\,dy
+        = \lim_{|P|\to 0} S(f,P,C)
+        = \lim_{|P|\to 0} \sum_{i,j=1}^n f(c^{ij})\Delta A_{ij},
+    \]
+    siempre que el límite exista. Si el límite existe, se dice que la función es integrable.
+\end{defi}
+
+\begin{prop}
+    Sea $\func{f}{R}{\R}$ un campo escalar, si $f$ es continua, entonces es integrable.
+\end{prop}
+
+\begin{prop}
+    Sea $\func{f}{R}{\R}$ un campo escalar, si $f$ es acotada y si el conjunto de discontinuidades de $f$ tiene área cero, entonces
+    \[
+        \iint_R f\, dA
+    \]
+    existe.
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Teorema de Fubini}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{teo}[Teorema de Fubini]
+    Sea $\func{f}{R}{\R}$ un campo escalar. Supongamos que $f$ es acotada y que $S$, el conjunto de discontinuidades de $f$, tiene área cero. Si cada recta paralela a los ejes de coordenadas interseca a $S$ en una cantidad finita de puntos, entonces
+    \[
+        \iint_R f\, dA = \int_a^b\l( \int_c^d f(x,y)\, dy\r)dx = \int_c^d\l( \int_a^b f(x,y)\, dx\r)dy.
+    \]
+\end{teo}
+
+\begin{prop}
+    Sean $\func{f,g}{R}{\R}$ campos escalares integrables. Se tienen las siguientes propiedades:
+    \begin{itemize}
+        \item $f+g$ es integrable y
+        \[
+            \iint_R (f+g)\, dA = \iint_R f\, dA + \iint_R g\, dA.
+        \]
+        \item $cf$ es integrable, donde $c\in\R$ es cualquier constante, y
+        \[
+            \iint_R cf\, dA = c \iint_R f\, dA.
+        \]
+        \item Si $f(x,y)\leq g(x,y)$ para todo $(x,y)\in R$, entonces
+        \[
+            \iint_R f\, dA \leq \iint_R g\, dA.
+        \]
+        \item $|f|$ es integrable y
+        \[
+            \left| \iint_R f\, dA \right| \leq \iint_R |f|\, dA.
+        \]
+    \end{itemize}
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Integrales dobles sobre regiones elementales}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A partir de aquí, tomaremos a $\Omega$ como un subconjunto cerrado de $R$.
+
+\begin{defi}
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar. Definimos la extensión de $f$ a $R$ por
+    \[
+        f^{\text{ext}}(x,y) = \begin{cases}
+                        f(x,y) & \text{ si } (x,y)\in \Omega, \\
+                        0 & \text{ si } (x,y) \not\in \Omega,
+                        \end{cases}
+    \]
+    para $(x,y)\in R$.
+\end{defi}
+
+\begin{defi}
+    Sea $\func{f}{\Omega}{\R}$ un campo escalar, donde $\Omega$ es una región elemental; si $R$ es cualquier rectángulo que contiene a $\Omega$, definimos
+    \[
+        \iint_\Omega f\, dA = \iint_R f^{\text{ext}}\, dA.
+    \]
+\end{defi}
+
+\begin{defi}
+    Se dice que $\Omega\subseteq\R^2$ es una región elemental si puede ser descrita de alguna de las siguientes maneras:
+    \begin{itemize}
+        \item \textbf{Región de tipo I:} si
+        \[
+            \Omega=\{(x,y)\in\R^2 \, : \, \gamma(x) \leq y \leq \delta(x), \, a\leq x\leq b \},
+        \]
+        donde $\func{\gamma, \delta}{[a,b]}{\R}$ son funciones continuas.
+        \item \textbf{Región de tipo II:} si
+        \[
+            \Omega=\{(x,y)\in\R^2 \, : \, \alpha(y) \leq x \leq \beta(y), \, c\leq y\leq d \},
+        \]
+        donde $\func{\alpha, \beta}{[c,d]}{\R}$ son funciones continuas.
+        \item \textbf{Región de tipo III:} si $\Omega$ es de tipo I y de tipo II.
+    \end{itemize}
+\end{defi}
+
+\begin{teo}
+    Sean $\Omega$ una región elemental en $\R^2$ y $\func{f}{\Omega}{\R}$ un campo escalar continuo.
+    \begin{itemize}
+        \item Si $\Omega$ es de tipo I, entonces
+        \[
+            \iint_\Omega f\, dA = \int_a^b\l( \int_{\gamma(x)}^{\delta(x)}f(x,y) \, dy\r)dx.
+        \]
+        \item Si $\Omega$ es de tipo II, entonces
+        \[
+            \iint_\Omega f\, dA = \int_c^d\l( \int_{\alpha(y)}^{\beta(y)}f(x,y) \, dx\r)dy.
+        \]
+    \end{itemize}
+\end{teo}
+
+
+\end{document}
