@@ -1,0 +1,198 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{aleph-comandos}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\hypersetup{
+    urlcolor=colordef!70,
+}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Reto no. 2: Análisis masico de una pieza industrial}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultado de aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+    \item \textbf{RdA 3 — Criterio 3.3:} Emplea integrales múltiples para determinar áreas, superficies y volúmenes.
+\end{itemize}
+
+Específicamente, el estudiante será capaz de:
+\begin{itemize}
+    \item Describir una región tridimensional mediante inecuaciones y elegir el sistema de coordenadas adecuado.
+    \item Calcular masa, centro de masa y momentos de inercia de un sólido con densidad variable mediante integrales triples.
+    \item Aplicar cambios de variable (coordenadas cilíndricas y esféricas) para simplificar el cálculo de integrales.
+    \item Interpretar los resultados en el contexto del diseño y análisis de piezas industriales.
+    \item Verificar resultados analíticos mediante integración numérica en Python.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Descripción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En ingeniería mecánica, el análisis másico de una pieza —masa total, centro de masa y momentos de inercia— es fundamental para el diseño de mecanismos, la predicción del comportamiento dinámico y la selección de materiales. Cuando la densidad del material no es uniforme (por ejemplo, por gradientes térmicos, aleaciones o porosidad), este análisis requiere integrales triples sobre regiones tridimensionales complejas.
+
+\subsection*{Pregunta esencial}
+\begin{itemize}[leftmargin=*]
+    \item ¿Cómo permiten las integrales triples calcular propiedades másicas de objetos reales con geometría y densidad no uniformes, y qué ventaja aporta elegir el sistema de coordenadas correcto?
+\end{itemize}
+
+\subsection*{Reto}
+
+Tu desafío es seleccionar una pieza industrial con simetría de revolución o simetría esférica (rodamiento, buje, cono de transmisión, cúpula, etc.), modelar su geometría como una región $E \subset \mathbb{R}^3$ definida por inecuaciones, proponer una función de densidad variable $\rho(x,y,z)$ justificada físicamente y calcular analítica y numéricamente sus propiedades másicas.
+
+Debes entregar:
+\begin{itemize}[leftmargin=*]
+    \item Un minitutorial en video (máx.\ 8 minutos) con la explicación conceptual y el recorrido del análisis.
+    \item Un informe en PDF redactado en \LaTeX\ con el desarrollo matemático y los resultados.
+    \item Un notebook de Jupyter o Google Colab reproducible con todo el código y las visualizaciones.
+\end{itemize}
+
+\subsection*{Preguntas guía}
+\begin{itemize}[leftmargin=*]
+    \item ¿Cómo se describe la región $E$ mediante inecuaciones en coordenadas cartesianas, cilíndricas o esféricas?
+    \item ¿Qué consideración física justifica que la densidad varíe dentro de la pieza?
+    \item ¿Por qué el cambio a coordenadas cilíndricas o esféricas simplifica las integrales en piezas con simetría de revolución?
+    \item ¿Qué relación hay entre la posición del centro de masa y la simetría geométrica de la pieza?
+    \item ¿Cómo afecta la distribución de masa a los momentos de inercia respecto a los distintos ejes?
+    \item ¿Qué tan cercanos son los resultados analíticos y numéricos? ¿Dónde puede originarse la diferencia?
+\end{itemize}
+
+\subsection*{Actividades guía}
+\begin{enumerate}[leftmargin=*, label={{\arabic*.}}]
+    \item Seleccionar una pieza industrial real con simetría geométrica reconocible (por ejemplo: cilindro macizo con cavidad cónica, semiesfera hueca, toro simplificado). Incluir una imagen o esquema acotado con dimensiones en el informe.
+    \item Definir la región $E$ que ocupa la pieza mediante inecuaciones en al menos un sistema de coordenadas. Verificar que los límites de integración son consistentes con las dimensiones reales de la pieza.
+    \item Proponer una función de densidad $\rho(x,y,z)$ no constante que refleje alguna característica física del material (por ejemplo, densidad mayor en la parte más gruesa, gradiente radial por enfriamiento, etc.). Justificar la elección.
+    \item Calcular analíticamente la {masa total}:
+    \[
+        m = \iiint_E \rho(x,y,z)\, dV,
+    \]
+    mostrando el cambio de variable utilizado y todos los pasos del cálculo.
+    \item Calcular analíticamente las {coordenadas del centro de masa} $(\bar{x}, \bar{y}, \bar{z})$:
+    \[
+        \bar{x} = \frac{1}{m}\iiint_E x\,\rho\, dV, \quad
+        \bar{y} = \frac{1}{m}\iiint_E y\,\rho\, dV, \quad
+        \bar{z} = \frac{1}{m}\iiint_E z\,\rho\, dV.
+    \]
+    Interpretar el resultado en función de la simetría de la pieza.
+    \item Calcular analíticamente al menos dos {momentos de inercia} respecto a los ejes coordenados, por ejemplo:
+    \[
+        I_z = \iiint_E (x^2+y^2)\,\rho\, dV.
+    \]
+    \item Verificar numéricamente los resultados de masa y centro de masa usando \texttt{scipy.integrate} (integración de Monte Carlo o cuadratura adaptativa) y comparar con los valores analíticos, reportando el error relativo.
+    \item Generar una visualización 3D de la región $E$ con \texttt{matplotlib} o \texttt{plotly}, indicando la posición del centro de masa sobre la figura.
+    \item Analizar cómo cambia el centro de masa si se duplica la densidad en una subregión específica de la pieza. Presentar este análisis como un experimento numérico.
+    \item Redactar conclusiones sobre la influencia de la geometría y la densidad variable en las propiedades másicas, y reflexionar sobre las simplificaciones del modelo.
+\end{enumerate}
+
+\subsection*{Recursos}
+\begin{itemize}[leftmargin=*]
+    \item \href{https://docs.scipy.org/doc/scipy/reference/integrate.html}{Módulo \texttt{scipy.integrate} — integración numérica en Python}.
+    \item \href{https://matplotlib.org/stable/gallery/mplot3d/index.html}{Galería de gráficos 3D con Matplotlib}.
+    \item \href{https://plotly.com/python/3d-mesh/}{Visualización de sólidos 3D con Plotly}.
+    \item \href{https://numpy.org/doc/stable/reference/random/generated/numpy.random.uniform.html}{Integración de Monte Carlo con NumPy}.
+    \item Complementar con al menos dos fuentes académicas (libro o artículo) citadas en formato APA.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Producto}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Minitutorial explicativo}
+Un video de máximo 8 minutos donde se explique:
+\begin{itemize}[leftmargin=*]
+    \item Qué es una integral triple y cómo se usa para calcular masa en un sólido con densidad variable.
+    \item Cómo se describe la región $E$ y por qué se eligió el sistema de coordenadas utilizado.
+    \item Qué representa el centro de masa y cómo se interpreta su posición en la pieza real.
+    \item Un ejemplo concreto: dado un punto de la pieza, cómo contribuye a la integral y qué implica para el diseño.
+\end{itemize}
+
+\subsection{Informe de aplicación}
+Un documento en PDF que contenga:
+\begin{enumerate}[leftmargin=*, label={\textbf{\arabic*.}}]
+    \item \textbf{Introducción:} descripción de la pieza, imagen o esquema, dimensiones y justificación de la elección.
+    \item \textbf{Modelo geométrico:} definición de la región $E$, límites de integración y sistema de coordenadas elegido.
+    \item \textbf{Función de densidad:} expresión de $\rho$ y justificación física.
+    \item \textbf{Cálculo de la masa:} desarrollo analítico completo con cambio de variable.
+    \item \textbf{Centro de masa:} cálculo analítico e interpretación geométrica.
+    \item \textbf{Momentos de inercia:} cálculo de al menos dos momentos e interpretación.
+    \item \textbf{Verificación numérica:} código, resultados y comparación con el valor analítico (error relativo).
+    \item \textbf{Experimento de sensibilidad:} análisis del efecto de modificar la densidad en una subregión.
+    \item \textbf{Conclusiones y limitaciones:} hallazgos principales y restricciones del modelo.
+    \item \textbf{Bibliografía} en formato APA.
+\end{enumerate}
+
+\subsection{Entrega técnica}
+\begin{itemize}[leftmargin=*]
+    \item El informe debe ser elaborado en la plantilla \LaTeX\ institucional disponible en Overleaf: \href{https://www.overleaf.com/read/vhdczzsymytd#3bf1e4}{Formato Tareas PUCE}.
+    \item Incluir el enlace al video con permisos de acceso activos.
+    \item Incluir el enlace al notebook (Google Colab o repositorio) con celdas ejecutadas y visibles.
+    \item Si los enlaces no permiten visualizar el material, la actividad no podrá ser calificada y se asignará \textbf{0}.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Rúbrica de calificación}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En caso de presentar un video con voz en off, rostro no visible o fuera del rango de tiempo establecido, se reducirá un nivel a cada punto de la rúbrica.
+
+\begin{landscape}
+\begin{center}\footnotesize
+\begin{tabular}{p{5cm}p{4cm}p{4cm}p{4cm}p{4cm}}
+\toprule
+\textbf{Indicador} & \textbf{Excelente} & \textbf{Bueno} & \textbf{Aceptable} & \textbf{Insuficiente} \\ \midrule
+\textbf{Modelo geométrico y densidad (10 pts)}
+    & Define correctamente la región $E$ con límites consistentes, elige el sistema de coordenadas adecuado y propone una densidad variable con justificación física clara (10)
+    & Región y densidad correctas con justificación incompleta o sistema de coordenadas subóptimo (8)
+    & Región con errores menores en los límites o densidad constante sin justificación (6)
+    & Región incorrecta o densidad no definida (0) \\ \midrule
+\textbf{Cálculo de masa y centro de masa (15 pts)}
+    & Calcula analíticamente la masa y el centro de masa con cambio de variable correcto, mostrando todos los pasos e interpretando el resultado (15)
+    & Cálculo correcto con pasos intermedios incompletos o interpretación parcial (12)
+    & Cálculo de la masa correcto pero centro de masa con errores o sin interpretación (9)
+    & Errores conceptuales en las integrales o resultados ausentes (0) \\ \midrule
+\textbf{Momentos de inercia (10 pts)}
+    & Calcula correctamente al menos dos momentos de inercia e interpreta su significado físico en la pieza (10)
+    & Un momento correcto con interpretación parcial o segundo momento con errores menores (8)
+    & Un solo momento calculado o interpretación ausente (6)
+    & Cálculo incorrecto o ausente (0) \\ \midrule
+\textbf{Verificación numérica y experimento (10 pts)}
+    & Verifica masa y centro de masa numéricamente con error relativo reportado, y presenta el experimento de sensibilidad con análisis de resultados (10)
+    & Verificación correcta sin experimento de sensibilidad, o experimento sin análisis (8)
+    & Verificación con errores en la implementación o experimento sin conclusiones (6)
+    & Verificación ausente o código no reproducible (0) \\ \midrule
+\textbf{Presentación en video (5 pts)}
+    & Exposición clara y fluida; rostro visible durante toda la presentación (5)
+    & Exposición clara con ligeras interrupciones; rostro visible (4)
+    & Exposición poco fluida o lectura excesiva; rostro visible parcial (3)
+    & Voz en off o rostro no visible / exposición ininteligible (0) \\ \midrule
+\textbf{Gestión del tiempo (5 pts)}
+    & 8:00 $\pm$ 30 s (5)
+    & 8:00 $\pm$ 60 s (4)
+    & 8:00 $\pm$ 90 s (3)
+    & Fuera de $\pm$ 90 s (0) \\ \bottomrule
+\end{tabular}
+\end{center}
+\end{landscape}
+
+\end{document}
