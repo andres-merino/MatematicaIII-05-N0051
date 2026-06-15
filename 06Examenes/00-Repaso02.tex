@@ -34,56 +34,66 @@ Encuentre y clasifique todos los puntos críticos de la función
 \]
 
 \begin{respuesta}
-Calculamos las derivadas parciales e igualamos a cero:
+Iniciemos encontrando los puntos críticos. Para ello, calculemos las derivadas parciales de $f$:
 \[
-    \frac{\partial f}{\partial x}(x,y) = 3x^2 - 3 = 0
-    \quad\Rightarrow\quad
-    x^2 = 1
-    \quad\Rightarrow\quad
-    x = \pm 1,
+    \frac{\partial f}{\partial x}(x,y) = 3x^2 - 3,
+    \qquad
+    \frac{\partial f}{\partial y}(x,y) = 3y^2 - 6y.
 \]
+Igualando a cero, obtenemos el sistema:
 \[
-    \frac{\partial f}{\partial y}(x,y) = 3y^2 - 6y = 3y(y-2) = 0
-    \quad\Rightarrow\quad
-    y = 0 \;\text{ o }\; y = 2.
+    \left\{
+    \begin{aligned}
+        3x^2 - 3 &= 0,\\
+        3y^2 - 6y &= 0.
+    \end{aligned}
+    \right.
 \]
-Los cuatro puntos críticos son:
+Resolviendo, se tiene que $x = \pm 1$ e $y = 0$ o $y = 2$. Con esto, los cuatro puntos críticos son:
 \[
     P_1 = (1,0),\quad P_2=(1,2),\quad P_3=(-1,0),\quad P_4=(-1,2).
 \]
-Calculamos las derivadas parciales de segundo orden:
-\[
-    \frac{\partial^2 f}{\partial x^2} = 6x,\qquad
-    \frac{\partial^2 f}{\partial x\partial y} = 0,\qquad
-    \frac{\partial^2 f}{\partial y^2} = 6y - 6.
-\]
-La Hessiana tiene determinante:
-\[
-    \det(H_f)(x,y)
-    =
-    (6x)(6y-6) - 0^2
-    =
-    36x(y-1).
-\]
-Evaluamos en cada punto crítico:
 
-\medskip
-\begin{center}
-\begin{tabular}{cccl}
-\hline
-Punto & $\det(H_f)$ & $f_{xx}$ & Clasificación \\ \hline
-$P_1=(1,0)$ & $36(1)(-1)=-36<0$ & — & Punto de silla \\
-$P_2=(1,2)$ & $36(1)(1)=36>0$ & $6>0$ & Mínimo local \\
-$P_3=(-1,0)$ & $36(-1)(-1)=36>0$ & $-6<0$ & Máximo local \\
-$P_4=(-1,2)$ & $36(-1)(1)=-36<0$ & — & Punto de silla \\ \hline
-\end{tabular}
-\end{center}
-
-\medskip
-Los valores de $f$ en los extremos locales son:
+Apliquemos ahora el criterio de la segunda derivada. Calculemos la matriz Hessiana:
 \[
-    f(1,2) = 1-3+8-12 = -6,\qquad f(-1,0) = -1+3+0-0 = 2.\qedhere
+    H_f(x,y)
+    =
+    \begin{pmatrix}
+        \dfrac{\partial^2 f}{\partial x^2} & \dfrac{\partial^2 f}{\partial x\partial y}\\[10pt]
+        \dfrac{\partial^2 f}{\partial y\partial x} & \dfrac{\partial^2 f}{\partial y^2}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        6x & 0\\
+        0 & 6y-6
+    \end{pmatrix}.
 \]
+Evaluando en cada punto crítico y aplicando el criterio de Sylvester:
+\begin{itemize}
+    \item \textbf{$P_1=(1,0)$:} La Hessiana evaluada en este punto es
+    \[
+        H_f(1,0) = \begin{pmatrix} 6 & 0 \\ 0 & -6 \end{pmatrix},
+    \]
+    con esto, $\det(H_f(1,0)) = -36 < 0$, por lo que $(1,0)$ es un punto de silla.
+
+    \item \textbf{$P_2=(1,2)$:} La Hessiana evaluada en este punto es
+    \[
+        H_f(1,2) = \begin{pmatrix} 6 & 0 \\ 0 & 6 \end{pmatrix},
+    \]
+    con esto, $\det(H_f(1,2)) = 36 > 0$ y $\dfrac{\partial^2 f}{\partial x^2}(1,2) = 6 > 0$, por lo que la función alcanza un mínimo local en $(1,2)$ y el mínimo es $f(1,2) = -6$.
+
+    \item \textbf{$P_3=(-1,0)$:} La Hessiana evaluada en este punto es
+    \[
+        H_f(-1,0) = \begin{pmatrix} -6 & 0 \\ 0 & -6 \end{pmatrix},
+    \]
+    con esto, $\det(H_f(-1,0)) = 36 > 0$ y $\dfrac{\partial^2 f}{\partial x^2}(-1,0) = -6 < 0$, por lo que la función alcanza un máximo local en $(-1,0)$ y el máximo es $f(-1,0) = 2$.
+
+    \item \textbf{$P_4=(-1,2)$:} La Hessiana evaluada en este punto es
+    \[
+        H_f(-1,2) = \begin{pmatrix} -6 & 0 \\ 0 & 6 \end{pmatrix},
+    \]
+    con esto, $\det(H_f(-1,2)) = -36 < 0$, por lo que $(-1,2)$ es un punto de silla.\qedhere
+\end{itemize}
 \end{respuesta}
 
 
@@ -96,40 +106,60 @@ Utilice el método de multiplicadores de Lagrange para encontrar los valores ext
 sujeta a la restricción $g(x,y) = x + y - 3 = 0$.
 
 \begin{respuesta}
-Planteamos el sistema $\nabla f = \lambda\,\nabla g$:
+Usemos multiplicadores de Lagrange. Planteemos el Lagrangeano:
 \[
-    \frac{\partial f}{\partial x} = \lambda\,\frac{\partial g}{\partial x}
-    \quad\Rightarrow\quad
-    2x = \lambda,
+    L(x,y,\lambda) = f(x,y) - \lambda\,g(x,y) = x^2 + 2y^2 - \lambda(x+y-3).
 \]
+Ahora, encontremos los puntos críticos. Para ello, calculemos las derivadas parciales de $L$:
 \[
-    \frac{\partial f}{\partial y} = \lambda\,\frac{\partial g}{\partial y}
-    \quad\Rightarrow\quad
-    4y = \lambda.
+    \frac{\partial L}{\partial x} = 2x - \lambda,
+    \qquad
+    \frac{\partial L}{\partial y} = 4y - \lambda,
+    \qquad
+    \frac{\partial L}{\partial \lambda} = -(x+y-3).
 \]
-De las dos ecuaciones obtenemos:
+Igualando a cero, obtenemos el sistema:
 \[
-    2x = 4y
-    \quad\Rightarrow\quad
-    x = 2y.
+    \left\{
+    \begin{aligned}
+        2x - \lambda &= 0,\\
+        4y - \lambda &= 0,\\
+        x + y - 3 &= 0.
+    \end{aligned}
+    \right.
 \]
-Sustituimos en la restricción:
-\[
-    2y + y = 3
-    \quad\Rightarrow\quad
-    3y = 3
-    \quad\Rightarrow\quad
-    y = 1,\quad x = 2.
-\]
-El único punto candidato es $(2,1)$ con $\lambda = 2(2) = 4$.
+Resolviendo, se tiene que $x = 2$, $y = 1$ y $\lambda = 4$. Con esto, el único punto crítico es $(2,1)$.
 
-El valor de $f$ en este punto es:
+Apliquemos ahora el criterio de la segunda derivada. Calculemos la matriz Hessiana de $L$ con respecto a $(\lambda, x, y)$:
 \[
-    f(2,1) = 4 + 2 = 6.
+    H_L(\lambda,x,y)
+    =
+    \begin{pmatrix}
+        \dfrac{\partial^2 L}{\partial \lambda^2} & \dfrac{\partial^2 L}{\partial \lambda\,\partial x} & \dfrac{\partial^2 L}{\partial \lambda\,\partial y}\\[10pt]
+        \dfrac{\partial^2 L}{\partial x\,\partial \lambda} & \dfrac{\partial^2 L}{\partial x^2} & \dfrac{\partial^2 L}{\partial x\,\partial y}\\[10pt]
+        \dfrac{\partial^2 L}{\partial y\,\partial \lambda} & \dfrac{\partial^2 L}{\partial y\,\partial x} & \dfrac{\partial^2 L}{\partial y^2}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        0 & -1 & -1\\
+        -1 & 2 & 0\\
+        -1 & 0 & 4
+    \end{pmatrix}.
 \]
-Como la restricción $x+y=3$ es una recta (conjunto cerrado no acotado) y $f(x,y)=x^2+2y^2$ crece sin límite sobre ella, este punto corresponde a un \textbf{mínimo} de $f$ restringida a la recta.
-
-El multiplicador $\lambda = 4$ indica que si se relaja la restricción en una unidad (es decir, $x+y=4$), el valor mínimo de $f$ aumenta aproximadamente en $4$ unidades.\qedhere
+Evaluando en el punto crítico $(4,2,1)$:
+\[
+    H_L(4,2,1)
+    =
+    \begin{pmatrix}
+        0 & -1 & -1\\
+        -1 & 2 & 0\\
+        -1 & 0 & 4
+    \end{pmatrix},
+\]
+con esto, $\det(H_L(4,2,1)) = -6 < 0$, por lo que $f$ alcanza un \textbf{mínimo} en $(2,1)$ y el mínimo es
+\[
+    f(2,1) = 4 + 2 = 6.\qedhere
+\]
 \end{respuesta}
 
 
@@ -150,104 +180,7 @@ Para el conjunto de tres puntos $\{(1,2),\,(2,3),\,(3,5)\}$:
 \end{enumerate}
 
 \begin{respuesta}
-\begin{enumerate}
-    \item Con $n=3$ y los puntos dados:
-    \[
-        E(a,b)
-        =
-        \frac{1}{3}\bigl[(2-a-b)^2+(3-2a-b)^2+(5-3a-b)^2\bigr].
-    \]
 
-    \item Calculamos las derivadas parciales. Usando el factor $\tfrac{2}{3}$:
-    \[
-        \frac{\partial E}{\partial a}
-        =
-        \frac{2}{3}\bigl[-(2-a-b)\cdot1 - (3-2a-b)\cdot2 - (5-3a-b)\cdot3\bigr]
-        =
-        0,
-    \]
-    \[
-        \frac{\partial E}{\partial b}
-        =
-        \frac{2}{3}\bigl[-(2-a-b) - (3-2a-b) - (5-3a-b)\bigr]
-        =
-        0.
-    \]
-    Simplificando la segunda ecuación:
-    \[
-        (2-a-b)+(3-2a-b)+(5-3a-b) = 0
-        \;\Rightarrow\;
-        10 - 6a - 3b = 0
-        \;\Rightarrow\;
-        6a + 3b = 10. \tag{I}
-    \]
-    Simplificando la primera ecuación:
-    \[
-        (2-a-b) + 2(3-2a-b) + 3(5-3a-b) = 0
-        \;\Rightarrow\;
-        23 - 14a - 6b = 0
-        \;\Rightarrow\;
-        14a + 6b = 23. \tag{II}
-    \]
-    De (I): $b = \dfrac{10-6a}{3}$. Sustituyendo en (II):
-    \[
-        14a + 6\cdot\frac{10-6a}{3} = 23
-        \;\Rightarrow\;
-        14a + 20 - 12a = 23
-        \;\Rightarrow\;
-        2a = 3
-        \;\Rightarrow\;
-        a = \frac{3}{2}.
-    \]
-    Entonces:
-    \[
-        b = \frac{10-6\cdot\tfrac{3}{2}}{3} = \frac{10-9}{3} = \frac{1}{3}.
-    \]
-    El punto crítico es $\left(\dfrac{3}{2},\,\dfrac{1}{3}\right)$.
-
-    \item Las derivadas parciales de segundo orden son:
-    \[
-        \frac{\partial^2 E}{\partial a^2}
-        =
-        \frac{2}{3}(1^2+2^2+3^2)
-        =
-        \frac{2}{3}\cdot 14
-        =
-        \frac{28}{3},
-    \]
-    \[
-        \frac{\partial^2 E}{\partial b^2}
-        =
-        \frac{2}{3}(1+1+1)
-        =
-        2,
-        \qquad
-        \frac{\partial^2 E}{\partial a\,\partial b}
-        =
-        \frac{2}{3}(1+2+3)
-        =
-        4.
-    \]
-    El determinante de la Hessiana es:
-    \[
-        \det(H_E)
-        =
-        \frac{28}{3}\cdot 2 - 4^2
-        =
-        \frac{56}{3} - 16
-        =
-        \frac{8}{3}
-        >
-        0,
-    \]
-    y $\dfrac{\partial^2 E}{\partial a^2} = \dfrac{28}{3} > 0$, por lo que el punto crítico es un \textbf{mínimo}.
-
-    \item La recta de regresión óptima es:
-    \[
-        \hat{y} = \frac{3}{2}\,x + \frac{1}{3}.
-    \]
-    El coeficiente $a = \tfrac{3}{2}$ indica que, en promedio, la variable respuesta aumenta $1.5$ unidades por cada unidad adicional en $x$. El término independiente $b = \tfrac{1}{3}$ es el valor estimado de $\hat{y}$ cuando $x=0$.\qedhere
-\end{enumerate}
 \end{respuesta}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -255,83 +188,103 @@ Para el conjunto de tres puntos $\{(1,2),\,(2,3),\,(3,5)\}$:
 Una empresa fabrica cajas rectangulares sin tapa con volumen fijo $V_0 = 32\ \text{cm}^3$. El costo del material es de $\$2$ por cm$^2$ para la base y de $\$1$ por cm$^2$ para cada cara lateral. Determine las dimensiones de la caja que minimizan el costo total de material.
 
 \begin{respuesta}
-Sean $x$, $y$ las dimensiones de la base y $z$ la altura de la caja (todas en cm). La restricción de volumen es:
+Sean las variables:
+\begin{itemize}
+    \item $x$: largo de la caja (en cm),
+    \item $y$: ancho de la caja (en cm),
+    \item $z$: altura de la caja (en cm).
+\end{itemize}
+El costo total es la suma del costo de la base más el de las cuatro caras laterales:
 \[
-    xyz = 32. \tag{R}
-\]
-El costo total es:
-\[
-    C(x,y,z) = 2xy + 2(xz + yz),
-\]
-donde $2xy$ corresponde a la base y $2(xz+yz)$ a las cuatro caras laterales (dos de dimensiones $x\times z$ y dos de $y\times z$).
-
-Usando (R) despejamos $z = \dfrac{32}{xy}$ y reducimos $C$ a función de dos variables:
-\[
-    C(x,y)
+    f(x,y,z)
     =
-    2xy + 2\left(x\cdot\frac{32}{xy} + y\cdot\frac{32}{xy}\right)
+    \underbrace{2xy}_{\text{base}}
+    + \underbrace{xz + xz}_{\text{front./post.}}
+    + \underbrace{yz + yz}_{\text{lat. iz./der.}}
     =
-    2xy + \frac{64}{y} + \frac{64}{x}.
+    2xy + 2xz + 2yz.
+\]
+Como el volumen debe ser de 32 $\text{cm}^3$, se tiene que:
+\[
+    xyz = 32
+\]
+Así, el problema de optimización es:
+\[
+    \left\{
+    \begin{aligned}
+        &\text{min }  f(x,y,z) = 2xy + 2xz + 2yz,\\
+        &\text{sujeto a} \\
+        &\qquad xyz - 32 = 0.
+    \end{aligned}
+    \right.
 \]
 
-Igualamos las derivadas parciales a cero:
+Usemos multiplicadores de Lagrange. Planteemos el Lagrangeano:
 \[
-    \frac{\partial C}{\partial x} = 2y - \frac{64}{x^2} = 0
-    \;\Rightarrow\;
-    x^2 y = 32, \tag{I}
+    L(\lambda,x,y,z) = 2xy + 2xz + 2yz - \lambda(xyz - 32).
 \]
+Ahora, encontremos los puntos críticos. Para ello, calculemos las derivadas parciales de $L$:
 \[
-    \frac{\partial C}{\partial y} = 2x - \frac{64}{y^2} = 0
-    \;\Rightarrow\;
-    xy^2 = 32. \tag{II}
+    \frac{\partial L}{\partial x} = 2y + 2z - \lambda yz,\quad
+    \frac{\partial L}{\partial y} = 2x + 2z - \lambda xz,\quad
+    \frac{\partial L}{\partial z} = 2x + 2y - \lambda xy,\quad
+    \frac{\partial L}{\partial \lambda} = -(xyz-32).
 \]
+Igualando a cero, obtenemos el sistema:
+\[
+    \left\{
+    \begin{aligned}
+        2y + 2z - \lambda yz &= 0,\\
+        2x + 2z - \lambda xz &= 0,\\
+        2x + 2y - \lambda xy &= 0,\\
+        xyz - 32 &= 0.
+    \end{aligned}
+    \right.
+\]
+Resolviendo, se tiene que $x = y = z = 2\sqrt[3]{4}$ y $\lambda = \sqrt[3]{2}$. Con esto, el único punto crítico es $\bigl(2\sqrt[3]{4},\,2\sqrt[3]{4},\,2\sqrt[3]{4}\bigr)$.
 
-Dividiendo (I) entre (II):
+Apliquemos ahora el criterio de la segunda derivada. Calculemos la matriz Hessiana de $L$ con respecto a $(\lambda,x,y,z)$:
 \[
-    \frac{x^2 y}{x y^2} = 1
-    \;\Rightarrow\;
-    \frac{x}{y} = 1
-    \;\Rightarrow\;
-    x = y.
-\]
-
-Sustituyendo en (I): $x^3 = 32 \Rightarrow x = \sqrt[3]{32} = 2\sqrt[3]{4}$.
-
-Por tanto $x = y = 2\sqrt[3]{4}$ y la altura es:
-\[
-    z = \frac{32}{xy} = \frac{32}{(2\sqrt[3]{4})^2} = \frac{32}{4\sqrt[3]{16}} = \frac{8}{\sqrt[3]{16}} = \frac{8}{2\sqrt[3]{2}} = \frac{4}{\sqrt[3]{2}} = 2\sqrt[3]{4}.
-\]
-
-La caja óptima es un \textbf{cubo} de lado $2\sqrt[3]{4} \approx 3{,}17\ \text{cm}$.
-
-Verificamos con la Hessiana. Las derivadas de segundo orden son:
-\[
-    \frac{\partial^2 C}{\partial x^2} = \frac{128}{x^3},\qquad
-    \frac{\partial^2 C}{\partial y^2} = \frac{128}{y^3},\qquad
-    \frac{\partial^2 C}{\partial x\,\partial y} = 2.
-\]
-En el punto crítico $x=y=2\sqrt[3]{4}$, se tiene $x^3=32$, por lo que:
-\[
-    \frac{\partial^2 C}{\partial x^2} = \frac{128}{32} = 4,\qquad
-    \frac{\partial^2 C}{\partial y^2} = 4.
-\]
-\[
-    \det(H_C) = 4\cdot 4 - 2^2 = 12 > 0,
-\]
-y $\dfrac{\partial^2 C}{\partial x^2} = 4 > 0$, lo que confirma que es un \textbf{mínimo}.
-
-El costo mínimo es:
-\[
-    C = 2(2\sqrt[3]{4})^2 + \frac{64}{2\sqrt[3]{4}} + \frac{64}{2\sqrt[3]{4}}
+    H_L(\lambda,x,y,z)
     =
-    2\cdot 4\sqrt[3]{16} + 64\cdot\frac{1}{2\sqrt[3]{4}}
+    \begin{pmatrix}
+        0 & -yz & -xz & -xy\\[4pt]
+        -yz & 0 & 2-\lambda z & 2-\lambda y\\[4pt]
+        -xz & 2-\lambda z & 0 & 2-\lambda x\\[4pt]
+        -xy & 2-\lambda y & 2-\lambda x & 0
+    \end{pmatrix}.
+\]
+Evaluando en el punto crítico y usando que $\sqrt[3]{2}\cdot 2\sqrt[3]{4} = 4$ y $(2\sqrt[3]{4})^2 = 4\sqrt[3]{16}$:
+\[
+    H_L\!\left(\sqrt[3]{2},\,2\sqrt[3]{4},\,2\sqrt[3]{4},\,2\sqrt[3]{4}\right)
     =
-    8\sqrt[3]{16} + 32\cdot\frac{1}{\sqrt[3]{4}}
+    \begin{pmatrix}
+        0 & -4\sqrt[3]{16} & -4\sqrt[3]{16} & -4\sqrt[3]{16}\\[4pt]
+        -4\sqrt[3]{16} & 0 & -2 & -2\\[4pt]
+        -4\sqrt[3]{16} & -2 & 0 & -2\\[4pt]
+        -4\sqrt[3]{16} & -2 & -2 & 0
+    \end{pmatrix}.
+\]
+Los menores principales relevantes con $m=1$, $n=3$ son:
+\[
+    \det(H_3) = -4(4\sqrt[3]{16})^2,
+    \qquad
+    \det(H_4) = -12(4\sqrt[3]{16})^2.
+\]
+La secuencia del criterio es:
+\[
+    (-1)^1\det(H_3) = 4(4\sqrt[3]{16})^2 > 0,
+    \qquad
+    (-1)^1\det(H_4) = 12(4\sqrt[3]{16})^2 > 0.
+\]
+Como la secuencia consta solo de números positivos, $f$ alcanza un {mínimo} en $\bigl(2\sqrt[3]{4},\,2\sqrt[3]{4},\,2\sqrt[3]{4}\bigr)$ y el costo mínimo es
+\[
+    f\!\left(2\sqrt[3]{4},\,2\sqrt[3]{4},\,2\sqrt[3]{4}\right)
     =
-    8\sqrt[3]{16} + 8\sqrt[3]{16}
+    6\cdot\bigl(2\sqrt[3]{4}\bigr)^2
     =
-    16\sqrt[3]{16}
-    \approx \$40{,}32.\qedhere
+    24\sqrt[3]{16}
+    \approx \$60{,}48.\qedhere
 \]
 \end{respuesta}
 
