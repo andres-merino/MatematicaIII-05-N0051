@@ -1,0 +1,332 @@
+\documentclass[11pt,respuestas,a4]{aleph-examen}
+% \documentclass[10pt,a5]{aleph-examen}
+
+% -- Paquetes extra
+\usepackage{aleph-comandos}
+\usepackage{systeme}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Examen Escrito 2 -- Criterio 3.2}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+\vspace{-5mm}
+\section*{Indicaciones}
+\begin{itemize}[leftmargin=*]
+\item
+    En esta actividad se evalúa si el estudiante (Criterio 3.2) emplea la derivada para resolver problemas de optimización.
+\item
+    Los ejercicios deben ser resueltos a mano y entregarse en hojas de forma física al docente, sin ayuda de resúmenes o asistentes computacionales.
+\item
+    Se encuentra prohibido el uso de cualquier otra fuente de información durante todo el examen.
+\item
+    No está permitido tener ningún dispositivo electrónico encendido durante el examen, incluyendo celulares, tablets, computadoras, audífonos, relojes inteligentes, ni similares.
+\item
+    En caso de considerar que existe un error en la pregunta o que esta se encuentra mal planteada, se debe indicar cuál es el error y justificarlo.
+\item
+    Todas las soluciones deben estar correctamente redactadas y explicadas.
+\end{itemize}
+
+\section*{Ejercicios}
+
+\begin{preguntas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Encuentre y clasifique los puntos críticos de la función\puntaje{10}
+\[
+    f(x,y) = 2xy - 2x^2 - 5y^2 + 4y - 3.
+\]
+
+\begin{respuesta}
+Iniciemos encontrando los puntos críticos. Para ello, calculemos las derivadas parciales de $f$:
+\[
+    \frac{\partial f}{\partial x}(x,y) = 2y - 4x,
+    \qquad
+    \frac{\partial f}{\partial y}(x,y) = 2x - 10y + 4.
+\]
+Igualando a cero, obtenemos el sistema:
+\[
+    \left\{
+    \begin{aligned}
+        2y - 4x &= 0,\\
+        2x - 10y + 4 &= 0.
+    \end{aligned}
+    \right.
+\]
+De la primera ecuación, $y = 2x$. Sustituyendo en la segunda:
+\[
+    2x - 10(2x) + 4 = 0
+    \;\Longrightarrow\;
+    -18x + 4 = 0
+    \;\Longrightarrow\;
+    x = \frac{2}{9},
+    \qquad
+    y = \frac{4}{9}.
+\]
+Con esto, el único punto crítico es $\left(\dfrac{2}{9},\dfrac{4}{9}\right)$.
+
+Apliquemos ahora el criterio de la segunda derivada. Calculemos la matriz Hessiana:
+\[
+    H_f(x,y)
+    =
+    \begin{pmatrix}
+        \dfrac{\partial^2 f}{\partial x^2} & \dfrac{\partial^2 f}{\partial x\partial y}\\[10pt]
+        \dfrac{\partial^2 f}{\partial y\partial x} & \dfrac{\partial^2 f}{\partial y^2}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        -4 & 2\\
+        2 & -10
+    \end{pmatrix}.
+\]
+La Hessiana es constante; aplicando el criterio de Sylvester:
+\[
+    \det(H_f) = (-4)(-10) - (2)(2) = 36 > 0,
+    \qquad
+    \frac{\partial^2 f}{\partial x^2} = -4 < 0,
+\]
+por lo que la función alcanza un {máximo} local en $\left(\dfrac{2}{9},\dfrac{4}{9}\right)$ y el máximo es
+\[
+    f\!\left(\frac{2}{9},\frac{4}{9}\right) = -\frac{19}{9} \approx -2{,}11.\qedhere
+\]
+\end{respuesta}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Utilice el método de multiplicadores de Lagrange para encontrar los valores extremos de
+\[
+    f(x,y) = 5x + 2y
+\]
+sujeta a la restricción $5x^2 + 2y^2 = 14$.\puntaje{15}
+
+\begin{respuesta}
+Usemos multiplicadores de Lagrange con $g(x,y) = 5x^2 + 2y^2 - 14$. Planteemos el Lagrangeano:
+\[
+    L(x,y,\lambda) = 5x + 2y - \lambda(5x^2 + 2y^2 - 14).
+\]
+Ahora, encontremos los puntos críticos. Para ello, calculemos las derivadas parciales de $L$:
+\[
+    \frac{\partial L}{\partial x} = 5 - 10\lambda x,
+    \qquad
+    \frac{\partial L}{\partial y} = 2 - 4\lambda y,
+    \qquad
+    \frac{\partial L}{\partial \lambda} = -(5x^2 + 2y^2 - 14).
+\]
+Igualando a cero, obtenemos el sistema:
+\[
+    \left\{
+    \begin{aligned}
+        5 - 10\lambda x &= 0,\\
+        2 - 4\lambda y &= 0,\\
+        5x^2 + 2y^2 - 14 &= 0.
+    \end{aligned}
+    \right.
+\]
+De las dos primeras ecuaciones, $x = \dfrac{1}{2\lambda}$ e $y = \dfrac{1}{2\lambda}$, es decir, $x = y$. Sustituyendo en la tercera:
+\[
+    5x^2 + 2x^2 - 14 = 0
+    \;\Longrightarrow\;
+    7x^2 = 14
+    \;\Longrightarrow\;
+    x^2 = 2
+    \;\Longrightarrow\;
+    x = \pm\sqrt{2}.
+\]
+Con esto, los puntos críticos son $\bigl(\sqrt{2},\sqrt{2}\bigr)$ con $\lambda = \dfrac{\sqrt{2}}{4}$ y $\bigl(-\sqrt{2},-\sqrt{2}\bigr)$ con $\lambda = -\dfrac{\sqrt{2}}{4}$.
+
+Apliquemos ahora el criterio de la segunda derivada. Calculemos la matriz Hessiana de $L$ con respecto a $(\lambda, x, y)$:
+\[
+    H_L(\lambda,x,y)
+    =
+    \begin{pmatrix}
+        0 & -10x & -4y\\[4pt]
+        -10x & -10\lambda & 0\\[4pt]
+        -4y & 0 & -4\lambda
+    \end{pmatrix}.
+\]
+Un cálculo directo muestra que $\det(H_L) = \lambda\bigl(400x^2 + 160y^2\bigr)$. Evaluando en cada punto crítico:
+\begin{itemize}
+    \item {$\bigl(\sqrt{2},\sqrt{2}\bigr)$ con $\lambda = \dfrac{\sqrt{2}}{4}$:} se tiene $\det(H_L) = 280\sqrt{2} > 0$, por lo que $f$ alcanza un {máximo} y el máximo es
+    \[
+        f\bigl(\sqrt{2},\sqrt{2}\bigr) = 5\sqrt{2} + 2\sqrt{2} = 7\sqrt{2} \approx 9{,}90.
+    \]
+    \item {$\bigl(-\sqrt{2},-\sqrt{2}\bigr)$ con $\lambda = -\dfrac{\sqrt{2}}{4}$:} se tiene $\det(H_L) = -280\sqrt{2} < 0$, por lo que $f$ alcanza un {mínimo} y el mínimo es
+    \[
+        f\bigl(-\sqrt{2},-\sqrt{2}\bigr) = -7\sqrt{2} \approx -9{,}90.\qedhere
+    \]
+\end{itemize}
+\end{respuesta}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Se va a fabricar una lata cilíndrica de metal (con tapa y fondo) a partir de $54\pi\ \text{cm}^2$ de lámina de lata. ¿Cuál es la mayor capacidad que puede tener la lata? {\footnotesize(\noindent\textit{Pista:} el volumen de un cilindro  es $\pi r^2 h$ y su área total (con tapa y fondo) es $2\pi r^2 + 2\pi r h$)}\puntaje{15}
+
+\begin{respuesta}
+Sean $r$ el radio de la base (en cm) y $h$ la altura de la lata (en cm). El volumen es
+\[
+    V(r,h) = \pi r^2 h,
+\]
+y, como la lata tiene tapa y fondo, el área total de lámina es
+\[
+    2\pi r^2 + 2\pi r h = 54\pi.
+\]
+Así, el problema de optimización es:
+\[
+    \left\{
+    \begin{aligned}
+        &\text{max } V(r,h) = \pi r^2 h,\\
+        &\text{sujeto a} \\
+        &\qquad 2\pi r^2 + 2\pi r h - 54\pi = 0.
+    \end{aligned}
+    \right.
+\]
+
+Usemos multiplicadores de Lagrange. Planteemos el Lagrangeano:
+\[
+    L(\lambda,r,h) = \pi r^2 h - \lambda\bigl(2\pi r^2 + 2\pi r h - 54\pi\bigr).
+\]
+Ahora, encontremos los puntos críticos. Para ello, calculemos las derivadas parciales de $L$:
+\[
+    \frac{\partial L}{\partial r} = 2\pi r h - \lambda(4\pi r + 2\pi h),\quad
+    \frac{\partial L}{\partial h} = \pi r^2 - \lambda(2\pi r),\quad
+    \frac{\partial L}{\partial \lambda} = -\bigl(2\pi r^2 + 2\pi r h - 54\pi\bigr).
+\]
+Igualando a cero, obtenemos el sistema:
+\[
+    \left\{
+    \begin{aligned}
+        2\pi r h - \lambda(4\pi r + 2\pi h) &= 0,\\
+        \pi r^2 - 2\pi\lambda r &= 0,\\
+        2\pi r^2 + 2\pi r h - 54\pi &= 0.
+    \end{aligned}
+    \right.
+\]
+De la segunda ecuación, $r = 2\lambda$, es decir, $\lambda = \dfrac{r}{2}$. Sustituyendo en la primera:
+\[
+    2\pi r h - \frac{r}{2}(4\pi r + 2\pi h)  = 0 
+    \;\Longrightarrow\;
+    2\pi r^2 + \pi r h = 0
+    \;\Longrightarrow\;
+    \pi r h = 2\pi r^2
+    \;\Longrightarrow\;
+    h = 2r.
+\]
+Reemplazando en la tercera:
+\[
+    2\pi r^2 + 2\pi r(2r) - 54\pi = 0
+    \;\Longrightarrow\;
+    6\pi r^2 = 54\pi
+    \;\Longrightarrow\;
+    r^2 = 9
+    \;\Longrightarrow\;
+    r = 3,\qquad h = 6.
+\]
+Con esto, el único punto crítico es $(r,h) = (3,6)$ con $\lambda = \dfrac{3}{2}$.
+
+Apliquemos ahora el criterio de la segunda derivada. La matriz Hessiana de $L$ con respecto a $(\lambda,r,h)$, evaluada en el punto crítico, es
+\[
+    H_L\!\left(\frac{3}{2},3,6\right)
+    =
+    \begin{pmatrix}
+        0 & -24\pi & -6\pi\\[4pt]
+        -24\pi & 6\pi & 3\pi\\[4pt]
+        -6\pi & 3\pi & 0
+    \end{pmatrix},
+\]
+cuyo determinante es $\det(H_L) = 648\pi^3 > 0$, por lo que $V$ alcanza un {máximo} en $(3,6)$. La mayor capacidad de la lata es
+\[
+    V(3,6) = \pi (3)^2 (6) = 54\pi \approx 169{,}65\ \text{cm}^3.\qedhere
+\]
+\end{respuesta}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Suponga que, en un problema de optimización sin restricciones, una función $f$ tiene el punto crítico $(1,-2,3)$ y que su matriz Hessiana es
+\[
+    H_f(x,y,z)
+    =
+    \begin{pmatrix}
+        2x & y+1 & z-3\\
+        y+1 & -y & x-2\\
+        z-3 & x-2 & z-1
+    \end{pmatrix}.
+\]
+Determine la naturaleza del punto crítico:
+\begin{enumerate}[leftmargin=*]
+    \item usando los valores propios de la Hessiana;\puntaje{6}
+    \item usando el criterio de Sylvester.\puntaje{4}
+\end{enumerate}
+
+\begin{respuesta}
+Primero, evaluemos la matriz Hessiana en el punto crítico $(1,-2,3)$:
+\[
+    H_f(1,-2,3)
+    =
+    \begin{pmatrix}
+        2(1) & (-2)+1 & 3-3\\
+        (-2)+1 & -(-2) & 1-2\\
+        3-3 & 1-2 & 3-1
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        2 & -1 & 0\\
+        -1 & 2 & -1\\
+        0 & -1 & 2
+    \end{pmatrix}.
+\]
+\begin{enumerate}
+    \item \textbf{Valores propios.} Calculemos el polinomio característico $\det(H_f - \lambda I)$:
+    \[
+        \det
+        \begin{pmatrix}
+            2-\lambda & -1 & 0\\
+            -1 & 2-\lambda & -1\\
+            0 & -1 & 2-\lambda
+        \end{pmatrix}
+        =
+        (2-\lambda)\bigl[(2-\lambda)^2 - 1\bigr] - (2-\lambda)
+        =
+        (2-\lambda)\bigl[(2-\lambda)^2 - 2\bigr].
+    \]
+    Igualando a cero, se tiene $2-\lambda = 0$ o $(2-\lambda)^2 = 2$, de donde los valores propios son
+    \[
+        \lambda_1 = 2-\sqrt{2}\approx 0{,}59,
+        \qquad
+        \lambda_2 = 2,
+        \qquad
+        \lambda_3 = 2+\sqrt{2}\approx 3{,}41.
+    \]
+    Como los tres valores propios son positivos, la Hessiana es definida positiva y, por lo tanto, $f$ alcanza un {mínimo} local en $(1,-2,3)$.
+
+    \item \textbf{Criterio de Sylvester.} Calculemos los menores principales líderes:
+    \[
+        D_1 = 2 > 0,
+        \qquad
+        D_2 = \det\begin{pmatrix} 2 & -1\\ -1 & 2 \end{pmatrix} = 3 > 0,
+        \qquad
+        D_3 = \det(H_f) = 4 > 0.
+    \]
+    Como $D_1, D_2, D_3$ son todos positivos, la Hessiana es definida positiva y, por lo tanto, $f$ alcanza un {mínimo} local en $(1,-2,3)$, en concordancia con el inciso anterior.\qedhere
+\end{enumerate}
+\end{respuesta}
+
+\end{preguntas}
+
+\end{document}
