@@ -1,0 +1,125 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 15: Integrales de línea}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales con asistentes computacionales.
+    \item \textbf{RdA 3:} Aplicar Cálculo Vectorial para resolver problemas reales.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Calcular integrales de línea de campos escalares a lo largo de una curva parametrizada.
+    \item Calcular integrales de línea de campos vectoriales y reconocer el efecto de la orientación de la curva.
+    \item Emplear integrales de línea para determinar masa, centro de masas y momentos de inercia de alambres.
+    \item Aplicar los teoremas fundamentales de las integrales de línea para campos conservativos.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+Cuando empujamos un carrito por un sendero que sube, baja y se curva, el esfuerzo total depende del camino que sigamos y de cuánto nos cueste avanzar en cada tramo. ¿Cómo podríamos sumar todas esas pequeñas contribuciones a lo largo de una trayectoria curva para obtener el esfuerzo total?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Integrales de línea de campos escalares y vectoriales}
+Se introduce la integral de línea como un límite de sumas a lo largo de una curva, primero para campos escalares y luego para campos vectoriales, junto con sus aplicaciones físicas.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial e interpretar la integral de línea de un campo escalar como la masa de un alambre de densidad variable y la de un campo vectorial como el trabajo de una fuerza a lo largo de un camino.
+    \item \textbf{Clase magistral:} se define la integral de línea de un campo escalar y se obtiene la fórmula $\int_C f\,d\alpha=\int_a^b f(\alpha(t))\|\alpha'(t)\|\,dt$; se define la integral de línea de un campo vectorial con la fórmula $\int_C F\cdot d\alpha=\int_a^b F(\alpha(t))\cdot\alpha'(t)\,dt$; se analiza el efecto de la orientación y de las parametrizaciones equivalentes. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen15.pdf}{Resumen15.pdf}.
+    \item \textbf{Implementación computacional:} calcular integrales de línea y visualizar curvas y campos con un asistente computacional.
+    \item \textbf{Resolución de ejercicios:} calcular integrales de línea de campos escalares y vectoriales usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios15.pdf}{Ejercicios15.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Calcule $\int_C (x+y)\,ds$ donde $C$ es el segmento de $(0,0)$ a $(1,2)$.
+    \item Calcule el trabajo del campo $F(x,y)=(y,x)$ a lo largo de la curva $\alpha(t)=(\cos t,\sin t)$, $t\in[0,\pi]$.
+    \item ¿Qué ocurre con la integral de línea de un campo vectorial si se invierte la orientación de la curva? ¿Y con la de un campo escalar?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Teoremas fundamentales e independencia del camino}
+Se estudia cuándo la integral de línea no depende del camino y se conecta con los campos conservativos a través de los teoremas fundamentales.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} mostrar con un ejemplo que para ciertos campos el trabajo entre dos puntos es el mismo sin importar el camino, y preguntar qué caracteriza a esos campos.
+    \item \textbf{Clase magistral:} se define la independencia del camino; se presenta la equivalencia entre campo conservativo, integral independiente del camino e integral nula sobre curvas cerradas; se enuncian el Primer y Segundo Teorema Fundamental para integrales de línea. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen15.pdf}{Resumen15.pdf}.
+    \item \textbf{Resolución de ejercicios:} evaluar integrales de línea de campos conservativos mediante una función potencial usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios15.pdf}{Ejercicios15.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Dado el campo conservativo $F(x,y)=(2x,2y)$ con potencial $f(x,y)=x^2+y^2$, calcule $\int_C F\cdot ds$ de $(0,0)$ a $(1,1)$.
+    \item ¿Por qué la integral de un campo conservativo sobre una curva cerrada es igual a cero?
+    \item Enuncie las tres condiciones equivalentes para que un campo vectorial sea conservativo.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 6.1, ejercicios 1--13 (impares).
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿Cómo se interpreta físicamente la integral de línea de un campo vectorial como trabajo? Investigar un ejemplo concreto en mecánica.
+    \item ¿Qué significa que un campo de fuerzas sea conservativo en física? ¿Qué relación tiene con la energía potencial?
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Ver los videos:
+\begin{itemize}[leftmargin=*]
+    \item \href{https://youtu.be/_GHJB0qbp_E?si=eY4iZ8Yk2hX6m3vO}{Introduction to the surface integral}.
+\end{itemize}
+
+
+\end{document}

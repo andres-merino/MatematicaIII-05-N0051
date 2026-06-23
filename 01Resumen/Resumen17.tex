@@ -1,0 +1,119 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+\usepackage{esint}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 17: Teoremas integrales}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Teorema de Green}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{teo}[Teorema de Green]
+    Sea $\Omega\subseteq \R^2$ un conjunto cerrado, acotado y simplemente conexo tal que $\partial \Omega$ es una curva suave parametrizada por una trayectoria que recorre $\partial \Omega$ de manera antihoraria. Se tiene que
+    \[
+        \iint_\Omega \rot(f) \,dA = \oint_{\partial \Omega} f\cdot ds.
+    \]
+\end{teo}
+
+\begin{advertencia}
+    Si tenemos que
+    \[
+        f(x,y)=(M(x,y),N(x,y)),
+    \]
+    para $(x,y)\in\R^2$, entonces el Teorema de Green se enuncia por
+    \[
+        \iint_\Omega \parcial{N}{x} - \parcial{M}{y} \,dxdy = \oint_{\partial \Omega} M\, dx+ N\, dy.
+    \]
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Teorema de Gauss en el plano}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{teo}[Teorema de Gauss en el plano]
+    Sea $\Omega\subseteq \R^2$ un conjunto cerrado, acotado y simplemente conexo tal que $\partial \Omega$ es una curva suave parametrizada por una trayectoria $\func{\alpha}{I}{\R^2}$ que recorre $\partial \Omega$ de manera antihoraria. Se define
+    \[
+        n(t) = \frac{(\alpha_2'(t),- \alpha_1'(t))}{\|\alpha'(t)\|}
+    \]
+    para $t\in I$. Se tiene que
+    \[
+        \iint_\Omega \dive(f) \,dA = \oint_{\partial \Omega} f\cdot n\, d\alpha.
+    \]
+\end{teo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Teorema de Stokes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Superficie orientable]
+    Se dice que una superficie $\Sigma$ es orientable si es posible definir un solo vector normal unitario en cada punto de $\Sigma$ de modo que este sea continuo. Una vez definido el vector normal se dice que $\Sigma$ es una superficie orientada.
+\end{defi}
+
+\begin{defi}
+    Dada una superficie orientada $\Sigma$ y una curva $C$ sobre $\Sigma$ se dice que la parametrización de $C$ tiene orientación consistente con la parametrización de $\Sigma$ si el vector normal de $\Sigma$ sigue la regla de la mano derecha con respecto a $C$.
+\end{defi}
+
+\begin{teo}[Teorema de Stokes]
+    Sea $\Sigma$ una superficie orientada, acotada y suave en $\R^3$ tal que el borde de $\Sigma$, denotado por $\partial \Sigma$, es una curva suave, simple, cerrada y parametrizada con orientación consistente con la parametrización de $\Sigma$. Sea $\func{f}{\Sigma}{\R^3}$ un campo vectorial diferenciable, se tiene que
+    \[
+        \iint_\Sigma \rot(f) \cdot dS = \oint_{\partial \Sigma} f\cdot ds.
+    \]
+\end{teo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Teorema de Gauss}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{teo}[Teorema de Gauss]
+    Sea $\Omega$ una región acotada de $\R^3$ tal que $\partial \Omega$ es una superficie suave, cerrada y parametrizada con orientación hacia fuera de $\Omega$. Sea $\func{F}{\Omega}{\R^3}$ un campo vectorial diferenciable, se tiene que
+    \[
+        \iiint_\Omega \dive(F) \, dV = \varoiint_{\partial \Omega} F\cdot dS.
+    \]
+\end{teo}
+
+\begin{prop}
+    Sea $\Omega$ una región acotada de $\R^3$ tal que $\partial \Omega$ es una superficie suave, cerrada y parametrizada con orientación hacia fuera de $\Omega$. Sean $\func{F}{\Omega}{\R^3}$ un campo vectorial y $\func{g}{\Omega\subseteq \R^3}{\R}$ un campo escalar, ambos diferenciables, se tiene que
+    \[
+        \iiint_{\Omega} (F \cdot \nabla g + g \dive(F))\, dV
+        = \varoiint_{\partial \Omega}  g F \cdot dS.
+    \]
+\end{prop}
+
+\begin{prop}[Fórmula de Green]
+    Sea $\Omega$ una región acotada de $\R^3$ tal que $\partial \Omega$ es una superficie suave, cerrada y parametrizada con orientación hacia fuera de $\Omega$. Sean $\func{f,g}{\Omega}{\R}$ campos escalares dos veces diferenciables, se tiene que
+    \[
+        \iiint_\Omega (\nabla f\cdot \nabla g + f \Delta g) \, dV
+        =
+        \varoiint_{\partial \Omega} (f\nabla g) \cdot dS.
+    \]
+\end{prop}
+
+\begin{prop}
+    Sea $\Omega$ una región acotada de $\R^3$ tal que $\partial \Omega$ es una superficie suave, cerrada y parametrizada con orientación hacia fuera de $\Omega$. Sean $\func{F,G}{\Omega}{\R^3}$ campos vectoriales dos veces diferenciables, se tiene que
+    \[
+        \iiint_{\Omega} (G \cdot \rot(F) - F \cdot \rot(G))\, dV
+        = \varoiint_{\partial \Omega}  (F\times G) \cdot dS.
+    \]
+\end{prop}
+
+
+\end{document}

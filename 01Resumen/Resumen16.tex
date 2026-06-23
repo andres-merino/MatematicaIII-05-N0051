@@ -1,0 +1,188 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 16: Integrales de superficie}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Superficies parametrizadas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En lo que sigue, tomaremos $\Omega\subseteq \R^2$ un conjunto abierto y conexo.
+
+\begin{defi}[Superficie parametrizada]
+    Dada $\func{\alpha}{\Omega}{\R^3}$ una función, al conjunto $\Sigma=\img(\alpha)$ se lo llama la gráfica de $\alpha$. A $\alpha$ se la llama una parametrización de $\Sigma$.
+
+    Si $\alpha$ es continua en $\Omega$, a su gráfica se la llama la superficie descrita por $\alpha$.
+\end{defi}
+
+\begin{defi}[Curvas coordenadas]
+    Dada una superficie $\Sigma$ con parametrización $\func{\alpha}{\Omega}{\R^3}$ y $(u_0,v_0)\in \Omega$, se definen las trayectorias
+    \[
+        \funcion{\alpha_{v_0}}{I_1}{\R^3}{u}{\alpha_{v_0}(u)=\alpha(u,v_0)}
+        \texty
+        \funcion{\alpha_{u_0}}{I_2}{\R^3}{v}{\alpha_{u_0}(v)=\alpha(u_0,v),}
+    \]
+    donde $I_1=\{u\in\R:(u,v_0)\in \Omega\}$ y $I_2=\{v\in\R:(u_0,v)\in \Omega\}$. A estas trayectorias se las llama curvas coordenadas de la superficie $\Sigma$ en $(u_0,v_0)$.
+\end{defi}
+
+\begin{defi}[Vectores tangentes y normal]
+    Dada una superficie $\Sigma$ con parametrización $\func{\alpha}{\Omega}{\R^3}$ y $(u,v)\in \Omega$, se tiene que
+    \[
+        T_\alpha^1(u,v) = \alpha_v'(u) = D_1 \alpha(u,v) = \parcial{\alpha}{u}(u,v)
+    \]
+    y
+    \[
+        T_\alpha^2(u,v) = \alpha_u'(v) = D_2 \alpha(u,v) = \parcial{\alpha}{v}(u,v)
+    \]
+    son vectores tangentes a las curvas coordenadas en $x(u)$ y $y(v)$, respectivamente. Se los denomina vectores tangentes a la superficie en el punto $\alpha(u,v)$. Además, al vector
+    \[
+        N(u,v) = T_\alpha^1(u,v) \times T_\alpha^2(u,v)
+    \]
+    se lo llama vector normal estándar en el punto $\alpha(u,v)$.
+\end{defi}
+
+\begin{advertencia}
+    Si no existe ambigüedad en cuanto a la parametrización de la superficie, se denotará por $T^1$, $T^2$, $N$ a $T_\alpha^1$, $T_\alpha^2$, $N_\alpha$, respectivamente.
+\end{advertencia}
+
+\begin{defi}[Superficie suave]
+    Dada una superficie $\Sigma$ con parametrización $\func{\alpha}{\Omega}{\R^3}$, se dice que es suave si
+    \[
+        N(u,v) \neq 0
+    \]
+    para todo $(u,v)\in \Omega$.
+\end{defi}
+
+\begin{prop}
+    Dada una superficie suave $\Sigma$ con parametrización $\func{\alpha}{\Omega}{\R^3}$, se tiene que su área está dada por
+    \[
+        \iint_\Omega \|N(u,v)\| \,dudv.
+    \]
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Integrales de superficie de campos escalares}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En lo siguiente consideraremos una superficie suave $\Sigma$ con una parametrización $\func{\alpha}{\Omega}{\R^3}$.
+
+\begin{defi}[Integral de superficie de campos escalares]
+    Dado un campo escalar $\func{f}{\Sigma}{\R}$, se define la integral de superficie del campo escalar $f$ sobre la superficie $\Sigma$ parametrizada por $\alpha$ por
+    \[
+        \iint_\Sigma f\, d\alpha
+        = \lim_{|P|\to 0} f(\alpha(b_i,c_j)) \| (\alpha(u_i,v_j)- \alpha(u_{i-1},v_j)) \times (\alpha(u_i,v_j)- \alpha(u_i,v_{j-1}))\|,
+    \]
+    siempre que el límite exista (el límite se toma sobre todas las particiones etiquetadas del conjunto $\Omega$).
+\end{defi}
+
+\begin{advertencia}
+    Otras notaciones para esta integral son:
+    \[
+        \iint_\Sigma f\, d\alpha
+        = \iint_\alpha f\, dS
+        = \iint_\Sigma f \,dS
+    \]
+\end{advertencia}
+
+\begin{teo}
+    Dado un campo escalar $\func{f}{\Sigma}{\R}$, si existe la integral de superficie de $f$ sobre la superficie $\Sigma$ parametrizada por $\alpha$, entonces se tiene que
+    \[
+        \iint_\Sigma f\, d\alpha
+        =\iint_\Omega f(\alpha(u,v))\|N(u,v)\|\,dudv.
+    \]
+\end{teo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Integrales de superficie de campos vectoriales}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Integral de superficie de campos vectoriales]
+    Dado un campo vectorial $\func{F}{\Sigma}{\R^3}$, se define la integral de superficie del campo vectorial $F$ sobre la superficie $\Sigma$ parametrizada por $\alpha$ por
+    \[
+        \iint_\Sigma F\cdot d\alpha
+        = \lim_{|P|\to 0} F(\alpha(b_i,c_j)) \cdot\l( (\alpha(u_i,v_j)- \alpha(u_{i-1},v_j)) \times (\alpha(u_i,v_j)- \alpha(u_i,v_{j-1}))\r),
+    \]
+    siempre que el límite exista (el límite se toma sobre todas las particiones etiquetadas del conjunto $\Sigma$).
+\end{defi}
+
+\begin{advertencia}
+    Otras notaciones para esta integral son:
+    \[
+        \iint_\Sigma F\cdot d\alpha
+        = \iint_\alpha F \cdot dS
+        = \iint_\Sigma F \cdot dS.
+    \]
+\end{advertencia}
+
+\begin{teo}
+    Dado un campo vectorial $\func{F}{\Sigma}{\R^3}$, si existe la integral de superficie de $F$ sobre la superficie $\Sigma$, entonces se tiene que
+    \[
+        \iint_\Sigma F\cdot d\alpha
+        =\iint_\Omega F(\alpha(u,v))\cdot N(u,v)\,dudv.
+    \]
+\end{teo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cambio de parámetro}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Parametrizaciones equivalentes]
+    Dadas dos funciones $\func{\alpha}{\Omega_1}{\R^3}$ y $\func{\beta}{\Omega_2}{\R^3}$, se dice que $\alpha$ y $\beta$ son equivalentes si existe una función $\func{H}{\Omega_1}{\Omega_2}$ biyectiva y derivable, tal que
+    \[
+        \alpha(u,v)=\beta(H(u,v))
+    \]
+    para todo $(u,v)\in \Omega_1$.
+\end{defi}
+
+\begin{prop}
+    Dadas dos funciones $\func{\alpha}{\Omega_1}{\R^3}$ y $\func{\beta}{\Omega_2}{\R^3}$ que sean equivalentes, se tiene que
+    \[
+        N_\alpha(u,v) = J_H(u,v) N_\beta(H(u,v))
+    \]
+    para todo $(u,v)\in \Omega_1$.
+\end{prop}
+
+\begin{defi}
+    Dadas dos funciones $\func{\alpha}{\Omega_1}{\R^3}$ y $\func{\beta}{\Omega_2}{\R^3}$ que sean equivalentes, se dice que
+    \begin{itemize}
+        \item preservan la orientación si $J_H(u,v)>0$ para todo $(u,v)\in \Omega_1$.
+        \item invierten la orientación si $J_H(u,v)<0$ para todo $(u,v)\in \Omega_1$.
+    \end{itemize}
+\end{defi}
+
+\begin{prop}
+    Dados $\func{f}{\Sigma}{\R}$ un campo escalar y $\func{\beta}{\Omega_2}{\R^3}$ una parametrización equivalente a $\alpha$ de $\Sigma$, se tiene que
+    \[
+        \iint_\Sigma f \,d\alpha = \iint_\Sigma f \,d\beta.
+    \]
+\end{prop}
+
+\begin{prop}
+    Dados $\func{F}{\Sigma}{\R^3}$ un campo vectorial y $\func{\beta}{\Omega_2}{\R^3}$ una parametrización equivalente a $\alpha$ de $\Sigma$, se tiene que
+    \begin{itemize}
+        \item si $\alpha$ y $\beta$ preservan la orientación, entonces $\iint_\Sigma F \cdot d\alpha = \iint_\Sigma F \cdot d\beta$; y
+        \item si $\alpha$ y $\beta$ invierten la orientación, entonces $\iint_\Sigma F \cdot d\alpha = -\iint_\Sigma F \cdot d\beta$.
+    \end{itemize}
+\end{prop}
+
+
+\end{document}

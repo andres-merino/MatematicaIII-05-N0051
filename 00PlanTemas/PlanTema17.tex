@@ -1,0 +1,122 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 17: Teoremas integrales}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales con asistentes computacionales.
+    \item \textbf{RdA 3:} Aplicar Cálculo Vectorial para resolver problemas reales.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Aplicar el Teorema de Green para relacionar una integral de línea sobre una curva cerrada con una integral doble.
+    \item Aplicar el Teorema de Gauss en el plano para calcular el flujo a través de una curva cerrada.
+    \item Aplicar el Teorema de Stokes para relacionar la integral de superficie del rotacional con una integral de línea.
+    \item Aplicar el Teorema de Gauss (de la divergencia) para relacionar el flujo a través de una superficie cerrada con una integral triple.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+Para saber cuánto aire entra y sale de una habitación, ¿será necesario medir el flujo en cada punto de las paredes, o bastará con conocer lo que ocurre en el interior? En general, ¿podemos deducir lo que sucede en el borde de una región a partir de lo que pasa dentro de ella?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Teoremas de Green y de Gauss en el plano}
+Se presentan los teoremas integrales en el plano, que relacionan una integral de línea sobre una curva cerrada con una integral doble sobre la región que encierra.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial y mostrar que, en el plano, la circulación y el flujo a lo largo del borde de una región pueden calcularse integrando una cantidad en su interior.
+    \item \textbf{Clase magistral:} se enuncia el Teorema de Green en sus formas $\iint_\Omega \rot(f)\,dA=\oint_{\partial\Omega} f\cdot ds$ y $\iint_\Omega(\partial N/\partial x-\partial M/\partial y)\,dxdy=\oint_{\partial\Omega} M\,dx+N\,dy$; se enuncia el Teorema de Gauss en el plano para el flujo a través del borde. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen17.pdf}{Resumen17.pdf}.
+    \item \textbf{Implementación computacional:} verificar el Teorema de Green calculando ambos lados de la igualdad con un asistente computacional.
+    \item \textbf{Resolución de ejercicios:} aplicar los teoremas de Green y de Gauss en el plano usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios17.pdf}{Ejercicios17.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Use el Teorema de Green para calcular $\oint_{\partial\Omega} -y\,dx+x\,dy$ donde $\partial\Omega$ es la circunferencia unitaria.
+    \item ¿Qué hipótesis debe cumplir la región $\Omega$ y su borde para poder aplicar el Teorema de Green?
+    \item ¿Qué relación tiene el Teorema de Green con el cálculo de áreas planas?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Teoremas de Stokes y de Gauss}
+Se generalizan los teoremas integrales al espacio: el Teorema de Stokes relaciona el rotacional con una integral de línea y el Teorema de Gauss relaciona la divergencia con el flujo a través de una superficie cerrada.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} presentar el Teorema de Stokes como la versión espacial del Teorema de Green y el Teorema de Gauss como el balance entre lo que ocurre dentro de un sólido y el flujo a través de su frontera.
+    \item \textbf{Clase magistral:} se introducen las superficies orientables y la orientación consistente del borde; se enuncia el Teorema de Stokes $\iint_\Sigma \rot(f)\cdot dS=\oint_{\partial\Sigma} f\cdot ds$ y el Teorema de Gauss $\iiint_\Omega \dive(F)\,dV=\varoiint_{\partial\Omega} F\cdot dS$. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen17.pdf}{Resumen17.pdf}.
+    \item \textbf{Resolución de ejercicios:} aplicar los teoremas de Stokes y de Gauss usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios17.pdf}{Ejercicios17.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Use el Teorema de Gauss para calcular el flujo de $F(x,y,z)=(x,y,z)$ a través de la esfera unitaria.
+    \item ¿En qué se parecen y en qué se diferencian los teoremas de Green y de Stokes?
+    \item Identifique el patrón común a los teoremas de Green, Stokes y Gauss: ¿qué relacionan en cada caso el interior de una región y su frontera?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 6.2, ejercicios 1--15 (impares).
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿Cómo se unifican los teoremas de Green, Stokes y Gauss en el Teorema General de Stokes mediante formas diferenciales?
+    \item ¿Qué papel juegan estos teoremas en las ecuaciones de Maxwell del electromagnetismo? Investigar un ejemplo concreto.
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Repasar de manera integral los contenidos del curso, articulando funciones vectoriales, derivadas parciales e integrales múltiples y vectoriales como un todo coherente, en preparación para la evaluación final.
+
+
+\end{document}

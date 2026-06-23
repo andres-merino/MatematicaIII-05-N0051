@@ -1,0 +1,242 @@
+\documentclass[a4,11pt]{aleph-notas}
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{aleph-comandos}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Resumen 15: Integrales de línea}
+\autor[A. Merino]{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Integrales de línea en campos escalares}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En lo siguiente consideraremos una curva $C$ con una parametrización $\func{\alpha}{[a,b]}{\R^n}$, donde $\alpha$ es una trayectoria derivable tal que $\alpha'$ es continua. Además, supondremos que $\Omega$ es un subconjunto de $\R^n$ tal que $C\subseteq \Omega$.
+
+\begin{defi}[Integral de línea de campos escalares]
+    Dado un campo escalar $\func{f}{\Omega}{\R}$, se define la integral de línea del campo escalar $f$ a lo largo de la trayectoria $\alpha$ por
+    \[
+        \int_C f\, d\alpha
+        = \lim_{|P|\to 0} f(\alpha(c_i)) \| \alpha(t_i)-\alpha(t_{i-1}) \|,
+    \]
+    siempre que el límite exista (el límite se toma sobre todas las particiones etiquetadas del intervalo $[a,b]$).
+\end{defi}
+
+\begin{advertencia}
+    A esta integral también se la llama la integral del campo escalar $f$ sobre la curva $C$. Otras notaciones para esta integral son:
+    \[
+        \int_C f \,d\alpha = \int_\alpha f \,ds
+        = \int_\alpha f(x,y) \,ds
+        = \int_C f \,ds
+        = \int_C f(x) \,ds
+        = \int_C f(x) \,d\alpha
+    \]
+\end{advertencia}
+
+\begin{teo}
+    Dado un campo escalar $\func{f}{\Omega}{\R}$, si existe la integral de línea de $f$ a lo largo de la trayectoria $\alpha$, entonces se tiene que
+    \[
+        \int_C f \,d\alpha
+        =\int_a^b f(\alpha(t))\|\alpha'(t)\|\,dt.
+    \]
+\end{teo}
+
+\begin{prop}
+    Dados $\func{f}{\Omega}{\R}$ un campo escalar y $\func{\beta}{[c,d]}{\R^n}$ una parametrización equivalente de $C$, se tiene que
+    \[
+        \int_C f \,d\alpha = \int_C f \,d\beta.
+    \]
+\end{prop}
+
+\begin{defi}
+    Dada una curva $C$ con una parametrización $\func{\alpha}{[a,b]}{\R^n}$,
+    se dice que $C$ es una curva cerrada si $\alpha(a)=\alpha(b)$ y se dice que es simple si es inyectiva.
+
+    Además, dada otra parametrización $\func{\beta}{[c,d]}{\R^n}$ de $C$ que sea equivalente a $\alpha$, se dice que las trayectorias preservan la orientación si $\alpha(a)=\beta(c)$ y $\alpha(b)=\beta(d)$, caso contrario se dice que invierten la orientación.
+\end{defi}
+
+\begin{advertencia}
+    Si $C$ es una curva cerrada se suele utilizar la notación
+    \[
+        \oint_C f \, d\alpha = \int_C f \, d\alpha.
+    \]
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Integrales de línea en campos vectoriales}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Integral de línea de campos vectoriales]
+    Dado un campo vectorial $\func{F}{\Omega}{\R^n}$, se define la integral de línea del campo vectorial $F$ a lo largo de la trayectoria $\alpha$ por
+    \[
+        \int_C F \cdot d\alpha
+        = \lim_{|P|\to 0} F(\alpha(c_i))\cdot (\alpha(t_i)-\alpha(t_{i-1}) ),
+    \]
+    siempre que el límite exista (el límite se toma sobre todas las particiones etiquetadas del intervalo $[a,b]$).
+\end{defi}
+
+\begin{advertencia}
+    A esta integral también se la llama la integral del campo vectorial $F$ sobre la curva $C$. Otras notaciones para esta integral son:
+    \[
+        \int_C F \cdot d\alpha
+        = \int_\alpha F \cdot ds
+        = \int_\alpha F(x) \cdot ds
+        = \int_C F \cdot ds
+        = \int_C F(x) \cdot ds
+        = \int_C F(x) \cdot d\alpha
+    \]
+\end{advertencia}
+
+\begin{teo}
+    Dado un campo vectorial $\func{F}{\Omega}{\R^n}$, si existe la integral de línea de $F$ a lo largo de la trayectoria $\alpha$, entonces se tiene que
+    \[
+        \int_C F \cdot d\alpha
+        =\int_a^b F(\alpha(t))\cdot \alpha'(t)\,dt.
+    \]
+\end{teo}
+
+\begin{advertencia}
+    En $\R^2$, si tenemos el campo vectorial $\func{F}{\Omega}{\R^2}$ dado por
+    \[
+        F(x,y) = (M(x,y),N(x,y)),
+    \]
+    para todo $(x,y)\in \Omega$, donde $M$ y $N$ son campos escalares, se suele utilizar la notación
+    \[
+        \int_C F \cdot d\alpha
+        = \int_\alpha M\,dx + N\,dy
+        = \int_\alpha M(x,y)\,dx + N(x,y)\,dy.
+    \]
+\end{advertencia}
+
+\begin{prop}
+    Dados $\func{F}{\Omega}{\R^n}$ un campo vectorial y $\func{\beta}{[c,d]}{\R^n}$ una parametrización equivalente a $\alpha$ de $C$, se tiene que
+    \begin{itemize}
+        \item si $\alpha$ y $\beta$ preservan la orientación, entonces $\int_C F \cdot d\alpha = \int_C F \cdot d\beta$; y
+        \item si $\alpha$ y $\beta$ invierten la orientación, entonces $\int_C F \cdot d\alpha = - \int_C F \cdot d\beta$.
+    \end{itemize}
+\end{prop}
+
+\begin{advertencia}
+    Si $C$ es una curva cerrada se suele utilizar la notación
+    \[
+        \oint_C F \cdot d\alpha = \int_C F \cdot d\alpha.
+    \]
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Aplicaciones}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{advertencia}
+    Dados una curva $C$ de $\R^3$, $\func{\alpha}{I}{\R^3}$ y $\func{\delta}{C}{\R}$ un campo escalar, si $C$ representa un alambre y $\delta(x,y,z)$ representa la densidad del alambre en el punto $(x,y,z)$, entonces se tiene que el centro de masas $(\overline{x},\overline{y},\overline{z})$ está dado por
+    \[
+        \overline{x}=
+        \frac{\int_C x\delta(x,y,z)\, d\alpha}
+        {\int_C \delta(x,y,z)\, d\alpha},
+        \quad
+        \overline{y}=
+        \frac{\int_C y\delta(x,y,z)\, d\alpha}
+        {\int_C \delta(x,y,z)\, d\alpha}
+        \quad\text{y}\quad
+        \overline{z}=
+        \frac{\int_C z\delta(x,y,z)\, d\alpha}
+        {\int_C \delta(x,y,z)\, d\alpha}.
+    \]
+\end{advertencia}
+
+\begin{advertencia}
+    Dados una curva $C$ de $\R^3$, $\func{\alpha}{I}{\R^3}$ y $\func{\delta}{C}{\R}$ un campo escalar, si $C$ representa un alambre y $\delta(x,y,z)$ representa la densidad del alambre en el punto $(x,y,z)$, entonces el momento de inercia con respecto al eje $x$ está dado por
+    \[
+        I_x =
+        \int_C (y^2+z^2)\delta(x,y,z)\, d\alpha,
+    \]
+    el momento de inercia con respecto al eje $y$ está dado por
+    \[
+        I_y =
+        \int_C (x^2+z^2)\delta(x,y,z)\, d\alpha
+    \]
+    y el momento de inercia con respecto al eje $z$ está dado por
+    \[
+        I_z =
+        \int_C (x^2+y^2)\delta(x,y,z)\, d\alpha.
+    \]
+\end{advertencia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Teoremas fundamentales de las integrales de línea}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{defi}[Conjuntos conexos]
+    Dado $\Omega\subseteq \R^n$, se dice que $\Omega$ es conexo (por caminos) si para todo par de puntos $a$ y $b$ de $\Omega$ existe una trayectoria continua $\alpha$ definida en un intervalo $[t_i,t_f]$ tal que $\alpha(t)\in \Omega$ para todo $t\in[t_i,t_f]$ y que $\alpha(t_i)=a$ y $\alpha(t_f)=b$.
+\end{defi}
+
+De aquí en adelante, se supone que $\Omega\subseteq \R^n$ es un conjunto conexo por caminos.
+
+\begin{defi}
+    Un campo vectorial $\func{F}{\Omega}{\R^n}$ se dice que tiene integral independiente de camino si
+    \[
+        \int_{C_1} F\cdot d\alpha = \int_{C_2} F\cdot d\beta
+    \]
+    para todo par de trayectorias $\alpha$ y $\beta$ que tienen los mismos puntos iniciales y finales.
+\end{defi}
+
+\begin{prop}
+    Sea $\func{F}{\Omega}{\R^n}$ un campo vectorial que tenga integral de línea independiente del camino, entonces, para toda curva cerrada $C$ con parametrización $\alpha$ se tiene que
+    \[
+        \oint_C F\cdot d\alpha = 0.
+    \]
+\end{prop}
+
+\begin{advertencia}
+    Si $\func{F}{\Omega}{\R^n}$ es un campo vectorial que tiene integral de línea independiente del camino, entonces para una trayectoria $\alpha$ con punto inicial $a$ y final $b$ notaremos
+    \[
+        \int_a^b F\cdot ds = \int_C F\cdot d\alpha.
+    \]
+\end{advertencia}
+
+\begin{teo}[Primer Teorema Fundamental para Integrales de Línea]
+    Sean $\func{F}{\Omega}{\R^n}$ un campo vectorial que tenga integral de línea independiente del camino y $a\in \Omega$ un punto, entonces, si definimos el campo escalar
+    \[
+        f(x) = \int_a^x F\cdot ds
+    \]
+    para todo $x\in \Omega$, entonces $f$ tiene gradiente y
+    \[
+        \nabla f(x) = F(x)
+    \]
+    para todo $x\in \Omega$, es decir, $f$ es un potencial de $F$.
+\end{teo}
+
+\begin{prop}
+    Sea $\func{F}{\Omega}{\R^n}$ un campo vectorial, se tiene que las siguientes tres proposiciones son equivalentes:
+    \begin{itemize}
+        \item $F$ es un campo conservativo;
+        \item $F$ tiene integral de línea independiente de camino; y
+        \item la integral de línea de $F$ sobre toda curva cerrada es igual a $0$.
+    \end{itemize}
+\end{prop}
+
+\begin{teo}[Segundo Teorema Fundamental para Integrales de Línea]
+    Sean $\func{F}{\Omega}{\R^n}$ un campo vectorial conservativo y
+    $\func{f}{\Omega}{\R}$ una función potencial de $F$. Para una trayectoria con punto inicial $a$ y final $b$ se tiene que
+    \[
+        \int_a^b F\cdot ds = \int_a^b \nabla f\cdot ds = f(b)-f(a).
+    \]
+\end{teo}
+
+
+\end{document}

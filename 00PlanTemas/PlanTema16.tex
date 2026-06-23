@@ -1,0 +1,125 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Se puede ver la documentación aquí:
+% https://github.com/alephsub0/LaTeX_aleph-notas
+
+% -- Paquetes adicionales
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+\hypersetup{
+    urlcolor=blue,
+    linkcolor=blue,
+}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Plan tema 16: Integrales de superficie}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Resultado de Aprendizaje}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA de la asignatura:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{RdA 1:} Identificar conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+    \item \textbf{RdA 2:} Calcular derivadas parciales e integrales con asistentes computacionales.
+    \item \textbf{RdA 3:} Aplicar Cálculo Vectorial para resolver problemas reales.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RdA del tema:}
+\begin{itemize}[leftmargin=*]
+    \item Parametrizar superficies en el espacio y calcular sus vectores tangentes y normal.
+    \item Calcular el área de una superficie suave mediante la norma del vector normal.
+    \item Calcular integrales de superficie de campos escalares sobre superficies parametrizadas.
+    \item Calcular integrales de superficie de campos vectoriales (flujo) y reconocer el efecto de la orientación.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Introducción}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Pregunta inicial:}
+Imaginemos el agua de un río que atraviesa una red colocada en diagonal a la corriente. La cantidad de agua que pasa por la red depende de su forma, de su inclinación y de la rapidez del agua en cada punto. ¿Cómo podríamos medir la cantidad total de agua que atraviesa una superficie curva?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Desarrollo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 1: Superficies parametrizadas e integrales de campos escalares}
+Se introduce la parametrización de superficies, los vectores tangentes y normal y el cálculo de área, para luego definir la integral de superficie de un campo escalar.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} mostrar cómo una superficie en el espacio (un plano inclinado, un cilindro, una esfera) se describe mediante dos parámetros, de forma análoga a como una curva se describe con uno.
+    \item \textbf{Clase magistral:} se definen parametrización, curvas coordenadas, vectores tangentes $T^1$, $T^2$ y el vector normal $N=T^1\times T^2$; se obtiene el área como $\iint_\Omega \|N(u,v)\|\,dudv$; se define la integral de superficie de campos escalares con la fórmula $\iint_\Sigma f\,d\alpha=\iint_\Omega f(\alpha(u,v))\|N(u,v)\|\,dudv$. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen16.pdf}{Resumen16.pdf}.
+    \item \textbf{Implementación computacional:} visualizar superficies parametrizadas y calcular áreas e integrales de superficie con un asistente computacional.
+    \item \textbf{Resolución de ejercicios:} calcular áreas e integrales de superficie de campos escalares usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios16.pdf}{Ejercicios16.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Para la parametrización $\alpha(u,v)=(u,v,u^2+v^2)$, calcule los vectores tangentes y el vector normal en un punto.
+    \item Calcule el área de la porción del plano $z=x+y$ sobre el cuadrado $[0,1]\times[0,1]$.
+    \item ¿Qué representa geométricamente la norma del vector normal $\|N(u,v)\|$?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Actividad 2: Integrales de superficie de campos vectoriales}
+Se define la integral de superficie de un campo vectorial (flujo) y se analiza el papel de la orientación de la superficie.
+
+\paragraph{¿Cómo lo haremos?}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Motivación:} retomar la pregunta inicial e interpretar la integral de superficie de un campo vectorial como el flujo de un fluido a través de la superficie.
+    \item \textbf{Clase magistral:} se define la integral de superficie de campos vectoriales con la fórmula $\iint_\Sigma F\cdot d\alpha=\iint_\Omega F(\alpha(u,v))\cdot N(u,v)\,dudv$; se discuten las parametrizaciones equivalentes y el efecto de invertir la orientación. Se usa el resumen \href{https://andres-merino.github.io/MatematicaIII-05-N0051/01Resumen/Resumen16.pdf}{Resumen16.pdf}.
+    \item \textbf{Resolución de ejercicios:} calcular el flujo de campos vectoriales a través de superficies usando \href{https://andres-merino.github.io/MatematicaIII-05-N0051/04Ejercicios/Ejercicios16.pdf}{Ejercicios16.pdf}.
+\end{itemize}
+
+\paragraph{Verificación de aprendizaje:}
+\begin{itemize}[leftmargin=*]
+    \item Calcule el flujo del campo $F(x,y,z)=(0,0,1)$ a través de la porción del plano $z=0$ sobre $[0,1]\times[0,1]$.
+    \item ¿Cómo cambia el valor del flujo si se invierte la orientación de la superficie?
+    \item Explique la diferencia entre la integral de superficie de un campo escalar y la de un campo vectorial.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Cierre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Tarea:}
+Resolver del libro \href{https://catalogobiblioteca.puce.edu.ec/cgi-bin/koha/opac-detail.pl?biblionumber=83405&query_desc=su%3A%22An%C3%A1lisis%20vectorial%22}{Cálculo Vectorial de Colley}: sección 6.1, ejercicios 15--25 (impares).
+
+\paragraph{Pregunta de investigación:}
+\begin{enumerate}[leftmargin=*]
+    \item ¿Qué es una superficie no orientable? Investigar el ejemplo de la banda de Möbius.
+    \item ¿En qué aplicaciones físicas aparece el flujo a través de una superficie? Investigar un ejemplo en electromagnetismo o en dinámica de fluidos.
+\end{enumerate}
+
+\paragraph{Para el próximo tema:}
+Ver los videos:
+\begin{itemize}[leftmargin=*]
+    \item \href{https://youtu.be/a4cFvAAt9zU?si=Ot8O8wnYy1cWk0lN}{Green's theorem proof}.
+\end{itemize}
+
+
+\end{document}
