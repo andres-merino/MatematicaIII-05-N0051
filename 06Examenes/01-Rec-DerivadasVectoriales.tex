@@ -1,0 +1,353 @@
+% \documentclass[11pt,respuestas,a4]{aleph-examen}
+\documentclass[10pt,a5]{aleph-examen}
+
+% -- Paquetes extra
+\usepackage{aleph-comandos}
+\usepackage{systeme}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Recuperación -- Criterio 2.2}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+\vspace{-5mm}
+% \section*{Indicaciones}
+% \begin{itemize}[leftmargin=*]
+% \item
+%     En esta actividad se evalúa si el estudiante (Criterio 2.2) calcula derivadas de funciones de varias variables.
+% \item
+%     Los ejercicios deben ser resueltos a mano y entregarse en hojas de forma física al docente, sin ayuda de resúmenes o asistentes computacionales.
+% \item
+%     Se encuentra prohibido el uso de cualquier otra fuente de información durante todo el examen.
+% \item
+%     No está permitido tener ningún dispositivo electrónico encendido durante el examen, incluyendo celulares, tablets, computadoras, audífonos, relojes inteligentes, ni similares.
+% \item
+%     En caso de considerar que existe un error en la pregunta o que esta se encuentra mal planteada, se debe indicar cuál es el error y justificarlo.
+% \item
+%     Todas las soluciones deben estar correctamente redactadas y explicadas.
+% \end{itemize}
+
+\section*{Ejercicios}
+
+\begin{preguntas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Considere la función
+\[
+    f(x,y) = \begin{cases}
+        \dfrac{x^2 y}{x^4 + y^2} & \text{si } (x,y)\neq(0,0),\\[6pt]
+        0 & \text{si } (x,y)=(0,0).
+    \end{cases}
+\]
+\begin{enumerate}[leftmargin=*]
+    \item Calcule los límites iterados cuando $(x,y)\to(0,0)$.\puntaje{3}
+    \item Calcule el límite por la trayectoria $y=2x$.\puntaje{2}
+    \item Calcule el límite cuando $(x,y)\to(0,0)$ por la trayectoria $y=x^2$.\puntaje{2}
+    \item ¿Es $f$ continua en $(0,0)$? Justifique a partir de los incisos anteriores.\puntaje{3}
+\end{enumerate}
+
+
+\begin{respuesta}
+\begin{enumerate}
+    \item Calculemos los límites iterados. Primero cuando $y\to 0$ y luego cuando $x\to 0$: para $x\neq 0$ fijo,
+    \[
+        \lim_{y\to 0}\frac{x^2 y}{x^4+y^2}
+        =
+        \frac{x^2\cdot 0}{x^4+0}
+        =
+        0,
+    \]
+    de modo que
+    \[
+        \lim_{x\to 0}\left(\lim_{y\to 0}\frac{x^2 y}{x^4+y^2}\right)
+        =
+        \lim_{x\to 0} 0
+        =
+        0.
+    \]
+    Ahora cuando $x\to 0$ y luego cuando $y\to 0$: para $y\neq 0$ fijo,
+    \[
+        \lim_{x\to 0}\frac{x^2 y}{x^4+y^2}
+        =
+        \frac{0\cdot y}{0+y^2}
+        =
+        0,
+    \]
+    de modo que
+    \[
+        \lim_{y\to 0}\left(\lim_{x\to 0}\frac{x^2 y}{x^4+y^2}\right)
+        =
+        \lim_{y\to 0} 0
+        =
+        0.
+    \]
+
+    \item Consideremos la trayectoria $y=2x$. Entonces:
+    \[
+        f(x,2x)
+        =
+        \frac{x^2\cdot 2x}{x^4+4x^2}
+        =
+        \frac{2x^3}{x^2(x^2+4)}
+        =
+        \frac{2x}{x^2+4}.
+    \]
+    Por tanto:
+    \[
+        \lim_{x\to 0} f(x,2x)
+        =
+        \lim_{x\to 0}\frac{2x}{x^2+4}
+        =
+        \frac{0}{4}
+        =
+        0.
+    \]
+
+    \item Consideremos la trayectoria $y=x^2$. Entonces:
+    \[
+        f\bigl(x,x^2\bigr)
+        =
+        \frac{x^2\cdot x^2}{x^4+\bigl(x^2\bigr)^2}
+        =
+        \frac{x^4}{x^4+x^4}
+        =
+        \frac{x^4}{2x^4}
+        =
+        \frac{1}{2}.
+    \]
+    Por tanto:
+    \[
+        \lim_{x\to 0} f\bigl(x,x^2\bigr)
+        =
+        \frac{1}{2}.
+    \]
+
+    \item Como los límites por distintas trayectorias son diferentes (por $y=2x$ se obtiene $0$, pero por $y=x^2$ se obtiene $\tfrac{1}{2}$), se concluye que
+    \[
+        \lim_{(x,y)\to(0,0)} f(x,y)
+    \]
+    no existe. Por lo tanto, $f$ no es continua en $(0,0)$.\qedhere
+\end{enumerate}
+\end{respuesta}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Sea $f(x,y)=y^2 e^x\cos(x)$.
+\begin{enumerate}[leftmargin=*]
+    \item Calcule $\dfrac{\partial f}{\partial x}$ y $\dfrac{\partial f}{\partial y}$.\puntaje{4}
+    \item Calcule $\nabla f(P)$ en el punto $P=(0,2)$.\puntaje{2}
+    \item Calcule la derivada direccional de $f$ en $P$ en la dirección del vector $\overrightarrow{PQ}$, donde $Q=(2,3)$.\puntaje{2}
+    \item Calcule la derivada direccional máxima de $f$ en $P$ e indique la dirección en la que se alcanza.\puntaje{2}
+\end{enumerate}
+
+
+\begin{respuesta}
+\begin{enumerate}
+    \item Calculemos las derivadas parciales usando la regla del producto:
+    \[
+        \frac{\partial f}{\partial x}(x,y)
+        =
+        y^2\bigl(e^x\cos(x)+e^x(-\sen(x))\bigr)
+        =
+        y^2 e^x\bigl(\cos(x)-\sen(x)\bigr).
+    \]
+    \[
+        \frac{\partial f}{\partial y}(x,y)
+        =
+        2y\,e^x\cos(x).
+    \]
+
+    \item Evaluamos en $P=(0,2)$:
+    \[
+        \frac{\partial f}{\partial x}(0,2)
+        =
+        4\cdot e^0\cdot(\cos 0-\sen 0)
+        =
+        4\cdot 1\cdot 1
+        =
+        4,
+        \qquad
+        \frac{\partial f}{\partial y}(0,2)
+        =
+        2(2)\cdot e^0\cdot\cos 0
+        =
+        4.
+    \]
+    Por lo tanto:
+    \[
+        \nabla f(P)
+        =
+        (4,\ 4).
+    \]
+
+    \item Calculamos el vector $\overrightarrow{PQ}$:
+    \[
+        u = \overrightarrow{PQ}
+        =
+        Q-P
+        =
+        (2,3)-(0,2)
+        =
+        (2,1).
+    \]
+    La derivada direccional de $f$ en $P$ en la dirección de $u$ es:
+    \[
+        f'(P;u)
+        =
+        \nabla f(P)\cdot u
+        =
+        (4,4)\cdot(2,1)
+        =
+        8+4
+        =
+        12.
+    \]
+
+    \item La máxima tasa de cambio de $f$ en $P$ se alcanza en la dirección del gradiente, es decir, tomando $u=\nabla f(P)=(4,4)$. La derivada direccional en esa dirección es:
+    \[
+        f'(P;u)
+        =
+        \nabla f(P)\cdot u
+        =
+        (4,4)\cdot(4,4)
+        =
+        16+16
+        =
+        32.\qedhere
+    \]
+\end{enumerate}
+\end{respuesta}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Aplique la regla de la cadena para calcular las derivadas indicadas.
+\begin{enumerate}[leftmargin=*]
+    \item Calcule $\dfrac{dw}{dt}$ si
+    $\quad
+        w=x\cos(y),
+        \quad
+        x=t^2,
+        \quad
+        y=\ln(t).
+    $\puntaje{3}
+
+    \item Calcule $\dfrac{dz}{dt}$ si
+    $
+        \quad
+        z=x^2y,
+        \quad
+        x=u+v^2,
+        \quad
+        y=uv,
+        \quad
+        u=e^t,
+        \quad
+        v=\ln(t).
+    $\puntaje{5}
+\end{enumerate}
+
+\begin{respuesta}
+\begin{enumerate}
+    \item Aplicamos la regla de la cadena:
+    \[
+        \frac{dw}{dt}
+        =
+        \frac{\partial w}{\partial x}\cdot\frac{dx}{dt}
+        +
+        \frac{\partial w}{\partial y}\cdot\frac{dy}{dt}.
+    \]
+    Calculamos cada factor:
+    \[
+        \frac{\partial w}{\partial x}=\cos(y),\qquad
+        \frac{\partial w}{\partial y}=-x\,\sen(y),\qquad
+        \frac{dx}{dt}=2t,\qquad
+        \frac{dy}{dt}=\frac{1}{t}.
+    \]
+    Por tanto:
+    \[
+        \frac{dw}{dt}
+        =
+        \cos(y)\cdot 2t + (-x\,\sen(y))\cdot\frac{1}{t}
+        =
+        2t\cos(y)-\frac{x}{t}\,\sen(y).
+    \]
+
+    \item Aplicamos la regla de la cadena considerando la dependencia completa:
+    \[
+        \frac{dz}{dt}
+        =
+        \frac{\partial z}{\partial x}\cdot\frac{dx}{dt}
+        +
+        \frac{\partial z}{\partial y}\cdot\frac{dy}{dt},
+    \]
+    donde a su vez:
+    \[
+        \frac{dx}{dt}
+        =
+        \frac{\partial x}{\partial u}\cdot\frac{du}{dt}
+        +
+        \frac{\partial x}{\partial v}\cdot\frac{dv}{dt},
+        \qquad
+        \frac{dy}{dt}
+        =
+        \frac{\partial y}{\partial u}\cdot\frac{du}{dt}
+        +
+        \frac{\partial y}{\partial v}\cdot\frac{dv}{dt}.
+    \]
+    Calculamos:
+    \[
+        \frac{\partial z}{\partial x}=2xy,\quad
+        \frac{\partial z}{\partial y}=x^2,\quad
+        \frac{\partial x}{\partial u}=1,\quad
+        \frac{\partial x}{\partial v}=2v,\quad
+        \frac{\partial y}{\partial u}=v,\quad
+        \frac{\partial y}{\partial v}=u,
+    \]
+    \[
+        \frac{du}{dt}=e^t,\qquad\frac{dv}{dt}=\frac{1}{t}.
+    \]
+    Entonces:
+    \[
+        \frac{dx}{dt}
+        =
+        1\cdot e^t+2v\cdot\frac{1}{t}
+        =
+        e^t+\frac{2v}{t},
+    \]
+    y
+    \[
+        \frac{dy}{dt}
+        =
+        v\cdot e^t+u\cdot\frac{1}{t}
+        =
+        ve^t+\frac{u}{t}.
+    \]
+    Por lo tanto:
+    \[
+        \frac{dz}{dt}
+        =
+        2xy\!\left(e^t+\frac{2v}{t}\right)+x^2\!\left(ve^t+\frac{u}{t}\right).\qedhere
+    \]
+\end{enumerate}
+\end{respuesta}
+
+
+\end{preguntas}
+
+\end{document}

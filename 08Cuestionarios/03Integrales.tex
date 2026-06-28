@@ -1,0 +1,456 @@
+\documentclass[a4,11pt]{aleph-notas}
+% Para obtener solo el pdf, compilar con pdfLaTeX.
+% Para obtener el xml compilar con XeLaTeX.
+
+% -- Paquetes adicionales
+\usepackage[handout]{aleph-moodle}
+% \usepackage{aleph-moodle}
+\moodleregisternewcommands
+% Todos los comandos nuevos deben ir luego del comando anterior
+\usepackage{aleph-comandos}
+
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Cuestionario No. 3: Integrales en varias variables}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+\vspace*{-8mm}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Indicaciones}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Se plantean bancos de preguntas orientados a evaluar el \textbf{criterio}: «Interpreta el concepto de integrales en varias variables y reconocer sus elementos y propiedades», correspondiente al \textbf{resultado de aprendizaje}: Identificar los conceptos, teoremas y propiedades de funciones vectoriales, derivadas parciales e integral vectorial.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Banco de preguntas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Integral doble: concepto, elementos e interpretación}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{multi}[]%
+    {ID-Concepto-01}
+    Sea $f:\R^2\to\R$ un campo escalar continuo sobre una región $R$. El resultado de $\displaystyle\iint_R f\,dA$ es:
+    \item* Un número real
+    \item Un campo escalar
+    \item Un campo vectorial
+    \item Una función de dos variables
+\end{multi}
+
+\begin{multi}[]%
+    {ID-Concepto-01b}
+    La integral doble $\displaystyle\iint_R f\,dA$ se define sobre:
+    \item* Una región del plano $\R^2$
+    \item Una curva del plano
+    \item Un sólido de $\R^3$
+    \item Un intervalo de $\R$
+\end{multi}
+
+\begin{multi}[]%
+    {ID-Interp-01}
+    Si $f(x,y)\geq 0$ sobre $R$, la integral $\displaystyle\iint_R f\,dA$ representa geométricamente:
+    \item* El volumen del sólido bajo la gráfica de $f$ y sobre la región $R$.
+    \item El área de la región $R$.
+    \item La pendiente del plano tangente a la gráfica de $f$.
+    \item La longitud de la frontera de $R$.
+\end{multi}
+
+\begin{multi}[]%
+    {ID-Interp-02}
+    La integral $\displaystyle\iint_R 1\,dA$ representa:
+    \item* El área de la región $R$.
+    \item El volumen bajo la gráfica de $f$.
+    \item El perímetro de la región $R$.
+    \item Siempre el valor $1$.
+\end{multi}
+
+\begin{multi}[]%
+    {ID-Elem-01}
+    En la expresión $\displaystyle\iint_R f(x,y)\,dA$, el símbolo $dA$ corresponde a:
+    \item* El diferencial de área de la región de integración.
+    \item El diferencial de longitud de arco.
+    \item El diferencial de volumen.
+    \item La función integrando.
+\end{multi}
+
+\begin{multi}[]%
+    {ID-Fubini-01}
+    El teorema de Fubini permite:
+    \item* Calcular una integral doble mediante integrales iteradas (una variable a la vez).
+    \item Intercambiar la integral por una derivada parcial.
+    \item Transformar la integral doble en una integral de línea.
+    \item Calcular el área únicamente en coordenadas polares.
+\end{multi}
+
+\begin{multi}[]%
+    {ID-Fubini-02}
+    Si $R=[a,b]\times[c,d]$ es un rectángulo y $f$ es continua, el teorema de Fubini afirma que:
+    \item* $\displaystyle\iint_R f\,dA = \int_a^b\!\!\int_c^d f(x,y)\,dy\,dx = \int_c^d\!\!\int_a^b f(x,y)\,dx\,dy$
+    \item $\displaystyle\iint_R f\,dA = \int_a^b f(x,y)\,dx$
+    \item $\displaystyle\iint_R f\,dA = \int_a^b\!\!\int_c^d f(x,y)\,dy\,dx$ solo en ese orden.
+    \item $\displaystyle\iint_R f\,dA = \left(\int_a^b f\,dx\right)\left(\int_c^d f\,dy\right)$ siempre.
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Propiedades de la integral doble}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{multi}[]%
+    {IDP-Lin-01}
+    La propiedad de linealidad de la integral doble establece que:
+    \item* $\displaystyle\iint_R (af+bg)\,dA = a\iint_R f\,dA + b\iint_R g\,dA$
+    \item $\displaystyle\iint_R (f\cdot g)\,dA = \iint_R f\,dA \cdot \iint_R g\,dA$
+    \item $\displaystyle\iint_R (f+g)\,dA = \iint_R f\,dA \cdot \iint_R g\,dA$
+    \item $\displaystyle\iint_R (af)\,dA = \iint_R f\,dA$
+\end{multi}
+
+\begin{multi}[]%
+    {IDP-Adit-01}
+    Si $R = R_1 \cup R_2$, donde $R_1$ y $R_2$ no se solapan (salvo en su frontera), entonces:
+    \item* $\displaystyle\iint_R f\,dA = \iint_{R_1} f\,dA + \iint_{R_2} f\,dA$
+    \item $\displaystyle\iint_R f\,dA = \iint_{R_1} f\,dA \cdot \iint_{R_2} f\,dA$
+    \item $\displaystyle\iint_R f\,dA = \iint_{R_1} f\,dA - \iint_{R_2} f\,dA$
+    \item $\displaystyle\iint_R f\,dA = \max\left(\iint_{R_1} f\,dA,\ \iint_{R_2} f\,dA\right)$
+\end{multi}
+
+\begin{multi}[]%
+    {IDP-Mon-01}
+    Si $f(x,y)\leq g(x,y)$ para todo $(x,y)\in R$, entonces:
+    \item* $\displaystyle\iint_R f\,dA \leq \iint_R g\,dA$
+    \item $\displaystyle\iint_R f\,dA \geq \iint_R g\,dA$
+    \item $\displaystyle\iint_R f\,dA = \iint_R g\,dA$
+    \item No hay relación entre ambas integrales.
+\end{multi}
+
+\begin{multi}[]%
+    {IDP-Cero-01}
+    Si la región $R$ tiene área cero, entonces $\displaystyle\iint_R f\,dA$ es:
+    \item* $0$
+    \item $1$
+    \item El valor de $f$ en el centro de $R$.
+    \item Indefinida.
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Cambio de variable en integrales dobles}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{multi}[]%
+    {CV-Jac-01}
+    En el cambio de variable de una integral doble, el factor que corrige el diferencial de área es:
+    \item* El valor absoluto del determinante del jacobiano de la transformación.
+    \item El determinante de la matriz hessiana.
+    \item El gradiente de la transformación.
+    \item La traza del jacobiano.
+\end{multi}
+
+\begin{multi}[]%
+    {CV-Pol-01}
+    Al pasar a coordenadas polares, el diferencial de área $dA = dx\,dy$ se transforma en:
+    \item* $r\,dr\,d\theta$
+    \item $dr\,d\theta$
+    \item $r^2\,dr\,d\theta$
+    \item $\dfrac{1}{r}\,dr\,d\theta$
+\end{multi}
+
+\begin{multi}[]%
+    {CV-Pol-02}
+    Las coordenadas polares resultan especialmente convenientes cuando la región de integración es:
+    \item* Un círculo, un sector circular o un anillo.
+    \item Un rectángulo con lados paralelos a los ejes.
+    \item Un triángulo arbitrario.
+    \item Cualquier región poligonal.
+\end{multi}
+
+\begin{multi}[]%
+    {CV-Jac-02}
+    Para la transformación a coordenadas polares $x = r\cos\theta$, $y = r\sin\theta$, el determinante del jacobiano es:
+    \item* $r$
+    \item $1$
+    \item $r^2$
+    \item $\cos\theta + \sin\theta$
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Integral triple: concepto, elementos e interpretación}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{multi}[]%
+    {IT-Concepto-01}
+    Sea $f:\R^3\to\R$ continua sobre un sólido $W$. El resultado de $\displaystyle\iiint_W f\,dV$ es:
+    \item* Un número real
+    \item Un campo escalar
+    \item Un campo vectorial
+    \item Una superficie
+\end{multi}
+
+\begin{multi}[]%
+    {IT-Interp-01}
+    La integral $\displaystyle\iiint_W 1\,dV$ representa:
+    \item* El volumen del sólido $W$.
+    \item El área de la frontera de $W$.
+    \item La masa total de $W$ con densidad arbitraria.
+    \item El centro de masa de $W$.
+\end{multi}
+
+\begin{multi}[]%
+    {IT-Interp-02}
+    Si $\rho(x,y,z)$ es la densidad de un sólido $W$, la integral $\displaystyle\iiint_W \rho\,dV$ representa:
+    \item* La masa total del sólido.
+    \item El volumen del sólido.
+    \item La densidad promedio.
+    \item El área de la superficie del sólido.
+\end{multi}
+
+\begin{multi}[]%
+    {IT-Elem-01}
+    En la expresión $\displaystyle\iiint_W f\,dV$, el símbolo $dV$ corresponde a:
+    \item* El diferencial de volumen del sólido de integración.
+    \item El diferencial de área.
+    \item El diferencial de longitud de arco.
+    \item La función integrando.
+\end{multi}
+
+\begin{multi}[]%
+    {IT-CilEsf-01}
+    En coordenadas cilíndricas, el diferencial de volumen es:
+    \item* $dV = r\,dr\,d\theta\,dz$
+    \item $dV = dr\,d\theta\,dz$
+    \item $dV = r^2\,dr\,d\theta\,dz$
+    \item $dV = \rho^2\sin\varphi\,d\rho\,d\varphi\,d\theta$
+\end{multi}
+
+\begin{multi}[]%
+    {IT-CilEsf-02}
+    En coordenadas esféricas, el diferencial de volumen es:
+    \item* $dV = \rho^2\sin\varphi\,d\rho\,d\varphi\,d\theta$
+    \item $dV = \rho\,d\rho\,d\varphi\,d\theta$
+    \item $dV = r\,dr\,d\theta\,dz$
+    \item $dV = \rho^2\,d\rho\,d\varphi\,d\theta$
+\end{multi}
+
+\begin{multi}[]%
+    {IT-CilEsf-03}
+    Para un sólido con simetría respecto a un eje (como un cilindro), el sistema de coordenadas más conveniente suele ser:
+    \item* Cilíndricas
+    \item Esféricas
+    \item Cartesianas
+    \item Polares en el plano
+\end{multi}
+
+\begin{multi}[]%
+    {IT-CilEsf-04}
+    Para un sólido con simetría respecto a un punto (como una esfera o una bola), el sistema de coordenadas más conveniente suele ser:
+    \item* Esféricas
+    \item Cilíndricas
+    \item Cartesianas
+    \item Rectangulares
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Integral de línea: concepto y elementos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{multi}[]%
+    {IL-Esc-01}
+    La integral de línea de un campo escalar $f$ sobre una curva $C$, $\displaystyle\int_C f\,ds$, puede interpretarse físicamente como:
+    \item* La masa de un alambre con forma $C$ y densidad lineal $f$.
+    \item El trabajo realizado por una fuerza a lo largo de $C$.
+    \item El flujo a través de $C$.
+    \item El área encerrada por $C$.
+\end{multi}
+
+\begin{multi}[]%
+    {IL-Vec-01}
+    La integral de línea de un campo vectorial $\displaystyle\int_C \vec{F}\cdot d\vec{r}$ se interpreta físicamente como:
+    \item* El trabajo realizado por el campo $\vec{F}$ a lo largo de la curva $C$.
+    \item La masa de un alambre con forma $C$.
+    \item El volumen bajo la curva $C$.
+    \item La longitud de la curva $C$.
+\end{multi}
+
+\begin{multi}[]%
+    {IL-Elem-01}
+    En la integral de línea de un campo escalar, el elemento $ds$ representa:
+    \item* El diferencial de longitud de arco de la curva.
+    \item El diferencial de área.
+    \item El vector tangente unitario.
+    \item El diferencial de volumen.
+\end{multi}
+
+\begin{multi}[]%
+    {IL-Param-01}
+    Para calcular una integral de línea es necesario contar con:
+    \item* Una parametrización de la curva $C$.
+    \item El gradiente de la curva $C$.
+    \item La matriz hessiana del integrando.
+    \item El área de la región encerrada por $C$.
+\end{multi}
+
+\begin{multi}[]%
+    {IL-Orient-01}
+    Si se invierte la orientación de la curva $C$, la integral de línea de un campo vectorial $\displaystyle\int_C \vec{F}\cdot d\vec{r}$:
+    \item* Cambia de signo.
+    \item No se altera.
+    \item Se anula.
+    \item Se duplica.
+\end{multi}
+
+\begin{multi}[]%
+    {IL-Orient-02}
+    La integral de línea de un campo escalar $\displaystyle\int_C f\,ds$ respecto a la orientación de la curva:
+    \item* No depende de la orientación (es la misma en ambos sentidos).
+    \item Cambia de signo al invertir la orientación.
+    \item Se anula si la curva es cerrada.
+    \item Depende solo del punto inicial.
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Campos conservativos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{multi}[]%
+    {CC-Def-01}
+    Un campo vectorial $\vec{F}$ es conservativo cuando:
+    \item* Proviene del gradiente de algún campo escalar, es decir, $\vec{F} = \nabla f$.
+    \item Su divergencia es nula.
+    \item Es perpendicular a sus curvas de nivel.
+    \item Su jacobiano es invertible.
+\end{multi}
+
+\begin{multi}[]%
+    {CC-Indep-01}
+    En un campo vectorial conservativo, la integral de línea $\displaystyle\int_C \vec{F}\cdot d\vec{r}$:
+    \item* No depende de la trayectoria, solo de los puntos inicial y final.
+    \item Depende de la longitud de la curva $C$.
+    \item Es siempre positiva.
+    \item Cambia con cada parametrización de $C$.
+\end{multi}
+
+\begin{multi}[]%
+    {CC-Cerrada-01}
+    Si $\vec{F}$ es un campo conservativo y $C$ es una curva cerrada, entonces $\displaystyle\oint_C \vec{F}\cdot d\vec{r}$ es:
+    \item* $0$
+    \item Siempre positiva.
+    \item Igual a la longitud de $C$.
+    \item Igual al área encerrada por $C$.
+\end{multi}
+
+\begin{multi}[]%
+    {CC-Grad-01}
+    Decir que un campo vectorial $\vec{F}$ «proviene de un gradiente» significa que existe un campo escalar $f$ tal que:
+    \item* $\vec{F} = \nabla f$
+    \item $\vec{F} = \nabla \cdot f$
+    \item $\vec{F} = \nabla \times f$
+    \item $f = \nabla \vec{F}$
+\end{multi}
+
+\begin{multi}[]%
+    {CC-Grad-02}
+    Si $\func{F}{\R^3}{\R^3}$ proviene de un gradiente (es conservativo), entonces necesariamente su rotacional cumple:
+    \item* $\nabla \times \vec{F} = \vec{0}$
+    \item $\nabla \times \vec{F} \neq \vec{0}$
+    \item $\nabla \cdot \vec{F} = 0$
+    \item $\nabla \cdot \vec{F} = 1$
+\end{multi}
+
+\begin{multi}[]%
+    {CC-Grad-03}
+    ¿Cuál de las siguientes condiciones permite reconocer que un campo $\vec{F}=(P,Q)$ de clase $C^1$ podría provenir de un gradiente en un dominio simplemente conexo?
+    \item* $\dfrac{\partial P}{\partial y} = \dfrac{\partial Q}{\partial x}$
+    \item $\dfrac{\partial P}{\partial x} = \dfrac{\partial Q}{\partial y}$
+    \item $P = Q$
+    \item $\dfrac{\partial P}{\partial x} + \dfrac{\partial Q}{\partial y} = 0$
+\end{multi}
+
+\end{quiz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{quiz}{Cálculo de integrales: evaluación numérica}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{numerical}[tolerance=0.01]%
+    {IN-Calc-01}
+    Sea $R = [0,2]\times[0,3]$. El valor de $\displaystyle\iint_R 1\,dA$ (el área de $R$) es:
+    \item 6
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {IN-Calc-02}
+    Sea $R = [0,1]\times[0,1]$. El valor de $\displaystyle\iint_R (x+y)\,dA$ es:
+    \item 1
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {IN-Calc-03}
+    Sea $R = [0,2]\times[0,1]$. El valor de $\displaystyle\iint_R x\,dA$ es:
+    \item 2
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {IN-Calc-04}
+    El valor del determinante del jacobiano de la transformación a coordenadas polares $x=r\cos\theta$, $y=r\sin\theta$ evaluado en $r=3$ es:
+    \item 3
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {IN-Calc-05}
+    Sea $W = [0,1]\times[0,2]\times[0,3]$. El valor de $\displaystyle\iiint_W 1\,dV$ (el volumen de $W$) es:
+    \item 6
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {IN-Calc-06}
+    Sea $f(x,y,z) = x^2 + y^2$. En coordenadas cilíndricas, el integrando $f$ se escribe como $r^2$. El valor de $r^2$ cuando $r=2$ es:
+    \item 4
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {IN-Calc-07}
+    Sea $\vec{F} = \nabla f$ con $f(x,y) = x^2 + y^2$. El valor de la integral de línea $\displaystyle\int_C \vec{F}\cdot d\vec{r}$ a lo largo de cualquier curva $C$ que va de $(0,0)$ a $(1,2)$ es:
+    \item 5
+\end{numerical}
+
+\begin{numerical}[tolerance=0.01]%
+    {IN-Calc-08}
+    Sea $\vec{F} = \nabla f$ con $f(x,y) = xy$. El valor de $\displaystyle\int_C \vec{F}\cdot d\vec{r}$ a lo largo de una curva $C$ que va de $(1,1)$ a $(3,2)$ es:
+    \item 5
+\end{numerical}
+
+\end{quiz}
+
+\end{document}
