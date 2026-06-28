@@ -1,0 +1,249 @@
+% \documentclass[11pt,respuestas,a4]{aleph-examen}
+\documentclass[10pt,a5]{aleph-examen}
+
+% -- Paquetes extra
+\usepackage{aleph-comandos}
+\usepackage{systeme}
+
+% -- Datos
+\institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
+\carrera{Catálogo STEM}
+\asignatura{Matemática III}
+\tema{Recuperación -- Criterio 3.2}
+\autor{Andrés Merino}
+\fecha{Periodo 2026-1}
+
+\logouno[0.16\textwidth]{Logos/logoPUCE_04_ac}
+\definecolor{colortext}{HTML}{1957d1}
+\definecolor{colordef}{HTML}{1957d1}
+\fuente{montserrat}
+
+
+\begin{document}
+
+\encabezado
+
+
+
+\section*{Ejercicios}
+
+\begin{preguntas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Encuentre y clasifique los puntos críticos de la función\puntaje{10}
+\[
+    f(x,y) = 2xy - x^2 - 3y^2 + 6y + 5.
+\]
+
+\begin{respuesta}
+Iniciemos encontrando los puntos críticos. Para ello, calculemos las derivadas parciales de $f$:
+\[
+    \frac{\partial f}{\partial x}(x,y) = 2y - 2x,
+    \qquad
+    \frac{\partial f}{\partial y}(x,y) = 2x - 6y + 6.
+\]
+Igualando a cero, obtenemos el sistema:
+\[
+    \left\{
+    \begin{aligned}
+        2y - 2x &= 0,\\
+        2x - 6y + 6 &= 0.
+    \end{aligned}
+    \right.
+\]
+De la primera ecuación, $y = x$. Sustituyendo en la segunda:
+\[
+    2x - 6x + 6 = 0
+    \;\Longrightarrow\;
+    -4x = -6
+    \;\Longrightarrow\;
+    x = \frac{3}{2},
+    \qquad
+    y = \frac{3}{2}.
+\]
+Con esto, el único punto crítico es $\left(\dfrac{3}{2},\dfrac{3}{2}\right)$.
+
+Apliquemos ahora el criterio de la segunda derivada. Calculemos la matriz Hessiana:
+\[
+    H_f(x,y)
+    =
+    \begin{pmatrix}
+        \dfrac{\partial^2 f}{\partial x^2} & \dfrac{\partial^2 f}{\partial x\partial y}\\[10pt]
+        \dfrac{\partial^2 f}{\partial y\partial x} & \dfrac{\partial^2 f}{\partial y^2}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        -2 & 2\\
+        2 & -6
+    \end{pmatrix}.
+\]
+La Hessiana es constante; aplicando el criterio de Sylvester:
+\[
+    \det(H_f) = (-2)(-6) - (2)(2) = 8 > 0,
+    \qquad
+    \frac{\partial^2 f}{\partial x^2} = -2 < 0,
+\]
+por lo que la función alcanza un {máximo} local en $\left(\dfrac{3}{2},\dfrac{3}{2}\right)$ y el máximo es
+\[
+    f\!\left(\frac{3}{2},\frac{3}{2}\right)
+    = 2\cdot\frac{9}{4} - \frac{9}{4} - 3\cdot\frac{9}{4} + 6\cdot\frac{3}{2} + 5
+    = \frac{18-9-27}{4} + 9 + 5
+    = -\frac{9}{2} + 14
+    = \frac{19}{2}.\qedhere
+\]
+\end{respuesta}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Utilice el método de multiplicadores de Lagrange para encontrar los valores extremos de
+\[
+    f(x,y) = 4x + 3y
+\]
+sujeta a la restricción $x^2 + y^2 = 25$.\puntaje{15}
+
+\begin{respuesta}
+Usemos multiplicadores de Lagrange con $g(x,y) = x^2 + y^2 - 25$. Planteemos el Lagrangeano:
+\[
+    L(x,y,\lambda) = 4x + 3y - \lambda(x^2 + y^2 - 25).
+\]
+Ahora, encontremos los puntos críticos. Para ello, calculemos las derivadas parciales de $L$:
+\[
+    \frac{\partial L}{\partial x} = 4 - 2\lambda x,
+    \qquad
+    \frac{\partial L}{\partial y} = 3 - 2\lambda y,
+    \qquad
+    \frac{\partial L}{\partial \lambda} = -(x^2 + y^2 - 25).
+\]
+Igualando a cero, obtenemos el sistema:
+\[
+    \left\{
+    \begin{aligned}
+        4 - 2\lambda x &= 0,\\
+        3 - 2\lambda y &= 0,\\
+        x^2 + y^2 - 25 &= 0.
+    \end{aligned}
+    \right.
+\]
+De las dos primeras ecuaciones, $x = \dfrac{2}{\lambda}$ e $y = \dfrac{3}{2\lambda}$. Sustituyendo en la tercera:
+\[
+    \frac{4}{\lambda^2} + \frac{9}{4\lambda^2} = 25
+    \;\Longrightarrow\;
+    \frac{25}{4\lambda^2} = 25
+    \;\Longrightarrow\;
+    \lambda^2 = \frac{1}{4}
+    \;\Longrightarrow\;
+    \lambda = \pm\frac{1}{2}.
+\]
+Con esto, los puntos críticos son $\bigl(4,3\bigr)$ con $\lambda = \dfrac{1}{2}$ y $\bigl(-4,-3\bigr)$ con $\lambda = -\dfrac{1}{2}$.
+
+Apliquemos ahora el criterio de la segunda derivada. Calculemos la matriz Hessiana de $L$ con respecto a $(\lambda, x, y)$:
+\[
+    H_L(\lambda,x,y)
+    =
+    \begin{pmatrix}
+        0 & -2x & -2y\\[4pt]
+        -2x & -2\lambda & 0\\[4pt]
+        -2y & 0 & -2\lambda
+    \end{pmatrix}.
+\]
+Un cálculo directo muestra que $\det(H_L) = 8\lambda(x^2 + y^2)$. Evaluando en cada punto crítico:
+\begin{itemize}
+    \item {$\bigl(4,3\bigr)$ con $\lambda = \dfrac{1}{2}$:} se tiene $\det(H_L) = 8\cdot\dfrac{1}{2}\cdot 25 = 100 > 0$, por lo que $f$ alcanza un {máximo} y el máximo es
+    \[
+        f(4,3) = 4(4) + 3(3) = 25.
+    \]
+    \item {$\bigl(-4,-3\bigr)$ con $\lambda = -\dfrac{1}{2}$:} se tiene $\det(H_L) = 8\cdot\left(-\dfrac{1}{2}\right)\cdot 25 = -100 < 0$, por lo que $f$ alcanza un {mínimo} y el mínimo es
+    \[
+        f(-4,-3) = 4(-4) + 3(-3) = -25.\qedhere
+    \]
+\end{itemize}
+\end{respuesta}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+Se va a fabricar una caja de metal sin tapa (con fondo y cuatro paredes laterales) de base cuadrada a partir de $48\ \text{cm}^2$ de lámina. ¿Cuál es el mayor volumen que puede tener la caja? {\footnotesize(\noindent\textit{Pista:} el volumen de una caja de base cuadrada de lado $x$ y altura $h$ es $x^2h$ y su área total sin tapa es $x^2 + 4xh$)}\puntaje{15}
+
+\begin{respuesta}
+Sean $x$ el lado de la base cuadrada (en cm) y $h$ la altura de la caja (en cm). El volumen es
+\[
+    V(x,h) = x^2 h,
+\]
+y, como la caja no tiene tapa, el área total de lámina es
+\[
+    x^2 + 4xh = 48.
+\]
+Así, el problema de optimización es:
+\[
+    \left\{
+    \begin{aligned}
+        &\text{max } V(x,h) = x^2 h,\\
+        &\text{sujeto a} \\
+        &\qquad x^2 + 4xh - 48 = 0.
+    \end{aligned}
+    \right.
+\]
+
+Usemos multiplicadores de Lagrange. Planteemos el Lagrangeano:
+\[
+    L(x,h,\lambda) = x^2 h - \lambda(x^2 + 4xh - 48).
+\]
+Ahora, encontremos los puntos críticos. Para ello, calculemos las derivadas parciales de $L$:
+\[
+    \frac{\partial L}{\partial x} = 2xh - \lambda(2x + 4h),\quad
+    \frac{\partial L}{\partial h} = x^2 - 4\lambda x,\quad
+    \frac{\partial L}{\partial \lambda} = -(x^2 + 4xh - 48).
+\]
+Igualando a cero, obtenemos el sistema:
+\[
+    \left\{
+    \begin{aligned}
+        2xh - \lambda(2x + 4h) &= 0,\\
+        x^2 - 4\lambda x &= 0,\\
+        x^2 + 4xh - 48 &= 0.
+    \end{aligned}
+    \right.
+\]
+De la segunda ecuación, $\lambda = \dfrac{x}{4}$. Sustituyendo en la primera:
+\[
+    2xh - \frac{x}{4}(2x + 4h) = 0
+    \;\Longrightarrow\;
+    2xh - \frac{x^2}{2} - xh = 0
+    \;\Longrightarrow\;
+    xh = \frac{x^2}{2}
+    \;\Longrightarrow\;
+    h = \frac{x}{2}.
+\]
+Reemplazando en la tercera:
+\[
+    x^2 + 4x\cdot\frac{x}{2} - 48 = 0
+    \;\Longrightarrow\;
+    3x^2 = 48
+    \;\Longrightarrow\;
+    x^2 = 16
+    \;\Longrightarrow\;
+    x = 4,\qquad h = 2.
+\]
+Con esto, el único punto crítico es $(x,h) = (4,2)$ con $\lambda = 1$.
+
+Apliquemos ahora el criterio de la segunda derivada. La matriz Hessiana de $L$ con respecto a $(\lambda,x,h)$, evaluada en el punto crítico, es
+\[
+    H_L\!\left(1,4,2\right)
+    =
+    \begin{pmatrix}
+        0 & -16 & -16\\[4pt]
+        -16 & 2 & 4\\[4pt]
+        -16 & 4 & 0
+    \end{pmatrix},
+\]
+cuyo determinante es $\det(H_L) = 1536 > 0$, por lo que $V$ alcanza un {máximo} en $(4,2)$. La mayor capacidad de la caja es
+\[
+    V(4,2) = (4)^2(2) = 32\ \text{cm}^3.\qedhere
+\]
+\end{respuesta}
+
+\end{preguntas}
+
+\end{document}
