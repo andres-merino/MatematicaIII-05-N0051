@@ -1,9 +1,11 @@
-% \documentclass[11pt,respuestas,a4]{aleph-examen}
-\documentclass[11pt,a4]{aleph-examen}
+\documentclass[11pt,respuestas,a4]{aleph-examen}
+% \documentclass[11pt,a4]{aleph-examen}
 
 % -- Paquetes extra
 \usepackage{aleph-comandos}
 \usepackage{systeme}
+\usepackage{tikz}
+\usetikzlibrary{calc,babel}
 
 % -- Datos
 \institucion{Facultad de Ciencias Exactas, Naturales y Ambientales}
@@ -36,25 +38,29 @@ Calcule la integral doble
 \]
 
 \begin{respuesta}
-Como $R$ es un rectángulo, por el Teorema de Fubini podemos integrar de manera iterada. Integremos primero respecto de $y$:
+Como $R$ es un rectángulo, por el Teorema de Fubini podemos plantear la integral doble como una integral iterada:
+\[
+    \iint_R \left(xy^2 + 2x\right)\,dA
+    =
+    \int_0^2 \left(\int_1^3 \left(xy^2 + 2x\right)\,dy\right) dx.
+\]
+Integremos primero la integral interna, respecto de $y$:
 \[
     \int_1^3 \left(xy^2 + 2x\right)\,dy
     =
-    x\left[\frac{y^3}{3}\right]_1^3 + 2x\bigl[y\bigr]_1^3
+    \left.\left(\frac{xy^3}{3} + 2xy\right)\right|_1^3
     =
-    x\cdot\frac{27-1}{3} + 2x(3-1)
-    =
-    \frac{26}{3}x + 4x
+    \left(9x + 6x\right) - \left(\frac{x}{3} + 2x\right)
     =
     \frac{38}{3}x.
 \]
-Ahora, integremos respecto de $x$:
+Con esto, integramos respecto de $x$:
 \[
     \iint_R \left(xy^2 + 2x\right)\,dA
     =
     \int_0^2 \frac{38}{3}x\,dx
     =
-    \frac{38}{3}\left[\frac{x^2}{2}\right]_0^2
+    \left.\frac{38}{3}\cdot\frac{x^2}{2}\right|_0^2
     =
     \frac{38}{3}\cdot 2
     =
@@ -84,21 +90,39 @@ Para $x\in[0,1]$ se tiene que $x^2 \le x$, por lo que la región puede describir
 \[
     D = \left\{(x,y) : 0\le x\le 1,\ x^2 \le y \le x\right\}.
 \]
-Con esto, planteamos la integral iterada e integramos primero respecto de $y$:
+\begin{center}
+\begin{tikzpicture}[scale=4]
+    \draw[->] (-0.1,0) -- (1.3,0) node[right] {$x$};
+    \draw[->] (0,-0.1) -- (0,1.3) node[above] {$y$};
+    \fill[colordef!20]
+        plot[domain=0:1, samples=50] (\x,{\x}) --
+        plot[domain=1:0, samples=50] (\x,{\x*\x}) -- cycle;
+    \draw[colordef, thick, domain=0:1.15, samples=50] plot (\x,{\x}) node[right] {$y=x$};
+    \draw[red, thick, domain=0:1.1, samples=50] plot (\x,{\x*\x}) node[left] {$y=x^2$};
+    \node at (0.45,0.28) {$D$};
+\end{tikzpicture}
+\end{center}
+Con esto, planteamos la integral doble como una integral iterada:
 \[
     \iint_D 6xy\,dA
     =
-    \int_0^1 \int_{x^2}^{x} 6xy\,dy\,dx
+    \int_0^1 \left(\int_{x^2}^{x} 6xy\,dy\right) dx.
+\]
+Integremos primero la integral interna, respecto de $y$:
+\[
+    \int_{x^2}^{x} 6xy\,dy
     =
-    \int_0^1 6x\left[\frac{y^2}{2}\right]_{x^2}^{x}\,dx
+    \left.\left(3xy^2\right)\right|_{x^2}^{x}
     =
-    \int_0^1 3x\left(x^2 - x^4\right)\,dx.
+    3x\cdot x^2 - 3x\cdot x^4
+    =
+    3x^3 - 3x^5.
 \]
 Finalmente, integramos respecto de $x$:
 \[
     \int_0^1 \left(3x^3 - 3x^5\right)\,dx
     =
-    \left[\frac{3x^4}{4} - \frac{3x^6}{6}\right]_0^1
+    \left.\left(\frac{3x^4}{4} - \frac{3x^6}{6}\right)\right|_0^1
     =
     \frac{3}{4} - \frac{1}{2}
     =
@@ -120,7 +144,11 @@ donde $D$ es la región del primer cuadrante acotada por las hipérbolas $xy = 1
 {plantee} la integral como una integral iterada en las variables $u$ y $v$ (no es necesario evaluarla).
 
 \begin{respuesta}
-Con el cambio de variable $u = xy$, $v = y/x$, las curvas que acotan a $D$ se transforman en:
+Con el cambio de variable $u = xy$, $v = y/x$, despejemos $x$ y $y$ en términos de $u$ y $v$: multiplicando ambas expresiones, $x^2 = u/v$; dividiéndolas, $y^2 = uv$. Como estamos en el primer cuadrante, tomamos las raíces positivas, de modo que la transformación $T$ y su inversa están dadas por
+\[
+    T(u,v) = (x,y) = \left(\sqrt{\frac{u}{v}},\ \sqrt{uv}\right).
+\]
+Las curvas que acotan a $D$ se transforman en:
 \[
     xy = 1 \ \Rightarrow\ u = 1,
     \qquad
@@ -134,35 +162,29 @@ Por lo tanto, la región en las nuevas variables es el rectángulo
 \[
     D' = \left\{(u,v) : 1\le u\le 3,\ 1\le v\le 4\right\}.
 \]
-Para obtener el diferencial de área, calculemos primero el jacobiano de $(u,v)$ respecto de $(x,y)$:
+Calculemos el jacobiano de la transformación $T$:
 \[
-    \frac{\partial(u,v)}{\partial(x,y)}
+    \det\bigl(J_T(u,v)\bigr)
     =
     \det\begin{pmatrix}
-        \dfrac{\partial u}{\partial x} & \dfrac{\partial u}{\partial y}\\[8pt]
-        \dfrac{\partial v}{\partial x} & \dfrac{\partial v}{\partial y}
+        \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v}\\[10pt]
+        \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}
     \end{pmatrix}
     =
     \det\begin{pmatrix}
-        y & x\\[8pt]
-        -\dfrac{y}{x^2} & \dfrac{1}{x}
+        \dfrac{1}{2\sqrt{uv}} & -\dfrac{1}{2v}\sqrt{\dfrac{u}{v}}\\[10pt]
+        \dfrac{1}{2}\sqrt{\dfrac{v}{u}} & \dfrac{1}{2}\sqrt{\dfrac{u}{v}}
     \end{pmatrix}
     =
-    \frac{y}{x} + \frac{y}{x}
+    \frac{1}{4v} + \frac{1}{4v}
     =
-    \frac{2y}{x}
-    =
-    2v.
+    \frac{1}{2v}.
 \]
-De este modo, el jacobiano de la transformación inversa es
-\[
-    \frac{\partial(x,y)}{\partial(u,v)} = \frac{1}{2v},
-    \qquad\text{luego}\qquad
-    dA = \frac{1}{2v}\,du\,dv,
-\]
-que, en efecto, no es constante. Además, como $x^2 = \dfrac{xy}{\,y/x\,} = \dfrac{u}{v}$, el integrando se transforma en $x^2 = \dfrac{u}{v}$. Con esto, la integral planteada como integral iterada es
+Además, como $x^2 = u/v$, el integrando se transforma en $x^2 = \dfrac{u}{v}$. Con esto, la integral planteada como integral iterada es
 \[
     \iint_D x^2\,dA
+    =
+    \int_1^4 \int_1^3 \frac{u}{v}\left|\det\bigl(J_T(u,v)\bigr)\right|\,du\,dv
     =
     \int_1^4 \int_1^3 \frac{u}{v}\cdot\frac{1}{2v}\,du\,dv
     =
@@ -188,30 +210,7 @@ La descripción del sólido $R$ proporciona directamente los límites de integra
 \[
     \iiint_R xy\,dV
     =
-    \int_1^2 \int_0^{x^2} \int_0^{x+y} xy\,dz\,dy\,dx.
-\]
-
-A modo de comprobación, evaluemos la integral. Integrando respecto de $z$:
-\[
-    \int_0^{x+y} xy\,dz = xy(x+y) = x^2 y + x y^2.
-\]
-Integrando respecto de $y$:
-\[
-    \int_0^{x^2} \left(x^2 y + x y^2\right)\,dy
-    =
-    x^2\cdot\frac{(x^2)^2}{2} + x\cdot\frac{(x^2)^3}{3}
-    =
-    \frac{x^6}{2} + \frac{x^7}{3}.
-\]
-Integrando respecto de $x$:
-\[
-    \int_1^2 \left(\frac{x^6}{2} + \frac{x^7}{3}\right)\,dx
-    =
-    \frac{1}{14}\bigl(2^7 - 1\bigr) + \frac{1}{24}\bigl(2^8 - 1\bigr)
-    =
-    \frac{127}{14} + \frac{255}{24}
-    =
-    \frac{1103}{56}.\qedhere
+    \int_1^2 \int_0^{x^2} \int_0^{x+y} xy\,dz\,dy\,dx.\qedhere
 \]
 \end{respuesta}
 
