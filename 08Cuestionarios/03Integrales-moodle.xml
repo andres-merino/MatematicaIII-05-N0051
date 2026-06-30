@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file was generated on 2026-06-28 by XeLaTeX -->
+<!-- This file was generated on 2026-06-30 by XeLaTeX -->
 <!-- running on *NIX with the package moodle v0.9 -->
 
 <quiz>
@@ -39,6 +39,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[ID-Concepto-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Al evaluar la integral doble \(\displaystyle \iint _R f&#8239;dA\) de un campo escalar continuo \(f\) sobre \(R\), se obtiene: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un número real</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una función de dos variables</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo vectorial</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una región del plano</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Concepto-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué tipo de objeto matemático es \(\displaystyle \iint _R f&#8239;dA\) cuando \(f:\mathbb {R}^2\to \mathbb {R}\) es continua sobre \(R\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un escalar (número real)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un vector</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una superficie</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una curva en el plano</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Concepto-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El cálculo de la integral doble de una función \(f:\mathbb {R}^2\to \mathbb {R}\) sobre una región \(R\) produce como resultado: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un número real</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Otra función de \(x\) e \(y\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo vectorial</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un plano tangente</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[ID-Concepto-01b]]></text>
   </name>
   <questiontext format="html">
@@ -62,6 +143,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>Un intervalo de \(\mathbb {R}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Concepto-01b-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El dominio de integración de una integral doble \(\displaystyle \iint _R f&#8239;dA\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una región bidimensional del plano</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un segmento de recta</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un volumen de \(\mathbb {R}^3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un punto del plano</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Concepto-01b-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Sobre qué tipo de conjunto se integra en una integral doble? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una región del plano \(\mathbb {R}^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una curva de \(\mathbb {R}^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una superficie de \(\mathbb {R}^3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un intervalo cerrado \([a,b]\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Concepto-01b-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En la expresión \(\displaystyle \iint _R f&#8239;dA\), el conjunto \(R\) representa: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una región plana (subconjunto de \(\mathbb {R}^2\))</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una trayectoria en el plano</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un sólido tridimensional</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un único número real</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -93,6 +255,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[ID-Interp-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para \(f(x,y)\geq 0\) en \(R\), ¿qué cantidad geométrica calcula \(\displaystyle \iint _R f&#8239;dA\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El volumen comprendido entre la región \(R\) y la superficie \(z=f(x,y)\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El área de la región \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El perímetro de \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La altura máxima de la gráfica de \(f\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Interp-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Cuando \(f\) es no negativa sobre \(R\), el valor de \(\displaystyle \iint _R f&#8239;dA\) coincide con: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El volumen del sólido limitado superiormente por \(z=f(x,y)\) e inferiormente por \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El área de la base \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La distancia entre la gráfica y el plano \(z=0\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La longitud del borde de \(R\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Interp-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(f(x,y)\geq 0\), geométricamente la integral \(\displaystyle \iint _R f&#8239;dA\) mide: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El volumen bajo la superficie \(z=f(x,y)\) sobre la región \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El área encerrada por la curva de nivel de \(f\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El gradiente de \(f\) en \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La superficie de la gráfica de \(f\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[ID-Interp-02]]></text>
   </name>
   <questiontext format="html">
@@ -116,6 +359,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>Siempre el valor \(1\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Interp-02-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Al integrar la función constante \(1\) sobre una región \(R\), es decir \(\displaystyle \iint _R 1&#8239;dA\), se obtiene: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El área de \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El volumen de \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La longitud de la frontera de \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El número \(1\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Interp-02-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué cantidad geométrica se calcula con \(\displaystyle \iint _R dA\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El área de la región \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El perímetro de \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El volumen del sólido sobre \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El valor promedio de \(R\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Interp-02-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para hallar el área de una región plana \(R\) mediante una integral doble se calcula: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R 1&#8239;dA\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R (x+y)&#8239;dA\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \oint _{\partial R} 1&#8239;ds\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R 0&#8239;dA\)</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -147,6 +471,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[ID-Elem-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué representa \(dA\) dentro de la integral doble \(\displaystyle \iint _R f(x,y)&#8239;dA\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El elemento diferencial de área.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El elemento diferencial de volumen.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El diferencial de arco \(ds\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El valor de \(f\) en cada punto.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Elem-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En coordenadas cartesianas, el diferencial de área \(dA\) de una integral doble se escribe como: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(dx&#8239;dy\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(dx+dy\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(dx&#8239;dy&#8239;dz\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\sqrt {dx^2+dy^2}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Elem-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El término \(dA\) en \(\displaystyle \iint _R f&#8239;dA\) indica que se está acumulando \(f\) respecto a: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Pequeños elementos de área de \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Pequeños elementos de longitud de \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Pequeños elementos de volumen.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El tiempo.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[ID-Fubini-01]]></text>
   </name>
   <questiontext format="html">
@@ -174,6 +579,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[ID-Fubini-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Para qué sirve el teorema de Fubini? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Para reducir una integral doble a dos integrales simples sucesivas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Para convertir una integral doble en una integral triple.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Para derivar bajo el signo integral.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Para calcular el rotacional de un campo.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Fubini-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El teorema de Fubini establece que, bajo condiciones de continuidad, una integral doble se puede evaluar: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Como integrales iteradas, integrando primero respecto a una variable y luego respecto a la otra.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Únicamente sumando los valores de \(f\) en la frontera.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Solo después de un cambio a coordenadas polares.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Derivando respecto a cada variable por separado.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Fubini-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Gracias al teorema de Fubini, calcular \(\displaystyle \iint _R f&#8239;dA\) se reduce a: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Resolver una integral simple dentro de otra integral simple.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Resolver una sola integral de una variable.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Calcular un determinante jacobiano.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Aplicar la regla de la cadena.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[ID-Fubini-02]]></text>
   </name>
   <questiontext format="html">
@@ -197,6 +683,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(\displaystyle \iint _R f&#8239;dA = \left (\int _a^b f&#8239;dx\right )\left (\int _c^d f&#8239;dy\right )\) siempre.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Fubini-02-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sobre un rectángulo \(R=[a,b]\times [c,d]\) con \(f\) continua, el orden de integración en las integrales iteradas: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Puede intercambiarse sin alterar el resultado.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Debe ser siempre \(dy&#8239;dx\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Debe ser siempre \(dx&#8239;dy\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cambia el signo del resultado al intercambiarse.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Fubini-02-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para \(f\) continua sobre el rectángulo \(R=[a,b]\times [c,d]\), ¿cuál igualdad es correcta? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\displaystyle \int _a^b\!\!\int _c^d f&#8239;dy&#8239;dx = \int _c^d\!\!\int _a^b f&#8239;dx&#8239;dy\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R f&#8239;dA = \int _a^b f&#8239;dx + \int _c^d f&#8239;dy\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R f&#8239;dA = \left (\int _a^b f&#8239;dx\right )\left (\int _c^d f&#8239;dy\right )\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R f&#8239;dA = \int _a^d f&#8239;dx\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[ID-Fubini-02-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En un rectángulo \(R=[a,b]\times [c,d]\) con \(f\) continua, el teorema de Fubini garantiza que las dos integrales iteradas posibles: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Dan el mismo valor.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Difieren en un factor jacobiano.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Solo coinciden si \(f\) es separable.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Tienen signos opuestos.</p>]]></text>
   </answer>
 </question>
  
@@ -235,6 +802,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[IDP-Lin-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Cuál de las siguientes igualdades expresa la linealidad de la integral doble? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R (af+bg)&#8239;dA = a\iint _R f&#8239;dA + b\iint _R g&#8239;dA\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R (af+bg)&#8239;dA = ab\iint _R (f+g)&#8239;dA\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R (af+bg)&#8239;dA = \iint _R f&#8239;dA + \iint _R g&#8239;dA\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R (af+bg)&#8239;dA = a+b\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IDP-Lin-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Una constante \(c\) que multiplica al integrando de una integral doble: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Puede salir fuera de la integral: \(\displaystyle \iint _R c&#8239;f&#8239;dA = c\iint _R f&#8239;dA\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Debe elevarse al cuadrado al salir.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>No puede extraerse de la integral.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Se convierte en el área de \(R\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IDP-Lin-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La integral doble de una suma de funciones cumple: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R (f+g)&#8239;dA = \iint _R f&#8239;dA + \iint _R g&#8239;dA\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R (f+g)&#8239;dA = \iint _R f&#8239;dA \cdot \iint _R g&#8239;dA\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R (f+g)&#8239;dA = \iint _R f&#8239;dA - \iint _R g&#8239;dA\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R (f+g)&#8239;dA = \iint _R fg&#8239;dA\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[IDP-Adit-01]]></text>
   </name>
   <questiontext format="html">
@@ -258,6 +906,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(\displaystyle \iint _R f&#8239;dA = \max \left (\iint _{R_1} f&#8239;dA,\ \iint _{R_2} f&#8239;dA\right )\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IDP-Adit-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La propiedad de aditividad respecto a la región (descomponer \(R\) en dos partes que no se solapan) afirma que la integral sobre \(R\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>La suma de las integrales sobre cada parte.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El producto de las integrales sobre cada parte.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El promedio de las integrales sobre cada parte.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La mayor de las integrales sobre cada parte.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IDP-Adit-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si una región \(R\) se parte en subregiones \(R_1\) y \(R_2\) que solo comparten la frontera, \(\displaystyle \iint _R f&#8239;dA\) es igual a: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _{R_1} f&#8239;dA + \iint _{R_2} f&#8239;dA\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _{R_1\cap R_2} f&#8239;dA\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _{R_1} f&#8239;dA \cdot \iint _{R_2} f&#8239;dA\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\dfrac {1}{2}\left (\displaystyle \iint _{R_1} f&#8239;dA + \iint _{R_2} f&#8239;dA\right )\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IDP-Adit-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Descomponer una región complicada en regiones más simples y sumar las integrales correspondientes es válido gracias a la propiedad de: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Aditividad respecto a la región de integración.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Linealidad respecto al integrando.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Monotonía.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cambio de variable.</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -289,6 +1018,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[IDP-Mon-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La propiedad de monotonía de la integral doble afirma que si \(f\leq g\) en toda la región \(R\), entonces: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>La integral de \(f\) es menor o igual que la integral de \(g\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La integral de \(f\) es mayor que la de \(g\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Ambas integrales son iguales.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Las integrales tienen signos opuestos.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IDP-Mon-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(f(x,y)\geq 0\) para todo \((x,y)\in R\), ¿qué se puede afirmar de \(\displaystyle \iint _R f&#8239;dA\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R f&#8239;dA \geq 0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R f&#8239;dA < 0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R f&#8239;dA = 0\) necesariamente.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>No puede determinarse su signo.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IDP-Mon-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sabiendo que \(m \leq f(x,y) \leq M\) en una región \(R\) de área \(A(R)\), la integral cumple: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\displaystyle m&#8239;A(R) \leq \iint _R f&#8239;dA \leq M&#8239;A(R)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R f&#8239;dA = M&#8239;A(R)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R f&#8239;dA \geq M&#8239;A(R)\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _R f&#8239;dA \leq m&#8239;A(R)\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[IDP-Cero-01]]></text>
   </name>
   <questiontext format="html">
@@ -312,6 +1122,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>Indefinida.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IDP-Cero-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El valor de \(\displaystyle \iint _R f&#8239;dA\) cuando \(R\) es un conjunto de área nula (por ejemplo, un segmento o un punto) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Igual al valor máximo de \(f\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(1\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Igual al área de la frontera.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IDP-Cero-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si se integra la función nula \(f\equiv 0\) sobre cualquier región \(R\), el resultado es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El área de \(R\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(1\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Indefinido.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IDP-Cero-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Cuánto vale la integral doble de cualquier función continua sobre una región de medida (área) cero? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Cero.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El valor de \(f\) en un punto.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Uno.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>No está definida.</p>]]></text>
   </answer>
 </question>
  
@@ -350,6 +1241,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[CV-Jac-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Al aplicar un cambio de variable en una integral doble, el diferencial de área se multiplica por: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\left |\det J\right |\), el valor absoluto del determinante del jacobiano.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\det H\), el determinante de la hessiana.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La norma del gradiente.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La derivada direccional de la transformación.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CV-Jac-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué papel cumple el jacobiano en un cambio de variable de una integral doble? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Mide cómo la transformación escala las áreas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Mide la curvatura del integrando.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Indica la dirección de máximo crecimiento.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Determina la continuidad de \(f\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CV-Jac-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En la fórmula de cambio de variable \(\displaystyle \iint _R f&#8239;dA = \iint _{R&rsquo;} f(&#8239;\cdot &#8239;)&#8239;|\det J|&#8239;du&#8239;dv\), el término \(|\det J|\) representa: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El factor de corrección del área entre los dos sistemas de coordenadas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El nuevo integrando.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La región transformada.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La densidad de \(f\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[CV-Pol-01]]></text>
   </name>
   <questiontext format="html">
@@ -373,6 +1345,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(\dfrac {1}{r}&#8239;dr&#8239;d\theta \)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CV-Pol-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En coordenadas polares, el elemento de área \(dA\) se escribe como: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(r&#8239;dr&#8239;d\theta \)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(dr&#8239;d\theta \)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\theta &#8239;dr&#8239;d\theta \)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(r^2&#8239;dr&#8239;d\theta \)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CV-Pol-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Al convertir \(\displaystyle \iint _R f(x,y)&#8239;dx&#8239;dy\) a coordenadas polares, el factor adicional que aparece junto a \(dr&#8239;d\theta \) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(r\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(r^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\dfrac {1}{r}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\sin \theta \)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CV-Pol-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El «\(r\)» extra que aparece en \(dA = r&#8239;dr&#8239;d\theta \) al usar coordenadas polares proviene de: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El determinante del jacobiano de la transformación polar.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La derivada de \(f\) respecto a \(r\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El radio de curvatura de la región.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una constante arbitraria.</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -404,6 +1457,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[CV-Pol-02-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿En cuál de las siguientes regiones es más natural usar coordenadas polares? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un disco centrado en el origen.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un cuadrado de lado \(1\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un trapecio.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una franja rectangular.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CV-Pol-02-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Las coordenadas polares simplifican una integral doble principalmente cuando la región o el integrando presentan: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Simetría circular (dependen de la distancia al origen).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Lados paralelos a los ejes coordenados.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Forma triangular.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Discontinuidades aisladas.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CV-Pol-02-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Una integral sobre la región \(x^2+y^2\leq 4\) se resuelve más fácilmente usando coordenadas: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Polares.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cartesianas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Esféricas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cilíndricas.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[CV-Jac-02]]></text>
   </name>
   <questiontext format="html">
@@ -427,6 +1561,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(\cos \theta + \sin \theta \)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CV-Jac-02-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El jacobiano de la transformación \(x = r\cos \theta \), \(y = r\sin \theta \) vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(r\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\theta \)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(1\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(r\cos \theta \sin \theta \)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CV-Jac-02-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Al calcular \(\displaystyle \frac {\partial (x,y)}{\partial (r,\theta )}\) para las coordenadas polares se obtiene: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(r\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(-r\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(r^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CV-Jac-02-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El determinante de la matriz \(\begin {pmatrix} \cos \theta & -r\sin \theta \\ \sin \theta & r\cos \theta \end {pmatrix}\), jacobiano de las coordenadas polares, es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(r\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(1\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(r(\cos \theta -\sin \theta )\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(r^2\)</p>]]></text>
   </answer>
 </question>
  
@@ -465,6 +1680,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[IT-Concepto-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Al evaluar la integral triple \(\displaystyle \iiint _W f&#8239;dV\) de un campo escalar continuo sobre un sólido \(W\), se obtiene: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un número real</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un campo vectorial</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una función de tres variables</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un sólido</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-Concepto-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué tipo de objeto resulta de calcular \(\displaystyle \iiint _W f&#8239;dV\) con \(f:\mathbb {R}^3\to \mathbb {R}\) continua? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un escalar (número real)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un vector de \(\mathbb {R}^3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una superficie en \(\mathbb {R}^3\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una curva en el espacio</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-Concepto-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El dominio de integración \(W\) de una integral triple \(\displaystyle \iiint _W f&#8239;dV\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un sólido (región de \(\mathbb {R}^3\)).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una superficie de \(\mathbb {R}^3\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una curva de \(\mathbb {R}^3\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una región plana de \(\mathbb {R}^2\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[IT-Interp-01]]></text>
   </name>
   <questiontext format="html">
@@ -488,6 +1784,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>El centro de masa de \(W\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-Interp-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Al integrar la función constante \(1\) sobre un sólido \(W\), es decir \(\displaystyle \iiint _W 1&#8239;dV\), se obtiene: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El volumen de \(W\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El área de la superficie de \(W\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La masa de \(W\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El número \(1\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-Interp-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para calcular el volumen de un sólido \(W\) mediante una integral triple se evalúa: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iiint _W 1&#8239;dV\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iiint _W \rho &#8239;dV\) con \(\rho \) la densidad.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _{\partial W} 1&#8239;dS\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iiint _W (x+y+z)&#8239;dV\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-Interp-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué cantidad geométrica calcula \(\displaystyle \iiint _W dV\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El volumen del sólido \(W\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El área lateral de \(W\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El perímetro de la base de \(W\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La densidad media de \(W\).</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -519,6 +1896,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[IT-Interp-02-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para obtener la masa de un sólido \(W\) con densidad puntual \(\rho (x,y,z)\) se calcula: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iiint _W \rho &#8239;dV\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iiint _W 1&#8239;dV\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iiint _W \frac {1}{\rho }&#8239;dV\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _{\partial W} \rho &#8239;dS\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-Interp-02-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La integral \(\displaystyle \iiint _W \rho (x,y,z)&#8239;dV\), donde \(\rho \) es la densidad, da como resultado: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>La masa total del sólido \(W\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El volumen total de \(W\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El peso de la superficie de \(W\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El centro de masa de \(W\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-Interp-02-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si la densidad de un sólido es constante \(\rho _0\), su masa se obtiene como: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\rho _0\) multiplicado por el volumen del sólido.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\rho _0\) multiplicado por el área de la superficie.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El volumen dividido entre \(\rho _0\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Simplemente \(\rho _0\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[IT-Elem-01]]></text>
   </name>
   <questiontext format="html">
@@ -542,6 +2000,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>La función integrando.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-Elem-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué representa \(dV\) en una integral triple \(\displaystyle \iiint _W f&#8239;dV\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El elemento diferencial de volumen.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El elemento diferencial de área.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El diferencial de arco.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El valor de \(f\) en cada punto.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-Elem-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En coordenadas cartesianas, el diferencial de volumen \(dV\) se escribe como: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(dx&#8239;dy&#8239;dz\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(dx&#8239;dy\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(dx+dy+dz\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\sqrt {dx^2+dy^2+dz^2}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-Elem-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El término \(dV\) en \(\displaystyle \iiint _W f&#8239;dV\) indica que \(f\) se acumula respecto a: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Pequeños elementos de volumen de \(W\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Pequeños elementos de área de la frontera.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Pequeños elementos de longitud.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El número de variables.</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -573,6 +2112,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[IT-CilEsf-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El elemento de volumen en coordenadas cilíndricas se expresa como: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(r&#8239;dr&#8239;d\theta &#8239;dz\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(r^2&#8239;dr&#8239;d\theta &#8239;dz\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(dr&#8239;d\theta &#8239;dz\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\rho ^2&#8239;d\rho &#8239;d\varphi &#8239;d\theta \)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-CilEsf-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Al pasar una integral triple a coordenadas cilíndricas, el factor jacobiano que multiplica a \(dr&#8239;d\theta &#8239;dz\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(r\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(r^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\dfrac {1}{r}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\sin \varphi \)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-CilEsf-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En coordenadas cilíndricas \((r,\theta ,z)\), el diferencial de volumen incluye el factor: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(r\) (el mismo de las coordenadas polares en el plano).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\rho ^2\sin \varphi \).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(z\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>ninguno; es simplemente \(dr&#8239;d\theta &#8239;dz\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[IT-CilEsf-02]]></text>
   </name>
   <questiontext format="html">
@@ -596,6 +2216,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(dV = \rho ^2&#8239;d\rho &#8239;d\varphi &#8239;d\theta \)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-CilEsf-02-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El elemento de volumen en coordenadas esféricas \((\rho ,\varphi ,\theta )\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\rho ^2\sin \varphi &#8239;d\rho &#8239;d\varphi &#8239;d\theta \)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\rho \sin \varphi &#8239;d\rho &#8239;d\varphi &#8239;d\theta \)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\rho ^2&#8239;d\rho &#8239;d\varphi &#8239;d\theta \)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(r&#8239;dr&#8239;d\theta &#8239;dz\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-CilEsf-02-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El factor jacobiano que aparece al transformar una integral triple a coordenadas esféricas es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\rho ^2\sin \varphi \)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\rho \sin \varphi \)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\rho ^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(r\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-CilEsf-02-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En coordenadas esféricas, ¿cuál es el factor que corrige el diferencial de volumen respecto de \(d\rho &#8239;d\varphi &#8239;d\theta \)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\rho ^2\sin \varphi \)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\sin \varphi \)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\rho ^2\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\cos \varphi \)</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -627,6 +2328,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[IT-CilEsf-03-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué sistema de coordenadas conviene usar para integrar sobre un cilindro o un cono? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Coordenadas cilíndricas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Coordenadas esféricas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Coordenadas cartesianas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Coordenadas polares planas.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-CilEsf-03-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Un sólido invariante bajo rotaciones alrededor del eje \(z\) se integra más cómodamente en coordenadas: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Cilíndricas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Esféricas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cartesianas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Baricéntricas.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-CilEsf-03-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para calcular el volumen de un sólido limitado por el cilindro \(x^2+y^2=4\), el sistema más adecuado es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Cilíndricas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Esféricas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cartesianas exclusivamente.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Polares en una sola variable.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[IT-CilEsf-04]]></text>
   </name>
   <questiontext format="html">
@@ -650,6 +2432,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>Rectangulares</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-CilEsf-04-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué coordenadas conviene emplear para integrar sobre una bola centrada en el origen? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Coordenadas esféricas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Coordenadas cilíndricas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Coordenadas cartesianas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Coordenadas polares planas.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-CilEsf-04-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Un sólido con simetría radial respecto a un punto (depende solo de la distancia al origen) se integra más fácilmente en coordenadas: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Esféricas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cilíndricas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cartesianas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Rectangulares.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IT-CilEsf-04-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para hallar el volumen de la región \(x^2+y^2+z^2\leq 9\), el sistema de coordenadas más adecuado es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Esféricas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cilíndricas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cartesianas únicamente.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Polares en el plano.</p>]]></text>
   </answer>
 </question>
  
@@ -688,6 +2551,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[IL-Esc-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(f\) representa la densidad lineal de un alambre con forma de la curva \(C\), entonces \(\displaystyle \int _C f&#8239;ds\) corresponde a: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>La masa total del alambre.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El trabajo sobre el alambre.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La longitud del alambre.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El centro de masa del alambre.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Esc-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué cantidad física calcula la integral de línea de un campo escalar \(\displaystyle \int _C f&#8239;ds\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>La masa de un alambre de densidad \(f\) y forma \(C\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El trabajo de un campo vectorial.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El flujo de un campo a través de \(C\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La circulación del campo.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Esc-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La integral \(\displaystyle \int _C 1&#8239;ds\) de un campo escalar constante igual a \(1\) sobre la curva \(C\) representa: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>La longitud de la curva \(C\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El área encerrada por \(C\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El trabajo a lo largo de \(C\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La masa de la región interior a \(C\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[IL-Vec-01]]></text>
   </name>
   <questiontext format="html">
@@ -711,6 +2655,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>La longitud de la curva \(C\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Vec-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué magnitud física representa \(\displaystyle \int _C \vec {F}\cdot d\vec {r}\) cuando \(\vec {F}\) es un campo de fuerzas? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El trabajo efectuado por \(\vec {F}\) al recorrer \(C\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La masa del alambre \(C\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El flujo de \(\vec {F}\) a través de una superficie.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La longitud de arco de \(C\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Vec-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La integral de línea \(\displaystyle \int _C \vec {F}\cdot d\vec {r}\) acumula a lo largo de la curva: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>La componente tangencial del campo \(\vec {F}\) (su trabajo).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La componente normal del campo.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La magnitud del campo únicamente.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La densidad del medio.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Vec-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para una fuerza \(\vec {F}\) que mueve una partícula a lo largo de una trayectoria \(C\), el trabajo realizado se calcula con: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\displaystyle \int _C \vec {F}\cdot d\vec {r}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \int _C \|\vec {F}\|&#8239;ds\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \int _C \vec {F}&#8239;ds\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \iint _C \vec {F}\cdot d\vec {r}\)</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -742,6 +2767,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[IL-Elem-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué significa \(ds\) en la integral \(\displaystyle \int _C f&#8239;ds\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Un diferencial de longitud de arco a lo largo de \(C\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un diferencial de área de la región interior.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El diferencial del parámetro \(t\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El vector tangente a \(C\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Elem-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(C\) está parametrizada por \(\vec {r}(t)\), el diferencial de longitud de arco \(ds\) se expresa como: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\|\vec {r}&#8239;&rsquo;(t)\|&#8239;dt\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\vec {r}&#8239;&rsquo;(t)&#8239;dt\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\vec {r}(t)&#8239;dt\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(dt\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Elem-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El elemento \(ds\) de una integral de línea escalar es siempre: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una cantidad positiva (longitud).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un vector.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Una cantidad que puede ser negativa.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Un área.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[IL-Param-01]]></text>
   </name>
   <questiontext format="html">
@@ -765,6 +2871,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>El área de la región encerrada por \(C\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Param-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El primer paso para evaluar una integral de línea sobre \(C\) consiste en: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Parametrizar la curva \(C\) mediante \(\vec {r}(t)\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Calcular el área que encierra \(C\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Hallar la hessiana del integrando.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Determinar el rotacional del campo.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Param-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para transformar \(\displaystyle \int _C \vec {F}\cdot d\vec {r}\) en una integral de una sola variable se requiere: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una parametrización \(\vec {r}(t)\), \(t\in [a,b]\), de la curva.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El gradiente del campo \(\vec {F}\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La divergencia de \(\vec {F}\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El área de \(C\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Param-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué elemento es indispensable para reducir una integral de línea a una integral ordinaria respecto al parámetro? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Una representación paramétrica de la curva.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El valor del campo en el origen.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La matriz jacobiana del campo.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La longitud total de la curva.</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -796,6 +2983,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[IL-Orient-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Al recorrer la curva \(C\) en sentido contrario, el valor de \(\displaystyle \int _C \vec {F}\cdot d\vec {r}\): </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Cambia de signo.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Permanece igual.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Se hace cero.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Se reduce a la mitad.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Orient-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(-C\) denota la curva \(C\) con orientación invertida, entonces: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\displaystyle \int _{-C} \vec {F}\cdot d\vec {r} = -\int _{C} \vec {F}\cdot d\vec {r}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \int _{-C} \vec {F}\cdot d\vec {r} = \int _{C} \vec {F}\cdot d\vec {r}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \int _{-C} \vec {F}\cdot d\vec {r} = 0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \int _{-C} \vec {F}\cdot d\vec {r} = 2\int _{C} \vec {F}\cdot d\vec {r}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Orient-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La integral de línea de un campo vectorial depende de la orientación de la curva porque: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El vector \(d\vec {r}\) invierte su sentido al cambiar la orientación.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El elemento \(ds\) se vuelve negativo.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El campo \(\vec {F}\) cambia de magnitud.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La parametrización deja de existir.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[IL-Orient-02]]></text>
   </name>
   <questiontext format="html">
@@ -819,6 +3087,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>Depende solo del punto inicial.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Orient-02-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Al recorrer la curva \(C\) en sentido opuesto, la integral de línea escalar \(\displaystyle \int _C f&#8239;ds\): </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Conserva su valor.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cambia de signo.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Se anula.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Se duplica.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Orient-02-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>A diferencia de la integral de línea vectorial, la integral de línea de un campo escalar: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Es independiente de la orientación de la curva.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Cambia de signo al invertir la orientación.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Solo está definida para curvas cerradas.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Depende del jacobiano.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[IL-Orient-02-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(-C\) es la curva \(C\) con orientación invertida, para un campo escalar \(f\) se cumple: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\displaystyle \int _{-C} f&#8239;ds = \int _{C} f&#8239;ds\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \int _{-C} f&#8239;ds = -\int _{C} f&#8239;ds\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \int _{-C} f&#8239;ds = 0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\displaystyle \int _{-C} f&#8239;ds = 2\int _{C} f&#8239;ds\)</p>]]></text>
   </answer>
 </question>
  
@@ -857,6 +3206,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[CC-Def-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué caracteriza a un campo vectorial conservativo? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Existe un campo escalar \(f\) tal que \(\vec {F}=\nabla f\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Su divergencia es cero.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Su rotacional es distinto de cero.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Es constante en todo el dominio.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Def-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Un campo \(\vec {F}\) se llama conservativo (o campo de gradiente) si: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Admite una función potencial \(f\) con \(\vec {F}=\nabla f\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>No admite función potencial.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Es tangente a sus líneas de campo.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Tiene divergencia constante.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Def-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>A la función escalar \(f\) que satisface \(\vec {F}=\nabla f\) se le denomina: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Función potencial de \(\vec {F}\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Divergencia de \(\vec {F}\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Rotacional de \(\vec {F}\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Jacobiano de \(\vec {F}\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[CC-Indep-01]]></text>
   </name>
   <questiontext format="html">
@@ -880,6 +3310,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>Cambia con cada parametrización de \(C\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Indep-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Una consecuencia de que \(\vec {F}\) sea conservativo es que su integral de línea: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Es independiente del camino seguido entre dos puntos.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Depende fuertemente del camino elegido.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Siempre vale cero.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Solo se puede calcular en curvas cerradas.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Indep-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(\vec {F}=\nabla f\), el teorema fundamental de las integrales de línea afirma que \(\displaystyle \int _C \vec {F}\cdot d\vec {r}\) es igual a: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(f(B)-f(A)\), con \(A\) y \(B\) los extremos de \(C\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La longitud de \(C\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(f(A)+f(B)\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El área encerrada por \(C\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Indep-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La propiedad de «independencia de la trayectoria» de las integrales de línea es equivalente a que el campo sea: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Conservativo.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>De divergencia nula.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Constante.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Perpendicular a sus líneas de flujo.</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -911,6 +3422,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[CC-Cerrada-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La circulación de un campo conservativo a lo largo de cualquier curva cerrada vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(0\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(1\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El área encerrada.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El perímetro de la curva.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Cerrada-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si \(\displaystyle \oint _C \vec {F}\cdot d\vec {r}=0\) para toda curva cerrada \(C\), entonces el campo \(\vec {F}\): </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Es conservativo.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Tiene rotacional no nulo.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Depende del camino.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>No admite función potencial.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Cerrada-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para un campo conservativo, la integral de línea sobre un lazo cerrado se anula porque los puntos inicial y final: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Coinciden, de modo que \(f(B)-f(A)=0\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Están muy alejados.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Tienen la misma longitud de arco.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Tienen distinto potencial.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[CC-Grad-01]]></text>
   </name>
   <questiontext format="html">
@@ -934,6 +3526,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(f = \nabla \vec {F}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Grad-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Cuál expresión indica que \(\vec {F}\) es el gradiente de un potencial escalar \(f\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\vec {F} = \nabla f\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\vec {F} = \operatorname {div} f\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\vec {F} = \operatorname {rot} f\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\vec {F} = \Delta f\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Grad-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Que \(\vec {F}\) sea un «campo de gradiente» equivale a escribir: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\vec {F} = \nabla f\) para alguna función escalar \(f\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\nabla \cdot \vec {F} = 0\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\nabla \times \vec {F} = \vec {F}\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(f = \nabla \cdot \vec {F}\).</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Grad-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La operación \(\nabla f\) que aparece en \(\vec {F}=\nabla f\) corresponde a: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El gradiente del campo escalar \(f\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>La divergencia de \(f\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El rotacional de \(f\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El laplaciano de \(f\).</p>]]></text>
   </answer>
 </question>
 <question type="multichoice">
@@ -965,6 +3638,87 @@
 </question>
 <question type="multichoice">
   <name format="html">
+    <text><![CDATA[CC-Grad-02-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Una condición necesaria para que un campo \( F\colon \mathbb {R}^3 \rightarrow \mathbb {R}^3\) de clase \(C^1\) sea conservativo es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Que su rotacional sea nulo, \(\nabla \times \vec {F}=\vec {0}\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Que su divergencia sea nula.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Que su divergencia valga \(1\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Que su rotacional sea no nulo.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Grad-02-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Si un campo \(\vec {F}\) en \(\mathbb {R}^3\) admite función potencial, entonces \(\nabla \times \vec {F}\) vale: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\vec {0}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\vec {F}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(1\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\nabla \cdot \vec {F}\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Grad-02-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>¿Qué propiedad del rotacional sirve como prueba (necesaria) para descartar que un campo en \(\mathbb {R}^3\) sea conservativo? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Si \(\nabla \times \vec {F}\neq \vec {0}\), el campo no es conservativo.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Si \(\nabla \cdot \vec {F}\neq 0\), el campo no es conservativo.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Si \(\nabla \times \vec {F}=\vec {0}\), el campo no es conservativo.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El rotacional no aporta información.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
     <text><![CDATA[CC-Grad-03]]></text>
   </name>
   <questiontext format="html">
@@ -988,6 +3742,87 @@
   </answer>
   <answer fraction="0" format="html">
     <text><![CDATA[<p>\(\dfrac {\partial P}{\partial x} + \dfrac {\partial Q}{\partial y} = 0\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Grad-03-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para un campo plano \(\vec {F}=(P,Q)\) de clase \(C^1\) en un dominio simplemente conexo, la condición que garantiza que sea conservativo es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>\(\dfrac {\partial P}{\partial y} = \dfrac {\partial Q}{\partial x}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\dfrac {\partial P}{\partial x} = \dfrac {\partial Q}{\partial y}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(\dfrac {\partial P}{\partial y} = -\dfrac {\partial Q}{\partial x}\)</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>\(P\cdot Q = 0\)</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Grad-03-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>La igualdad \(\dfrac {\partial P}{\partial y} = \dfrac {\partial Q}{\partial x}\) para un campo \(\vec {F}=(P,Q)\) en un dominio simplemente conexo indica que: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>El campo es conservativo (admite función potencial).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El campo tiene divergencia nula.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El campo es solenoidal.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>El campo no tiene función potencial.</p>]]></text>
+  </answer>
+</question>
+<question type="multichoice">
+  <name format="html">
+    <text><![CDATA[CC-Grad-03-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Para el campo plano \(\vec {F}=(P,Q)\), la cantidad \(\dfrac {\partial Q}{\partial x}-\dfrac {\partial P}{\partial y}\) corresponde a la componente del rotacional; el campo es conservativo (en un dominio simplemente conexo) cuando dicha cantidad es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <single>true</single>
+  <shuffleanswers>1</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <answer fraction="100" format="html">
+    <text><![CDATA[<p>Igual a \(0\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Positiva.</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Igual a \(P+Q\).</p>]]></text>
+  </answer>
+  <answer fraction="0" format="html">
+    <text><![CDATA[<p>Distinta de \(0\).</p>]]></text>
   </answer>
 </question>
  
@@ -1015,6 +3850,54 @@
 </question>
 <question type="numerical">
   <name format="html">
+    <text><![CDATA[IN-Calc-01-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(R = [0,4]\times [0,2]\). El valor de \(\displaystyle \iint _R 1&#8239;dA\) (el área de \(R\)) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>8</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-01-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El área de la región rectangular \(R=[1,4]\times [0,2]\), calculada como \(\displaystyle \iint _R dA\), es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>6</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-01-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(R = [0,5]\times [0,2]\). ¿Cuánto vale \(\displaystyle \iint _R 1&#8239;dA\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>10</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
     <text><![CDATA[IN-Calc-02]]></text>
   </name>
   <questiontext format="html">
@@ -1026,6 +3909,54 @@
   <hidden>0</hidden>
   <answer fraction="100" format="plain_text">
     <text>1</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-02-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(R = [0,1]\times [0,1]\). El valor de \(\displaystyle \iint _R x&#8239;dA\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>0.5</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-02-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(R = [0,2]\times [0,1]\). El valor de \(\displaystyle \iint _R (x+y)&#8239;dA\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>3</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-02-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(R = [0,1]\times [0,2]\). El valor de \(\displaystyle \iint _R (x+y)&#8239;dA\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>3</text>
     <tolerance>0.01</tolerance>
   </answer>
 </question>
@@ -1047,6 +3978,54 @@
 </question>
 <question type="numerical">
   <name format="html">
+    <text><![CDATA[IN-Calc-03-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(R = [0,3]\times [0,1]\). El valor de \(\displaystyle \iint _R x&#8239;dA\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>4.5</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-03-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(R = [0,2]\times [0,2]\). El valor de \(\displaystyle \iint _R x&#8239;dA\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>4</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-03-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(R = [0,2]\times [0,1]\). El valor de \(\displaystyle \iint _R y&#8239;dA\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>1</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
     <text><![CDATA[IN-Calc-04]]></text>
   </name>
   <questiontext format="html">
@@ -1058,6 +4037,54 @@
   <hidden>0</hidden>
   <answer fraction="100" format="plain_text">
     <text>3</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-04-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El determinante del jacobiano de la transformación a coordenadas polares \(x=r\cos \theta \), \(y=r\sin \theta \) evaluado en \(r=5\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>5</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-04-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En coordenadas polares, el diferencial de área es \(dA=r&#8239;dr&#8239;d\theta \). El valor del factor \(r\) cuando \(r=7\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>7</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-04-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El determinante del jacobiano de las coordenadas polares evaluado en \(r=1/2\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>0.5</text>
     <tolerance>0.01</tolerance>
   </answer>
 </question>
@@ -1079,6 +4106,54 @@
 </question>
 <question type="numerical">
   <name format="html">
+    <text><![CDATA[IN-Calc-05-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(W = [0,2]\times [0,2]\times [0,2]\). El valor de \(\displaystyle \iiint _W 1&#8239;dV\) (el volumen de \(W\)) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>8</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-05-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>El volumen de la caja \(W=[0,1]\times [0,1]\times [0,4]\), calculado como \(\displaystyle \iiint _W dV\), es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>4</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-05-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(W = [0,3]\times [0,2]\times [0,2]\). ¿Cuánto vale \(\displaystyle \iiint _W 1&#8239;dV\)? </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>12</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
     <text><![CDATA[IN-Calc-06]]></text>
   </name>
   <questiontext format="html">
@@ -1090,6 +4165,54 @@
   <hidden>0</hidden>
   <answer fraction="100" format="plain_text">
     <text>4</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-06-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(f(x,y,z) = x^2 + y^2\). En coordenadas cilíndricas \(f = r^2\). El valor de \(r^2\) cuando \(r=3\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>9</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-06-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En coordenadas esféricas, \(x^2+y^2+z^2 = \rho ^2\). El valor de \(\rho ^2\) cuando \(\rho =4\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>16</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-06-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>En coordenadas cilíndricas, el factor del diferencial de volumen es \(r\). Si \(r=2\), el valor de \(dV/(dr&#8239;d\theta &#8239;dz)=r\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>2</text>
     <tolerance>0.01</tolerance>
   </answer>
 </question>
@@ -1111,6 +4234,54 @@
 </question>
 <question type="numerical">
   <name format="html">
+    <text><![CDATA[IN-Calc-07-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\vec {F} = \nabla f\) con \(f(x,y) = x^2 + y^2\). El valor de \(\displaystyle \int _C \vec {F}\cdot d\vec {r}\) a lo largo de cualquier curva que va de \((0,0)\) a \((2,1)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>5</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-07-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\vec {F} = \nabla f\) con \(f(x,y) = x^2 + y^2\). El valor de \(\displaystyle \int _C \vec {F}\cdot d\vec {r}\) desde \((0,0)\) hasta \((3,0)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>9</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-07-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\vec {F} = \nabla f\) con \(f(x,y) = x^2 + y^2\). El valor de \(\displaystyle \int _C \vec {F}\cdot d\vec {r}\) a lo largo de cualquier curva que va de \((1,0)\) a \((2,0)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>3</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
     <text><![CDATA[IN-Calc-08]]></text>
   </name>
   <questiontext format="html">
@@ -1122,6 +4293,54 @@
   <hidden>0</hidden>
   <answer fraction="100" format="plain_text">
     <text>5</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-08-v1]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\vec {F} = \nabla f\) con \(f(x,y) = xy\). El valor de \(\displaystyle \int _C \vec {F}\cdot d\vec {r}\) desde \((0,0)\) hasta \((2,3)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>6</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-08-v2]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\vec {F} = \nabla f\) con \(f(x,y) = xy\). El valor de \(\displaystyle \int _C \vec {F}\cdot d\vec {r}\) desde \((1,1)\) hasta \((4,2)\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>7</text>
+    <tolerance>0.01</tolerance>
+  </answer>
+</question>
+<question type="numerical">
+  <name format="html">
+    <text><![CDATA[IN-Calc-08-v3]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Sea \(\vec {F} = \nabla f\) con \(f(x,y) = xy\). El valor de \(\displaystyle \oint _C \vec {F}\cdot d\vec {r}\) a lo largo de cualquier curva cerrada \(C\) es: </p>]]></text>
+  </questiontext>
+  <defaultgrade>1.0</defaultgrade>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+  <answer fraction="100" format="plain_text">
+    <text>0</text>
     <tolerance>0.01</tolerance>
   </answer>
 </question>
